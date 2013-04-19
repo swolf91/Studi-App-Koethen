@@ -3,8 +3,6 @@ package de.hsanhalt.inf.studiappkoethen.utils;
 import java.util.HashSet;
 import java.util.Set;
 
-import android.R;
-
 public class BuildingManager
 {
 	/**
@@ -22,7 +20,7 @@ public class BuildingManager
 	private BuildingManager()
 	{
 		buildings = new HashSet<Building>();
-		// TODO XML Datei laden und BuildingObjekte erzeugen.
+		// TODO XML DateiEN laden und BuildingObjekte erzeugen.
 		// bla bla
 	}
 	

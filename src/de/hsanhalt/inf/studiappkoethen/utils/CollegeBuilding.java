@@ -13,21 +13,21 @@ public class CollegeBuilding extends Building
 	 */
 	private final int numberOfFaculty;
 	
-	public CollegeBuilding(String name, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty)
+	public CollegeBuilding(String name, Category category, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty)
 	{
-		this(name, street, houseNumber, postalCode, city, latitude, longitude, description, numberOfBuilding, numberOfFaculty, (URL)null);
+		this(name, category, street, houseNumber, postalCode, city, latitude, longitude, description, numberOfBuilding, numberOfFaculty, (URL)null);
 	}
 	
-	public CollegeBuilding(String name, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty, String url)
+	public CollegeBuilding(String name, Category category, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty, String url)
 	{
-		super(name, street, houseNumber, postalCode, city, latitude, longitude,	description, url);
+		super(name, category, street, houseNumber, postalCode, city, latitude, longitude,	description, url);
 		this.numberOfBuilding = numberOfBuilding;
 		this.numberOfFaculty = numberOfFaculty;
 	}
 
-	public CollegeBuilding(String name, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty, URL url)
+	public CollegeBuilding(String name, Category category, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty, URL url)
 	{
-		super(name, street, houseNumber, postalCode, city, latitude, longitude,	description, url);
+		super(name, category, street, houseNumber, postalCode, city, latitude, longitude,	description, url);
 		
 		this.numberOfBuilding = numberOfBuilding;
 		this.numberOfFaculty = numberOfFaculty;

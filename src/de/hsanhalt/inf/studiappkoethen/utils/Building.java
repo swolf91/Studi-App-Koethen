@@ -9,6 +9,10 @@ public class Building
 	 */
 	private final String name;
 	/**
+	 * beinhaltet die Kategorie dieses Gebäudes
+	 */
+	private final Category category;
+	/**
 	 * beinhaltet die Strasse in der sich das Gebaeude befindet
 	 */
 	private final String street;
@@ -24,7 +28,6 @@ public class Building
 	 * Postleitzahl des Ortes
 	 */
 	private final String postalCode;
-	
 	/**
 	 * Beschreibung des Gebaeudes
 	 */
@@ -55,9 +58,9 @@ public class Building
 	 * @param city - Ort
 	 * @param description - Beschreibung
 	 */
-	public Building(String name, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description)
+	public Building(String name, Category category, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description)
 	{
-		this(name, street, houseNumber, postalCode, city, latitude, longitude, description, (URL)null);
+		this(name, category, street, houseNumber, postalCode, city, latitude, longitude, description, (URL)null);
 	}
 	
 	/**
@@ -70,9 +73,9 @@ public class Building
 	 * @param description - Beschreibung
 	 * @param url - URL des Gebaeudes
 	 */
-	public Building(String name, String street, String houseNumber, String postalCode, String city, int latitude, int longitude, String description, String url)
+	public Building(String name, Category category, String street, String houseNumber, String postalCode, String city, int latitude, int longitude, String description, String url)
 	{
-		this(name, street, houseNumber, postalCode, city, latitude, longitude, description, (URL)null);
+		this(name, category, street, houseNumber, postalCode, city, latitude, longitude, description, (URL)null);
 		URL matchedURL;
 		try
 		{
@@ -95,9 +98,10 @@ public class Building
 	 * @param description - Beschreibung
 	 * @param url - URL des Gebaeudes
 	 */
-	public Building(String name, String street, String houseNumber, String postalCode, String city, int latitude, int longitude, String description, URL url)
+	public Building(String name, Category category, String street, String houseNumber, String postalCode, String city, int latitude, int longitude, String description, URL url)
 	{
 		this.name = name;
+		this.category = category;
 		this.street = street;
 		this.houseNumber = houseNumber;
 		this.postalCode = postalCode;
@@ -207,6 +211,15 @@ public class Building
 	public URL getURL()
 	{
 		return this.url;
+	}
+	
+	/**
+	 * Gibt die Kategorie in der dieses Gebaeude eingeordnet ist zurueck.
+	 * @return
+	 */
+	public Category getCategory()
+	{
+		return this.category;
 	}
 	
 	@Override
