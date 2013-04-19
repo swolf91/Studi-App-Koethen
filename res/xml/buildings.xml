@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <categoryID>0</categoryID>
+    <building>
+        <name>TestGebaeude</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06369</postalCode>
+        <city>Koethen</city>
+        <latitude>511232454</latitude>
+		<longitude>113454345</longitude>
+		<description>Unser Schulgebaeude</description>
+		<url>http://www.inf.hs-anhalt.de</url>
+ 	</building>
+</buildings>
