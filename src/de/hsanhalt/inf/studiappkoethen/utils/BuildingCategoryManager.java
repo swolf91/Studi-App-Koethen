@@ -1,19 +1,18 @@
 package de.hsanhalt.inf.studiappkoethen.utils;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.util.Log;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
-public class BuildingCategoryManager
+public class BuildingCategoryManager implements IXmlParser
 {
     private static BuildingCategoryManager INSTANCE;
-    private List<BuildingCategory> categoryList;
+    private Map<Byte, BuildingCategory> categoryMap;
 
     public static BuildingCategoryManager getInstance()
     {
@@ -26,81 +25,77 @@ public class BuildingCategoryManager
 
     private BuildingCategoryManager()
     {
-        this.categoryList = new ArrayList<BuildingCategory>();
-    }
-
-    /**
-     *    http://xjaphx.wordpress.com/2011/10/16/android-xml-adventure-parsing-xml-data-with-xmlpullparser/
-     *    http://stackoverflow.com/questions/15254089/kxmlparser-throws-unexpected-token-exception-at-the-start-of-rss-pasing
-     * @param stream
-     */
-    public void loadXML(InputStream stream)
-    {
-        if(stream != null)
-        {
-            try
-            {
-                XmlPullParser parser = XmlPullParserFactory.newInstance().newPullParser();
-                parser.setInput(stream, null);
-                this.parseXML(parser);
-            }
-            catch (XmlPullParserException e)
-            {
-                Log.e("XmlPullParserException", e.getMessage(), e);
-            }
-            catch (IOException e)
-            {
-                Log.e("IOException", e.getMessage(), e);
-            }
-            finally
-            {
-                try
-                {
-                    stream.close();
-                }
-                catch(Exception e)
-                {
-                     Log.e("Stream", "Couldn't close the input stream of the categories.xml", e);
-                }
-            }
-        }
-    }
-
-    private void parseXML(XmlPullParser parser) throws IOException, XmlPullParserException
-    {
-        int eventType = parser.getEventType();
-
-        System.out.println("parserStart: " + parser.getEventType());
-        System.out.println("start? " + (eventType == XmlPullParser.START_DOCUMENT));
-
-        int j = 0;
-        /*
-        while (eventType != XmlPullParser.END_DOCUMENT)
-        {
-            if(eventType == XmlPullParser.START_TAG)
-            {
-                System.out.println("Tagname: " + parser.getName());
-            }
-            eventType = parser.next();
-
-            j++;
-        }
-        */
-        System.out.println("die Schleife wurde " + j + " mal durchlaufen");
+        this.categoryMap = new HashMap<Byte, BuildingCategory>();
     }
 
     public boolean hasContent()
     {
-        return this.categoryList != null && !this.categoryList.isEmpty();
+        return this.categoryMap != null && !this.categoryMap.isEmpty();
     }
 
-    public BuildingCategory getCategory(int id)
+    public BuildingCategory getCategory(byte id)
     {
-        return null;
+        return this.categoryMap.get(id);
     }
 
     public BuildingCategory getCategory(String name)
     {
-        return null;
+        throw new UnsupportedOperationException("not implemented yet");
+    }
+
+    @Override
+    public void addNode(Node node)
+    {
+        Log.d("Node noticed", "will add node soon");
+
+        if(node.hasChildNodes())
+        {
+            NodeList nodes = node.getChildNodes();
+            for(int i = 0; i < nodes.getLength(); i++)
+            {
+                Node subNode = nodes.item(i);
+                if(subNode.getNodeName().equals("category"))
+                {
+                    this.addElement(subNode);
+                }
+            }
+        }
+    }
+
+    private boolean addElement(Node node)
+    {
+        if(!node.hasChildNodes())
+        {
+            return false;
+        }
+
+        byte id = -1;
+        String name = null;
+
+        NodeList nodeList = node.getChildNodes();
+
+        for(int i = 0; i < nodeList.getLength(); i++)
+        {
+            Node subNode = nodeList.item(i);
+            if(subNode.getNodeName().equals("id"))
+            {
+                id = Byte.valueOf(subNode.getTextContent());
+            }
+            else if(subNode.getNodeName().equals("name"))
+            {
+                name = subNode.getTextContent();
+            }
+        }
+
+        if(id == -1 || name == null)
+        {
+            return false;
+        }
+
+        BuildingCategory category = new BuildingCategory(id, name);
+        this.categoryMap.put(id, category);
+        Log.d("Building category created", "id: " + id + " name: " + name);
+
+        return true;
     }
 }
