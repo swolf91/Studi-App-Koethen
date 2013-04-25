@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <categoryID>6</categoryID>
+    
+<building>
+        <name>Dilan Doener</name>
+        <street>Weintraubenstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>5175177</latitude>
+  <longitude>1198146</longitude>
+	<description>Dilan Doener Koethen</description>
+	<url>http://dilan-doener.jimdo.com/</url>
+  </building>
+<building>
+        <name>Rostbratwurstgrill</name>
+        <street>Leopoldstrasse</street>
+        <houseNumber>67a</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>5175646</latitude>
+	<longitude>1198537</longitude>
+	<description>Rostbratwurstgrill Koethen</description>
+	<url>http://rostbratwurstgrill.de/details.php?ID=28</url>
+  </building>
+
+   
+</buildings>
