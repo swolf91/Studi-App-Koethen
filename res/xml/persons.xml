@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE person [
+<!ELEMENT person (common , university_department , contact)>
+<!ELEMENT common (name , surname , state , special_field , street , street-number , postcode , town , buildings , room , description)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT special_field (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT street-number (#PCDATA)>
+<!ELEMENT postcode (#PCDATA)>
+<!ELEMENT town (#PCDATA)>
+<!ELEMENT buildings (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+
+
+<!ELEMENT university_department (profession? , lectures? , responsibility)>
+<!ELEMENT profession (#PCDATA)>
+<!ELEMENT lectures (#PCDATA)>
+<!ELEMENT responsibility (#PCDATA)>
+
+<!ELEMENT contact (talk-time? , phone , email? , link?)>
+<!ELEMENT talk-time (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+] >
+<person>
+<common>
+
+     <name></name>
+     <surname></surname>
+     <state></state>
+     <special_field></special_field>
+     <street></street>
+     <street-number></street-number>
+     <postcode></postcode>
+     <town></town>
+
+     <buildings></buildings>
+     <room></room>
+     <description></description>
+     
+</common>
+<university_department>
+
+      <profession></profession>
+      <lectures></lectures>
+      <responsibility></responsibility>
+      
+</university_department>
+<contact>
+
+      <talk-time></talk-time>
+      <phone></phone>
+      <email></email>
+      <link></link>
+
+</contact>
+</person>
