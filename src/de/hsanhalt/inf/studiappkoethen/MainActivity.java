@@ -3,6 +3,7 @@ package de.hsanhalt.inf.studiappkoethen;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import de.hsanhalt.inf.studiappkoethen.utils.BuildingCategoryManager;
 
 public class MainActivity extends Activity
 {
@@ -12,8 +13,15 @@ public class MainActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		System.out.println("hallo du");
+
+
+
+        BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
+        if(!buildingCategoryManager.hasContent())
+        {
+            buildingCategoryManager.loadXML(this.getResources().openRawResource(R.xml.categories));
+        }
+        buildingCategoryManager.getCategory(1);
 	}
 
 	@Override
