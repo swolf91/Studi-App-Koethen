@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <categoryID>1</categoryID>
+      <building>
+        	<name>Vetter Busunternehmen</name>
+        	<description>aktueller Fahrplan für Köthen und Umland</description>
+		<url>http://www.vetter-bus.de/fahrplan/?UNTERNEHMEN=RVK</url>
+  	</building>    	
+	<building>
+        	<name>Bus und Bahn</name>
+        	<description>Fahrplan für Bus und Bahn</description>
+		<url>http://www.koethen-anhalt.de/de/bus-bahn.html</url>
+  	</building>
+    	<building>
+        	<name>Deutsche Bahn</name>
+        	<description>Die Deutsche Bahn für Reisen und Ausflüge</description>
+		<url>http://mobile.bahn.de/bin/mobil/detect.exe</url>
+  	</building>
+    	<building>
+        	<name>Taxi City Fahrdienst</name>
+        	<description>Taxi City Fahrdienst Koethen</description>
+		
+        	<phoneNumber>034965116192</houseNumber>
+
+  	</building>
+    	<building>
+        	<name>Taxi Eichler</name>
+        	<description>Eichler Frank Taxi und Transporte</description>
+				
+        	<phoneNumber>0349640460</houseNumber>
+
+  	</building>
+    	<building>
+        	<name>Taxi EUROW</name>
+        	<description>EUROW Taxen und Transport GmbH</description>
+				
+        	<phoneNumber>03496557788</houseNumber>
+
+  	</building>
+</buildings>
