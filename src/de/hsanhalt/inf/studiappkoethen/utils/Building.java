@@ -9,7 +9,7 @@ public class Building
 	 */
 	private final String name;
 	/**
-	 * beinhaltet die Kategorie dieses Gebäudes
+	 * beinhaltet die Kategorie dieses Gebaeudes
 	 */
 	private final Category category;
 	/**
@@ -158,7 +158,7 @@ public class Building
 	}
 	
 	/**
-	 * Gibt den Breitengrad als Integer der Festkommadarsteööung zurueck.
+	 * Gibt den Breitengrad als Integer der Festkommadarstellung zurueck.
 	 * (Achtung: 7 Stellen nach dem Komma sind hier vor dem Komma :D)
 	 * @return 
 	 */
@@ -177,7 +177,7 @@ public class Building
 	}
 	
 	/**
-	 * Gibt den Laengengrad als Integer der Festkommadarsteööung zurueck.
+	 * Gibt den Laengengrad als Integer der Festkommadarstellung zurueck.
 	 * (Achtung: 7 Stellen nach dem Komma sind hier vor dem Komma :D)
 	 * @return
 	 */
