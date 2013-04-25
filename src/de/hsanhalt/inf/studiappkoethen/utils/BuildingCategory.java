@@ -1,11 +1,11 @@
 package de.hsanhalt.inf.studiappkoethen.utils;
 
-public class Category
+public class BuildingCategory
 {
 	private final byte id;
 	private final String name;
 	
-	public Category(byte id, String name)
+	public BuildingCategory(byte id, String name)
 	{
 		this.id = id;
 		this.name = name;
