@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <categories>
-    <category>
-        <id>0</id>
-        <name>Test</name>
-    </category>
-    <category>
-        <id>1</id>
-        <name>Test2</name>
-    </category>
-    <category>
-        <id>2</id>
-        <name>Test3</name>
-    </category>
+        <category>
+        	<id>0</id>
+        	<name>Hochschule</name>
+    	</category>
+    	<category>
+        	<id>1</id>
+        	<name>Verkehr</name>
+    	</category>
+    	<category>
+        	<id>2</id>
+        	<name>Aemter</name>
+    	</category>
+	<category>
+        	<id>3</id>
+        	<name>Krankenhaus</name>
+    	</category>
+	<category>
+        	<id>4</id>
+        	<name>Studentenwesen</name>
+    	</category>
+	<category>
+        	<id>5</id>
+        	<name>Bar</name>
+    	</category>
+	<category>
+        	<id>6</id>
+        	<name>Essen</name>
+    	</category>
+	<category>
+        	<id>7</id>
+        	<name>Club</name>
+    	</category>
 </categories>
