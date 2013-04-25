@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>5</categoryID>
-    
-<building>
+
+    <building>
         <name>Paradise Inn</name>
         <street>Weintraubenstrasse</street>
         <houseNumber>14</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175152</latitude>
-  <longitude>1198146</longitude>
-	<description>Paradise Inn – Cocktail und Cafe Bar</description>
-	<url>http://www.yellowmap.de/Details/t9q8cq4PAASI_ELQIuInlw==.aspx</url>
-  </building>
+        <longitude>1198146</longitude>
+        <description>Paradise Inn – Cocktail und Cafe Bar</description>
+        <url>http://www.yellowmap.de/Details/t9q8cq4PAASI_ELQIuInlw==.aspx</url>
+    </building>
 
-   
 </buildings>

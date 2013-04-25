@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>4</categoryID>
-    
-<building>
+
+    <building>
         <name>BafoeG</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175399</latitude>
-  <longitude>1197113</longitude>
-	<description>Amt fuer Ausbildungsfoerderung</description>
-	<url>http://www.studentenwerk-halle.de/bafoeg/bafoeg/oeffnungszeiten-und-beratungsorte/</url>
-  </building>
-<building>
+        <longitude>1197113</longitude>
+        <description>Amt fuer Ausbildungsfoerderung</description>
+        <url>http://www.studentenwerk-halle.de/bafoeg/bafoeg/oeffnungszeiten-und-beratungsorte/</url>
+    </building>
+    <building>
         <name>Wohnplatzvermittlung</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175399</latitude>
-	<longitude>1197113</longitude>
-	<description>Wohnplatzvermittlung in Koethen</description>
-	<url>http://www.studentenwerk-halle.de/wohnen/beratungszeiten-und-orte/koethen-dessau-bernburg/</url>
-  </building>
-<building>
+        <longitude>1197113</longitude>
+        <description>Wohnplatzvermittlung in Koethen</description>
+        <url>http://www.studentenwerk-halle.de/wohnen/beratungszeiten-und-orte/koethen-dessau-bernburg/</url>
+    </building>
+    <building>
         <name>Studentenwerk</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175399</latitude>
-	<longitude>1197113</longitude>
-	<description>Studentenwerk - Aussenstelle Koethen</description>
-	<url>http://www.studentenwerk-halle.de/startseite.html</url>
-  </building>
-   
+        <longitude>1197113</longitude>
+        <description>Studentenwerk - Aussenstelle Koethen</description>
+        <url>http://www.studentenwerk-halle.de/startseite.html</url>
+    </building>
+
 </buildings>

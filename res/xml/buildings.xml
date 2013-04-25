@@ -8,8 +8,8 @@
         <postalCode>06369</postalCode>
         <city>Koethen</city>
         <latitude>511232454</latitude>
-		<longitude>113454345</longitude>
-		<description>Unser Schulgebaeude</description>
-		<url>http://www.inf.hs-anhalt.de</url>
- 	</building>
+        <longitude>113454345</longitude>
+        <description>Unser Schulgebaeude</description>
+        <url>http://www.inf.hs-anhalt.de</url>
+    </building>
 </buildings>

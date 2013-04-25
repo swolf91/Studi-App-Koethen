@@ -8,10 +8,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175169</latitude>
-  <longitude>1197424</longitude>
-	<description>Stadt Koethen (Anhalt) - Stadtverwaltung Koethen</description>
-	<url>http://www.koethen-anhalt.de/de/stadtverwaltung.html</url>
-  </building>
+        <longitude>1197424</longitude>
+        <description>Stadt Koethen (Anhalt) - Stadtverwaltung Koethen</description>
+        <url>http://www.koethen-anhalt.de/de/stadtverwaltung.html</url>
+    </building>
     <building>
         <name>Einwohnermeldeamt</name>
         <street>Wallstrasse</street>
@@ -19,10 +19,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5174958</latitude>
-	<longitude>1197276</longitude>
-	<description>Stadt Koethen (Anhalt) - Einwohnermeldeamt Koethen</description>
-	<url>http://www.koethen-anhalt.de/de/einwohnermeldeabteilung.html</url>
-  </building>
+        <longitude>1197276</longitude>
+        <description>Stadt Koethen (Anhalt) - Einwohnermeldeamt Koethen</description>
+        <url>http://www.koethen-anhalt.de/de/einwohnermeldeabteilung.html</url>
+    </building>
     <building>
         <name>Schulverwaltung</name>
         <street>Kleine Wallstrasse</street>
@@ -30,10 +30,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5174986</latitude>
-	<longitude>1197265</longitude>
-	<description>Stadt Koethen (Anhalt) - Allgemeine Verwaltung Schulen</description>
-	<url>http://www.koethen-anhalt.de/de/schulverwaltung.html</url>
-  </building>
+        <longitude>1197265</longitude>
+        <description>Stadt Koethen (Anhalt) - Allgemeine Verwaltung Schulen</description>
+        <url>http://www.koethen-anhalt.de/de/schulverwaltung.html</url>
+    </building>
     <building>
         <name>Kindertagesstaetten</name>
         <street>Kleine Wallstrasse</street>
@@ -41,10 +41,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5174986</latitude>
-	<longitude>1197265</longitude>
-	<description>Stadt Koethen (Anhalt) - Kindertagesstaetten</description>
-	<url>http://www.koethen-anhalt.de/de/402-kindertagesstaetten.html</url>
-  </building>
+        <longitude>1197265</longitude>
+        <description>Stadt Koethen (Anhalt) - Kindertagesstaetten</description>
+        <url>http://www.koethen-anhalt.de/de/402-kindertagesstaetten.html</url>
+    </building>
     <building>
         <name>Agentur fuer Arbeit</name>
         <street>Wallstrasse</street>
@@ -52,10 +52,12 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175040</latitude>
-	<longitude>1197229</longitude>
-	<description>Agentur für Arbeit Koethen</description>
-	<url>http://www.arbeitsagentur.de/nn_17796/Partner/RD-SAT/Dessau-Rosslau-Wittenberg/04209-Geschaeftsstelle-Koethen.html</url>
-  </building>
+        <longitude>1197229</longitude>
+        <description>Agentur für Arbeit Koethen</description>
+        <url>
+            http://www.arbeitsagentur.de/nn_17796/Partner/RD-SAT/Dessau-Rosslau-Wittenberg/04209-Geschaeftsstelle-Koethen.html
+        </url>
+    </building>
     <building>
         <name>Feuerwehr</name>
         <street>Markstrasse</street>
@@ -63,7 +65,7 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175169</latitude>
-	<longitude>1197424</longitude>
-	<description>Feuerwehr Koethen</description>
-	</building>
+        <longitude>1197424</longitude>
+        <description>Feuerwehr Koethen</description>
+    </building>
 </buildings>

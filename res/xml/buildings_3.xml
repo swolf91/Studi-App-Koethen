@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>3</categoryID>
-    
-<building>
+
+    <building>
         <name>Krankenhaus</name>
         <street>Hallesche Strasse</street>
         <houseNumber>29</houseNumber>
@@ -10,8 +10,8 @@
         <city>Koethen</city>
         <latitude>5174680</latitude>
         <longitude>1197113</longitude>
-      	<description>Krankenhaus Koethen</description>
-      	<url>http://www.rhoen-klinikum-ag.com/rka/cms/koe_2/deu/index.html</url>
-  </building>
-   
+        <description>Krankenhaus Koethen</description>
+        <url>http://www.rhoen-klinikum-ag.com/rka/cms/koe_2/deu/index.html</url>
+    </building>
+
 </buildings>
