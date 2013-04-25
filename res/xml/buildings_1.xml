@@ -20,21 +20,21 @@
         	<name>Taxi City Fahrdienst</name>
         	<description>Taxi City Fahrdienst Koethen</description>
 		
-        	<phoneNumber>034965116192</houseNumber>
+        	<phoneNumber>034965116192</phoneNumber>
 
   	</building>
     	<building>
         	<name>Taxi Eichler</name>
         	<description>Eichler Frank Taxi und Transporte</description>
 				
-        	<phoneNumber>0349640460</houseNumber>
+        	<phoneNumber>0349640460</phoneNumber>
 
   	</building>
     	<building>
         	<name>Taxi EUROW</name>
         	<description>EUROW Taxen und Transport GmbH</description>
 				
-        	<phoneNumber>03496557788</houseNumber>
+        	<phoneNumber>03496557788</phoneNumber>
 
   	</building>
 </buildings>
