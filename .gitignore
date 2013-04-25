@@ -1,1 +1,13 @@
 /bin/
+
+# IntelliJ IDEA
+.idea/*
+!.idea/codeStyleSettings.xml
+*.iml
+
+# Eclipse
+.settings/
+.project/
+.classpath
+.externalToolBuilders/
+maven-eclipse.xml
