@@ -1,10 +1,13 @@
-package de.hsanhalt.inf.studiappkoethen.utils;
+package de.hsanhalt.inf.studiappkoethen.util.xml.parsing;
 
+import java.io.IOException;
 import java.io.InputStream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import android.content.res.AssetManager;
 import android.util.Log;
+import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -12,6 +15,7 @@ import org.w3c.dom.NodeList;
 public class XmlParser
 {
     private static XmlParser INSTANCE;
+    private AssetManager assets;
 
     public static XmlParser getInstance()
     {
@@ -62,14 +66,45 @@ public class XmlParser
         }
     }
 
+    public void setAssets(AssetManager assets)
+    {
+        this.assets = assets;
+    }
+
+    public void install()
+    {
+        try
+        {
+            this.parse(this.assets.open("xml/categories.xml"));
+        }
+        catch (IOException e)
+        {
+            Log.e("FileException", "Can't parse file categories.xml from assets", e);
+        }
+
+//        try
+//        {
+//            for(String file : this.assets.list("xml"))
+//            {
+//                Log.d("Filename: ", file);
+//            }
+//        }
+//        catch (Exception e)
+//        {
+//            Log.e("AssetsError", "Can't list asset files", e);
+//        }
+
+//        TODO alle xml-Dateien laden.
+    }
+
     private enum XMLClasses
     {
         CATEGORIES("categories", BuildingCategoryManager.getInstance());
 
         private String tagName;
-        private IXmlParser instance;
+        private IXmlParsing instance;
 
-        XMLClasses(String tagName, IXmlParser instance)
+        XMLClasses(String tagName, IXmlParsing instance)
         {
             this.tagName = tagName;
             this.instance = instance;

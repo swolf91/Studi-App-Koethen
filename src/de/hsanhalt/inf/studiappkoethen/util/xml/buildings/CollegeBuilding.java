@@ -1,4 +1,4 @@
-package de.hsanhalt.inf.studiappkoethen.utils;
+package de.hsanhalt.inf.studiappkoethen.util.xml.buildings;
 
 import java.net.URL;
 

@@ -1,15 +1,14 @@
-package de.hsanhalt.inf.studiappkoethen.utils;
+package de.hsanhalt.inf.studiappkoethen.util.xml.buildings;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import android.util.Log;
+import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.IXmlParsing;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class BuildingCategoryManager implements IXmlParser
+public class BuildingCategoryManager implements IXmlParsing
 {
     private static BuildingCategoryManager INSTANCE;
     private Map<Byte, BuildingCategory> categoryMap;
@@ -40,6 +39,7 @@ public class BuildingCategoryManager implements IXmlParser
 
     public BuildingCategory getCategory(String name)
     {
+//        TODO Diese Methode umsetzen (Levenstin Distance?)
         throw new UnsupportedOperationException("not implemented yet");
     }
 
