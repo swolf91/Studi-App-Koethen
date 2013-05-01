@@ -2,21 +2,33 @@ package de.hsanhalt.inf.studiappkoethen.util.xml.parsing;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import android.content.res.AssetManager;
 import android.util.Log;
+import de.hsanhalt.inf.studiappkoethen.util.StringUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+/**
+ *  Diese Klasse uebernimmt das Hauptparsen der XML's und ordnet die Nodes den richtigen
+ *  Klassen zu, die IXMLParsing implementiert haben muessen und in der XMLClasses registriert sind.
+ */
 public class XmlParser
 {
     private static XmlParser INSTANCE;
     private AssetManager assets;
 
+    /**
+     * Gibt eine Instanz dieser Klasse zurueck
+     * @return
+     */
     public static XmlParser getInstance()
     {
         if(INSTANCE == null)
@@ -26,6 +38,10 @@ public class XmlParser
         return INSTANCE;
     }
 
+    /**
+     * prueft ob diese Klasse bereits erstellt wurde.
+     * @return
+     */
     public static boolean isCreated()
     {
         return INSTANCE != null;
@@ -34,6 +50,10 @@ public class XmlParser
     private XmlParser()
     {}
 
+    /**
+     * parst den InputStream
+     * @param stream
+     */
     public void parse(InputStream stream)
     {
         try
@@ -66,53 +86,86 @@ public class XmlParser
         }
     }
 
+    /**
+     * Setzt den AssetManager
+     * @param assets
+     */
     public void setAssets(AssetManager assets)
     {
         this.assets = assets;
     }
 
+    /**
+     * "Installiert" die xml-Dateien aus dem xml Ordner in den Assets.
+     */
     public void install()
     {
-        try
-        {
-            this.parse(this.assets.open("xml/categories.xml"));
-        }
-        catch (IOException e)
-        {
-            Log.e("FileException", "Can't parse file categories.xml from assets", e);
-        }
+        String[] fileList;
+        List<String> folder = new ArrayList<String>(1);
+        folder.add("xml");
 
-//        try
-//        {
-//            for(String file : this.assets.list("xml"))
-//            {
-//                Log.d("Filename: ", file);
-//            }
-//        }
-//        catch (Exception e)
-//        {
-//            Log.e("AssetsError", "Can't list asset files", e);
-//        }
-
-//        TODO alle xml-Dateien laden.
+        while(!folder.isEmpty())
+        {
+            Iterator<String> iter = folder.iterator();
+            while(iter.hasNext())
+            {
+                String currentFolder = iter.next();
+                iter.remove();
+                try
+                {
+                    fileList = this.assets.list(currentFolder);
+                }
+                catch (IOException e)
+                {
+                    Log.e("XmlLoadError", "Can't list all files in " + currentFolder + " assets folder.");
+                    return;
+                }
+                for(String file : fileList)
+                {
+                    file = currentFolder + "/" + file;
+                    String extension = StringUtils.getFileExtension(file);
+                    if(extension.equals(""))
+                    {
+                        folder.add(file);
+                    }
+                    else if(extension.equals("xml"))
+                    {
+                        try
+                        {
+                            Log.d("XmlLoad", "Loads xml-file: " + file);
+                            this.parse(this.assets.open(file));
+                        }
+                        catch (IOException e)
+                        {
+                            Log.e("XmlLoadError", "Can't load the file: " + file);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
     }
 
+    /**
+     * Aufzaehlung in der alle Klassen registriert werden muessen, die was aus der XML laden wollen
+     */
     private enum XMLClasses
     {
-        CATEGORIES("categories", BuildingCategoryManager.getInstance());
+        CATEGORIES(BuildingCategoryManager.getInstance());
 
-        private String tagName;
         private IXmlParsing instance;
 
-        XMLClasses(String tagName, IXmlParsing instance)
+        /**
+         * @param instance - Instanz der Klasse, die IXmlParsing implementiert.
+         */
+        XMLClasses(IXmlParsing instance)
         {
-            this.tagName = tagName;
             this.instance = instance;
         }
 
         public boolean matches(String tagName)
         {
-            return this.tagName.equals(tagName);
+            return this.instance.getStartTag().equals(tagName);
         }
 
         public void addNode(Node node)

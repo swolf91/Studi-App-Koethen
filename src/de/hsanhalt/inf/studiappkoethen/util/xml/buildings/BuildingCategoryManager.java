@@ -46,8 +46,10 @@ public class BuildingCategoryManager implements IXmlParsing
     @Override
     public void addNode(Node node)
     {
-        Log.d("Node noticed", "will add node soon");
-
+        if(!this.getStartTag().equals(node.getNodeName()))
+        {
+            return;
+        }
         if(node.hasChildNodes())
         {
             NodeList nodes = node.getChildNodes();
@@ -60,6 +62,12 @@ public class BuildingCategoryManager implements IXmlParsing
                 }
             }
         }
+    }
+
+    @Override
+    public String getStartTag()
+    {
+        return "categories";
     }
 
     private boolean addElement(Node node)
