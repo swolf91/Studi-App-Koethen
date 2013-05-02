@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>3</categoryID>
-    
-<building>
+
+    <building>
         <name>Krankenhaus</name>
         <street>Hallesche Strasse</street>
         <houseNumber>29</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5174680</latitude>
-    <longitude>1197113</longitude>
-	<description>Krankenhaus Koethen</description>
-	<url>http://www.rhoen-klinikum-ag.com/rka/cms/koe_2/deu/index.html</url>
-  </building>
+        <longitude>1197113</longitude>
+        <description>Krankenhaus Koethen</description>
+        <url>http://www.rhoen-klinikum-ag.com/rka/cms/koe_2/deu/index.html</url>
+    </building>
     <building>
         <name>Feuerwehr</name>
         <street>Bärteichpromenade</street>
@@ -20,9 +20,9 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517493400</latitude>
-	<longitude>119726500</longitude>
-	<description>Feuerwehr Koethen</description>
-	</building>
+        <longitude>119726500</longitude>
+        <description>Feuerwehr Koethen</description>
+    </building>
     <building>
         <name>Polizei</name>
         <street>Friedrich-Ebert-Strasse</street>
@@ -30,9 +30,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517543990</latitude>
-	<longitude>119931190</longitude>
-	<description>Polizeirevier Anhalt-Bitterfeld, Sitz Koethen </description>
-	</building>
+        <longitude>119931190</longitude>
+        <description>Polizeirevier Anhalt-Bitterfeld, Sitz Koethen</description>
+    </building>
 
-   
 </buildings>

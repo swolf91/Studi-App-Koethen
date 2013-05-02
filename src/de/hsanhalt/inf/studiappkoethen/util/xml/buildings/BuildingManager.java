@@ -167,7 +167,7 @@ public class BuildingManager implements IXmlParsing
                 NodeList collageList = subNode.getChildNodes();
                 for(int j = 0; j < collageList.getLength(); j++)
                 {
-                    Node collageNode = collageList.item(i);
+                    Node collageNode = collageList.item(j);
                     String collageNodeName = collageNode.getNodeName();
                     if(collageNodeName.equals("numberOfFaculty"))
                     {

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <categoryID>0</categoryID>
+
+    <building>
+        <name>Hochschulbibliothek</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>01</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>5175445</latitude>
+        <longitude>1196982</longitude>
+        <description>Hochschulbibliothek HS Anhalt in Koethen</description>
+        <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
+    </building>
+    <building>
+        <name>Dekanat Fachbereich 6</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>01</numberOfBuilding>
+            <numberOfFaculty>6</numberOfFaculty>
+        </collegeBuilding>
+        <latitude>5175445</latitude>
+        <longitude>1196982</longitude>
+        <description>Lehrgebaeude, Fachbereich 6 - Elektrotechnik, Maschinenbau und Wirtschaftsingeneuerwesen
+        </description>
+        <url>http://www.emw.hs-anhalt.de/www/</url>
+    </building>
+    <building>
+        <name>Dekanat Fachbereich 7</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>02</numberOfBuilding>
+            <numberOfFaculty>7</numberOfFaculty>
+        </collegeBuilding>
+        <latitude>5175445</latitude>
+        <longitude>1196982</longitude>
+        <description>Lehrgebaeude, Fachbereich 7 - Angwandte Biowissenschaften und Prozesstechnik</description>
+        <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
+    </building>
+    <building>
+        <name>Lehr- und Verwaltungsgebaeude</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>03</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>5175445</latitude>
+        <longitude>1196982</longitude>
+        <description>Lehr- u. Verwaltungsgebaeude, Praesidium, Leiter Verwaltung, ASA, AAA, FTTZ, ZIK, Poststelle,
+            zentr. Wache
+        </description>
+        <url>http://www.hs-anhalt.de/</url>
+    </building>
+    <building>
+        <name>Werkstattgebaeude</name>
+        <street>Fasanerieallee</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>07</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>5175445</latitude>
+        <longitude>1196982</longitude>
+        <description>Werkstattgebaeude</description>
+        <url>http://www.hs-anhalt.de/</url>
+    </building>
+    <building>
+        <name>Studentenrat</name>
+        <street>Fasanerieallee</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>08</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>5175445</latitude>
+        <longitude>1196982</longitude>
+        <description>Studentenrat und Fachschaft</description>
+        <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
+    </building>
+    <building>
+        <name>Elektrotechniklabor</name>
+        <street>Joachimallee</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>13</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>5175445</latitude>
+        <longitude>1196982</longitude>
+        <description>Elektrotechniklabor</description>
+        <url>http://www.hs-anhalt.de/</url>
+    </building>
+    <building>
+        <name>Sprachenzentrum</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06354</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>23</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>51746114</latitude>
+        <longitude>1198433</longitude>
+        <description>Sprachenzentrum Koethen</description>
+        <url>http://www.inf.hs-anhalt.de/sprachenzentrum/sprachenzentrum/</url>
+    </building>
+    <building>
+        <name>Dekanat Fachbereich 5</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06354</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>23</numberOfBuilding>
+            <numberOfFaculty>5</numberOfFaculty>
+        </collegeBuilding>
+        <latitude>51746114</latitude>
+        <longitude>1198433</longitude>
+        <description>Fachbereich 5 - Informatik und Sprachen</description>
+        <url>http://www.inf.hs-anhalt.de/</url>
+    </building>
+    <building>
+        <name>Studienkolleg</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06354</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>23</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>51746114</latitude>
+        <longitude>1198433</longitude>
+        <description>Studienkolleg Koethen</description>
+        <url>http://www.hs-anhalt.de/international/landesstudienkolleg.html</url>
+    </building>
+    <building>
+        <name>Technoligiezentrum</name>
+        <street>Fasanerieallee</street>
+        <houseNumber>??</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding></collegeBuilding>
+        <latitude>51746114</latitude>
+        <longitude>1198433</longitude>
+        <description>Technologiezentrum</description>
+        <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
+    </building>
+    <building>
+        <name>Sporthalle</name>
+        <street>Antoinettenstrasse</street>
+        <houseNumber>34</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding></collegeBuilding>
+        <latitude>5175408</latitude>
+        <longitude>1196453</longitude>
+        <description>Hochschulsport</description>
+        <url>http://193.25.32.158/hochschulsport/index.php/koethen/aktuelles</url>
+    </building>
+    <building>
+        <name>Mensa Hauptkampus</name>
+        <street>Fasanerieallee</street>
+        <houseNumber>1a</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+          <!--  <numberOfBuilding>M</numberOfBuilding> TODO nach Grund fragen! -->
+        </collegeBuilding>
+        <latitude>5175399</latitude>
+        <longitude>1196640</longitude>
+        <description>Mensa am Hauptkampus</description>
+        <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
+    </building>
+    <building>
+        <name>Mensa Lohmannstrasse</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06354</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>23</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>51746114</latitude>
+        <longitude>1198433</longitude>
+        <description>Mensa in der Lohmannstrasse</description>
+        <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-lohmannstrasse/</url>
+    </building>
+
+</buildings>

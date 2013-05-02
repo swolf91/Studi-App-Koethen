@@ -8,10 +8,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517516900</latitude>
-  <longitude>119742400</longitude>
-	<description>Stadt Koethen (Anhalt) - Stadtverwaltung Koethen</description>
-	<url>http://www.koethen-anhalt.de/de/stadtverwaltung.html</url>
-  </building>
+        <longitude>119742400</longitude>
+        <description>Stadt Koethen (Anhalt) - Stadtverwaltung Koethen</description>
+        <url>http://www.koethen-anhalt.de/de/stadtverwaltung.html</url>
+    </building>
     <building>
         <name>Einwohnermeldeamt</name>
         <street>Wallstrasse</street>
@@ -19,10 +19,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517495800</latitude>
-	<longitude>119727600</longitude>
-	<description>Stadt Koethen (Anhalt) - Einwohnermeldeamt Koethen</description>
-	<url>http://www.koethen-anhalt.de/de/einwohnermeldeabteilung.html</url>
-  </building>
+        <longitude>119727600</longitude>
+        <description>Stadt Koethen (Anhalt) - Einwohnermeldeamt Koethen</description>
+        <url>http://www.koethen-anhalt.de/de/einwohnermeldeabteilung.html</url>
+    </building>
     <building>
         <name>Schulverwaltung</name>
         <street>Kleine Wallstrasse</street>
@@ -30,10 +30,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517498600</latitude>
-	<longitude>119726500</longitude>
-	<description>Stadt Koethen (Anhalt) - Allgemeine Verwaltung Schulen</description>
-	<url>http://www.koethen-anhalt.de/de/schulverwaltung.html</url>
-  </building>
+        <longitude>119726500</longitude>
+        <description>Stadt Koethen (Anhalt) - Allgemeine Verwaltung Schulen</description>
+        <url>http://www.koethen-anhalt.de/de/schulverwaltung.html</url>
+    </building>
     <building>
         <name>Kindertagesstaetten</name>
         <street>Kleine Wallstrasse</street>
@@ -41,10 +41,10 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517498600</latitude>
-	<longitude>119726500</longitude>
-	<description>Stadt Koethen (Anhalt) - Kindertagesstaetten</description>
-	<url>http://www.koethen-anhalt.de/de/402-kindertagesstaetten.html</url>
-  </building>
+        <longitude>119726500</longitude>
+        <description>Stadt Koethen (Anhalt) - Kindertagesstaetten</description>
+        <url>http://www.koethen-anhalt.de/de/402-kindertagesstaetten.html</url>
+    </building>
     <building>
         <name>Agentur fuer Arbeit</name>
         <street>Wallstrasse</street>
@@ -52,42 +52,44 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517504000</latitude>
-	<longitude>119722900</longitude>
-	<description>Agentur für Arbeit Koethen</description>
-	<url>http://www.arbeitsagentur.de/nn_17796/Partner/RD-SAT/Dessau-Rosslau-Wittenberg/04209-Geschaeftsstelle-Koethen.html</url>
-  </building>
+        <longitude>119722900</longitude>
+        <description>Agentur für Arbeit Koethen</description>
+        <url>
+            http://www.arbeitsagentur.de/nn_17796/Partner/RD-SAT/Dessau-Rosslau-Wittenberg/04209-Geschaeftsstelle-Koethen.html
+        </url>
+    </building>
 
-<building>
+    <building>
         <name>BafoeG</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175399</latitude>
-	<longitude>1197113</longitude>
-	<description>Amt fuer Ausbildungsfoerderung</description>
-	<url>http://www.studentenwerk-halle.de/bafoeg/bafoeg/oeffnungszeiten-und-beratungsorte/</url>
-  </building>
-<building>
+        <longitude>1197113</longitude>
+        <description>Amt fuer Ausbildungsfoerderung</description>
+        <url>http://www.studentenwerk-halle.de/bafoeg/bafoeg/oeffnungszeiten-und-beratungsorte/</url>
+    </building>
+    <building>
         <name>Wohnplatzvermittlung</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175399</latitude>
-	<longitude>1197113</longitude>
-	<description>Wohnplatzvermittlung in Koethen</description>
-	<url>http://www.studentenwerk-halle.de/wohnen/beratungszeiten-und-orte/koethen-dessau-bernburg/</url>
-  </building>
-<building>
+        <longitude>1197113</longitude>
+        <description>Wohnplatzvermittlung in Koethen</description>
+        <url>http://www.studentenwerk-halle.de/wohnen/beratungszeiten-und-orte/koethen-dessau-bernburg/</url>
+    </building>
+    <building>
         <name>Studentenwerk</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>5175399</latitude>
-	<longitude>1197113</longitude>
-	<description>Studentenwerk - Aussenstelle Koethen</description>
-	<url>http://www.studentenwerk-halle.de/startseite.html</url>
-  </building>
+        <longitude>1197113</longitude>
+        <description>Studentenwerk - Aussenstelle Koethen</description>
+        <url>http://www.studentenwerk-halle.de/startseite.html</url>
+    </building>
 </buildings>

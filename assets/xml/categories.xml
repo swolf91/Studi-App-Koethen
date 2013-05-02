@@ -14,22 +14,10 @@
     </category>
     <category>
         <id>3</id>
-        <name>Krankenhaus</name>
+        <name>Sondergebaeude</name>
     </category>
     <category>
         <id>4</id>
-        <name>Studentenwesen</name>
-    </category>
-    <category>
-        <id>5</id>
-        <name>Bar</name>
-    </category>
-    <category>
-        <id>6</id>
-        <name>Essen</name>
-    </category>
-    <category>
-        <id>7</id>
-        <name>Club</name>
+        <name>Freizeit</name>
     </category>
 </categories>
