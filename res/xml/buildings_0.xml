@@ -8,8 +8,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>01</numberOfBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517544530</latitude>
+        <longitude>119698290</longitude>
         <description>Hochschulbibliothek HS Anhalt in Koethen</description>
         <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
     </building>
@@ -22,8 +22,8 @@
         <city>Koethen</city>
         <numberOfBuilding>01</numberOfBuilding>
         <numberOfFaculty>6</numberOfFaculty>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517544530</latitude>
+        <longitude>119698290</longitude>
         <description>Lehrgebaeude, Fachbereich 6 - Elektrotechnik, Maschinenbau und Wirtschaftsingeneuerwesen
         </description>
         <url>http://www.emw.hs-anhalt.de/www/</url>
@@ -37,8 +37,8 @@
         <city>Koethen</city>
         <numberOfBuilding>02</numberOfBuilding>
         <numberOfFaculty>7</numberOfFaculty>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517548680</latitude>
+        <longitude>119682680</longitude>
         <description>Lehrgebaeude, Fachbereich 7 - Angwandte Biowissenschaften und Prozesstechnik</description>
         <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
     </building>
@@ -50,8 +50,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>03</numberOfBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517549910</latitude>
+        <longitude>119674200</longitude>
         <description>Lehr- u. Verwaltungsgebaeude, Praesidium, Leiter Verwaltung, ASA, AAA, FTTZ, ZIK, Poststelle,
             zentr. Wache
         </description>
@@ -65,8 +65,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>07</numberOfBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517544500</latitude>
+        <longitude>119698200</longitude>
         <description>Werkstattgebaeude</description>
         <url>http://www.hs-anhalt.de/</url>
     </building>
@@ -78,8 +78,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>08</numberOfBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517544500</latitude>
+        <longitude>119698200</longitude>
         <description>Studentenrat und Fachschaft</description>
         <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
     </building>
@@ -91,8 +91,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>13</numberOfBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517544500</latitude>
+        <longitude>119698200</longitude>
         <description>Elektrotechniklabor</description>
         <url>http://www.hs-anhalt.de/</url>
     </building>
@@ -104,8 +104,8 @@
         <postalCode>06354</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>23</numberOfBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Sprachenzentrum Koethen</description>
         <url>http://www.inf.hs-anhalt.de/sprachenzentrum/sprachenzentrum/</url>
     </building>
@@ -118,8 +118,8 @@
         <city>Koethen</city>
         <numberOfBuilding>23</numberOfBuilding>
         <numberOfFaculty>5</numberOfFaculty>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Fachbereich 5 - Informatik und Sprachen</description>
         <url>http://www.inf.hs-anhalt.de/</url>
     </building>
@@ -131,8 +131,8 @@
         <postalCode>06354</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>23</numberOfBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Studienkolleg Koethen</description>
         <url>http://www.hs-anhalt.de/international/landesstudienkolleg.html</url>
     </building>
@@ -143,8 +143,8 @@
         <houseNumber>??</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461140</latitude>
+        <longitude>119843300</longitude>
         <description>Technologiezentrum</description>
         <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
     </building>
@@ -155,8 +155,8 @@
         <houseNumber>34</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5175408</latitude>
-        <longitude>1196453</longitude>
+        <latitude>517540844</latitude>
+        <longitude>119645339</longitude>
         <description>Hochschulsport</description>
         <url>http://193.25.32.158/hochschulsport/index.php/koethen/aktuelles</url>
     </building>
@@ -168,8 +168,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>M</numberOfBuilding>
-        <latitude>5175399</latitude>
-        <longitude>1196640</longitude>
+        <latitude>517539986</latitude>
+        <longitude>119664018</longitude>
         <description>Mensa am Hauptkampus</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
     </building>
@@ -181,8 +181,8 @@
         <postalCode>06354</postalCode>
         <city>Koethen</city>
         <numberOfBuilding>23</numberOfBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Mensa in der Lohmannstrasse</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-lohmannstrasse/</url>
     </building>
