@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<categories>
+      <category>
+        	<id>0</id>
+        	<name>Hochschule</name>
+    	</category>
+    	<category>
+        	<id>1</id>
+        	<name>Verkehr</name>
+    	</category>
+    	<category>
+        	<id>2</id>
+        	<name>Aemter</name>
+    	</category>
+	<category>
+        	<id>3</id>
+        	<name>Sondergebaeude</name>
+    	</category>
+	<category>
+        	<id>4</id>
+        	<name>Freizeit</name>
+    	</category>
+</categories>
