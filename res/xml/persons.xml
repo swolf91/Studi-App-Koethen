@@ -20,13 +20,13 @@
         <description></description>
 
     </common>
-    <university_department>
+    <universityDepartment>
 
         <profession></profession>
         <module></module>
         <responsibility></responsibility>
 
-    </university_department>
+    </universityDepartment>
     <contact>
 
         <talk-time></talk-time>
