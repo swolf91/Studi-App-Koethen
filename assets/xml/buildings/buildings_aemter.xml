@@ -7,8 +7,8 @@
         <houseNumber>1-3</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5175169</latitude>
-        <longitude>1197424</longitude>
+        <latitude>517516900</latitude>
+    <longitude>119742400</longitude>
         <description>Stadt Koethen (Anhalt) - Stadtverwaltung Koethen</description>
         <url>http://www.koethen-anhalt.de/de/stadtverwaltung.html</url>
     </building>
@@ -18,8 +18,8 @@
         <houseNumber>1-5</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5174958</latitude>
-        <longitude>1197276</longitude>
+        <latitude>517495800</latitude>
+    <longitude>119727600</longitude>
         <description>Stadt Koethen (Anhalt) - Einwohnermeldeamt Koethen</description>
         <url>http://www.koethen-anhalt.de/de/einwohnermeldeabteilung.html</url>
     </building>
@@ -29,8 +29,8 @@
         <houseNumber>1-5</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5174986</latitude>
-        <longitude>1197265</longitude>
+        <latitude>517498600</latitude>
+    <longitude>119726500</longitude>e>
         <description>Stadt Koethen (Anhalt) - Allgemeine Verwaltung Schulen</description>
         <url>http://www.koethen-anhalt.de/de/schulverwaltung.html</url>
     </building>
@@ -40,8 +40,8 @@
         <houseNumber>1-5</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5174986</latitude>
-        <longitude>1197265</longitude>
+       <latitude>517498600</latitude>
+    <longitude>119726500</longitude>
         <description>Stadt Koethen (Anhalt) - Kindertagesstaetten</description>
         <url>http://www.koethen-anhalt.de/de/402-kindertagesstaetten.html</url>
     </building>
@@ -51,8 +51,8 @@
         <houseNumber>72-73</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5175040</latitude>
-        <longitude>1197229</longitude>
+        <latitude>517504000</latitude>
+    <longitude>119722900</longitude>
         <description>Agentur für Arbeit Koethen</description>
         <url>
             http://www.arbeitsagentur.de/nn_17796/Partner/RD-SAT/Dessau-Rosslau-Wittenberg/04209-Geschaeftsstelle-Koethen.html
@@ -64,8 +64,8 @@
         <houseNumber>1-3</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5175169</latitude>
-        <longitude>1197424</longitude>
+       <latitude>517493400</latitude>
+    <longitude>119726500</longitude>>
         <description>Feuerwehr Koethen</description>
     </building>
 </buildings>
