@@ -32,36 +32,26 @@ public class Building
 	 * Beschreibung des Gebaeudes
 	 */
 	private final String description;
+    /**
+     * Telefonnummer des Gebaeudes
+     */
+    private final String phoneNumber;
 	/**
 	 * Webseite des Gebaeudes
 	 */
-	private URL url;
+	private final URL url;
 	/**
 	 * Der Breitengrad in dem sich das Gebaeude befindet 
 	 * Festkommadarstellung (immer 7 Stellen nach dem Komma) in int umwandeln um Rundungsfehler zu vermeiden!
 	 * Wert von -90 bis 90 mit 7 Kommastellen, also 90 = 900000000
 	 */
-	private final int latitude;
+	private final Integer latitude;
 	/**
 	 * Der Laengengrad in dem sich das Gebaeude befindet1
 	 * Festkommadarstellung (immer 7 Stellen nach dem Komma) in int umwandeln um Rundungsfehler zu vermeiden!
 	 * Werte zwischen -180 und 180
 	 */
-	private final int longitude;
-
-	/**
-	 * Dieser Konstruktor fuellt alle Werte, laest dabei aber die URL auf nichts referenzieren!
-	 * @param name - Name des Gebaeudes
-	 * @param street - Strasse des Gebaeudes
-	 * @param houseNumber - Hausnummer
-	 * @param postalCode - Postleitzahl
-	 * @param city - Ort
-	 * @param description - Beschreibung
-	 */
-	public Building(String name, BuildingCategory buildingCategory, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description)
-	{
-		this(name, buildingCategory, street, houseNumber, postalCode, city, latitude, longitude, description, (URL)null);
-	}
+	private final Integer longitude;
 	
 	/**
 	 * Dieser Konstruktor fuellt alle Werte, und matched den String zu einem URL Objekt, wenn es sich dabei um eine URL handeln sollte.
@@ -73,43 +63,37 @@ public class Building
 	 * @param description - Beschreibung
 	 * @param url - URL des Gebaeudes
 	 */
-	public Building(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, int latitude, int longitude, String description, String url)
+	public Building(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, String url)
 	{
-		this(name, buildingCategory, street, houseNumber, postalCode, city, latitude, longitude, description, (URL)null);
-		URL matchedURL;
-		try
-		{
-			matchedURL = new URL(url);
-		}
-		catch(Exception e)
-		{
-			matchedURL = null;
-		}
-		this.url = matchedURL;
-	}
+        this.name = name;
+        this.buildingCategory = buildingCategory;
+        this.street = street;
+        this.houseNumber = houseNumber;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.description = description;
+        this.phoneNumber = phoneNumber;
 
-	/**
-	 * Dieser Konstruktor fuellt alle Werte des Gebaeudes.
-	 * @param name - Name des Gebaeudes
-	 * @param street - Strasse des Gebaeudes
-	 * @param houseNumber - Hausnummer
-	 * @param postalCode - Postleitzahl
-	 * @param city - Ort
-	 * @param description - Beschreibung
-	 * @param url - URL des Gebaeudes
-	 */
-	public Building(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, int latitude, int longitude, String description, URL url)
-	{
-		this.name = name;
-		this.buildingCategory = buildingCategory;
-		this.street = street;
-		this.houseNumber = houseNumber;
-		this.postalCode = postalCode;
-		this.city = city;
-		this.latitude = latitude;
-		this.longitude = longitude;
-		this.description = description;
-		this.url = url;
+        if(url != null)
+        {
+            URL matchedURL;
+            try
+            {
+                matchedURL = new URL(url);
+            }
+            catch(Exception e)
+            {
+                matchedURL = null;
+            }
+            this.url = matchedURL;
+        }
+        else
+        {
+            this.url = null;
+        }
+
 	}
 	
 	/**
@@ -162,7 +146,7 @@ public class Building
 	 * (Achtung: 7 Stellen nach dem Komma sind hier vor dem Komma :D)
 	 * @return 
 	 */
-	public int getLatitude()
+	public Integer getLatitude()
 	{
 		return this.latitude;
 	}
@@ -171,7 +155,7 @@ public class Building
 	 * Gibt den Breitengrad zurueck.
 	 * @return
 	 */
-	public double getExactLatitude()
+	public Double getExactLatitude()
 	{
 		return (double) this.latitude / Math.pow(10, 7);
 	}
@@ -181,7 +165,7 @@ public class Building
 	 * (Achtung: 7 Stellen nach dem Komma sind hier vor dem Komma :D)
 	 * @return
 	 */
-	public int getLongitude()
+	public Integer getLongitude()
 	{
 		return this.longitude;
 	}
@@ -190,7 +174,7 @@ public class Building
 	 * Gibt den Laengengrad zurueck.
 	 * @return
 	 */
-	public double getExactLongitude()
+	public Double getExactLongitude()
 	{
 		return (double) this.longitude / Math.pow(10, 7);
 	}

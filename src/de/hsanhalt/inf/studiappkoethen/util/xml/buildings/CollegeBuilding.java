@@ -7,27 +7,15 @@ public class CollegeBuilding extends Building
 	/**
 	 * Die Nummer des Gebauedes, in dem sich dieses Gebaeude bzw diese Abteilung befindet.
 	 */
-	private final int numberOfBuilding;
+	private final Integer numberOfBuilding;
 	/**
 	 * Die Nummer des Fachbereiches um den es sich bei diesem Gebaeude handelt.
 	 */
-	private final int numberOfFaculty;
-	
-	public CollegeBuilding(String name, BuildingCategory buildingCategory, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty)
-	{
-		this(name, buildingCategory, street, houseNumber, postalCode, city, latitude, longitude, description, numberOfBuilding, numberOfFaculty, (URL)null);
-	}
-	
-	public CollegeBuilding(String name, BuildingCategory buildingCategory, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty, String url)
-	{
-		super(name, buildingCategory, street, houseNumber, postalCode, city, latitude, longitude,	description, url);
-		this.numberOfBuilding = numberOfBuilding;
-		this.numberOfFaculty = numberOfFaculty;
-	}
+	private final Integer numberOfFaculty;
 
-	public CollegeBuilding(String name, BuildingCategory buildingCategory, String street, String houseNumber,	String postalCode, String city, int latitude, int longitude, String description, int numberOfBuilding, int numberOfFaculty, URL url)
+	public CollegeBuilding(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, Integer numberOfBuilding, Integer numberOfFaculty, String url)
 	{
-		super(name, buildingCategory, street, houseNumber, postalCode, city, latitude, longitude,	description, url);
+		super(name, buildingCategory, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url);
 		
 		this.numberOfBuilding = numberOfBuilding;
 		this.numberOfFaculty = numberOfFaculty;
@@ -37,7 +25,7 @@ public class CollegeBuilding extends Building
 	 * Gibt die Nummer des Gebaeudes zurueck.
 	 * @return
 	 */
-	public int getNumberOfBuilding()
+	public Integer getNumberOfBuilding()
 	{
 		return this.numberOfBuilding;
 	}
@@ -46,7 +34,7 @@ public class CollegeBuilding extends Building
 	 * Gibt die Fachbereichsnummer des Gebaedes zurueck.
 	 * @return
 	 */
-	public int getNumberOfFaculty()
+	public Integer getNumberOfFaculty()
 	{
 		return this.numberOfFaculty;
 	}

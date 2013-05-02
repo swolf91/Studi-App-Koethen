@@ -12,6 +12,7 @@ import android.content.res.AssetManager;
 import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.util.StringUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -118,7 +119,7 @@ public class XmlParser
                 catch (IOException e)
                 {
                     Log.e("XmlLoadError", "Can't list all files in " + currentFolder + " assets folder.");
-                    return;
+                    continue;
                 }
                 for(String file : fileList)
                 {
@@ -138,7 +139,7 @@ public class XmlParser
                         catch (IOException e)
                         {
                             Log.e("XmlLoadError", "Can't load the file: " + file);
-                            return;
+                            continue;
                         }
                     }
                 }
@@ -151,6 +152,7 @@ public class XmlParser
      */
     private enum XMLClasses
     {
+        BUILDINGS(BuildingManager.getInstance()),
         CATEGORIES(BuildingCategoryManager.getInstance());
 
         private IXmlParsing instance;
