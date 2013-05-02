@@ -11,5 +11,10 @@
         <longitude>113454345</longitude>
         <description>Unser Schulgebaeude</description>
         <url>http://www.inf.hs-anhalt.de</url>
+        <phoneNumber>991</phoneNumber>
+        <collageBuilding>
+            <numberOfFaculty>5</numberOfFaculty>
+            <numberOfBuilding>23</numberOfBuilding>
+        </collageBuilding>
     </building>
 </buildings>
