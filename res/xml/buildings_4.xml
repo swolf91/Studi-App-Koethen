@@ -1,39 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>4</categoryID>
-
-    <building>
-        <name>BafoeG</name>
+    
+<building>
+        <name>Paradise Inn</name>
+        <street>Weintraubenstrasse</street>
+        <houseNumber>14</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>5175152</latitude>
+    <longitude>1198146</longitude>
+	<description>Paradise Inn – Cocktail und Cafe Bar</description>
+	<url>http://www.yellowmap.de/Details/t9q8cq4PAASI_ELQIuInlw==.aspx</url>
+  </building>
+<building>
+        <name>Dilan Doener</name>
+        <street>Weintraubenstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>5175177</latitude>
+	<longitude>1198146</longitude>
+	<description>Dilan Doener Koethen</description>
+	<url>http://dilan-doener.jimdo.com/</url>
+  </building>
+<building>
+        <name>Rostbratwurstgrill</name>
+        <street>Leopoldstrasse</street>
+        <houseNumber>67a</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>5175646</latitude>
+	<longitude>1198537</longitude>
+	<description>Rostbratwurstgrill Koethen</description>
+	<url>http://rostbratwurstgrill.de/details.php?ID=28</url>
+  </building>
+<building>
+        <name>Lackfabrik</name>
+        <street>Augustenstrasse</street>
+        <houseNumber>44</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>5175716</latitude>
+	<longitude>1198244</longitude>
+	<description>Lackfabrik Koethen</description>
+	<url>http://www.clubfeeling.de/clubs/lackfabrik-koethen-koethen/</url>
+  </building>
+<building>
+        <name>Mensakeller</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>517539986</latitude>
-        <longitude>119664018</longitude>
-        <description>Amt fuer Ausbildungsfoerderung</description>
-        <url>http://www.studentenwerk-halle.de/bafoeg/bafoeg/oeffnungszeiten-und-beratungsorte/</url>
-    </building>
-    <building>
-        <name>Wohnplatzvermittlung</name>
-        <street>Fasanerieallee</street>
-        <houseNumber>1a</houseNumber>
-        <postalCode>06366</postalCode>
-        <city>Koethen</city>
-        <latitude>517539986</latitude>
-        <longitude>119664018</longitude>
-        <description>Wohnplatzvermittlung in Koethen</description>
-        <url>http://www.studentenwerk-halle.de/wohnen/beratungszeiten-und-orte/koethen-dessau-bernburg/</url>
-    </building>
-    <building>
-        <name>Studentenwerk</name>
-        <street>Fasanerieallee</street>
-        <houseNumber>1a</houseNumber>
-        <postalCode>06366</postalCode>
-        <city>Koethen</city>
-        <latitude>517539986</latitude>
-        <longitude>119664018</longitude>
-        <description>Studentenwerk - Aussenstelle Koethen</description>
-        <url>http://www.studentenwerk-halle.de/startseite.html</url>
-    </building>
-
+        <latitude>5175399</latitude>
+	<longitude>1197113</longitude>
+	<description>Mensakeller - Studentendisco Koethen</description>
+	<url>http://www.mensakeller.com/</url>
+  </building>
+   
 </buildings>
