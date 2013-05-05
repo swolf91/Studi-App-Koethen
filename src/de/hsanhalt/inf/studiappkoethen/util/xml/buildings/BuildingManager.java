@@ -38,7 +38,7 @@ public class BuildingManager implements IXmlParsing
     public List<Building> getBuildingList(BuildingCategory... categories)
     {
         List<Building> buildingList;
-        if(categories == null || categories.length == 0)
+        if (categories == null || categories.length == 0)
         {
             buildingList = new ArrayList<Building>(this.buildings);
         }
@@ -47,9 +47,9 @@ public class BuildingManager implements IXmlParsing
             buildingList = new ArrayList<Building>();
             List<BuildingCategory> categoryList = Arrays.asList(categories);
 
-            for(Building building : this.buildings)
+            for (Building building : this.buildings)
             {
-                if(categoryList.contains(building.getBuildingCategory()))
+                if (categoryList.contains(building.getBuildingCategory()))
                 {
                     buildingList.add(building);
                 }
@@ -115,65 +115,65 @@ public class BuildingManager implements IXmlParsing
         Integer numberOfBuilding = null;
 
         NodeList list = node.getChildNodes();
-        for(int i = 0; i < list.getLength(); i++)
+        for (int i = 0; i < list.getLength(); i++)
         {
             Node subNode = list.item(i);
             String nodeName = subNode.getNodeName();
             String content = subNode.getTextContent();
 
-            if(nodeName.equals("name"))
+            if (nodeName.equals("name"))
             {
                 name = content;
             }
-            else if(nodeName.equals("street"))
+            else if (nodeName.equals("street"))
             {
                 street = content;
             }
-            else if(nodeName.equals("houseNumber"))
+            else if (nodeName.equals("houseNumber"))
             {
                 houseNumber = content;
             }
-            else if(nodeName.equals("postalCode"))
+            else if (nodeName.equals("postalCode"))
             {
                 postalCode = content;
             }
-            else if(nodeName.equals("city"))
+            else if (nodeName.equals("city"))
             {
                 city = content;
             }
-            else if(nodeName.equals("latitude"))
+            else if (nodeName.equals("latitude"))
             {
                 latitude = Integer.valueOf(content);
             }
-            else if(nodeName.equals("longitude"))
+            else if (nodeName.equals("longitude"))
             {
                 longitude = Integer.valueOf(content);
             }
-            else if(nodeName.equals("description"))
+            else if (nodeName.equals("description"))
             {
                 description = content;
             }
-            else if(nodeName.equals("url"))
+            else if (nodeName.equals("url"))
             {
                 url = content;
             }
-            else if(nodeName.equals("phoneNumber"))
+            else if (nodeName.equals("phoneNumber"))
             {
                 phoneNumber = content;
             }
-            else if(nodeName.equals("collegeBuilding"))
+            else if (nodeName.equals("collegeBuilding"))
             {
                 collegeBuilding = true;
                 NodeList collageList = subNode.getChildNodes();
-                for(int j = 0; j < collageList.getLength(); j++)
+                for (int j = 0; j < collageList.getLength(); j++)
                 {
                     Node collageNode = collageList.item(j);
                     String collageNodeName = collageNode.getNodeName();
-                    if(collageNodeName.equals("numberOfFaculty"))
+                    if (collageNodeName.equals("numberOfFaculty"))
                     {
                         numberOfFaculty = Integer.valueOf(collageNode.getTextContent());
                     }
-                    else if(collageNodeName.equals("numberOfBuilding"))
+                    else if (collageNodeName.equals("numberOfBuilding"))
                     {
                         numberOfBuilding = Integer.valueOf(collageNode.getTextContent());
                     }
@@ -183,39 +183,13 @@ public class BuildingManager implements IXmlParsing
 
         Building building;
 
-        if(collegeBuilding)
+        if (collegeBuilding)
         {
-            building = new CollegeBuilding(
-                name,
-                category,
-                street,
-                houseNumber,
-                postalCode,
-                city,
-                phoneNumber,
-                latitude,
-                longitude,
-                description,
-                numberOfBuilding,
-                numberOfFaculty,
-                url
-            );
+            building = new CollegeBuilding(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, numberOfBuilding, numberOfFaculty, url);
         }
         else
         {
-            building = new Building(
-                name,
-                category,
-                street,
-                houseNumber,
-                postalCode,
-                city,
-                phoneNumber,
-                latitude,
-                longitude,
-                description,
-                url
-            );
+            building = new Building(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url);
         }
         this.buildings.add(building);
 

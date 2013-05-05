@@ -18,8 +18,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
- *  Diese Klasse uebernimmt das Hauptparsen der XML's und ordnet die Nodes den richtigen
- *  Klassen zu, die IXMLParsing implementiert haben muessen und in der XMLClasses registriert sind.
+ * Diese Klasse uebernimmt das Hauptparsen der XML's und ordnet die Nodes den richtigen
+ * Klassen zu, die IXMLParsing implementiert haben muessen und in der XMLClasses registriert sind.
  */
 public class XmlParser
 {
@@ -28,11 +28,10 @@ public class XmlParser
 
     /**
      * Gibt eine Instanz dieser Klasse zurueck
-     * @return
      */
     public static XmlParser getInstance()
     {
-        if(INSTANCE == null)
+        if (INSTANCE == null)
         {
             INSTANCE = new XmlParser();
         }
@@ -41,7 +40,6 @@ public class XmlParser
 
     /**
      * prueft ob diese Klasse bereits erstellt wurde.
-     * @return
      */
     public static boolean isCreated()
     {
@@ -49,11 +47,11 @@ public class XmlParser
     }
 
     private XmlParser()
-    {}
+    {
+    }
 
     /**
      * parst den InputStream
-     * @param stream
      */
     public void parse(InputStream stream)
     {
@@ -65,14 +63,14 @@ public class XmlParser
 
             NodeList list = document.getChildNodes();
 
-            for(int i = 0; i < list.getLength(); i++)
+            for (int i = 0; i < list.getLength(); i++)
             {
                 Node node = list.item(i);
                 String name = node.getNodeName();
 
-                for(XMLClasses classes : XMLClasses.values())
+                for (XMLClasses classes : XMLClasses.values())
                 {
-                    if(classes.matches(name))
+                    if (classes.matches(name))
                     {
                         classes.addNode(node);
                         break;
@@ -89,7 +87,6 @@ public class XmlParser
 
     /**
      * Setzt den AssetManager
-     * @param assets
      */
     public void setAssets(AssetManager assets)
     {
@@ -105,10 +102,10 @@ public class XmlParser
         List<String> folder = new ArrayList<String>(1);
         folder.add("xml");
 
-        while(!folder.isEmpty())
+        while (!folder.isEmpty())
         {
             Iterator<String> iter = folder.iterator();
-            while(iter.hasNext())
+            while (iter.hasNext())
             {
                 String currentFolder = iter.next();
                 iter.remove();
@@ -121,15 +118,15 @@ public class XmlParser
                     Log.e("XmlLoadError", "Can't list all files in " + currentFolder + " assets folder.");
                     continue;
                 }
-                for(String file : fileList)
+                for (String file : fileList)
                 {
                     file = currentFolder + "/" + file;
                     String extension = StringUtils.getFileExtension(file);
-                    if(extension.equals(""))
+                    if (extension.equals(""))
                     {
                         folder.add(file);
                     }
-                    else if(extension.equals("xml"))
+                    else if (extension.equals("xml"))
                     {
                         try
                         {

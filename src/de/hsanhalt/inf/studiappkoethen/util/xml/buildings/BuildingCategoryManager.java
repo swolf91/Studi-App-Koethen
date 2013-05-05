@@ -2,6 +2,7 @@ package de.hsanhalt.inf.studiappkoethen.util.xml.buildings;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.IXmlParsing;
@@ -39,24 +40,32 @@ public class BuildingCategoryManager implements IXmlParsing
 
     public BuildingCategory getCategory(String name)
     {
-//        TODO Diese Methode umsetzen (Levenstin Distance?)
-        throw new UnsupportedOperationException("not implemented yet");
+//        TODO Diese Methode evtl umbauen (Levenstin Distance?)
+        for (Entry<Byte, BuildingCategory> entry : this.categoryMap.entrySet())
+        {
+            BuildingCategory category = entry.getValue();
+            if (category.getName().equals(name))
+            {
+                return category;
+            }
+        }
+        return null;
     }
 
     @Override
     public void addNode(Node node)
     {
-        if(!this.getStartTag().equals(node.getNodeName()))
+        if (!this.getStartTag().equals(node.getNodeName()))
         {
             return;
         }
-        if(node.hasChildNodes())
+        if (node.hasChildNodes())
         {
             NodeList nodes = node.getChildNodes();
-            for(int i = 0; i < nodes.getLength(); i++)
+            for (int i = 0; i < nodes.getLength(); i++)
             {
                 Node subNode = nodes.item(i);
-                if(subNode.getNodeName().equals("category"))
+                if (subNode.getNodeName().equals("category"))
                 {
                     this.addElement(subNode);
                 }
@@ -72,7 +81,7 @@ public class BuildingCategoryManager implements IXmlParsing
 
     private boolean addElement(Node node)
     {
-        if(!node.hasChildNodes())
+        if (!node.hasChildNodes())
         {
             return false;
         }
@@ -82,20 +91,20 @@ public class BuildingCategoryManager implements IXmlParsing
 
         NodeList nodeList = node.getChildNodes();
 
-        for(int i = 0; i < nodeList.getLength(); i++)
+        for (int i = 0; i < nodeList.getLength(); i++)
         {
             Node subNode = nodeList.item(i);
-            if(subNode.getNodeName().equals("id"))
+            if (subNode.getNodeName().equals("id"))
             {
                 id = Byte.valueOf(subNode.getTextContent());
             }
-            else if(subNode.getNodeName().equals("name"))
+            else if (subNode.getNodeName().equals("name"))
             {
                 name = subNode.getTextContent();
             }
         }
 
-        if(id == -1 || name == null)
+        if (id == -1 || name == null)
         {
             return false;
         }

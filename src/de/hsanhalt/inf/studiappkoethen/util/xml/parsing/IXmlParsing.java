@@ -9,13 +9,13 @@ public interface IXmlParsing
 {
     /**
      * Fuegt alle Inhalte innerhalb der Node in die Klasse ein.
+     *
      * @param node - node welches als Inhalt das Starttag hat.
      */
     public void addNode(Node node);
 
     /**
      * Gibt das Starttag zurueck
-     * @return
      */
     public String getStartTag();
 }
