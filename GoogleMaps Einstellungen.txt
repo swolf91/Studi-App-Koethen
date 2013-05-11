@@ -1,0 +1,39 @@
+
+Einfügen des Google-Play-Services:
+
+	Hierfür muss Google-Play-services im Android SDK-Manager installiert sein.
+
+	File -> Import...:
+	Android -> Existing Android Code Into Workspace
+	Next
+	Unter Root Directory Pfad der Bibliotheken von GooglePlay eingeben. Dieser ist normalerweise wie folgt gespeichert:
+		<User>\AppData\Local\Android\android-sdk\extras\google\google_play_services\libproject\google-play-services_lib
+	Mit Refresh sollte dieser auch in der Projektliste darunter erscheinen.
+	Wichtig: Copy project into Workspace aktivieren
+	Finish
+
+	Rechtsklick auf das Projekt(Studi-App-Koethen) -> Properties
+	Unter Android -> Library -> Add... die google-play-services_lib mit einfügen und bestätigen.
+
+
+
+Erstellung eines Debug-Keys für GoogleMaps:
+
+	Hierfür zuerst die Konsole öffnen (Startmenü -> Suchen... -> cmd).
+	Dann in der Konsole in das bin-Directory der aktuellen Java-Version wechseln ( cd C:\Program Files (x86)\Java\jre7\bin ). 
+	Den Pfad zu der Datei debug.keystore ermittel (normalerweise unter <User>\.android\debug.keystore).
+	Sollte diese nicht vorhanden sein, dann einfach ein neues Android-Projekt (und evtl. starten) mit Eclipse erstellen. Dann sollte die Datei generiert werden.
+	
+	In die Konsole folgendes eingeben:
+	
+	keytool -list -v -keystore <Pfad zu der debug.keystore>\debug.keystore
+	
+	Den Code SHA-1 kopieren (Rechtsklick -> Markieren : Text markieren und Enter zum kopieren).
+	
+	Unter https://code.google.com/apis/console/ ein Projekt erstellen. Dafür ist ein Google-Account nötig.
+	Dann unter Services den Punkt "Google Maps Android API v2" aktivieren und dann unter API Access einen neuen Android-Key generieren.
+	
+	Dazu den SHA-1-Dode einfügen und, mit einem Semikolon getrennt, den Paketnamen des Projektes (de.hsanhalt.inf.studiappkoethen) noch mit anfügen.
+	Den generierten API key in der Manifest-Datei einfügen/ersetzen.
+
+	Ist der Key nicht korrekt, kann das Programm trotzdem ohne Fehler gestartet werden. Es wird allerdings nur das Feld für die Karte mitsamt Zoom-Buttons angezeigt und keine Karte geladen.
