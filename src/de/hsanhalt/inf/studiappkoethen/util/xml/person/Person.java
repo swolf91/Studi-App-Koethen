@@ -4,6 +4,7 @@ import java.net.URL;
 
 public class Person
 {
+	private final PersonCategory personCategory;
 	/**
 	 * beinhaltet den Namen der Person
 	 */
@@ -76,5 +77,236 @@ public class Person
 	 * Url auf die Website der Person
 	 */
 	private final String url;
+	/**
+	 * Hier wird über die Parameter eingelesen.
+	 * @param name 
+	 * @param surname
+	 * @param state
+	 * @param special_field Fachbereich.
+	 * @param street
+	 * @param streetNumber
+	 * @param postalCode
+	 * @param city
+	 * @param buildings Gebäudekategorie.
+	 * @param room
+	 * @param description
+	 * @param profession Fach.
+	 * @param module Lehrbereiche.
+	 * @param responsibility Zuständigkeit.
+	 * @param talkTime 
+	 * @param phone
+	 * @param email
+	 * @param url Link zur persöhnlichen Seite.
+	 */
+	public Person(PersonCategory personCategory, String name, String surname, String state,
+			String specialField, String street, String streetNumber,
+			String postalCode, String city, String buildings,
+			String room, String description, String profession,
+			String []module, String []responsibility, String talkTime,
+			String phone, String email, String url) {
+		
+		this.personCategory = personCategory;
+		this.name = name;
+		this.surname = surname;
+		this.state = state;
+		this.specialField = specialField;
+		this.street = street;
+		this.streetNumber = streetNumber;
+		this.postalCode = postalCode;
+		this.city = city;
+		this.buildings = buildings;
+		this.room = room;
+		this.description = description;
+		this.profession = profession;
+		this.module = copy(module);
+		this.responsibility = copy(responsibility);
+		this.talkTime = talkTime;
+		this.phone = phone;
+		this.email = email;
+				
+        if (url != null)
+        {
+            URL matchedURL;
+            try
+            {
+                matchedURL = new URL(url);
+            }
+            catch (Exception e)
+            {
+                matchedURL = null;
+            }
+            this.url = matchedURL;
+        }
+        else
+        {
+            this.url = null;
+        }
+	}
+	/**
+	 * Gibt die Kategorie der Person zurück.
+	 * @return
+	 */
+	public PersonCategory getPersonCategory()
+	{
+		return personCategory;
+	}
+	/**
+	 * Gibt den Namen der Person zurück.
+	 * @return
+	 */
+	public String getName()
+	{
+		return name;
+	}
+	/**
+	 * Gibt den Vornamen  der Person  zurück.
+	 * @return
+	 */
+	public String getSurname()
+	{
+		return surname;
+	}
+	/**
+	 * Gibt den Status der Person zurück.
+	 * @return
+	 */
+	public String getState()
+	{
+		return state;
+	}
+	/**
+	 * Gibt die Fachrichtung der Person  zurück.
+	 * @return
+	 */
+	public String getSpecialField()
+	{
+		return specialField;
+	}
+	/**
+	 * Gibt die Straße der Person zurück.
+	 * @return
+	 */
+	public String getStreet()
+	{
+		return street;
+	}
+	/**
+	 * Gibt die Hausnummer der Person  zurück.
+	 * @return
+	 */
+	public String getStreetNumber()
+	{
+		return streetNumber;
+	}
+	/**
+	 * Gibt die PLZ der Person  zurück.
+	 * @return
+	 */
+	public String getPostalCode()
+	{
+		return postalCode;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getCity()
+	{
+		return city;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getBuildings()
+	{
+		return buildings;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getRoom()
+	{
+		return room;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getDescription()
+	{
+		return description;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getProfession()
+	{
+		return profession;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String[] getModul()
+	{
+		return modul;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String[] getResponsibility()
+	{
+		return responsibility;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getTalkTime()
+	{
+		return talkTime;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getPhone()
+	{
+		return phone;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getEmail()
+	{
+		return email;
+	}
+	/**
+	 * Gibt die  zurück.
+	 * @return
+	 */
+	public String getUrl()
+	{
+		return url;
+	}
+
+	/**
+	 * Legt eine 1:1 Kopie des übergebenen Arrays an.
+	 * @param dat : dat kopiert er 1:1.
+	 */
+	private String [] copy(string [] dat){
+		
+	String[] tmp=new String[dat.length];
 	
+	for(int i=0;i<dat.length;i++){
+		tmp[i]=dat[i];
+	}
+	return tmp;
+		
+	}
 }
