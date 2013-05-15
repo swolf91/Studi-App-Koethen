@@ -40,7 +40,7 @@ public class PersonCategoryManager implements IXmlParsing
 
     public PersonCategory getCategory(String name)
     {
-//        TODO Diese Methode evtl umbauen (Levenstin Distance?)
+        
         for (Entry<Byte, PersonCategory> entry : this.categoryMap.entrySet())
         {
             PersonCategory category = entry.getValue();
