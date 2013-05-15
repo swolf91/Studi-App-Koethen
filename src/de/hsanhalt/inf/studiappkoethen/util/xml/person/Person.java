@@ -46,7 +46,7 @@ public class Person
 	*/
 	private final String room;
 	/**
-	 * Personenbeschreibung
+	 * Personenbeschreibungder Person
 	 */
 	private final String description;
 	/**
@@ -62,7 +62,7 @@ public class Person
 	 */
 	private final String[] responsibility;
 	/**
-	 * Sprechzeiten
+	 * Sprechzeiten der Person
 	 */
 	private final String talkTime;
 	/**
@@ -78,11 +78,11 @@ public class Person
 	 */
 	private final String url;
 	/**
-	 * Hier wird über die Parameter eingelesen.
+	 * Hier wird über die Parameter eingelesen. (manches ist evtl überflüssig, das meiste ist selbsterklärend.)
 	 * @param name 
 	 * @param surname
 	 * @param state
-	 * @param special_field Fachbereich.
+	 * @param specialField Fachbereich.
 	 * @param street
 	 * @param streetNumber
 	 * @param postalCode
