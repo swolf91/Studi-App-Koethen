@@ -28,7 +28,7 @@ public class Person
 	/**
 	 * Straßenummer des Arbeitsortes einer Person
 	 */
-	private final String streetNumber;
+	private final String houseNumber;
 	/**
 	*	PLZ des Arbeitsortes einer Person
 	*/
@@ -86,7 +86,7 @@ public class Person
 	 * @param state
 	 * @param specialField Fachbereich.
 	 * @param street
-	 * @param streetNumber
+	 * @param houseNumber
 	 * @param postalCode
 	 * @param city
 	 * @param buildings Gebäudekategorie.
@@ -101,7 +101,7 @@ public class Person
 	 * @param url Link zur persöhnlichen Seite.
 	 */
 	public Person(PersonCategory personCategory, String name, String surname, String state,
-			String specialField, String street, String streetNumber,
+			String specialField, String street, String houseNumber,
 			String postalCode, String city, String buildings,
 			String room, String description, String profession,
 			String []module, String []responsibility, String talkTime,
@@ -113,7 +113,7 @@ public class Person
 		this.state = state;
 		this.specialField = specialField;
 		this.street = street;
-		this.streetNumber = streetNumber;
+		this.houseNumber = houseNumber;
 		this.postalCode = postalCode;
 		this.city = city;
 		this.buildings = buildings;
@@ -196,9 +196,9 @@ public class Person
 	 * Gibt die Hausnummer der Person  zurück.
 	 * @return
 	 */
-	public String getStreetNumber()
+	public String gethouseNumber()
 	{
-		return streetNumber;
+		return houseNumber;
 	}
 	/**
 	 * Gibt die PLZ der Person  zurück.
