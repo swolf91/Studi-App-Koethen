@@ -56,7 +56,7 @@ public class Person
 	/**
 	 * Module welche die Person unterhält
 	 */
-	private final String[] modul;
+	private final String[] module;
 	/**
 	 *  Für was die Person verantwortlich ist
 	 */
@@ -76,7 +76,9 @@ public class Person
 	/**
 	 * Url auf die Website der Person
 	 */
-	private final String url;
+	private final URL url;
+	
+	
 	/**
 	 * Hier wird über die Parameter eingelesen. (manches ist evtl überflüssig, das meiste ist selbsterklärend.)
 	 * @param name 
@@ -252,7 +254,7 @@ public class Person
 	 */
 	public String[] getModul()
 	{
-		return modul;
+		return module;
 	}
 	/**
 	 * Gibt die  zurück.
@@ -290,7 +292,7 @@ public class Person
 	 * Gibt die  zurück.
 	 * @return
 	 */
-	public String getUrl()
+	public URL getUrl()
 	{
 		return url;
 	}
@@ -299,7 +301,7 @@ public class Person
 	 * Legt eine 1:1 Kopie des übergebenen Arrays an.
 	 * @param dat : dat kopiert er 1:1.
 	 */
-	private String [] copy(string [] dat){
+	private String [] copy(String [] dat){
 		
 	String[] tmp=new String[dat.length];
 	
