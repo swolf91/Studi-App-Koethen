@@ -98,7 +98,6 @@ public class Person
 	 * @param talkTime 
 	 * @param phone
 	 * @param email
-	 * @param url Link zur persöhnlichen Seite.
 	 */
 	public Person(PersonCategory personCategory, String name, String surname, String state,
 			String specialField, String street, String houseNumber,
