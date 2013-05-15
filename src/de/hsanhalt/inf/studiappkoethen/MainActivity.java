@@ -1,22 +1,17 @@
 package de.hsanhalt.inf.studiappkoethen;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import de.hsanhalt.inf.studiappkoethen.activities.GoogleMapsActivity;
 import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.XmlParser;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 
-import android.app.FragmentManager;
 
 public class MainActivity extends Activity
 {
-	static final LatLng KOETHEN = new LatLng(51.750, 11.967);
-	private GoogleMap map;
-	
 	
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,16 +26,6 @@ public class MainActivity extends Activity
             xmlParser.install();
         }
         
-
-		FragmentManager myFragmentManager = getFragmentManager();
-        MapFragment myMapFragment 
-         = (MapFragment)myFragmentManager.findFragmentById(R.id.map);
-        map = myMapFragment.getMap();
-        map.setMyLocationEnabled(true);        
-        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
-	    map.moveCamera(CameraUpdateFactory.newLatLngZoom(KOETHEN, 14));
-	    map.animateCamera(CameraUpdateFactory.zoomTo(14), 2000, null);
     }
 
     @Override
@@ -49,5 +34,13 @@ public class MainActivity extends Activity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    
+    public void onButtonClick(View view) {
+    	switch(view.getId()) {
+    		case R.id.btn_googlemaps:
+    			startActivity(new Intent(this, GoogleMapsActivity.class));
+    			break;
+    	}
     }
 }
