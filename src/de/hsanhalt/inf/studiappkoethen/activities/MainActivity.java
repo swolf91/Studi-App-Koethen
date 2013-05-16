@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.activities.GoogleMapsActivity;
 import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.XmlParser;
 
 

@@ -16,7 +16,7 @@ public class PersonManager implements IXmlParsing{
 	
 	
 /**
- * Standartkonstruktor. Lädt alle in als XML-Daten vorhandenen Personen in den RAM.
+ * Standartkonstruktor. Laedt alle in als XML-Daten vorhandenen Personen in den RAM.
  */
 	private PersonManager(){
 		
@@ -44,8 +44,8 @@ public class PersonManager implements IXmlParsing{
 	
 	/**
 	 * 
-	 * Gibt für 0..n Kategorien eine Personenliste zurück.
-	 * @param categories 0..n Möglichkeiten
+	 * Gibt fuer 0..n Kategorien eine Personenliste zurueck.
+	 * @param categories 0..n Moeglichkeiten
 	 * @return Alle Personen der angeforderten Kategorieen
 	 */
 	public List<Person> getPersonList(PersonCategory... categories)
@@ -100,7 +100,7 @@ public class PersonManager implements IXmlParsing{
     }
 	/**
 	 * Elemente werden aus der XML ausgelesen und als Personenobjekte angelegt.
-	 * @param category wird benötigt um schneller auf die Person zu schließen.
+	 * @param category wird benoetigt um schneller auf die Person zu schliessen.
 	 * @param node aktueller XML Knoten
 	 */
 	private void addElement(PersonCategory category, Node node)

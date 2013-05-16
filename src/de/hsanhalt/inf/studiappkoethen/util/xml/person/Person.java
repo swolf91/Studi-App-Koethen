@@ -22,11 +22,11 @@ public class Person
 	 */
 	private final String specialField;
 	/**
-	 * Straße des Arbeitsortes einer Person
+	 * Strasse des Arbeitsortes einer Person
 	 */
 	private final String street;
 	/**
-	 * Straßenummer des Arbeitsortes einer Person
+	 * Strassenummer des Arbeitsortes einer Person
 	 */
 	private final String houseNumber;
 	/**
@@ -38,11 +38,11 @@ public class Person
 	*/
 	private final String city;
 	/**
-	* Gebäude in dem die Person ihren Arbeitsort hat
+	* Gebï¿½ude in dem die Person ihren Arbeitsort hat
 	*/
 	private final String buildings;
 	/**
-	* Büroraum der Person
+	* Bueroraum der Person
 	*/
 	private final String room;
 	/**
@@ -54,11 +54,11 @@ public class Person
 	 */
 	private final String profession;
 	/**
-	 * Module welche die Person unterhält
+	 * Module welche die Person unterhï¿½lt
 	 */
 	private final String[] module;
 	/**
-	 *  Für was die Person verantwortlich ist
+	 *  Fuer was die Person verantwortlich ist
 	 */
 	private final String[] responsibility;
 	/**
@@ -80,7 +80,7 @@ public class Person
 	
 	
 	/**
-	 * Hier wird über die Parameter eingelesen. (manches ist evtl überflüssig, das meiste ist selbsterklärend.)
+	 * Hier wird ueber die Parameter eingelesen. (manches ist evtl ueberfluessig, das meiste ist selbsterklaerend.)
 	 * @param name 
 	 * @param surname
 	 * @param state
@@ -89,12 +89,12 @@ public class Person
 	 * @param houseNumber
 	 * @param postalCode
 	 * @param city
-	 * @param buildings Gebäudekategorie.
+	 * @param buildings Gebï¿½udekategorie.
 	 * @param room
 	 * @param description
 	 * @param profession Fach.
 	 * @param module Lehrbereiche.
-	 * @param responsibility Zuständigkeit.
+	 * @param responsibility Zustï¿½ndigkeit.
 	 * @param talkTime 
 	 * @param phone
 	 * @param email
@@ -144,7 +144,7 @@ public class Person
         }
 	}
 	/**
-	 * Gibt die Kategorie der Person zurück.
+	 * Gibt die Kategorie der Person zurï¿½ck.
 	 * @return
 	 */
 	public PersonCategory getPersonCategory()
@@ -152,7 +152,7 @@ public class Person
 		return personCategory;
 	}
 	/**
-	 * Gibt den Namen der Person zurück.
+	 * Gibt den Namen der Person zurueck.
 	 * @return
 	 */
 	public String getName()
@@ -160,7 +160,7 @@ public class Person
 		return name;
 	}
 	/**
-	 * Gibt den Vornamen  der Person  zurück.
+	 * Gibt den Vornamen  der Person  zurueck.
 	 * @return
 	 */
 	public String getSurname()
@@ -168,7 +168,7 @@ public class Person
 		return surname;
 	}
 	/**
-	 * Gibt den Status der Person zurück.
+	 * Gibt den Status der Person zurueck.
 	 * @return
 	 */
 	public String getState()
@@ -176,7 +176,7 @@ public class Person
 		return state;
 	}
 	/**
-	 * Gibt die Fachrichtung der Person  zurück.
+	 * Gibt die Fachrichtung der Person  zurueck.
 	 * @return
 	 */
 	public String getSpecialField()
@@ -184,7 +184,7 @@ public class Person
 		return specialField;
 	}
 	/**
-	 * Gibt die Straße der Person zurück.
+	 * Gibt die Straï¿½e der Person zurueck.
 	 * @return
 	 */
 	public String getStreet()
@@ -192,7 +192,7 @@ public class Person
 		return street;
 	}
 	/**
-	 * Gibt die Hausnummer der Person  zurück.
+	 * Gibt die Hausnummer der Person  zurueck.
 	 * @return
 	 */
 	public String gethouseNumber()
@@ -200,7 +200,7 @@ public class Person
 		return houseNumber;
 	}
 	/**
-	 * Gibt die PLZ der Person  zurück.
+	 * Gibt die PLZ der Person  zurueck.
 	 * @return
 	 */
 	public String getPostalCode()
@@ -208,7 +208,7 @@ public class Person
 		return postalCode;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getCity()
@@ -216,7 +216,7 @@ public class Person
 		return city;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getBuildings()
@@ -224,7 +224,7 @@ public class Person
 		return buildings;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getRoom()
@@ -232,7 +232,7 @@ public class Person
 		return room;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getDescription()
@@ -240,7 +240,7 @@ public class Person
 		return description;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getProfession()
@@ -248,7 +248,7 @@ public class Person
 		return profession;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String[] getModul()
@@ -256,7 +256,7 @@ public class Person
 		return module;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String[] getResponsibility()
@@ -264,7 +264,7 @@ public class Person
 		return responsibility;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getTalkTime()
@@ -272,7 +272,7 @@ public class Person
 		return talkTime;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getPhone()
@@ -280,7 +280,7 @@ public class Person
 		return phone;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public String getEmail()
@@ -288,7 +288,7 @@ public class Person
 		return email;
 	}
 	/**
-	 * Gibt die  zurück.
+	 * Gibt die  zurueck.
 	 * @return
 	 */
 	public URL getUrl()
@@ -297,7 +297,7 @@ public class Person
 	}
 
 	/**
-	 * Legt eine 1:1 Kopie des übergebenen Arrays an.
+	 * Legt eine 1:1 Kopie des uebergebenen Arrays an.
 	 * @param dat : dat kopiert er 1:1.
 	 */
 	private String [] copy(String [] dat){
