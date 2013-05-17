@@ -9,10 +9,9 @@ import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.XmlParser;
 
 
-
 public class MainActivity extends Activity
 {
-	
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -25,7 +24,6 @@ public class MainActivity extends Activity
             xmlParser.setAssets(this.getAssets());
             xmlParser.install();
         }
-        
     }
 
     @Override
@@ -35,12 +33,14 @@ public class MainActivity extends Activity
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
-    public void onButtonClick(View view) {
-    	switch(view.getId()) {
-    		case R.id.btn_googlemaps:
-    			startActivity(new Intent(this, GoogleMapsActivity.class));
-    			break;
-    	}
+
+    public void onButtonClick(View view)
+    {
+        switch (view.getId())
+        {
+        case R.id.btn_googlemaps:
+            startActivity(new Intent(this, GoogleMapsActivity.class));
+            break;
+        }
     }
 }

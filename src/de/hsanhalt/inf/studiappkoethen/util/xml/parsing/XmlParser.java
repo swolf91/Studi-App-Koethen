@@ -13,6 +13,7 @@ import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.util.StringUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.util.xml.person.PersonCategoryManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -150,7 +151,8 @@ public class XmlParser
     private enum XMLClasses
     {
         BUILDINGS(BuildingManager.getInstance()),
-        CATEGORIES(BuildingCategoryManager.getInstance());
+        BUILDINGCATEGORIES(BuildingCategoryManager.getInstance()),
+        PERSONCATEGORIES(PersonCategoryManager.getInstance());
 
         private IXmlParsing instance;
 

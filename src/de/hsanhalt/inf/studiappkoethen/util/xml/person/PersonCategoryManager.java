@@ -40,7 +40,7 @@ public class PersonCategoryManager implements IXmlParsing
 
     public PersonCategory getCategory(String name)
     {
-        
+
         for (Entry<Byte, PersonCategory> entry : this.categoryMap.entrySet())
         {
             PersonCategory category = entry.getValue();
@@ -76,7 +76,7 @@ public class PersonCategoryManager implements IXmlParsing
     @Override
     public String getStartTag()
     {
-        return "categories";
+        return "personCategories";
     }
 
     private boolean addElement(Node node)

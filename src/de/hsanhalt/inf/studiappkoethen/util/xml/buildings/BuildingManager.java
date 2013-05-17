@@ -19,7 +19,7 @@ public class BuildingManager implements IXmlParsing
      */
     private BuildingManager()
     {
-        buildings = new ArrayList<Building>();
+        this.buildings = new ArrayList<Building>();
     }
 
     /**
