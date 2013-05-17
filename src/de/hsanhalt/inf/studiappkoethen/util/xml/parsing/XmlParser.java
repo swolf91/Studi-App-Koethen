@@ -13,7 +13,7 @@ import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.util.StringUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
-import de.hsanhalt.inf.studiappkoethen.util.xml.person.PersonCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.util.xml.persons.PersonCategoryManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
