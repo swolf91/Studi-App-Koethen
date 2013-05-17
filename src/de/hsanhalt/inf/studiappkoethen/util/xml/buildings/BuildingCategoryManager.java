@@ -76,7 +76,7 @@ public class BuildingCategoryManager implements IXmlParsing
     @Override
     public String getStartTag()
     {
-        return "categories";
+        return "buildingCategories";
     }
 
     private boolean addElement(Node node)
