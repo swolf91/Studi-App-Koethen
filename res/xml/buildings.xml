@@ -16,5 +16,7 @@
             <numberOfFaculty>5</numberOfFaculty>
             <numberOfBuilding>23</numberOfBuilding>
         </collageBuilding>
+        <registerImage>path</registerImage>
+        <registerImage>Campus/Hochschule.jpg</registerImage>
     </building>
 </buildings>
