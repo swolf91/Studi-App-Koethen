@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<categories>
+<buildingCategories>
     <category>
         <id>0</id>
         <name>Hochschule</name>
@@ -20,4 +20,4 @@
         <id>4</id>
         <name>Freizeit</name>
     </category>
-</categories>
+</buildingCategories>
