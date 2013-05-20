@@ -11,3 +11,4 @@
 .externalToolBuilders/
 maven-eclipse.xml
 /out/
+/gen/
