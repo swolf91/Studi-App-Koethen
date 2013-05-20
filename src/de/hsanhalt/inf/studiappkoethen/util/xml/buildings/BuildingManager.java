@@ -114,6 +114,8 @@ public class BuildingManager implements IXmlParsing
         Integer numberOfFaculty = null;
         Integer numberOfBuilding = null;
 
+        List<String> images = new ArrayList<String>();
+
         NodeList list = node.getChildNodes();
         for (int i = 0; i < list.getLength(); i++)
         {
@@ -179,17 +181,21 @@ public class BuildingManager implements IXmlParsing
                     }
                 }
             }
+            else if(nodeName.equals("registerImage"))
+            {
+                images.add("images/" + content);
+            }
         }
 
         Building building;
 
         if (collegeBuilding)
         {
-            building = new CollegeBuilding(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, numberOfBuilding, numberOfFaculty, url);
+            building = new CollegeBuilding(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, numberOfBuilding, numberOfFaculty, url, images.toArray(new String[images.size()]));
         }
         else
         {
-            building = new Building(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url);
+            building = new Building(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url, images.toArray(new String[images.size()]));
         }
         this.buildings.add(building);
 

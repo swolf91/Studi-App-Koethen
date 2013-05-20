@@ -52,6 +52,10 @@ public class Building
      * Werte zwischen -180 und 180
      */
     private final Integer longitude;
+    /**
+     * Dieses Array beinhaltet alle Pfade zu den Bildern
+     */
+    private final String[] images;
 
     /**
      * Dieser Konstruktor fuellt alle Werte, und matched den String zu einem URL Objekt, wenn es sich dabei um eine URL handeln sollte.
@@ -64,7 +68,7 @@ public class Building
      * @param description - Beschreibung
      * @param url         - URL des Gebaeudes
      */
-    public Building(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, String url)
+    public Building(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, String url, String[] images)
     {
         this.name = name;
         this.buildingCategory = buildingCategory;
@@ -76,6 +80,7 @@ public class Building
         this.longitude = longitude;
         this.description = description;
         this.phoneNumber = phoneNumber;
+        this.images = images;
 
         if (url != null)
         {
@@ -184,6 +189,11 @@ public class Building
     public URL getURL()
     {
         return this.url;
+    }
+
+    public String[] getImagePaths()
+    {
+        return this.images;
     }
 
     /**
