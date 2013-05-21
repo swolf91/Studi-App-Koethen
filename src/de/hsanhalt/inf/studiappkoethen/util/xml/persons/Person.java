@@ -170,7 +170,7 @@ public class Person
     }
 
     /**
-     * Gibt die Straï¿½e der Person zurueck.
+     * Gibt die Strasse der Arbeitsadresse einer Person zurueck.
      */
     public String getStreet()
     {
@@ -178,7 +178,7 @@ public class Person
     }
 
     /**
-     * Gibt die Hausnummer der Person  zurueck.
+     * Gibt die Hausnummer der Arbeitsadresse einer zurueck.
      */
     public String gethouseNumber()
     {
@@ -186,7 +186,7 @@ public class Person
     }
 
     /**
-     * Gibt die PLZ der Person  zurueck.
+     * Gibt die PLZ der Arbeitsadresse einer Person zurueck.
      */
     public String getPostalCode()
     {
@@ -194,7 +194,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die Stadt der Arbeitsadresse einer Person zurueck.
      */
     public String getCity()
     {
@@ -202,7 +202,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt den Gebaudenamen der Arbeitsadresse einer Person zurueck.
      */
     public String getBuilding()
     {
@@ -210,7 +210,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die Raumnummer/Raumbezeichnung der Arbeitsadresse einer Person zurueck.
      */
     public String getRoom()
     {
@@ -218,7 +218,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt eine Beschreibung zur Person zurueck.
      */
     public String getDescription()
     {
@@ -226,7 +226,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die Fachrichtung einer Person zurueck.
      */
     public String getProfession()
     {
@@ -234,7 +234,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die Module einer Person zurueck.
      */
     public String[] getModuls()
     {
@@ -242,7 +242,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt den Zuständikeitsbereich einer Person zurueck.
      */
     public String[] getResponsibilities()
     {
@@ -250,7 +250,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die Sprechzeiten einer Person zurueck.
      */
     public String getTalkTime()
     {
@@ -258,7 +258,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die Telefonnummer einer Person zurueck.
      */
     public String getPhone()
     {
@@ -266,7 +266,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die E-Mail einer Person zurueck.
      */
     public String getEmail()
     {
@@ -274,7 +274,7 @@ public class Person
     }
 
     /**
-     * Gibt die  zurueck.
+     * Gibt die URL zur Website einer Person zurueck.
      */
     public URL getUrl()
     {
