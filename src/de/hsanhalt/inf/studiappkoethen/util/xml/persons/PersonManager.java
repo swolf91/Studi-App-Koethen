@@ -22,7 +22,7 @@ public class PersonManager implements IXmlParsing
     private PersonManager()
     {
         this.person = new ArrayList<Person>();
-        // TODO Klasse in XmlParser-klasse registrieren!
+               
     }
 
 
@@ -201,15 +201,15 @@ public class PersonManager implements IXmlParsing
 
                 for (int k = 0; k < childList.getLength(); k++)
                 {
-                	Node n =childList.item(k);
-                	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE
-                		module[k] = childList.item(k).getNodeValue();
+                	Node n =childList.item(k); 
+                	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE 
+                		module[k] = childList.item(k).getNodeValue(); // Lösungsvorschlag 
                 	}
                 }
             }
             else if (nodeName.equals("responsibilities"))
             {
-                                                //TODO xml an der Stelle ueberarbeiten & Implementierung ueberdenken
+                                                
                 NodeList childList = subNode.getChildNodes();
                 responsibility = new String[childList.getLength()];
 
