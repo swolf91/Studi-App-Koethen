@@ -191,19 +191,23 @@ public class PersonManager implements IXmlParsing
             {
                 street = content;
             }
-            else if (nodeName.equals("module"))
+            else if (nodeName.equals("modules"))
             {
                                                     //TODO xml an der Stelle ueberarbeiten & Implementierung ueberdenken
                                                     // Grund dafuer ist, dass getChildNodes mehr childs zurueck gibt, als vorhanden sind!
+            										
                 NodeList childList = subNode.getChildNodes();
                 module = new String[childList.getLength()];
 
                 for (int k = 0; k < childList.getLength(); k++)
                 {
-                    module[i] = childList.item(k).getNodeValue();
+                	Node n =childList.item(k);
+                	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE
+                		module[k] = childList.item(k).getNodeValue();
+                	}
                 }
             }
-            else if (nodeName.equals("responsibility"))
+            else if (nodeName.equals("responsibilities"))
             {
                                                 //TODO xml an der Stelle ueberarbeiten & Implementierung ueberdenken
                 NodeList childList = subNode.getChildNodes();
@@ -211,7 +215,11 @@ public class PersonManager implements IXmlParsing
 
                 for (int k = 0; k < childList.getLength(); k++)
                 {
-                    responsibility[i] = childList.item(k).getNodeValue();
+                	Node n =childList.item(k);
+                	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE
+                		responsibility[k] = childList.item(k).getNodeValue();
+                	}
+                    
                 }
             }
             else if (nodeName.equals("talkTime"))
