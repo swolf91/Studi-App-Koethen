@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE person [<!ELEMENT person (common , university_department , contact)><!ELEMENT common (name , surname , state , special_field , street , street-number , postcode , town , buildings , room , description)><!ELEMENT name (#PCDATA)><!ELEMENT surname (#PCDATA)><!ELEMENT state (#PCDATA)><!ELEMENT special_field (#PCDATA)><!ELEMENT street (#PCDATA)><!ELEMENT street-number (#PCDATA)><!ELEMENT postcode (#PCDATA)><!ELEMENT town (#PCDATA)><!ELEMENT buildings (#PCDATA)><!ELEMENT room (#PCDATA)><!ELEMENT description (#PCDATA)>
+<!ELEMENT university_department (profession? , lectures? , responsibility)><!ELEMENT profession (#PCDATA)><!ELEMENT lectures (#PCDATA)><!ELEMENT responsibility (#PCDATA)>
+<!ELEMENT contact (talk-time? , phone , email? , link?)><!ELEMENT talk-time (#PCDATA)><!ELEMENT phone (#PCDATA)><!ELEMENT email (#PCDATA)><!ELEMENT link (#PCDATA)>] >
+<persons>
+    <person>
+    <common>
+
+        <name>Ursula-Brigitte</name>
+        <surname>Fissgus</surname>
+        <state>Prof. Dr.</state>
+        <numberOfFaculty>5</numberOfFaculty>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+
+        <buildings>23</buildings>
+        <room>132</room>
+        <description></description>
+
+    </common>
+    <universityDepartment>
+
+        <professions>
+			<profession>Softwaretechnik</profession>
+			<profession>Softwareentwicklung</profession>
+			<profession>Compiler und Laufzeitsysteme</profession>
+			</professions>
+        <modules>
+			<module>Softwaretechnik</module>
+		</modules>
+        <responsibility>Dekanin</responsibility>
+
+    </universityDepartment>
+    <contact>
+
+        <talkTime></talkTime>
+        <phone>+49-3496-67-3121</phone>
+        <email>u.fissgus@inf.hs-anhlt.de</email>
+        <url>http://www.inf.hs-anhalt.de/fachbereich/personal/profs/fissgus/</url>
+
+    </contact>
+</person>
+
+<person>
+    <common>
+
+        <name>Juergen</name>
+        <surname>Schwarz</surname>
+        <state>Prof. Dr.</state>
+        <numberOfFaculty>6</numberOfFaculty>
+        <street>Bernburger Strasse</street>
+        <houseNumber>57</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+
+        <buildings>01</buildings>
+        <room>219</room>
+        <description></description>
+
+    </common>
+    <universityDepartment>
+
+        <profession>Leistungselektronik und Antriebe</profession>
+        <module></module>
+        <responsibility>Dekan</responsibility>
+
+    </universityDepartment>
+    <contact>
+
+        <talkTime></talkTime>
+        <phone>+49 (0) 3496 67 2334</phone>
+        <email>	dekan@emw.hs-anhalt.de</email>
+        <url>http://www.emw.hs-anhalt.de/www/menschen/professoren/prof-dr-j-schwarz.html</url>
+
+    </contact>
+</person>
+
+<person>
+    <common>
+
+        <name>Joachim</name>
+        <surname>Breme</surname>
+        <state>Prof. Dr.</state>
+        <numberOfFaculty>7</numberOfFaculty>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+
+        <buildings>02</buildings>
+        <room>213</room>
+        <description></description>
+
+    </common>
+    <universityDepartment>
+
+        <profession>Mathematik</profession>
+        <module></module>
+        <responsibility>Dekan</responsibility>
+
+    </universityDepartment>
+    <contact>
+
+        <talkTime></talkTime>
+        <phone>+49 (0) 3496 67 2517</phone>
+        <email>dekan@bwp.hs-anhalt.de</email>
+        <url>http://www.bwp.hs-anhalt.de/fachbereich/dekanat.html</url>
+
+    </contact>
+</person>
+
+<person>
+    <common>
+
+        <name>Doris</name>
+        <surname>Quabis</surname>
+        <state>Frau</state>
+        <numberOfFaculty></numberOfFaculty>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+
+        <buildings>03</buildings>
+        <room>14</room>
+        <description></description>
+
+    </common>
+    <universityDepartment>
+
+        <profession></profession>
+        <module></module>
+        <responsibility>Allgemeine Studienberatung</responsibility>
+
+    </universityDepartment>
+    <contact>
+
+        <talkTime></talkTime>
+        <phone>+49 3496 67 5203</phone>
+        <email>beratung@hs-anhalt.de</email>
+        <url>http://www.hs-anhalt.de/nc/studium/service-fuer-studierende/allgemeine-studienberatung.html</url>
+
+    </contact>
+</person>	
+
+<person>
+    <common>
+
+        <name>Ingrid</name>
+        <surname>Heuer</surname>
+        <state>Frau</state>
+        <numberOfFaculty></numberOfFaculty>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+
+        <buildings>03</buildings>
+        <room>007</room>
+        <description></description>
+
+    </common>
+    <universityDepartment>
+
+        <profession></profession>
+        <module></module>
+        <responsibility>Studentische Angelegenheiten</responsibility>
+
+    </universityDepartment>
+    <contact>
+
+        <talkTime></talkTime>
+        <phone>+49 (0) 3496 67 5229</phone>
+        <email>i.heuer@asa.hs-anhalt.de</email>
+        <url>http://www.hs-anhalt.de/nc/studium/service-fuer-studierende/abteilung-studentische-angelegenheiten.html</url>
+
+    </contact>
+</person>
+
+</persons>
