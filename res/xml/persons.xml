@@ -6,8 +6,8 @@
 	
 	        <name>Gent</name>
 	        <surname>A</surname>
-	        <state>Prof.Dr.Dr.med.Dipl.Imba.</state>
-	        <specialField>Taxifahrerwissenschaft</specialField>
+	        <state>Prof.Dr.</state>
+	        <specialField>Mathe</specialField>
 	        <street>Musterstasse</street>
 	        <houseNumber>7</houseNumber>
 	        <postalCode>123321</postalCode>
@@ -25,7 +25,7 @@
 		        <module>Alleswasmanberechnenkann</module>
 	        </modules>
 	        <responsibilities>
-	            <responsibility>Kaffe holen</responsibility>
+	            <responsibility>Prüfungsamt</responsibility>
 	            <responsibility>Server optimieren</responsibility>
 	        </responsibilities>
 	
