@@ -125,14 +125,18 @@ public class PersonManager implements IXmlParsing
         String room = null;
         String description = null;
         String profession = null;
-        String[] module = null;
-        String[] responsibility = null;
+        String[] modules = null;
+        String[] responsibilities = null;
         String talkTime = null;
         String phone = null;
         String email = null;
         String url = null;
 
         NodeList list = node.getChildNodes();
+        
+        ArrayList<String> module = new ArrayList<String>();        
+        ArrayList<String> responsibility = new ArrayList<String>();
+        
         for (int i = 0; i < list.getLength(); i++)
         {
             Node subNode = list.item(i);
@@ -197,13 +201,13 @@ public class PersonManager implements IXmlParsing
                                                     // Grund dafuer ist, dass getChildNodes mehr childs zurueck gibt, als vorhanden sind!
             										
                 NodeList childList = subNode.getChildNodes();
-                module = new String[childList.getLength()];
+              
 
                 for (int k = 0; k < childList.getLength(); k++)
                 {
                 	Node n =childList.item(k); 
                 	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE 
-                		module[k] = childList.item(k).getNodeValue(); // Lösungsvorschlag 
+                		module.add(childList.item(k).getNodeValue());  
                 	}
                 }
             }
@@ -211,13 +215,13 @@ public class PersonManager implements IXmlParsing
             {
                                                 
                 NodeList childList = subNode.getChildNodes();
-                responsibility = new String[childList.getLength()];
-
+                
+ 
                 for (int k = 0; k < childList.getLength(); k++)
                 {
                 	Node n =childList.item(k);
                 	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE
-                		responsibility[k] = childList.item(k).getNodeValue();
+                		responsibility.add(childList.item(k).getNodeValue());
                 	}
                     
                 }
@@ -242,7 +246,7 @@ public class PersonManager implements IXmlParsing
 
         Person newPerson;
 
-        newPerson = new Person(category, name, surname, state, specialField, street, houseNumber, postalCode, city, buildings, room, description, profession, module, responsibility, talkTime, phone, email, url);
+        newPerson = new Person(category, name, surname, state, specialField, street, houseNumber, postalCode, city, buildings, room, description, profession, module.toArray(new String[module.size()]), responsibility.toArray(new String[responsibility.size()]), talkTime, phone, email, url);
 
         this.person.add(newPerson);
 
