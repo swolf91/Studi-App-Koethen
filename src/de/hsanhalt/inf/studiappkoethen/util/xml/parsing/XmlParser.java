@@ -13,6 +13,7 @@ import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.util.StringUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.util.xml.persons.PersonManager;
 import de.hsanhalt.inf.studiappkoethen.util.xml.persons.PersonCategoryManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -149,10 +150,12 @@ public class XmlParser
      * Aufzaehlung in der alle Klassen registriert werden muessen, die was aus der XML laden wollen
      */
     private enum XMLClasses
-    {
+    {	
+    	PERSONS(PersonManager.getInstance()),
         BUILDINGS(BuildingManager.getInstance()),
         BUILDINGCATEGORIES(BuildingCategoryManager.getInstance()),
         PERSONCATEGORIES(PersonCategoryManager.getInstance());
+        
 
         private IXmlParsing instance;
 
