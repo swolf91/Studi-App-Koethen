@@ -4,5 +4,9 @@
     <string name="app_name">Studi-App Koethen</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="campus">Campus</string>
+    <string name="koethen">Köthen</string>
+    <string name="karte">Karte</string>
+    <string name="entdeckertour">Entdeckertour</string>
 
 </resources>
