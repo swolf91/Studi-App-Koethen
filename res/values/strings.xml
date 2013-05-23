@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Studi-App Koethen</string>
     <string name="action_settings">Settings</string>
+    <string name="action_close">Beenden</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_hs">HS-Gebaeude</string>
+    <string name="action_bars">Bars</string>
+    <string name="action_main">Hauptseite</string>
+    <string name="action_list">Liste</string>
+    <string name="app_name">Studi-App Koethen</string>
     <string name="hello_world">Hello world!</string>
     <string name="campus">Campus</string>
     <string name="koethen">Köthen</string>
     <string name="karte">Karte</string>
     <string name="entdeckertour">Entdeckertour</string>
-    <string name="title_activity_exp_list">ExpListActivity</string>
+    <string name="title_activity_expandable_list">ExpandableListActivity</string>
 
 </resources>

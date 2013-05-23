@@ -3,6 +3,9 @@ package de.hsanhalt.inf.studiappkoethen.activities;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuItem;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
@@ -169,5 +172,36 @@ public class GoogleMapsActivity extends Activity
 			}
 		};
 	}
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.googlemaps, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+        case R.id.action_close:
+            moveTaskToBack(true);
+            return true;
+
+        case R.id.action_main:
+            startActivity(new Intent(this, MainActivity.class));
+            return true;
+
+        case R.id.action_filter:
+            ;
+            return true;
+
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+
+    }
 	
 }
