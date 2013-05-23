@@ -15,7 +15,7 @@
             android:id="@+id/detail_arrow_left"
             android:layout_gravity="center_horizontal|top"
             android:onClick="onImageChange"
-            android:background="@color/common_signin_btn_dark_text_disabled" />
+            android:background="#FFAAAAAA" />
 
         <ImageView
             android:layout_width="fill_parent"
@@ -34,7 +34,7 @@
             android:id="@+id/detail_arrow_right"
             android:layout_gravity="center_horizontal|top"
             android:onClick="onImageChange"
-            android:background="@color/common_signin_btn_dark_text_disabled" />
+            android:background="#FFAAAAAA" />
 
     </LinearLayout>
 
