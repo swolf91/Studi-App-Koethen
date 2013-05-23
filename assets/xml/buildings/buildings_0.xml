@@ -80,14 +80,14 @@
     <building>
         <name>Studentenrat</name>
         <street>Fasanerieallee</street>
-        <houseNumber>??</houseNumber>
+        <houseNumber>55</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
             <numberOfBuilding>08</numberOfBuilding>
         </collegeBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+       <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
         <description>Studentenrat und Fachschaft</description>
         <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
     </building>
