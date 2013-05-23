@@ -150,13 +150,13 @@
     </building>
     <building>
         <name>Technoligiezentrum</name>
-        <street>Fasanerieallee</street>
-        <houseNumber>??</houseNumber>
+        <street>Hubertus</street>
+        <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding></collegeBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517557047</latitude>
+        <longitude>119602829</longitude>
         <description>Technologiezentrum</description>
         <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
     </building>
