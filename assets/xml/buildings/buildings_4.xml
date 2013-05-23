@@ -58,15 +58,15 @@
         <url>http://www.mensakeller.com/</url>
     </building>
     <building>
-        <name>VT-Club Wohnheim 6</name>
+        <name>VT-Club</name>
         <street>Hubertus</street>
         <houseNumber>56</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517552250</latitude>
         <longitude>119597090</longitude>
-        <description>Mensakeller - Studentendisco Koethen</description>
-        <url>http://www.mensakeller.com/</url>
+        <description>Studentenclub im Wohnheim 6</description>
+        <url>http://www.vt-club.de/index.php</url>
     </building>
 
 </buildings>
