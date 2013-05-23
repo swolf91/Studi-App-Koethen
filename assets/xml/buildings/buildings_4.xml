@@ -3,6 +3,7 @@
     <categoryID>4</categoryID>
 
     <building>
+    <id>0</id>
         <name>Paradise Inn</name>
         <street>Weintraubenstrasse</street>
         <houseNumber>14</houseNumber>
@@ -14,6 +15,7 @@
         <url>http://www.yellowmap.de/Details/t9q8cq4PAASI_ELQIuInlw==.aspx</url>
     </building>
     <building>
+    <id>1</id>
         <name>Dilan Doener</name>
         <street>Weintraubenstrasse</street>
         <houseNumber>23</houseNumber>
@@ -25,6 +27,7 @@
         <url>http://dilan-doener.jimdo.com/</url>
     </building>
     <building>
+    <id>2</id>
         <name>Rostbratwurstgrill</name>
         <street>Leopoldstrasse</street>
         <houseNumber>67a</houseNumber>
@@ -36,6 +39,7 @@
         <url>http://rostbratwurstgrill.de/details.php?ID=28</url>
     </building>
     <building>
+    <id>3</id>
         <name>Lackfabrik</name>
         <street>Augustenstrasse</street>
         <houseNumber>44</houseNumber>
@@ -47,6 +51,7 @@
         <url>http://www.clubfeeling.de/clubs/lackfabrik-koethen-koethen/</url>
     </building>
     <building>
+    <id>4</id>
         <name>Mensakeller</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
@@ -58,6 +63,7 @@
         <url>http://www.mensakeller.com/</url>
     </building>
     <building>
+    <id>5</id>
         <name>VT Club</name>
         <street>Hubertus</street>
         <houseNumber>56</houseNumber>
