@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <categoryID>0</categoryID>
+
+    <building>
+    <id>0</id>
+        <name>Hochschulbibliothek</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>57</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>01</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
+        <description>Hochschulbibliothek HS Anhalt in Koethen</description>
+        <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
+    </building>
+ 
+</buildings>
