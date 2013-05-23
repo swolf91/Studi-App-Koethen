@@ -3,19 +3,25 @@ package de.hsanhalt.inf.studiappkoethen.activities;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.layout;
 import de.hsanhalt.inf.studiappkoethen.R.menu;
+import de.hsanhalt.inf.studiappkoethen.util.ElvAdapter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ExpandableListActivity;
 import android.view.Menu;
+import android.widget.ExpandableListView;
 
 public class ExpListActivity extends ExpandableListActivity
 {
-
+	
+	ExpandableListView elv;
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
+	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_explist);
+		
+		elv=(ExpandableListView)findViewById(R.id.expandableListView1);
+		elv.setAdapter(new ElvAdapter(this));
 	}
 
 	@Override
