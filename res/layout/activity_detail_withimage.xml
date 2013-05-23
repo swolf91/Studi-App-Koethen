@@ -11,6 +11,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="37.5dp"
+            android:layout_marginLeft="5dp"
             android:id="@+id/detail_arrow_left"
             android:layout_gravity="center_horizontal|top"
             android:onClick="onImageChange"
@@ -19,7 +20,8 @@
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="5dp"
             android:id="@+id/detail_image"
             android:layout_gravity="center_horizontal|top"
         />
@@ -27,7 +29,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="-50dp"
+            android:layout_marginLeft="-55dp"
             android:layout_marginTop="37.5dp"
             android:id="@+id/detail_arrow_right"
             android:layout_gravity="center_horizontal|top"
@@ -39,6 +41,15 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:text="@string/miss_building"
-        android:id="@+id/detail_description" />
+        android:text="@string/detail_description"
+        android:id="@+id/detail_description"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="-50dp"
+        android:text="@string/detail_button_mapview"
+        android:id="@+id/detail_button_mapview"
+        android:layout_gravity="center" />
 </LinearLayout>
