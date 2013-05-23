@@ -5,18 +5,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.SharedPreferences;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.XmlParser;
 
 
 public class MainActivity extends Activity
 {
+    SharedPreferences mPreferences ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mPreferences = getSharedPreferences("firstStart", MODE_PRIVATE);
 
         if (!XmlParser.isCreated())
         {
@@ -25,6 +30,27 @@ public class MainActivity extends Activity
             xmlParser.install();
         }
     }
+    
+    @Override  
+    public void onResume() 
+	{  
+	   super.onResume();
+	   
+	   if (mPreferences.getBoolean("firstrun", true)) 
+	   {
+		    mPreferences.edit().putBoolean("firstrun", false).commit();
+	    
+			Builder builder = new AlertDialog.Builder(this);
+			builder.setIcon(R.drawable.ic_launcher);
+			builder.setTitle("Willkommen");
+			builder.setMessage("Hi Ersties,\nhoffe ihr könnt unsere App gebrauchen und viel Spass damit.");
+			builder.setCancelable(true);
+			builder.setPositiveButton(android.R.string.ok,null);
+	        
+			AlertDialog dialog = builder.create();
+			dialog.show();
+	   }
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
