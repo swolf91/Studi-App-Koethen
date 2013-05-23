@@ -12,8 +12,8 @@
         <collegeBuilding>
             <numberOfBuilding>W1</numberOfBuilding>
         </collegeBuilding>
-        <latitude>517550372</latitude>
-        <longitude>119686104</longitude>
+        <latitude>517447423</latitude>
+        <longitude>119821665</longitude>
     </building>
     
         <building>
@@ -26,8 +26,8 @@
         <collegeBuilding>
             <numberOfBuilding>W2</numberOfBuilding>
         </collegeBuilding>
-        <latitude>517550372</latitude>
-        <longitude>119686104</longitude>
+        <latitude>517549900</latitude>
+        <longitude>119663200</longitude>
     </building>
     
         <building>
@@ -40,8 +40,8 @@
         <collegeBuilding>
             <numberOfBuilding>W3</numberOfBuilding>
         </collegeBuilding>
-        <latitude>517550372</latitude>
-        <longitude>119686104</longitude>
+        <latitude>517548600</latitude>
+        <longitude>119657200</longitude>
     </building>
     
         <building>
@@ -54,8 +54,8 @@
         <collegeBuilding>
             <numberOfBuilding>W4</numberOfBuilding>
         </collegeBuilding>
-        <latitude>517550372</latitude>
-        <longitude>119686104</longitude>
+        <latitude>517544624</latitude>
+        <longitude>119647807</longitude>
     </building>
     
         <building>
@@ -68,8 +68,8 @@
         <collegeBuilding>
             <numberOfBuilding>W5</numberOfBuilding>
         </collegeBuilding>
-        <latitude>517550372</latitude>
-        <longitude>119686104</longitude>
+        <latitude>517552828</latitude>
+        <longitude>119652915</longitude>
     </building>
     
         <building>
@@ -82,8 +82,8 @@
         <collegeBuilding>
             <numberOfBuilding>W6</numberOfBuilding>
         </collegeBuilding>
-        <latitude>517550372</latitude>
-        <longitude>119686104</longitude>
+        <latitude>517557047</latitude>
+        <longitude>119602829</longitude>
     </building>
  
 </buildings>
