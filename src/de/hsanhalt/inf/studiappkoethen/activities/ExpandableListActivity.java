@@ -1,16 +1,12 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.R.layout;
-import de.hsanhalt.inf.studiappkoethen.R.menu;
 import de.hsanhalt.inf.studiappkoethen.util.ElvAdapter;
 import android.os.Bundle;
-import android.app.Activity;
-import android.app.ExpandableListActivity;
 import android.view.Menu;
 import android.widget.ExpandableListView;
 
-public class ExpListActivity extends ExpandableListActivity
+public class ExpandableListActivity extends android.app.ExpandableListActivity
 {
 	
 	ExpandableListView elv;
