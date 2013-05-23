@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -70,6 +71,9 @@ public class MainActivity extends Activity
                 break;
             case id.btn_koethen:
                 Intent intent = new Intent(this, DetailActivity.class);
+                intent.putExtra("categorie", (byte) 0);
+                intent.putExtra("building", (byte) 2);
+
                 this.startActivity(intent);
                 break;
         }
