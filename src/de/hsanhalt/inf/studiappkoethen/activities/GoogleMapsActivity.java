@@ -3,15 +3,14 @@ package de.hsanhalt.inf.studiappkoethen.activities;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.activities.classes.MergedMarkers;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -34,7 +33,7 @@ public class GoogleMapsActivity extends Activity
 	private float currentZoomLevel = startZoomLevel;
 	private float previousZoomLevel = 1.0f;
 	private List<Marker> displayedMarkers = new ArrayList<Marker>();
-	
+	private List<MergedMarkers> mergedMarkerList = new ArrayList<MergedMarkers>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -113,6 +112,14 @@ public class GoogleMapsActivity extends Activity
 		}
 	}
 	
+	public void clearMarker(int i) {
+		if(displayedMarkers.size() > i) {
+			Marker delMkr = displayedMarkers.get(i);
+			displayedMarkers.remove(i);
+			delMkr.remove();
+		}
+	}
+	
 	public void clearAllMarkers() {
 		while(displayedMarkers.isEmpty() == false) {
 			Marker first = displayedMarkers.get(0);
@@ -123,7 +130,7 @@ public class GoogleMapsActivity extends Activity
 		//Toast.makeText(getApplicationContext(), "All Markers cleared!", Toast.LENGTH_LONG).show();
 	}
 	
-	public int getZoomTriggerdistance() {
+	public int getZoomTriggerDistance() {
 		float tmp = (16.4f - currentZoomLevel) * 500;
 		if(tmp > 0) {
 			return (int) tmp;
@@ -133,12 +140,57 @@ public class GoogleMapsActivity extends Activity
 	}
 	
 	public void mergeCloseMarkers() {
-		int triggerDistance = getZoomTriggerdistance();
-		// TODO: Funktion zum Mergen der Marker
+		int triggerDistance = getZoomTriggerDistance();
+		//List<Marker> mergedMarkers = new ArrayList<Marker>();
+		
+		boolean stillMoreMergableMarkers = true;
+		
+		while(stillMoreMergableMarkers) {
+			int i = 0;
+			int j = 1;
+			boolean mergableMarkersFound = false;
+			if(displayedMarkers.size() > 1) {
+				while((i < displayedMarkers.size() - 1) && (!mergableMarkersFound)) {
+					while((j < displayedMarkers.size()) && (!mergableMarkersFound)) {
+						double dLat = (displayedMarkers.get(i).getPosition().latitude - displayedMarkers.get(j).getPosition().latitude) * 10000000;
+						double dLon = (displayedMarkers.get(i).getPosition().longitude - displayedMarkers.get(j).getPosition().longitude) * 10000000;
+						double dTotal = Math.sqrt(dLat * dLat + dLon * dLon);
+						
+						if((dTotal < triggerDistance) && (dTotal > 0.0)) {
+							mergableMarkersFound = true;
+							
+							
+							Log.w("MARKERS FOUND", displayedMarkers.get(i).getTitle() + " <-> " + displayedMarkers.get(j).getTitle() + " = " + dTotal);
+						}
+						j++;
+					}
+					i++;
+				}
+			} else {
+				stillMoreMergableMarkers = false;
+			}
+			if(mergableMarkersFound) {
+				Marker m1 = displayedMarkers.get(i - 1);
+				Marker m2 = displayedMarkers.get(j - 1);
+				MergedMarkers newMerge;// = new MergedMarkers(m1, m2);// = new MergedMarkers(displayedMarkers.get(i - 1), displayedMarkers.get(j - 1));
+				
+				//mergedMarkerList.add(newMerge);	
+				
+				clearMarker(i - 1);	
+				clearMarker(j - 1);
+			} else {
+				stillMoreMergableMarkers = false;
+			}
+		}
+		/*
+		for(int i = 0; i < mergedMarkerList.size(); i++) {
+			Marker newBuildingMarker = map.addMarker(mergedMarkerList.get(i).getMarkerOptions());
+			displayedMarkers.add(newBuildingMarker);
+		}/**/
 	}
 	
 	public void splitMergedMarkers() {
-		int triggerDistance = getZoomTriggerdistance();
+		int triggerDistance = getZoomTriggerDistance();
 		// TODO: Funktion zum Splitten gemergeter Marker
 	}
 	
@@ -149,9 +201,9 @@ public class GoogleMapsActivity extends Activity
 				if(previousZoomLevel != position.zoom){
 				
 					currentZoomLevel = position.zoom;
+					
 					StringBuilder sbld = new StringBuilder();
 					String str = "";
-					
 					sbld.append(currentZoomLevel);
 					str = sbld.toString();
 					
@@ -161,6 +213,7 @@ public class GoogleMapsActivity extends Activity
 										
 					if(previousZoomLevel < currentZoomLevel) {
 						mergeCloseMarkers();		// Kombinieren von nahen Markern
+						
 					} else {
 						splitMergedMarkers();		// Teilen von kombinierten Markern
 					}
@@ -172,36 +225,5 @@ public class GoogleMapsActivity extends Activity
 			}
 		};
 	}
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.googlemaps, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch (item.getItemId())
-        {
-        case R.id.action_close:
-            moveTaskToBack(true);
-            return true;
-
-        case R.id.action_main:
-            startActivity(new Intent(this, MainActivity.class));
-            return true;
-
-        case R.id.action_filter:
-            ;
-            return true;
-
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-
-    }
 	
 }
