@@ -15,5 +15,6 @@
     <string name="karte">Karte</string>
     <string name="entdeckertour">Entdeckertour</string>
     <string name="title_activity_expandable_list">ExpandableListActivity</string>
+    <string name="miss_building">Es wurde kein gueltiges Gebaeude zur Anzeige ausgewaehlt!</string>
 
 </resources>

@@ -90,6 +90,10 @@
         <latitude>517557047</latitude>
         <longitude>119602829</longitude>
         <registerImage>buildings/WH6.JPG</registerImage>
+        <registerImage>buildings/WH5.JPG</registerImage>
+        <registerImage>buildings/WH4.JPG</registerImage>
+        <registerImage>buildings/WH3.JPG</registerImage>
+        <registerImage>buildings/WH2.JPG</registerImage>
     </building>
  
 </buildings>

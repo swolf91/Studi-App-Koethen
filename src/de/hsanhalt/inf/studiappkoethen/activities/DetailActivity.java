@@ -15,10 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.id;
-import de.hsanhalt.inf.studiappkoethen.R.menu;
+import de.hsanhalt.inf.studiappkoethen.R.layout;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
@@ -26,61 +25,96 @@ import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
 
 public class DetailActivity extends Activity
 {
-//    public void onButtonClick(View view)
-//    {
-//        switch (view.getId())
-//        {
-//        case R.id.btn_googlemaps:
-//            startActivity(new Intent(this, GoogleMapsActivity.class));
-//            break;
-//        case R.id.btn_koethen:
-//            Intent intent = new Intent(this, DetailActivity.class);
-//            this.startActivity(intent);
-//            break;
-//        }
-//    }
+    Integer pictureIndex = null;
+    ImageView imageView = null;
+    Building building = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.activity_detail);
 
-        byte categorieID = this.getIntent().getByteExtra("categorie", (byte) -1);
+        byte categorieID = this.getIntent().getByteExtra("category", (byte) -1);
         byte buildingID = this.getIntent().getByteExtra("building", (byte) -1);
 
         if(categorieID != -1 && buildingID != -1)
         {
             BuildingCategory category = BuildingCategoryManager.getInstance().getCategory(categorieID);
-            Building building = BuildingManager.getInstance().getBuilding(category, buildingID);
+            this.building = BuildingManager.getInstance().getBuilding(category, buildingID);
 
             String imagePaths[] = building.getImagePaths();
             if(imagePaths.length != 0)
             {
+                this.pictureIndex = 0;
+                this.setContentView(R.layout.activity_detail_withimage);
                 try
                 {
-                    ImageView imageView = (ImageView) this.findViewById(R.id.detail_imageView);
-                    imageView.setImageBitmap(this.getBitmapFromAsset(imagePaths[0]));
+                    this.imageView = (ImageView) this.findViewById(id.detail_image);
+                    this.imageView.setImageBitmap(this.getBitmapFromAsset(imagePaths[this.pictureIndex]));
                 }
                 catch (IOException e)
                 {
                     Log.e("ImageError", "Couldn't load image " + imagePaths[0] + "!", e);
                 }
             }
+            else
+            {
+                this.setContentView(layout.activity_detail_withoutimage);
+            }
 
-            TextView textView = (TextView) this.findViewById(id.detail_textView);
-            textView.setText(
-                "Name: " + building.getName() +  "\n" +
-                "Beschreibung: " + building.getDescription()
-            );
-
-            Toast.makeText(this, "Gebaeude: " + building.getName(), Toast.LENGTH_LONG).show();
+            TextView textView = (TextView) this.findViewById(id.detail_description);
+            this.setTextView(textView);
         }
     }
 
-    public void imageClick(View view)
+    private void setTextView(TextView textView)
     {
-        Toast.makeText(this, "In Zukunft wird das Bild gross angezeigt ;)", Toast.LENGTH_LONG).show();
+        if(this.building != null)
+        {
+            textView.setText(this.building.getName());
+        }
+    }
+
+    public void onImageChange(View view)
+    {
+        if(this.pictureIndex != null && this.imageView != null && this.building != null)
+        {
+            int newIndex = this.pictureIndex;
+            int imageLength = this.building.getImagePaths().length;
+
+            switch (view.getId())
+            {
+                case id.detail_arrow_left:
+                    newIndex--;
+                    break;
+                case id.detail_arrow_right:
+                    newIndex++;
+                    break;
+                default: return;
+            }
+
+            if(newIndex < 0)
+            {
+                newIndex = imageLength - 1;
+            }
+            else if(newIndex >= imageLength)
+            {
+                newIndex = 0;
+            }
+
+            if(newIndex != this.pictureIndex)
+            {
+                this.pictureIndex = newIndex;
+                try
+                {
+                    this.imageView.setImageBitmap(this.getBitmapFromAsset(this.building.getImagePaths()[this.pictureIndex]));
+                }
+                catch (IOException e)
+                {
+                    Log.e("ImageError", "Couldn't load image " + this.building.getImagePaths()[this.pictureIndex] + "!", e);
+                }
+            }
+        }
     }
 
     private Bitmap getBitmapFromAsset(String path) throws IOException
