@@ -8,8 +8,8 @@
         <houseNumber>29</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>5174680</latitude>
-        <longitude>1197113</longitude>
+        <latitude>517468000</latitude>
+        <longitude>119711300</longitude>
         <description>Krankenhaus Koethen</description>
         <url>http://www.rhoen-klinikum-ag.com/rka/cms/koe_2/deu/index.html</url>
     </building>
@@ -20,7 +20,7 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <latitude>517493400</latitude>
-        <longitude>119726500</longitude>
+        <longitude>119741800</longitude>
         <description>Feuerwehr Koethen</description>
     </building>
     <building>
@@ -29,8 +29,8 @@
         <houseNumber>39</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>517543990</latitude>
-        <longitude>119931190</longitude>
+        <latitude>517541224</latitude>
+        <longitude>119930895</longitude>
         <description>Polizeirevier Anhalt-Bitterfeld, Sitz Koethen</description>
     </building>
 
