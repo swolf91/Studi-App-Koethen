@@ -11,8 +11,8 @@
         <collegeBuilding>
             <numberOfBuilding>01</numberOfBuilding>
         </collegeBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
         <description>Hochschulbibliothek HS Anhalt in Koethen</description>
         <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
     </building>
@@ -26,8 +26,8 @@
             <numberOfBuilding>01</numberOfBuilding>
             <numberOfFaculty>6</numberOfFaculty>
         </collegeBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
         <description>Lehrgebaeude, Fachbereich 6 - Elektrotechnik, Maschinenbau und Wirtschaftsingeneuerwesen
         </description>
         <url>http://www.emw.hs-anhalt.de/www/</url>
@@ -42,8 +42,8 @@
             <numberOfBuilding>02</numberOfBuilding>
             <numberOfFaculty>7</numberOfFaculty>
         </collegeBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
         <description>Lehrgebaeude, Fachbereich 7 - Angwandte Biowissenschaften und Prozesstechnik</description>
         <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
     </building>
@@ -114,8 +114,8 @@
         <collegeBuilding>
             <numberOfBuilding>23</numberOfBuilding>
         </collegeBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Sprachenzentrum Koethen</description>
         <url>http://www.inf.hs-anhalt.de/sprachenzentrum/sprachenzentrum/</url>
     </building>
@@ -129,8 +129,8 @@
             <numberOfBuilding>23</numberOfBuilding>
             <numberOfFaculty>5</numberOfFaculty>
         </collegeBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Fachbereich 5 - Informatik und Sprachen</description>
         <url>http://www.inf.hs-anhalt.de/</url>
     </building>
@@ -143,8 +143,8 @@
         <collegeBuilding>
             <numberOfBuilding>23</numberOfBuilding>
         </collegeBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Studienkolleg Koethen</description>
         <url>http://www.hs-anhalt.de/international/landesstudienkolleg.html</url>
     </building>
@@ -167,8 +167,8 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding></collegeBuilding>
-        <latitude>5175408</latitude>
-        <longitude>1196453</longitude>
+        <latitude>517540844</latitude>
+        <longitude>119645339</longitude>
         <description>Hochschulsport</description>
         <url>http://193.25.32.158/hochschulsport/index.php/koethen/aktuelles</url>
     </building>
@@ -181,8 +181,8 @@
         <collegeBuilding>
           <!--  <numberOfBuilding>M</numberOfBuilding> TODO nach Grund fragen! -->
         </collegeBuilding>
-        <latitude>5175399</latitude>
-        <longitude>1196640</longitude>
+        <latitude>517539986</latitude>
+        <longitude>119664018</longitude>
         <description>Mensa am Hauptkampus</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
     </building>
@@ -195,8 +195,8 @@
         <collegeBuilding>
             <numberOfBuilding>23</numberOfBuilding>
         </collegeBuilding>
-        <latitude>51746114</latitude>
-        <longitude>1198433</longitude>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
         <description>Mensa in der Lohmannstrasse</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-lohmannstrasse/</url>
     </building>
