@@ -22,6 +22,7 @@ import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.CollegeBuilding;
 
 public class DetailActivity extends Activity
 {
@@ -71,7 +72,48 @@ public class DetailActivity extends Activity
     {
         if(this.building != null)
         {
-            textView.setText(this.building.getName());
+            String text = "";
+
+            String value = "Name:\n\t" + this.building.getName() + "\n\n";
+            text += value;
+
+            if(this.building.getStreet() != null && this.building.getHouseNumber() != null && this.building.getPostalCode() != null && this.building.getCity() != null)
+            {
+                value = "Adresse:\n\t";
+                value += this.building.getStreet() + " " + this.building.getHouseNumber() + "\n\t";
+                value += this.building.getPostalCode() + " " + this.building.getCity() + "\n\n";
+                text += value;
+            }
+
+            if(this.building instanceof CollegeBuilding)
+            {
+                CollegeBuilding collegeBuilding = (CollegeBuilding) this.building;
+
+                if(collegeBuilding.getNumberOfBuilding() != null)
+                {
+                    value = "Gebaeudenummer:\n\t" + collegeBuilding.getNumberOfBuilding() + "\n\n";
+                    text += value;
+                }
+                if(collegeBuilding.getNumberOfFaculty() != null)
+                {
+                    value = "Fachbereichsnummer\n\t" + collegeBuilding.getNumberOfFaculty() + "\n\n";
+                    text += value;
+                }
+            }
+
+            if(this.building.getURL() != null)
+            {
+                value = "Homepage:\n\t" + this.building.getURL() + "\n\n";
+                text += value;
+            }
+
+            if(this.building.getDescription() != null)
+            {
+                value = "Beschreibung:\n" + this.building.getDescription();
+                text += value;
+            }
+
+            textView.setText(text);
         }
     }
 
