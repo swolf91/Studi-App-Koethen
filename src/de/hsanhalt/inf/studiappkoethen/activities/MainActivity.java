@@ -33,6 +33,7 @@ public class MainActivity extends Activity
         }
     }
     
+<<<<<<< HEAD
     @Override  
     public void onResume() 
 	{  
@@ -54,6 +55,7 @@ public class MainActivity extends Activity
 	   }
 	}
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -62,6 +64,7 @@ public class MainActivity extends Activity
         return true;
     }
 
+<<<<<<< HEAD
     public void onButtonClick(View view)
     {
         switch (view.getId())
@@ -91,7 +94,7 @@ public class MainActivity extends Activity
 
         default:
             return super.onOptionsItemSelected(item);
-        }
 
+        }
     }
 }
