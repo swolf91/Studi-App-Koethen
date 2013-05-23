@@ -3,6 +3,7 @@
     <categoryID>3</categoryID>
 
     <building>
+    <id>0</id>
         <name>Krankenhaus</name>
         <street>Hallesche Strasse</street>
         <houseNumber>29</houseNumber>
@@ -14,6 +15,7 @@
         <url>http://www.rhoen-klinikum-ag.com/rka/cms/koe_2/deu/index.html</url>
     </building>
     <building>
+    <id>1</id>
         <name>Feuerwehr</name>
         <street>Bärteichpromenade</street>
         <houseNumber>12</houseNumber>
@@ -24,6 +26,7 @@
         <description>Feuerwehr Koethen</description>
     </building>
     <building>
+    <id>2</id>
         <name>Polizei</name>
         <street>Friedrich-Ebert-Strasse</street>
         <houseNumber>39</houseNumber>
