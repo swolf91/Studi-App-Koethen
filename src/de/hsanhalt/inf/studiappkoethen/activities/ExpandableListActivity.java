@@ -14,7 +14,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_explist);
+		setContentView(R.layout.activity_expandablelist);
 		
 		elv=(ExpandableListView)findViewById(R.id.expandableListView1);
 		elv.setAdapter(new ElvAdapter(this));

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
-    <categoryID>0</categoryID>
+    <categoryID>5</categoryID>
 
     <building>
     <id>0</id>
@@ -10,7 +10,7 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>W1</numberOfBuilding>
+            <numberOfBuilding>1</numberOfBuilding>
         </collegeBuilding>
         <latitude>517447423</latitude>
         <longitude>119821665</longitude>
@@ -24,11 +24,11 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>W2</numberOfBuilding>
+            <numberOfBuilding>2</numberOfBuilding>
         </collegeBuilding>
         <latitude>517549900</latitude>
         <longitude>119663200</longitude>
-        <registerImage>WH2.jpg</registerImage>
+        <registerImage>buildings/WH2.jpg</registerImage>
 
     </building>
     
@@ -40,11 +40,11 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>W3</numberOfBuilding>
+            <numberOfBuilding>3</numberOfBuilding>
         </collegeBuilding>
         <latitude>517548600</latitude>
         <longitude>119657200</longitude>
-        <registerImage>WH3.jpg</registerImage>
+        <registerImage>buildings/WH3.jpg</registerImage>
     </building>
     
         <building>
@@ -55,11 +55,11 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>W4</numberOfBuilding>
+            <numberOfBuilding>4</numberOfBuilding>
         </collegeBuilding>
         <latitude>517544624</latitude>
         <longitude>119647807</longitude>
-        <registerImage>WH4.jpg</registerImage>
+        <registerImage>buildings/WH4.jpg</registerImage>
     </building>
     
         <building>
@@ -70,11 +70,11 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>W5</numberOfBuilding>
+            <numberOfBuilding>5</numberOfBuilding>
         </collegeBuilding>
         <latitude>517552828</latitude>
         <longitude>119652915</longitude>
-        <registerImage>WH5.jpg</registerImage>
+        <registerImage>buildings/WH5.jpg</registerImage>
     </building>
     
         <building>
@@ -85,11 +85,11 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>W6</numberOfBuilding>
+            <numberOfBuilding>6</numberOfBuilding>
         </collegeBuilding>
         <latitude>517557047</latitude>
         <longitude>119602829</longitude>
-        <registerImage>WH6.jpg</registerImage>
+        <registerImage>buildings/WH6.JPG</registerImage>
     </building>
  
 </buildings>

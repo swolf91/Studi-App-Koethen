@@ -71,8 +71,8 @@ public class MainActivity extends Activity
                 break;
             case id.btn_koethen:
                 Intent intent = new Intent(this, DetailActivity.class);
-                intent.putExtra("categorie", (byte) 0);
-                intent.putExtra("building", (byte) 2);
+                intent.putExtra("categorie", (byte) 5);
+                intent.putExtra("building", (byte) 5);
 
                 this.startActivity(intent);
                 break;

@@ -20,4 +20,8 @@
         <id>4</id>
         <name>Freizeit</name>
     </category>
+    <category>
+        <id>5</id>
+        <name>Wohnheime</name>
+    </category>
 </buildingCategories>
