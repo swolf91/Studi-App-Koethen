@@ -8,5 +8,6 @@
     <string name="koethen">Köthen</string>
     <string name="karte">Karte</string>
     <string name="entdeckertour">Entdeckertour</string>
+    <string name="title_activity_exp_list">ExpListActivity</string>
 
 </resources>
