@@ -2,6 +2,7 @@
 <buildings>
     <categoryID>2</categoryID>
     <building>
+    <id>0</id>
         <name>Stadtverwaltung</name>
         <street>Markstrasse</street>
         <houseNumber>1-3</houseNumber>
@@ -13,6 +14,7 @@
         <url>http://www.koethen-anhalt.de/de/stadtverwaltung.html</url>
     </building>
     <building>
+    <id>1</id>
         <name>Einwohnermeldeamt</name>
         <street>Wallstrasse</street>
         <houseNumber>1-5</houseNumber>
@@ -24,6 +26,7 @@
         <url>http://www.koethen-anhalt.de/de/einwohnermeldeabteilung.html</url>
     </building>
     <building>
+    <id>2</id>
         <name>Schulverwaltung</name>
         <street>Kleine Wallstrasse</street>
         <houseNumber>1-5</houseNumber>
@@ -35,6 +38,7 @@
         <url>http://www.koethen-anhalt.de/de/schulverwaltung.html</url>
     </building>
     <building>
+    <id>3</id>
         <name>Kindertagesstaetten</name>
         <street>Kleine Wallstrasse</street>
         <houseNumber>1-5</houseNumber>
@@ -46,6 +50,7 @@
         <url>http://www.koethen-anhalt.de/de/402-kindertagesstaetten.html</url>
     </building>
     <building>
+    <id>4</id>
         <name>Agentur fuer Arbeit</name>
         <street>Wallstrasse</street>
         <houseNumber>72-73</houseNumber>
@@ -60,6 +65,7 @@
     </building>
 
     <building>
+    <id>5</id>
         <name>BafoeG</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
@@ -71,6 +77,7 @@
         <url>http://www.studentenwerk-halle.de/bafoeg/bafoeg/oeffnungszeiten-und-beratungsorte/</url>
     </building>
     <building>
+    <id>6</id>
         <name>Wohnplatzvermittlung</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
@@ -82,6 +89,7 @@
         <url>http://www.studentenwerk-halle.de/wohnen/beratungszeiten-und-orte/koethen-dessau-bernburg/</url>
     </building>
     <building>
+    <id>7</id>
         <name>Studentenwerk</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
