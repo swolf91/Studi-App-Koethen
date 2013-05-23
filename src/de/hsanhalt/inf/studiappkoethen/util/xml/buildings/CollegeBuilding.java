@@ -11,9 +11,9 @@ public class CollegeBuilding extends Building
      */
     private final Integer numberOfFaculty;
 
-    public CollegeBuilding(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, Integer numberOfBuilding, Integer numberOfFaculty, String url, String[] images)
+    public CollegeBuilding(String name, byte id, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, Integer numberOfBuilding, Integer numberOfFaculty, String url, String[] images)
     {
-        super(name, buildingCategory, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url, images);
+        super(name, id, buildingCategory, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url, images);
 
         this.numberOfBuilding = numberOfBuilding;
         this.numberOfFaculty = numberOfFaculty;

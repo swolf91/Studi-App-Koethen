@@ -37,7 +37,14 @@ public class BuildingManager implements IXmlParsing
 
     public Building getBuilding(BuildingCategory category, byte id)
     {
-
+        for(Building building : this.buildings)
+        {
+            if(building.getBuildingCategory().equals(category) && building.getID() == id)
+            {
+                return building;
+            }
+        }
+        return null;
     }
 
     public List<Building> getBuildingList(BuildingCategory... categories)
@@ -104,6 +111,7 @@ public class BuildingManager implements IXmlParsing
             return;
         }
 
+        byte id = -1;
         String name = null;
         String street = null;
         String houseNumber = null;
@@ -131,6 +139,10 @@ public class BuildingManager implements IXmlParsing
             if (nodeName.equals("name"))
             {
                 name = content;
+            }
+            else if(nodeName.equals("id"))
+            {
+                id = Byte.valueOf(content);
             }
             else if (nodeName.equals("street"))
             {
@@ -192,19 +204,26 @@ public class BuildingManager implements IXmlParsing
             }
         }
 
-        Building building;
 
-        if (collegeBuilding)
+        if(id != -1 && name != null)
         {
-            building = new CollegeBuilding(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, numberOfBuilding, numberOfFaculty, url, images.toArray(new String[images.size()]));
+            Building building;
+            if (collegeBuilding)
+            {
+                building = new CollegeBuilding(name, id, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, numberOfBuilding, numberOfFaculty, url, images.toArray(new String[images.size()]));
+            }
+            else
+            {
+                building = new Building(name, id, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url, images.toArray(new String[images.size()]));
+            }
+            this.buildings.add(building);
+
+            Log.d("Created " + building.getClass().getSimpleName(), category.getName() + " - " + name);
         }
         else
         {
-            building = new Building(name, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url, images.toArray(new String[images.size()]));
+            Log.d("BuildingError", "Could not add a building from category " + category.getName() + " because name or id is missing!" );
         }
-        this.buildings.add(building);
-
-        Log.d("Created " + building.getClass().getSimpleName(), category.getName() + " - " + name);
     }
 
     /**

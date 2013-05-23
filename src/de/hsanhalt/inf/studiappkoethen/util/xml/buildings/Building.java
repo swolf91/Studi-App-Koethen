@@ -9,6 +9,10 @@ public class Building
      */
     private final String name;
     /**
+     * beeinhaltet die ID des Gebaeudes. Diese haengt auch von der
+     */
+    private final byte id;
+    /**
      * beinhaltet die Kategorie dieses Gebaeudes
      */
     private final BuildingCategory buildingCategory;
@@ -68,9 +72,10 @@ public class Building
      * @param description - Beschreibung
      * @param url         - URL des Gebaeudes
      */
-    public Building(String name, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, String url, String[] images)
+    public Building(String name, byte id, BuildingCategory buildingCategory, String street, String houseNumber, String postalCode, String city, String phoneNumber, Integer latitude, Integer longitude, String description, String url, String[] images)
     {
         this.name = name;
+        this.id = id;
         this.buildingCategory = buildingCategory;
         this.street = street;
         this.houseNumber = houseNumber;
@@ -202,6 +207,15 @@ public class Building
     public BuildingCategory getBuildingCategory()
     {
         return this.buildingCategory;
+    }
+
+    /**
+     * Gibt die ID des Gebaeudes zurueck
+     * @return
+     */
+    public byte getID()
+    {
+        return this.id;
     }
 
     @Override
