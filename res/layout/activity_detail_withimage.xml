@@ -5,12 +5,12 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="125dp">
+        android:layout_height="150dp">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="37.5dp"
+            android:layout_marginTop="50dp"
             android:layout_marginLeft="5dp"
             android:id="@+id/detail_arrow_left"
             android:layout_gravity="center_horizontal|top"
@@ -30,7 +30,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="-55dp"
-            android:layout_marginTop="37.5dp"
+            android:layout_marginTop="50dp"
             android:id="@+id/detail_arrow_right"
             android:layout_gravity="center_horizontal|top"
             android:onClick="onImageChange"
