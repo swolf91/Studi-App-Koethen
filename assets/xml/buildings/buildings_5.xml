@@ -4,18 +4,86 @@
 
     <building>
     <id>0</id>
-        <name>Hochschulbibliothek</name>
-        <street>Bernburger Strasse</street>
-        <houseNumber>57</houseNumber>
+        <name>Wohnheim 1</name>
+        <street>Philipp-Semmelweis-Strasse</street>
+        <houseNumber>4</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>01</numberOfBuilding>
+            <numberOfBuilding>W1</numberOfBuilding>
         </collegeBuilding>
         <latitude>517550372</latitude>
         <longitude>119686104</longitude>
-        <description>Hochschulbibliothek HS Anhalt in Koethen</description>
-        <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
+    </building>
+    
+        <building>
+    <id>1</id>
+        <name>Wohnheim 2</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>54</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>W2</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
+    </building>
+    
+        <building>
+    <id>2</id>
+        <name>Wohnheim 3</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>53</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>W3</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
+    </building>
+    
+        <building>
+    <id>3</id>
+        <name>Wohnheim 4</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>52b</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>W4</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
+    </building>
+    
+        <building>
+    <id>4</id>
+        <name>Wohnheim 5</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>52</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>W5</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
+    </building>
+    
+        <building>
+    <id>5</id>
+        <name>Wohnheim 6</name>
+        <street>Am Hubertus</street>
+        <houseNumber>6</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>W6</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
     </building>
  
 </buildings>
