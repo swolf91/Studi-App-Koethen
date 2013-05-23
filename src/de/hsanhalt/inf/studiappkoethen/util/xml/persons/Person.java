@@ -242,7 +242,7 @@ public class Person
     }
 
     /**
-     * Gibt den Zuständikeitsbereich einer Person zurueck.
+     * Gibt den Zustaendikeitsbereich einer Person zurueck.
      */
     public String[] getResponsibilities()
     {

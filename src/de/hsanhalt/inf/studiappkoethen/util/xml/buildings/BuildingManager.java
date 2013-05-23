@@ -35,6 +35,11 @@ public class BuildingManager implements IXmlParsing
         return INSTANCE;
     }
 
+    public Building getBuilding(BuildingCategory category, byte id)
+    {
+
+    }
+
     public List<Building> getBuildingList(BuildingCategory... categories)
     {
         List<Building> buildingList;

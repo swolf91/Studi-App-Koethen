@@ -9,6 +9,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.SharedPreferences;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.XmlParser;
 
 
@@ -20,7 +21,7 @@ public class MainActivity extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        this.setContentView(R.layout.activity_main);
         mPreferences = getSharedPreferences("firstStart", MODE_PRIVATE);
 
         if (!XmlParser.isCreated())
@@ -64,9 +65,13 @@ public class MainActivity extends Activity
     {
         switch (view.getId())
         {
-        case R.id.btn_googlemaps:
-            startActivity(new Intent(this, GoogleMapsActivity.class));
-            break;
+            case R.id.btn_googlemaps:
+                startActivity(new Intent(this, GoogleMapsActivity.class));
+                break;
+            case id.btn_koethen:
+                Intent intent = new Intent(this, DetailActivity.class);
+                this.startActivity(intent);
+                break;
         }
     }
 }
