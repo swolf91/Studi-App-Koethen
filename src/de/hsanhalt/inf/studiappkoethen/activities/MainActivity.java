@@ -36,9 +36,9 @@ public class MainActivity extends Activity
 	{  
 	   super.onResume();
 	   
-	   if (mPreferences.getBoolean("firstrun", true)) 
+	   if (mPreferences.getBoolean("firstStart", true)) 
 	   {
-		    mPreferences.edit().putBoolean("firstrun", false).commit();
+		    mPreferences.edit().putBoolean("firstStart", false).commit();
 	    
 			Builder builder = new AlertDialog.Builder(this);
 			builder.setIcon(R.drawable.ic_launcher);
