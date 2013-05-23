@@ -9,6 +9,7 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -114,6 +115,7 @@ public class DetailActivity extends Activity
             }
 
             textView.setText(text);
+            textView.setMovementMethod(new ScrollingMovementMethod());
         }
     }
 
