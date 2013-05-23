@@ -65,15 +65,15 @@
     </building>
     <building>
         <name>Werkstattgebaeude</name>
-        <street>Fasanerieallee</street>
-        <houseNumber>??</houseNumber>
+        <street>Hubertus</street>
+        <houseNumber>56</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
             <numberOfBuilding>07</numberOfBuilding>
         </collegeBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517548510</latitude>
+        <longitude>119582960</longitude>
         <description>Werkstattgebaeude</description>
         <url>http://www.hs-anhalt.de/</url>
     </building>
@@ -93,15 +93,15 @@
     </building>
     <building>
         <name>Elektrotechniklabor</name>
-        <street>Joachimallee</street>
-        <houseNumber>??</houseNumber>
+        <street>Fasaneriallee</street>
+        <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
             <numberOfBuilding>13</numberOfBuilding>
         </collegeBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+        <latitude>517540140</latitude>
+        <longitude>119682250</longitude>
         <description>Elektrotechniklabor</description>
         <url>http://www.hs-anhalt.de/</url>
     </building>
