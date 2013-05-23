@@ -4,11 +4,13 @@ public class BuildingCategory
 {
     private final byte id;
     private final String name;
+    private final String iconPath;
 
-    public BuildingCategory(byte id, String name)
+    public BuildingCategory(byte id, String name, String iconPath)
     {
         this.id = id;
         this.name = name;
+        this.iconPath = iconPath;
     }
 
     public byte getID()
@@ -19,5 +21,10 @@ public class BuildingCategory
     public String getName()
     {
         return this.name;
+    }
+
+    public String getIconPath()
+    {
+        return this.iconPath;
     }
 }

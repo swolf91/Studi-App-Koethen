@@ -88,6 +88,7 @@ public class BuildingCategoryManager implements IXmlParsing
 
         byte id = -1;
         String name = null;
+        String iconPath = null;
 
         NodeList nodeList = node.getChildNodes();
 
@@ -102,6 +103,10 @@ public class BuildingCategoryManager implements IXmlParsing
             {
                 name = subNode.getTextContent();
             }
+            else if(subNode.getNodeName().equals("setIcon"))
+            {
+                iconPath = subNode.getTextContent();
+            }
         }
 
         if (id == -1 || name == null)
@@ -109,14 +114,14 @@ public class BuildingCategoryManager implements IXmlParsing
             return false;
         }
 
-        BuildingCategory category = new BuildingCategory(id, name);
+        BuildingCategory category = new BuildingCategory(id, name, iconPath);
         this.categoryMap.put(id, category);
         Log.d("Building category created", "id: " + id + " name: " + name);
 
         return true;
     }
     /**
-     * Durchläuft mit einem Iterator für die Extpandable List.
+     * Durchlï¿½uft mit einem Iterator fï¿½r die Extpandable List.
      * @return alle Gebaudekategorien
      */
     public String[] getallBuildingCategories(){
