@@ -115,4 +115,22 @@ public class BuildingCategoryManager implements IXmlParsing
 
         return true;
     }
+    /**
+     * Durchläuft mit einem Iterator für die Extpandable List.
+     * @return alle Gebaudekategorien
+     */
+    public String[] getallCategories(){
+    	int max=categoryMap.size();
+		String [] tmp= new String [max];
+    	int i=0;
+    	
+		while(categoryMap.values().iterator().hasNext()){
+			tmp[i]=categoryMap.values().iterator().next().getName();
+			i++;
+		}
+		
+    	return tmp;
+		
+    	
+    }
 }
