@@ -50,14 +50,14 @@
     <building>
         <name>Lehr- und Verwaltungsgebaeude</name>
         <street>Bernburger Strasse</street>
-        <houseNumber>??</houseNumber>
+        <houseNumber>55</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
             <numberOfBuilding>03</numberOfBuilding>
         </collegeBuilding>
-        <latitude>5175445</latitude>
-        <longitude>1196982</longitude>
+         <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
         <description>Lehr- u. Verwaltungsgebaeude, Praesidium, Leiter Verwaltung, ASA, AAA, FTTZ, ZIK, Poststelle,
             zentr. Wache
         </description>
