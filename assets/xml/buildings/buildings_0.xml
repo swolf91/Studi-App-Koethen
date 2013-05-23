@@ -3,6 +3,7 @@
     <categoryID>0</categoryID>
 
     <building>
+    <id>0</id>
         <name>Hochschulbibliothek</name>
         <street>Bernburger Strasse</street>
         <houseNumber>57</houseNumber>
@@ -17,6 +18,7 @@
         <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
     </building>
     <building>
+    <id>1</id>
         <name>Dekanat Fachbereich 6</name>
         <street>Bernburger Strasse</street>
         <houseNumber>55</houseNumber>
@@ -33,6 +35,7 @@
         <url>http://www.emw.hs-anhalt.de/www/</url>
     </building>
     <building>
+    <id>2</id>
         <name>Dekanat Fachbereich 7</name>
         <street>Bernburger Strasse</street>
         <houseNumber>55</houseNumber>
@@ -48,6 +51,7 @@
         <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
     </building>
     <building>
+    <id>3</id>
         <name>Lehr- und Verwaltungsgebaeude</name>
         <street>Bernburger Strasse</street>
         <houseNumber>55</houseNumber>
@@ -64,6 +68,7 @@
         <url>http://www.hs-anhalt.de/</url>
     </building>
     <building>
+    <id>4</id>
         <name>Werkstattgebaeude</name>
         <street>Hubertus</street>
         <houseNumber>56</houseNumber>
@@ -78,6 +83,7 @@
         <url>http://www.hs-anhalt.de/</url>
     </building>
     <building>
+    <id>5</id>
         <name>Studentenrat</name>
         <street>Fasanerieallee</street>
         <houseNumber>55</houseNumber>
@@ -92,6 +98,7 @@
         <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
     </building>
     <building>
+    <id>6</id>
         <name>Elektrotechniklabor</name>
         <street>Fasaneriallee</street>
         <houseNumber>1a</houseNumber>
@@ -106,6 +113,7 @@
         <url>http://www.hs-anhalt.de/</url>
     </building>
     <building>
+    <id>7</id>
         <name>Sprachenzentrum</name>
         <street>Lohmannstrasse</street>
         <houseNumber>23</houseNumber>
@@ -120,6 +128,7 @@
         <url>http://www.inf.hs-anhalt.de/sprachenzentrum/sprachenzentrum/</url>
     </building>
     <building>
+    <id>8</id>
         <name>Dekanat Fachbereich 5</name>
         <street>Lohmannstrasse</street>
         <houseNumber>23</houseNumber>
@@ -135,6 +144,7 @@
         <url>http://www.inf.hs-anhalt.de/</url>
     </building>
     <building>
+    <id>9</id>
         <name>Studienkolleg</name>
         <street>Lohmannstrasse</street>
         <houseNumber>23</houseNumber>
@@ -149,6 +159,7 @@
         <url>http://www.hs-anhalt.de/international/landesstudienkolleg.html</url>
     </building>
     <building>
+    <id>10</id>
         <name>Technoligiezentrum</name>
         <street>Hubertus</street>
         <houseNumber>1a</houseNumber>
@@ -161,6 +172,7 @@
         <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
     </building>
     <building>
+    <id>11</id>
         <name>Sporthalle</name>
         <street>Antoinettenstrasse</street>
         <houseNumber>34</houseNumber>
@@ -173,6 +185,7 @@
         <url>http://193.25.32.158/hochschulsport/index.php/koethen/aktuelles</url>
     </building>
     <building>
+    <id>12</id>
         <name>Mensa Hauptkampus</name>
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
@@ -187,6 +200,7 @@
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
     </building>
     <building>
+    <id>13</id>
         <name>Mensa Lohmannstrasse</name>
         <street>Lohmannstrasse</street>
         <houseNumber>23</houseNumber>
