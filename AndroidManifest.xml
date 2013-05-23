@@ -47,6 +47,7 @@
         <activity android:name=".activities.CampusActivity"></activity>
         <activity android:name=".activities.KoethenActivity"></activity>
         <activity android:name=".activities.DetailActivity"></activity>
+        <activity android:name=".activities.ExpListActivityy"></activity>
     </application>
 
 </manifest>
