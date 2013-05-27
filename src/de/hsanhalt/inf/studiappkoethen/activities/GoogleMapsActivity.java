@@ -7,8 +7,10 @@ import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
 import de.hsanhalt.inf.studiappkoethen.activities.classes.MergedMarkers;
+import de.hsanhalt.inf.studiappkoethen.activities.classes.ExtendetMarker;
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.MapFragment;
 
 public class GoogleMapsActivity extends Activity
@@ -32,8 +35,9 @@ public class GoogleMapsActivity extends Activity
 	private GoogleMap map;
 	private float currentZoomLevel = startZoomLevel;
 	private float previousZoomLevel = 1.0f;
-	private List<Marker> displayedMarkers = new ArrayList<Marker>();
+	private List<ExtendetMarker> displayedMarkers = new ArrayList<ExtendetMarker>();
 	private List<MergedMarkers> mergedMarkerList = new ArrayList<MergedMarkers>();
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -54,6 +58,7 @@ public class GoogleMapsActivity extends Activity
 	    map.animateCamera(CameraUpdateFactory.zoomTo(startZoomLevel), 2000, null);
 	    map.setOnCameraChangeListener(getCameraChangeListener());
 	    
+	    
 	    setMarkersOnCloseZoomLevel();
 		
 	}
@@ -69,7 +74,7 @@ public class GoogleMapsActivity extends Activity
 				LatLng newBuilding = new LatLng(building.getExactLatitude(), building.getExactLongitude());
 				String title = building.getName();
 				BitmapDescriptor buildingIcon;
-				int index = building.getBuildingCategory().getID();
+				byte index = building.getBuildingCategory().getID();
 								
 				switch(index){			// Bestimmung des Icons
 					case 2:
@@ -85,11 +90,12 @@ public class GoogleMapsActivity extends Activity
 				
 				Marker newBuildingMarker;
 				
-				
+				/*
 				StringBuilder sbld = new StringBuilder();
 				String str = "";
-				sbld.append("Latitude: " + building.getExactLatitude() + ", Longitude: " + building.getExactLongitude());
-				str = sbld.toString();
+				//sbld.append("Latitude: " + building.getExactLatitude() + ", Longitude: " + building.getExactLongitude());
+				sbld.append("ID: " + building.getID());
+				str = sbld.toString();/**/
 				
 				
 				if(building.getDescription() == null) {		// Marker-Erstellung ohne Beschreibung
@@ -106,15 +112,45 @@ public class GoogleMapsActivity extends Activity
 							.snippet(building.getDescription()));
 				}
 				
-				displayedMarkers.add(newBuildingMarker);
+				map.setOnInfoWindowClickListener(
+						new OnInfoWindowClickListener() {
+							@Override
+							public void onInfoWindowClick(Marker clickedMarker) {
+								startDetailedView(clickedMarker.getId());
+							}
+						}
+					);
+			    
+				displayedMarkers.add(new ExtendetMarker(newBuildingMarker, building.getBuildingCategory().getID(), building.getID()));
 				
 			}
 		}
 	}
 	
+	private void startDetailedView(String markerId) {
+		byte currentCategId = 0;
+		byte currentBuildId = 0;
+		int i = 0;
+		boolean matchedMarkerFound = false;
+		while((!displayedMarkers.isEmpty()) && (i < displayedMarkers.size()) && (!matchedMarkerFound)) {
+			if(displayedMarkers.get(i).getMarker().getId().equals(markerId)) {
+				currentCategId = displayedMarkers.get(i).getCategId();
+				currentBuildId = displayedMarkers.get(i).getBuildId();
+				matchedMarkerFound = true;
+			}
+			i++;
+		}
+		if(matchedMarkerFound) {
+			Intent intent = new Intent(this, DetailActivity.class);
+	        intent.putExtra("category", currentCategId);
+	        intent.putExtra("building", currentBuildId);
+	        this.startActivity(intent);/**/
+		}
+	}
+	
 	public void clearMarker(int i) {
 		if(displayedMarkers.size() > i) {
-			Marker delMkr = displayedMarkers.get(i);
+			Marker delMkr = displayedMarkers.get(i).getMarker();
 			displayedMarkers.remove(i);
 			delMkr.remove();
 		}
@@ -122,12 +158,10 @@ public class GoogleMapsActivity extends Activity
 	
 	public void clearAllMarkers() {
 		while(displayedMarkers.isEmpty() == false) {
-			Marker first = displayedMarkers.get(0);
+			Marker first = displayedMarkers.get(0).getMarker();
 			displayedMarkers.remove(0);
 			first.remove();
 		}
-		
-		//Toast.makeText(getApplicationContext(), "All Markers cleared!", Toast.LENGTH_LONG).show();
 	}
 	
 	public int getZoomTriggerDistance() {
@@ -152,15 +186,15 @@ public class GoogleMapsActivity extends Activity
 			if(displayedMarkers.size() > 1) {
 				while((i < displayedMarkers.size() - 1) && (!mergableMarkersFound)) {
 					while((j < displayedMarkers.size()) && (!mergableMarkersFound)) {
-						double dLat = (displayedMarkers.get(i).getPosition().latitude - displayedMarkers.get(j).getPosition().latitude) * 10000000;
-						double dLon = (displayedMarkers.get(i).getPosition().longitude - displayedMarkers.get(j).getPosition().longitude) * 10000000;
+						double dLat = (displayedMarkers.get(i).getMarker().getPosition().latitude - displayedMarkers.get(j).getMarker().getPosition().latitude) * 10000000;
+						double dLon = (displayedMarkers.get(i).getMarker().getPosition().longitude - displayedMarkers.get(j).getMarker().getPosition().longitude) * 10000000;
 						double dTotal = Math.sqrt(dLat * dLat + dLon * dLon);
 						
 						if((dTotal < triggerDistance) && (dTotal > 0.0)) {
 							mergableMarkersFound = true;
 							
 							
-							Log.w("MARKERS FOUND", displayedMarkers.get(i).getTitle() + " <-> " + displayedMarkers.get(j).getTitle() + " = " + dTotal);
+							Log.w("MARKERS FOUND", displayedMarkers.get(i).getMarker().getTitle() + " <-> " + displayedMarkers.get(j).getMarker().getTitle() + " = " + dTotal);
 						}
 						j++;
 					}
@@ -170,8 +204,8 @@ public class GoogleMapsActivity extends Activity
 				stillMoreMergableMarkers = false;
 			}
 			if(mergableMarkersFound) {
-				Marker m1 = displayedMarkers.get(i - 1);
-				Marker m2 = displayedMarkers.get(j - 1);
+				Marker m1 = displayedMarkers.get(i - 1).getMarker();
+				Marker m2 = displayedMarkers.get(j - 1).getMarker();
 				MergedMarkers newMerge;// = new MergedMarkers(m1, m2);// = new MergedMarkers(displayedMarkers.get(i - 1), displayedMarkers.get(j - 1));
 				
 				//mergedMarkerList.add(newMerge);	
@@ -225,5 +259,7 @@ public class GoogleMapsActivity extends Activity
 			}
 		};
 	}
+	
+	
 	
 }
