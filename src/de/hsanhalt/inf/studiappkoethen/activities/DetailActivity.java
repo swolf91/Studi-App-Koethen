@@ -42,6 +42,11 @@ public class DetailActivity extends Activity
             String imagePaths[] = building.getImagePaths();
             if(imagePaths.length != 0)
             {
+//                if(imagePaths.length == 1)
+//                {
+//                    ImageView arrowLeft = (ImageView) this.findViewById(R.id.detail_arrow_left);
+//                    arrowLeft.getDrawingCache().setDensity(0);
+//                }
                 this.pictureIndex = 0;
                 this.setContentView(R.layout.activity_detail_withimage);
                 try
