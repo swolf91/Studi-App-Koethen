@@ -13,6 +13,9 @@ import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -29,7 +32,6 @@ import com.google.android.gms.maps.MapFragment;
 
 public class GoogleMapsActivity extends Activity
 {
-
 	static final LatLng KOETHEN = new LatLng(51.750, 11.967);
 	static final float startZoomLevel = 14.0f;
 	private GoogleMap map;
@@ -37,6 +39,7 @@ public class GoogleMapsActivity extends Activity
 	private float previousZoomLevel = 1.0f;
 	private List<ExtendetMarker> displayedMarkers = new ArrayList<ExtendetMarker>();
 	private List<MergedMarkers> mergedMarkerList = new ArrayList<MergedMarkers>();
+	private boolean filterOptions[] = new boolean[5];
 	
 	
 	@Override
@@ -46,6 +49,9 @@ public class GoogleMapsActivity extends Activity
 		
 		setContentView(R.layout.activity_googlemaps);
 		
+		for(int i = 0; i < filterOptions.length; i++) {
+			filterOptions[i] = true;
+		}
 
 		FragmentManager myFragmentManager = getFragmentManager();
         MapFragment myMapFragment 
@@ -63,13 +69,57 @@ public class GoogleMapsActivity extends Activity
 		
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.googlemaps_filter, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.filteritem01:
+				filterOptions[0] = !filterOptions[0];
+				clearAllMarkers();
+				setMarkersOnCloseZoomLevel();
+				return true;
+			case R.id.filteritem02:
+				filterOptions[1] = !filterOptions[1];
+				clearAllMarkers();
+				setMarkersOnCloseZoomLevel();
+				return true;
+			case R.id.filteritem03:
+				filterOptions[2] = !filterOptions[2];
+				clearAllMarkers();
+				setMarkersOnCloseZoomLevel();
+				return true;
+			case R.id.filteritem04:
+				filterOptions[3] = !filterOptions[3];
+				clearAllMarkers();
+				setMarkersOnCloseZoomLevel();
+				return true;
+			case R.id.filteritem05:
+				filterOptions[4] = !filterOptions[4];
+				clearAllMarkers();
+				setMarkersOnCloseZoomLevel();
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
+	
 	public void setMarkersOnCloseZoomLevel(){		//Setzen aller Marker
 		BuildingManager buildingManager = BuildingManager.getInstance();
 		List<Building> buildings = buildingManager.getBuildingList();
 		
 		for(Building building : buildings)
 		{
-			if((building.getLatitude() != null) && (building.getLongitude() != null) && (building.getName() != null))
+			int category = building.getBuildingCategory().getID();
+			if(category > 4 || category < 0) {
+				category = 0;
+			}
+			if((building.getLatitude() != null) && (building.getLongitude() != null) && (filterOptions[category]))
 			{
 				LatLng newBuilding = new LatLng(building.getExactLatitude(), building.getExactLongitude());
 				String title = building.getName();

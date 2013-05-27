@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/filteritem01" android:title="Kategorie 1" android:icon="@drawable/ic_launcher"></item>
+    <item android:id="@+id/filteritem02" android:title="Kategorie 2" android:icon="@drawable/ic_launcher_blue"></item>
+    <item android:id="@+id/filteritem03" android:title="Kategorie 3" android:icon="@drawable/ic_launcher_red"></item>
+    <item android:id="@+id/filteritem04" android:title="Kategorie 4" android:icon="@drawable/ic_launcher"></item>
+    <item android:id="@+id/filteritem05" android:title="Kategorie 5" android:icon="@drawable/ic_launcher"></item>
+
+</menu>
