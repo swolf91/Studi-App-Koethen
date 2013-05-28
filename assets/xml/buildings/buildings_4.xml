@@ -61,6 +61,7 @@
         <longitude>119664018</longitude>
         <description>Mensakeller - Studentendisco Koethen</description>
         <url>http://www.mensakeller.com/</url>
+        <registerImage>buildings/Mensakeller.JPG</registerImage>
     </building>
     <building>
         <id>5</id>
@@ -73,6 +74,7 @@
         <longitude>119597090</longitude>
         <description>Studentenclub im Wohnheim 6</description>
         <url>http://www.vt-club.de/index.php</url>
+        <registerImage>buildings/VTClub.JPG</registerImage>
     </building>
 
 </buildings>
