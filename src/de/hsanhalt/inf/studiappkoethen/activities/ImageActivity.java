@@ -27,6 +27,7 @@ public class ImageActivity extends Activity
                 touch.setImageBitmap(AndroidUtils.getBitmapFromAsset(this.getAssets(), path));
                 touch.setMaxZoom(4f); //change the max level of zoom, default is 3f
                 setContentView(touch);
+                this.getActionBar().hide();
             }
             catch (IOException e)
             {
