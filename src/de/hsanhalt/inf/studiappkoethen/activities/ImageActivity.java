@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
+import de.hsanhalt.inf.studiappkoethen.util.TouchImageView;
 
 public class ImageActivity extends Activity
 {
@@ -22,8 +23,10 @@ public class ImageActivity extends Activity
         {
             try
             {
-                ImageView imageView = (ImageView) this.findViewById(R.id.image_image);
-                imageView.setImageBitmap(AndroidUtils.getBitmapFromAsset(this.getAssets(), path));
+                TouchImageView touch = new TouchImageView(this);
+                touch.setImageBitmap(AndroidUtils.getBitmapFromAsset(this.getAssets(), path));
+                touch.setMaxZoom(4f); //change the max level of zoom, default is 3f
+                setContentView(touch);
             }
             catch (IOException e)
             {

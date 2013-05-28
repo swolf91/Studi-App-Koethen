@@ -17,5 +17,6 @@
     <string name="title_activity_expandable_list">ExpandableListActivity</string>
     <string name="detail_description">Es wurde kein gueltiges Gebaeude zur Anzeige ausgewaehlt!</string>
     <string name="detail_button_mapview">Auf Karte anzeigen</string>
+    <string name="image_errormsg">Das Bild konnte nicht geladen werden</string>
 
 </resources>
