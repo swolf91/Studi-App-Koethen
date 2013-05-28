@@ -32,8 +32,7 @@ public class MainActivity extends Activity
             xmlParser.install();
         }
     }
-    
-<<<<<<< HEAD
+
     @Override  
     public void onResume() 
 	{  
@@ -64,7 +63,6 @@ public class MainActivity extends Activity
         return true;
     }
 
-<<<<<<< HEAD
     public void onButtonClick(View view)
     {
         switch (view.getId())
