@@ -44,8 +44,10 @@ public class DetailActivity extends Activity
             {
 //                if(imagePaths.length == 1)
 //                {
-//                    ImageView arrowLeft = (ImageView) this.findViewById(R.id.detail_arrow_left);
-//                    arrowLeft.getDrawingCache().setDensity(0);
+//                    ImageView arrow = (ImageView) this.findViewById(R.id.detail_arrow_left);
+//                    arrow.setEnabled(false);
+//                    arrow = (ImageView) this.findViewById(R.id.detail_arrow_right);
+//                    arrow.setEnabled(false);
 //                }
                 this.pictureIndex = 0;
                 this.setContentView(R.layout.activity_detail_withimage);
