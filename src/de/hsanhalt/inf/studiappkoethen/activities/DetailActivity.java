@@ -1,13 +1,9 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -17,8 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.R.id;
-import de.hsanhalt.inf.studiappkoethen.R.layout;
+import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
@@ -51,8 +46,9 @@ public class DetailActivity extends Activity
                 this.setContentView(R.layout.activity_detail_withimage);
                 try
                 {
-                    this.imageView = (ImageView) this.findViewById(id.detail_image);
-                    this.imageView.setImageBitmap(this.getBitmapFromAsset(imagePaths[this.pictureIndex]));
+                    this.imageView = (ImageView) this.findViewById(R.id.detail_image);
+                    this.imageView.setImageBitmap(AndroidUtils
+                                                      .getBitmapFromAsset(this.getAssets(), imagePaths[this.pictureIndex]));
                 }
                 catch (IOException e)
                 {
@@ -61,10 +57,10 @@ public class DetailActivity extends Activity
             }
             else
             {
-                this.setContentView(layout.activity_detail_withoutimage);
+                this.setContentView(R.layout.activity_detail_withoutimage);
             }
 
-            TextView textView = (TextView) this.findViewById(id.detail_description);
+            TextView textView = (TextView) this.findViewById(R.id.detail_description);
             this.setTextView(textView);
         }
     }
@@ -119,6 +115,18 @@ public class DetailActivity extends Activity
         }
     }
 
+    public void onImageClick(View view)
+    {
+        if(this.imageView != null && view.getId() == R.id.detail_image)
+        {
+//            Toast.makeText(this, "Image was clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ImageActivity.class);
+            String path = this.building.getImagePaths()[this.pictureIndex];
+            intent.putExtra("image", path);
+            this.startActivity(intent);
+        }
+    }
+
     public void onImageChange(View view)
     {
         if(this.pictureIndex != null && this.imageView != null && this.building != null)
@@ -128,10 +136,10 @@ public class DetailActivity extends Activity
 
             switch (view.getId())
             {
-                case id.detail_arrow_left:
+                case R.id.detail_arrow_left:
                     newIndex--;
                     break;
-                case id.detail_arrow_right:
+                case R.id.detail_arrow_right:
                     newIndex++;
                     break;
                 default: return;
@@ -151,7 +159,7 @@ public class DetailActivity extends Activity
                 this.pictureIndex = newIndex;
                 try
                 {
-                    this.imageView.setImageBitmap(this.getBitmapFromAsset(this.building.getImagePaths()[this.pictureIndex]));
+                    this.imageView.setImageBitmap(AndroidUtils.getBitmapFromAsset(this.getAssets(), this.building.getImagePaths()[this.pictureIndex]));
                 }
                 catch (IOException e)
                 {
@@ -161,14 +169,7 @@ public class DetailActivity extends Activity
         }
     }
 
-    private Bitmap getBitmapFromAsset(String path) throws IOException
-    {
-        AssetManager assets = this.getAssets();
-        InputStream inputStream = assets.open(path);
-        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-        inputStream.close();
-        return bitmap;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item)

@@ -24,6 +24,7 @@
             android:layout_marginLeft="5dp"
             android:id="@+id/detail_image"
             android:layout_gravity="center_horizontal|top"
+            android:onClick="onImageClick"
         />
 
         <ImageView
