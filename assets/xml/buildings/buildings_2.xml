@@ -75,6 +75,7 @@
         <longitude>119664018</longitude>
         <description>Amt fuer Ausbildungsfoerderung</description>
         <url>http://www.studentenwerk-halle.de/bafoeg/bafoeg/oeffnungszeiten-und-beratungsorte/</url>
+        <registerImage>buildings/Studentenwerk.JPG</registerImage>
     </building>
     <building>
     <id>6</id>
@@ -87,6 +88,7 @@
         <longitude>119664018</longitude>
         <description>Wohnplatzvermittlung in Koethen</description>
         <url>http://www.studentenwerk-halle.de/wohnen/beratungszeiten-und-orte/koethen-dessau-bernburg/</url>
+        <registerImage>buildings/Studentenwerk.JPG</registerImage>
     </building>
     <building>
     <id>7</id>
@@ -99,5 +101,6 @@
         <longitude>119664018</longitude>
         <description>Studentenwerk - Aussenstelle Koethen</description>
         <url>http://www.studentenwerk-halle.de/startseite.html</url>
+        <registerImage>buildings/Studentenwerk.JPG</registerImage>
     </building>
 </buildings>
