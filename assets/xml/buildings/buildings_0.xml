@@ -16,6 +16,8 @@
         <longitude>119686104</longitude>
         <description>Hochschulbibliothek HS Anhalt in Koethen</description>
         <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
+        <registerImage>buildings/Gebaeude01.JPG</registerImage>
+        <registerImage>buildings/Gebaeude01_2.JPG</registerImage>
     </building>
     <building>
     <id>1</id>
@@ -33,6 +35,8 @@
         <description>Lehrgebaeude, Fachbereich 6 - Elektrotechnik, Maschinenbau und Wirtschaftsingeneuerwesen
         </description>
         <url>http://www.emw.hs-anhalt.de/www/</url>
+        <registerImage>buildings/Gebaeude01.JPG</registerImage>
+        <registerImage>buildings/Gebaeude01_2.JPG</registerImage>
     </building>
     <building>
     <id>2</id>
@@ -49,6 +53,8 @@
         <longitude>119686116</longitude>
         <description>Lehrgebaeude, Fachbereich 7 - Angwandte Biowissenschaften und Prozesstechnik</description>
         <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
+        <registerImage>buildings/Gebaeude02.JPG</registerImage>
+        <registerImage>buildings/Gebaeude02_2.JPG</registerImage>
     </building>
     <building>
     <id>3</id>
@@ -66,6 +72,7 @@
             zentr. Wache
         </description>
         <url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Gebaeude03.JPG</registerImage>
     </building>
     <building>
     <id>4</id>
@@ -96,6 +103,7 @@
         <longitude>119686116</longitude>
         <description>Studentenrat und Fachschaft</description>
         <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
+        <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
     </building>
     <building>
     <id>6</id>
@@ -126,6 +134,8 @@
         <longitude>119843346</longitude>
         <description>Sprachenzentrum Koethen</description>
         <url>http://www.inf.hs-anhalt.de/sprachenzentrum/sprachenzentrum/</url>
+        <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
+        <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
     </building>
     <building>
     <id>8</id>
@@ -142,6 +152,8 @@
         <longitude>119843346</longitude>
         <description>Fachbereich 5 - Informatik und Sprachen</description>
         <url>http://www.inf.hs-anhalt.de/</url>
+        <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
+        <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
     </building>
     <building>
     <id>9</id>
@@ -157,6 +169,8 @@
         <longitude>119843346</longitude>
         <description>Studienkolleg Koethen</description>
         <url>http://www.hs-anhalt.de/international/landesstudienkolleg.html</url>
+        <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
+        <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
     </building>
     <building>
     <id>10</id>
@@ -170,6 +184,8 @@
         <longitude>119602829</longitude>
         <description>Technologiezentrum</description>
         <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
+        <registerImage>buildings/Technologiezentrum.JPG</registerImage>
+        <registerImage>buildings/Technologiezentrum_2.JPG</registerImage>
     </building>
     <building>
     <id>11</id>
@@ -183,6 +199,8 @@
         <longitude>119645339</longitude>
         <description>Hochschulsport</description>
         <url>http://193.25.32.158/hochschulsport/index.php/koethen/aktuelles</url>
+        <registerImage>buildings/Sporthalle.JPG</registerImage>
+        <registerImage>buildings/Sporthalle_2.JPG</registerImage>
     </building>
     <building>
     <id>12</id>
@@ -198,6 +216,7 @@
         <longitude>119664018</longitude>
         <description>Mensa am Hauptkampus</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
+        <registerImage>buildings/Studentenwerk.JPG</registerImage>
     </building>
     <building>
     <id>13</id>
@@ -213,6 +232,8 @@
         <longitude>119843346</longitude>
         <description>Mensa in der Lohmannstrasse</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-lohmannstrasse/</url>
+        <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
+        <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
     </building>
 
 </buildings>
