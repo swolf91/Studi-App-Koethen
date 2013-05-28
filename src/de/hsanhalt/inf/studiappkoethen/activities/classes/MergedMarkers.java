@@ -49,7 +49,7 @@ public class MergedMarkers
 	private void mergeMarkers() {
 		Marker merged = mergedMarker;
 		merged.setTitle("Sammelmarker");
-		merged.setSnippet("Bitte reinzoomen für detailierte Ansicht.");
+		merged.setSnippet("Bitte reinzoomen fuer detailierte Ansicht.");
 		
 		double addedLat = 0.0;
 		double addedLng = 0.0;
