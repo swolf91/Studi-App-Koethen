@@ -5,7 +5,6 @@ public class StringUtils
     private StringUtils()
     {
     }
-//  TODO nuetzliche statische Methoden einfuegen. ( trim etc )
 
     /**
      * Gibt die Dateiendung des Strings zurueck.

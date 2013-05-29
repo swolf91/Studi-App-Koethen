@@ -117,7 +117,7 @@ public class XmlParser
                 }
                 catch (IOException e)
                 {
-                    Log.e("XmlLoadError", "Can't list all files in " + currentFolder + " assets folder.");
+                    Log.e("XmlParserError", "Can't list all files in " + currentFolder + " assets folder.");
                     continue;
                 }
                 for (String file : fileList)
@@ -132,12 +132,12 @@ public class XmlParser
                     {
                         try
                         {
-                            Log.d("XmlLoad", "Loads xml-file: " + file);
+                            Log.d("XmlParserDebug", "Loads xml-file: " + file);
                             this.parse(this.assets.open(file));
                         }
                         catch (IOException e)
                         {
-                            Log.e("XmlLoadError", "Can't load the file: " + file);
+                            Log.e("XmlParserError", "Can't load the file: " + file);
                             continue;
                         }
                     }
@@ -155,7 +155,6 @@ public class XmlParser
         BUILDINGS(BuildingManager.getInstance()),
         BUILDINGCATEGORIES(BuildingCategoryManager.getInstance()),
         PERSONCATEGORIES(PersonCategoryManager.getInstance());
-        
 
         private IXmlParsing instance;
 
@@ -167,11 +166,20 @@ public class XmlParser
             this.instance = instance;
         }
 
+        /**
+         * Prueft ob Tag des Parameters mit dem StartTag der IXmlParsing-Klasse uebereinstimmt
+         * @param tagName
+         * @return
+         */
         public boolean matches(String tagName)
         {
             return this.instance.getStartTag().equals(tagName);
         }
 
+        /**
+         * ruft die AddNode-Methode der jeweiligen IXmlParsing-Klasse auf, um dort einen Eintrag hinzuzufuegen.
+         * @param node
+         */
         public void addNode(Node node)
         {
             this.instance.addNode(node);
