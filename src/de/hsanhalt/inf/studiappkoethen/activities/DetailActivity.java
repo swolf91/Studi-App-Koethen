@@ -5,7 +5,6 @@ import java.io.IOException;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,7 +12,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategory;
@@ -99,15 +97,15 @@ public class DetailActivity extends Activity
     {
         if(this.building != null)
         {
-            TextView textView = (TextView) this.findViewById(id.detail_textView_name);
+            TextView textView = (TextView) this.findViewById(R.id.detail_textView_name);
             textView.setText(this.building.getName());
 
             if(this.building.getStreet() != null && this.building.getHouseNumber() != null && this.building.getPostalCode() != null && this.building.getCity() != null)
             {
-                textView = (TextView) this.findViewById(id.detail_textView_adress_headline);
+                textView = (TextView) this.findViewById(R.id.detail_textView_adress_headline);
                 textView.setVisibility(View.VISIBLE);
 
-                textView = (TextView) this.findViewById(id.detail_textView_adress);
+                textView = (TextView) this.findViewById(R.id.detail_textView_adress);
                 textView.setVisibility(View.VISIBLE);
 
                 String value = this.building.getStreet() + " " + this.building.getHouseNumber() + "\n";
@@ -121,19 +119,19 @@ public class DetailActivity extends Activity
 
                 if(collegeBuilding.getNumberOfBuilding() != null)
                 {
-                    textView = (TextView) this.findViewById(id.detail_textView_buildingnumber_headline);
+                    textView = (TextView) this.findViewById(R.id.detail_textView_buildingnumber_headline);
                     textView.setVisibility(View.VISIBLE);
 
-                    textView = (TextView) this.findViewById(id.detail_textView_buildingnumber);
+                    textView = (TextView) this.findViewById(R.id.detail_textView_buildingnumber);
                     textView.setVisibility(View.VISIBLE);
                     textView.setText(collegeBuilding.getNumberOfBuilding().toString());
                 }
                 if(collegeBuilding.getNumberOfFaculty() != null)
                 {
-                    textView = (TextView) this.findViewById(id.detail_textView_facultynumber_headline);
+                    textView = (TextView) this.findViewById(R.id.detail_textView_facultynumber_headline);
                     textView.setVisibility(View.VISIBLE);
 
-                    textView = (TextView) this.findViewById(id.detail_textView_facultynumber);
+                    textView = (TextView) this.findViewById(R.id.detail_textView_facultynumber);
                     textView.setVisibility(View.VISIBLE);
                     textView.setText(collegeBuilding.getNumberOfFaculty().toString());
                 }
@@ -141,24 +139,24 @@ public class DetailActivity extends Activity
 
             if(this.building.getURL() != null)
             {
-                textView = (TextView) this.findViewById(id.detail_textView_homepage_headline);
+                textView = (TextView) this.findViewById(R.id.detail_textView_homepage_headline);
                 textView.setVisibility(View.VISIBLE);
 
-                textView = (TextView) this.findViewById(id.detail_textView_homepage);
+                textView = (TextView) this.findViewById(R.id.detail_textView_homepage);
                 textView.setVisibility(View.VISIBLE);
                 textView.setText(this.building.getURL().toString());
             }
 
             if(this.building.getDescription() != null)
             {
-                textView = (TextView) this.findViewById(id.detail_textView_description_headline);
+                textView = (TextView) this.findViewById(R.id.detail_textView_description_headline);
                 textView.setVisibility(View.VISIBLE);
 
-                textView = (TextView) this.findViewById(id.detail_textView_description);
+                textView = (TextView) this.findViewById(R.id.detail_textView_description);
                 textView.setVisibility(View.VISIBLE);
                 textView.setText(this.building.getDescription());
             }
-//
+
 //            textView.setText(text);
 //            textView.setMovementMethod(new ScrollingMovementMethod());
         }
