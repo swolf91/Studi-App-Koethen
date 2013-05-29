@@ -22,8 +22,19 @@ import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.CollegeBuilding;
 
 public class DetailActivity extends Activity
 {
+    /**
+     * Der Index des Pfades zum Bild, das derzeitig angezeigt wird.
+     * Der Pfad kann dann mit this.building.getImagePaths() geholt werden
+     * und gilt innerhalb der Assets
+     */
     Integer pictureIndex = null;
+    /**
+     * Beinhaltet die ImageView, die das Bild anzeigt.
+     */
     ImageView imageView = null;
+    /**
+     * Beinhaltet das Gebaeude, das derzeitig angezeigt wird.
+     */
     Building building = null;
 
     @Override
@@ -31,35 +42,42 @@ public class DetailActivity extends Activity
     {
         super.onCreate(savedInstanceState);
 
-        byte categorieID = this.getIntent().getByteExtra("category", (byte) -1);
-        byte buildingID = this.getIntent().getByteExtra("building", (byte) -1);
+        byte categorieID = this.getIntent().getByteExtra("category", (byte) -1);   // ruft die ID der Kategorie aus den uebergebenen Parametern ab
+        byte buildingID = this.getIntent().getByteExtra("building", (byte) -1);   // ruft die ID des Gebaeudes aus den uebergebenen Parametern ab
 
-        if(categorieID != -1 && buildingID != -1)
+        /*
+         * Seite wird mit Inhalt gefuellt, wenn ID's gueltige Werte besitzen
+         */
+        if(categorieID > -1 && buildingID > -1)
         {
-            BuildingCategory category = BuildingCategoryManager.getInstance().getCategory(categorieID);
-            this.building = BuildingManager.getInstance().getBuilding(category, buildingID);
+            BuildingCategory category = BuildingCategoryManager.getInstance().getCategory(categorieID);   //setzt Kategorie
+            this.building = BuildingManager.getInstance().getBuilding(category, buildingID);    // setzt Gebaeude
 
+            /*
+             * Der folgende Code ueberprueft, ob Bilder vorhanden sind und entscheidet anhand dieser Information
+             * welches Layout geladen werden soll.
+             * Wenn nur ein Bild vorhanden ist, werden aus dem Bildlayout zusaetzlich alle Bildwechselpfeile ausgeblendet.
+             */
             String imagePaths[] = building.getImagePaths();
             if(imagePaths.length != 0)
             {
-//                if(imagePaths.length == 1)
-//                {
-//                    ImageView arrow = (ImageView) this.findViewById(R.id.detail_arrow_left);
-//                    arrow.setEnabled(false);
-//                    arrow = (ImageView) this.findViewById(R.id.detail_arrow_right);
-//                    arrow.setEnabled(false);
-//                }
                 this.pictureIndex = 0;
                 this.setContentView(R.layout.activity_detail_withimage);
+                if(imagePaths.length == 1)
+                {
+                    ImageView arrow = (ImageView) this.findViewById(R.id.detail_arrow_left);
+                    arrow.setVisibility(View.INVISIBLE);    // blendet Pfeilgrafik aus
+                    arrow = (ImageView) this.findViewById(R.id.detail_arrow_right);
+                    arrow.setVisibility(View.INVISIBLE);
+                }
                 try
                 {
                     this.imageView = (ImageView) this.findViewById(R.id.detail_image);
-                    this.imageView.setImageBitmap(AndroidUtils
-                                                      .getBitmapFromAsset(this.getAssets(), imagePaths[this.pictureIndex]));
+                    this.imageView.setImageBitmap(AndroidUtils.getBitmapFromAsset(this.getAssets(), imagePaths[this.pictureIndex]));
                 }
                 catch (IOException e)
                 {
-                    Log.e("ImageError", "Couldn't load image " + imagePaths[0] + "!", e);
+                    Log.e("DetailActivityError", "Couldn't load image " + imagePaths[this.pictureIndex] + "!", e);
                 }
             }
             else
@@ -72,6 +90,10 @@ public class DetailActivity extends Activity
         }
     }
 
+    /**
+     * Diese Methode setzt den Text, der in der uebergebenen TextView angezeigt wird.
+     * @param textView
+     */
     private void setTextView(TextView textView)
     {
         if(this.building != null)
@@ -122,18 +144,26 @@ public class DetailActivity extends Activity
         }
     }
 
+    /**
+     * Diese Methode wird aufgerufen, wenn auf das Bild geklickt wird. Sie oeffnet die
+     * ImageActivity und uebergibt den Pfad zum Bild als Parameter
+     * @param view
+     */
     public void onImageClick(View view)
     {
         if(this.imageView != null && view.getId() == R.id.detail_image)
         {
-//            Toast.makeText(this, "Image was clicked", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, ImageActivity.class);
-            String path = this.building.getImagePaths()[this.pictureIndex];
-            intent.putExtra("image", path);
+            intent.putExtra("image", this.building.getImagePaths()[this.pictureIndex]);
             this.startActivity(intent);
         }
     }
 
+    /**
+     * Diese Methode wird aufgerufen wenn eine der Pfeilgrafiken gedrueckt wird.
+     * Sie dient dazu zwischen verschiedenen Bildern zu wechseln.
+     * @param view
+     */
     public void onImageChange(View view)
     {
         if(this.pictureIndex != null && this.imageView != null && this.building != null)
@@ -161,6 +191,10 @@ public class DetailActivity extends Activity
                 newIndex = 0;
             }
 
+            /*
+             * Wenn neuer Index ungleich des alten Indexes ist, wird innerhalb der if-Anweisung das Bild gewechselt.
+             * Dies ist nur, damit ein gleiches Bild nicht nochmal geladen wird, man koennte aber darauf verzichen.
+             */
             if(newIndex != this.pictureIndex)
             {
                 this.pictureIndex = newIndex;
@@ -170,7 +204,7 @@ public class DetailActivity extends Activity
                 }
                 catch (IOException e)
                 {
-                    Log.e("ImageError", "Couldn't load image " + this.building.getImagePaths()[this.pictureIndex] + "!", e);
+                    Log.e("DetailActivityError", "Couldn't load image " + this.building.getImagePaths()[this.pictureIndex] + "!", e);
                 }
             }
         }
