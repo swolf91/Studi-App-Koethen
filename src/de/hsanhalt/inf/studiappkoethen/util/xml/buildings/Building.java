@@ -212,7 +212,7 @@ public class Building
 
     /**
      * Gibt die ID des Gebaeudes zurueck
-     * @return
+     * 
      */
     public byte getID()
     {
@@ -223,5 +223,14 @@ public class Building
     public String toString()
     {
         return this.getName();
+    }
+    
+    /**
+     * Gibt das Building Objekt zurueck.
+     * 
+     */
+    public Building getBuilding(){
+    	return this;
+    	
     }
 }

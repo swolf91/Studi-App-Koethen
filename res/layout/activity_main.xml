@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout1"
+    android:background="@drawable/hsa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,37 +9,40 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" >
-
+   
     <Button
         android:id="@+id/btn_campus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:onClick="onButtonClick"
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/campus"
+        android:onClick="onButtonClick" 
         android:text="@string/campus" />
 
     <Button
         android:id="@+id/btn_koethen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:onClick="onButtonClick"
-        android:text="@string/koethen" />
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/schildk"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/btn_entdeckertour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:onClick="onButtonClick"
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tour"
+        android:onClick="onButtonClick" 
         android:text="@string/entdeckertour" />
 
     <Button
         android:id="@+id/btn_googlemaps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:onClick="onButtonClick"
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/karte"
+        android:onClick="onButtonClick" 
         android:text="@string/karte" />
 
 </LinearLayout>

@@ -40,37 +40,49 @@ public class GoogleMapsActivity extends Activity
 	private List<ExtendetMarker> displayedMarkers = new ArrayList<ExtendetMarker>();
 	private List<MergedMarkers> mergedMarkerList = new ArrayList<MergedMarkers>();
 	private boolean filterOptions[] = new boolean[5];
-	
+	private byte extraCategorieId = -1;
+	private byte extraBuildingId = -1;
+	//byte specialBuildingFilter[];
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		
-        byte categorieID = this.getIntent().getByteExtra("category", (byte) -1);
-        byte buildingID = this.getIntent().getByteExtra("building", (byte) -1);
-	
+		extraCategorieId = this.getIntent().getByteExtra("category", (byte) -1);
+		extraBuildingId = this.getIntent().getByteExtra("building", (byte) -1);
+		
+
+		//specialBuildingFilter = this.getIntent().getByteArrayExtra("specialBuildingFilter");
+		
 		setContentView(R.layout.activity_googlemaps);
 		
-		for(int i = 0; i < filterOptions.length; i++) {
-			filterOptions[i] = true;
+		for(byte i = 0; i < filterOptions.length; i++) {
+			if(extraCategorieId == -1 && extraBuildingId == -1) {
+				filterOptions[i] = true;
+			} else {
+				if(extraCategorieId == i && extraBuildingId == -1){
+					filterOptions[i] = true;
+				} else {
+					filterOptions[i] = false;
+				}
+			}
 		}
 
 		FragmentManager myFragmentManager = getFragmentManager();
         MapFragment myMapFragment 
          = (MapFragment)myFragmentManager.findFragmentById(R.id.map);
         map = myMapFragment.getMap();
-        map.setMyLocationEnabled(true);        
-        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(KOETHEN, startZoomLevel));
 	    map.animateCamera(CameraUpdateFactory.zoomTo(startZoomLevel), 2000, null);
+	    
 	    map.setOnCameraChangeListener(getCameraChangeListener());
-	    setMarkersOnCloseZoomLevel();
         
-        if(categorieID != -1 && buildingID != -1)
+        if(extraCategorieId != -1 && extraBuildingId != -1)
         {
-        	setSelectionOnDestination(categorieID, buildingID);
+        	setSingleMarkerAndSelectIt(extraCategorieId, extraBuildingId);
+        } else {
+    	    setMarkersDependingOnFilter();
         }
 	}
 
@@ -87,36 +99,90 @@ public class GoogleMapsActivity extends Activity
 			case R.id.filteritem01:
 				filterOptions[0] = !filterOptions[0];
 				clearAllMarkers();
-				setMarkersOnCloseZoomLevel();
+				setMarkersDependingOnFilter();
 				return true;
 			case R.id.filteritem02:
 				filterOptions[1] = !filterOptions[1];
 				clearAllMarkers();
-				setMarkersOnCloseZoomLevel();
+				setMarkersDependingOnFilter();
 				return true;
 			case R.id.filteritem03:
 				filterOptions[2] = !filterOptions[2];
 				clearAllMarkers();
-				setMarkersOnCloseZoomLevel();
+				setMarkersDependingOnFilter();
 				return true;
 			case R.id.filteritem04:
 				filterOptions[3] = !filterOptions[3];
 				clearAllMarkers();
-				setMarkersOnCloseZoomLevel();
+				setMarkersDependingOnFilter();
 				return true;
 			case R.id.filteritem05:
 				filterOptions[4] = !filterOptions[4];
 				clearAllMarkers();
-				setMarkersOnCloseZoomLevel();
+				setMarkersDependingOnFilter();
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
 	}
 	
-	public void setSelectionOnDestination(byte categoryId, byte buildingId) {
+	public BitmapDescriptor getCategoryIcon(byte category) {
+		switch(category){			// Bestimmung des Icons
+			case 2:
+				return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_blue);
+			case 3:
+				return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_red);
+			default:
+				return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher);
+		}
+	}
+	
+	public void createNewMarker(Building building) {
+		LatLng newBuilding = new LatLng(building.getExactLatitude(), building.getExactLongitude());
+		String title = building.getName();
+		byte index = building.getBuildingCategory().getID();
+				
+		Marker newBuildingMarker;
+		
+		if(building.getDescription() == null) {		// Marker-Erstellung ohne Beschreibung
+			newBuildingMarker = map.addMarker(new MarkerOptions()
+					.position(newBuilding)
+					.title(title)
+					.icon(getCategoryIcon(index)));
+		} else {									// Marker-Erstellung mit Beschreibung
+			newBuildingMarker = map.addMarker(new MarkerOptions()
+					.position(newBuilding)
+					.title(title)
+					.icon(getCategoryIcon(index))
+					.snippet(building.getDescription()));
+		}
+		
+		map.setOnInfoWindowClickListener(
+				new OnInfoWindowClickListener() {
+					@Override
+					public void onInfoWindowClick(Marker clickedMarker) {
+						startDetailedView(clickedMarker.getId());
+					}
+				}
+			);
+	    
+		displayedMarkers.add(new ExtendetMarker(newBuildingMarker, building.getBuildingCategory().getID(), building.getID()));
+	}
+	
+	public void setSingleMarkerAndSelectIt(byte categoryId, byte buildingId) {
 		int i = 0;
 		boolean matchedMarkerFound = false;
+		
+		BuildingManager buildingManager = BuildingManager.getInstance();
+		List<Building> buildings = buildingManager.getBuildingList();
+		
+		for(Building building : buildings)
+		{
+			if((building.getLatitude() != null) && (building.getLongitude() != null) && (categoryId == building.getBuildingCategory().getID()) && (buildingId == building.getID()))
+			{
+				createNewMarker(building);
+			}
+		}
 		while((!displayedMarkers.isEmpty()) && (i < displayedMarkers.size()) && (!matchedMarkerFound)) {
 			if((displayedMarkers.get(i).getCategId() == categoryId) && (displayedMarkers.get(i).getBuildId() == buildingId)) {
 				matchedMarkerFound = true;
@@ -126,10 +192,9 @@ public class GoogleMapsActivity extends Activity
 		}
 		map.moveCamera(CameraUpdateFactory.newLatLngZoom(displayedMarkers.get(i).getMarker().getPosition(), startZoomLevel));
 		displayedMarkers.get(i).getMarker().showInfoWindow();
-	    //map.animateCamera(CameraUpdateFactory.zoomTo(startZoomLevel), 2000, null);
 	}
 	
-	public void setMarkersOnCloseZoomLevel(){		//Setzen aller Marker
+	public void setMarkersDependingOnFilter(){		//Setzen aller Marker
 		BuildingManager buildingManager = BuildingManager.getInstance();
 		List<Building> buildings = buildingManager.getBuildingList();
 		
@@ -141,58 +206,7 @@ public class GoogleMapsActivity extends Activity
 			}
 			if((building.getLatitude() != null) && (building.getLongitude() != null) && (filterOptions[category]))
 			{
-				LatLng newBuilding = new LatLng(building.getExactLatitude(), building.getExactLongitude());
-				String title = building.getName();
-				BitmapDescriptor buildingIcon;
-				byte index = building.getBuildingCategory().getID();
-								
-				switch(index){			// Bestimmung des Icons
-					case 2:
-						buildingIcon = BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_blue);
-						break;
-					case 3:
-						buildingIcon = BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_red);
-						break;
-					default:
-						buildingIcon = BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher);
-						break;
-				}
-				
-				Marker newBuildingMarker;
-				
-				/*
-				StringBuilder sbld = new StringBuilder();
-				String str = "";
-				//sbld.append("Latitude: " + building.getExactLatitude() + ", Longitude: " + building.getExactLongitude());
-				sbld.append("ID: " + building.getID());
-				str = sbld.toString();/**/
-				
-				
-				if(building.getDescription() == null) {		// Marker-Erstellung ohne Beschreibung
-					newBuildingMarker = map.addMarker(new MarkerOptions()
-							.position(newBuilding)
-							.title(title)
-							.icon(buildingIcon));
-				} else {									// Marker-Erstellung mit Beschreibung
-					newBuildingMarker = map.addMarker(new MarkerOptions()
-							.position(newBuilding)
-							.title(title)
-							.icon(buildingIcon)
-							//.snippet(str));
-							.snippet(building.getDescription()));
-				}
-				
-				map.setOnInfoWindowClickListener(
-						new OnInfoWindowClickListener() {
-							@Override
-							public void onInfoWindowClick(Marker clickedMarker) {
-								startDetailedView(clickedMarker.getId());
-							}
-						}
-					);
-			    
-				displayedMarkers.add(new ExtendetMarker(newBuildingMarker, building.getBuildingCategory().getID(), building.getID()));
-				
+				createNewMarker(building);
 			}
 		}
 	}
