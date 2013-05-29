@@ -5,7 +5,6 @@ import java.io.IOException;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -85,30 +84,33 @@ public class DetailActivity extends Activity
                 this.setContentView(R.layout.activity_detail_withoutimage);
             }
 
-            TextView textView = (TextView) this.findViewById(R.id.detail_description);
-            this.setTextView(textView);
+//            TextView textView = (TextView) this.findViewById(R.id.detail_description);
+//            this.setTextView(textView);
+            this.setTextViews();
         }
     }
 
     /**
-     * Diese Methode setzt den Text, der in der uebergebenen TextView angezeigt wird.
-     * @param textView
+     * Diese Methode setzt die Beschreibung des Building-Objektes
      */
-    private void setTextView(TextView textView)
+    private void setTextViews()
     {
         if(this.building != null)
         {
-            String text = "";
-
-            String value = "Name:\n\t" + this.building.getName() + "\n\n";
-            text += value;
+            TextView textView = (TextView) this.findViewById(R.id.detail_textView_name);
+            textView.setText(this.building.getName());
 
             if(this.building.getStreet() != null && this.building.getHouseNumber() != null && this.building.getPostalCode() != null && this.building.getCity() != null)
             {
-                value = "Adresse:\n\t";
-                value += this.building.getStreet() + " " + this.building.getHouseNumber() + "\n\t";
-                value += this.building.getPostalCode() + " " + this.building.getCity() + "\n\n";
-                text += value;
+                textView = (TextView) this.findViewById(R.id.detail_textView_adress_headline);
+                textView.setVisibility(View.VISIBLE);
+
+                textView = (TextView) this.findViewById(R.id.detail_textView_adress);
+                textView.setVisibility(View.VISIBLE);
+
+                String value = this.building.getStreet() + " " + this.building.getHouseNumber() + "\n";
+                value += this.building.getPostalCode() + " " + this.building.getCity();
+                textView.setText(value);
             }
 
             if(this.building instanceof CollegeBuilding)
@@ -117,30 +119,46 @@ public class DetailActivity extends Activity
 
                 if(collegeBuilding.getNumberOfBuilding() != null)
                 {
-                    value = "Gebaeudenummer:\n\t" + collegeBuilding.getNumberOfBuilding() + "\n\n";
-                    text += value;
+                    textView = (TextView) this.findViewById(R.id.detail_textView_buildingnumber_headline);
+                    textView.setVisibility(View.VISIBLE);
+
+                    textView = (TextView) this.findViewById(R.id.detail_textView_buildingnumber);
+                    textView.setVisibility(View.VISIBLE);
+                    textView.setText(collegeBuilding.getNumberOfBuilding().toString());
                 }
                 if(collegeBuilding.getNumberOfFaculty() != null)
                 {
-                    value = "Fachbereichsnummer\n\t" + collegeBuilding.getNumberOfFaculty() + "\n\n";
-                    text += value;
+                    textView = (TextView) this.findViewById(R.id.detail_textView_facultynumber_headline);
+                    textView.setVisibility(View.VISIBLE);
+
+                    textView = (TextView) this.findViewById(R.id.detail_textView_facultynumber);
+                    textView.setVisibility(View.VISIBLE);
+                    textView.setText(collegeBuilding.getNumberOfFaculty().toString());
                 }
             }
 
             if(this.building.getURL() != null)
             {
-                value = "Homepage:\n\t" + this.building.getURL() + "\n\n";
-                text += value;
+                textView = (TextView) this.findViewById(R.id.detail_textView_homepage_headline);
+                textView.setVisibility(View.VISIBLE);
+
+                textView = (TextView) this.findViewById(R.id.detail_textView_homepage);
+                textView.setVisibility(View.VISIBLE);
+                textView.setText(this.building.getURL().toString());
             }
 
             if(this.building.getDescription() != null)
             {
-                value = "Beschreibung:\n" + this.building.getDescription();
-                text += value;
+                textView = (TextView) this.findViewById(R.id.detail_textView_description_headline);
+                textView.setVisibility(View.VISIBLE);
+
+                textView = (TextView) this.findViewById(R.id.detail_textView_description);
+                textView.setVisibility(View.VISIBLE);
+                textView.setText(this.building.getDescription());
             }
 
-            textView.setText(text);
-            textView.setMovementMethod(new ScrollingMovementMethod());
+//            textView.setText(text);
+//            textView.setMovementMethod(new ScrollingMovementMethod());
         }
     }
 
