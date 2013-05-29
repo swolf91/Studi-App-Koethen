@@ -12,33 +12,36 @@
 
     <Button
         android:id="@+id/btn_campus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/campus"
         android:onClick="onButtonClick"
         android:text="@string/campus" />
 
     <Button
         android:id="@+id/btn_koethen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:onClick="onButtonClick"
-        android:text="@string/koethen" />
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/schildk"
+        android:onClick="onButtonClick" />
 
     <Button
         android:id="@+id/btn_entdeckertour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tour"
         android:onClick="onButtonClick"
         android:text="@string/entdeckertour" />
 
     <Button
         android:id="@+id/btn_googlemaps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="125dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/karte"
         android:onClick="onButtonClick"
         android:text="@string/karte" />
 
