@@ -9,7 +9,8 @@ public class Building
      */
     private final String name;
     /**
-     * beeinhaltet die ID des Gebaeudes. Diese haengt auch von der
+     * beeinhaltet die ID des Gebaeudes. Diese haengt auch von der Kategorie ab und
+     * ist nur in Verbindung miteinander einzigartig
      */
     private final byte id;
     /**

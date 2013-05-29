@@ -9,11 +9,24 @@ import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.IXmlParsing;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class BuildingCategoryManager implements IXmlParsing
+/**
+ * Diese Klasse verwaltet die Instanzen der BuildingCategory-Klasse.
+ */
+public final class BuildingCategoryManager implements IXmlParsing
 {
+    /**
+     * beinhaltet die Instanz dieser Klasse
+     */
     private static BuildingCategoryManager INSTANCE;
+    /**
+     * In dieser Map werden bzw sind alle Kategorien gespeichert
+     */
     private Map<Byte, BuildingCategory> categoryMap;
 
+    /**
+     * Gibt eine Instanz dieser Klasse zurueck und sorgt dafuer, dass auch nur
+     * eine Instanz erstellt wird! Ganz ala Singleton.
+     */
     public static BuildingCategoryManager getInstance()
     {
         if (INSTANCE == null)
@@ -23,21 +36,30 @@ public class BuildingCategoryManager implements IXmlParsing
         return INSTANCE;
     }
 
+    /**
+     * Konstruktor erstellt eine leere Map, die später die Kategorien enthaelt.
+     * Kann nicht von Aussen aufgerufen werden.
+     */
     private BuildingCategoryManager()
     {
         this.categoryMap = new HashMap<Byte, BuildingCategory>();
     }
 
-    public boolean hasContent()
-    {
-        return this.categoryMap != null && !this.categoryMap.isEmpty();
-    }
-
+    /**
+     * Gibt die Kategorie zurueck, die zur jeweiligen ID gehoert.
+     * @param id
+     * @return
+     */
     public BuildingCategory getCategory(byte id)
     {
         return this.categoryMap.get(id);
     }
 
+    /**
+     * Gibt die Kategorie zurueck, die den jeweiligen Namen besitzt.
+     * @param name
+     * @return
+     */
     public BuildingCategory getCategory(String name)
     {
 //        TODO Diese Methode evtl umbauen (Levenstin Distance?)
@@ -79,6 +101,11 @@ public class BuildingCategoryManager implements IXmlParsing
         return "buildingCategories";
     }
 
+    /**
+     * Fuegt das Node-Element zur Liste hinzu.
+     * @param node
+     * @return ob Element hinzugefuegt werden konnte oder nicht.
+     */
     private boolean addElement(Node node)
     {
         if (!node.hasChildNodes())
@@ -116,26 +143,25 @@ public class BuildingCategoryManager implements IXmlParsing
 
         BuildingCategory category = new BuildingCategory(id, name, iconPath);
         this.categoryMap.put(id, category);
-        Log.d("Building category created", "id: " + id + " name: " + name);
+        Log.d("BuildingCategoryManagerDebug", "Category was created: " + id + " " + name);
 
         return true;
     }
+
     /**
-     * Durchl�uft mit einem Iterator f�r die Extpandable List.
-     * @return alle Gebaudekategorien
+     * Gibt alle Instanzen der BuildingCategory-Klasse zurueck.
+     * @return
      */
-    public String[] getallBuildingCategories(){
-    	int max=categoryMap.size();
-		String [] tmp= new String [max];
-    	int i=0;
-    	
-		while(categoryMap.values().iterator().hasNext()){
-			tmp[i]=categoryMap.values().iterator().next().getName();
-			i++;
-		}
-		
-    	return tmp;
-		
-    	
+    public BuildingCategory[] getBuildingCategories()
+    {
+        BuildingCategory[] buildingCategories = new BuildingCategory[this.categoryMap.size()];
+
+        int i = 0;
+        for(Entry<Byte, BuildingCategory> entry : this.categoryMap.entrySet())
+        {
+            buildingCategories[i++] = entry.getValue();
+        }
+
+        return buildingCategories;
     }
 }

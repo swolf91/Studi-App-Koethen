@@ -9,13 +9,23 @@ import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.IXmlParsing;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+/**
+ * Diese Klasse verwaltet die Instanzen der Building-Klasse.
+ */
 public class BuildingManager implements IXmlParsing
 {
+    /**
+     * beinhaltet die Instanz dieser Klasse
+     */
     private static BuildingManager INSTANCE;
+    /**
+     * In dieser Map werden bzw sind alle BuildingObjekte abgespeichert.
+     */
     private List<Building> buildings;
 
     /**
-     *
+     * Konstruktor erstellt eine leere Liste, welche spaeter
+     * Building-Objekte enthaelt.
      */
     private BuildingManager()
     {
@@ -35,6 +45,12 @@ public class BuildingManager implements IXmlParsing
         return INSTANCE;
     }
 
+    /**
+     * Diese Methode gibt das BuildingObjekt mit den jeweiligen ID's zurueck
+     * @param category - ID der BuildingCategory des Objekts
+     * @param id - ID des Objektes
+     * @return
+     */
     public Building getBuilding(BuildingCategory category, byte id)
     {
         for(Building building : this.buildings)
@@ -47,6 +63,15 @@ public class BuildingManager implements IXmlParsing
         return null;
     }
 
+    /**
+     * Gibt eine Liste zurueck, welche Building-Objekte beinhaltet.
+     * Diese setzen sich so zusammen:
+     * 1. Fall kein Parameter - Alle vorhandenen Building-Objekte werden zurueckgegeben
+     * 2. Fall mit Parameter -  Alle Building-Objekte, die zu den angegebenen BuildingCategory-Objekten gehoeren
+     *                          werden zurueckgegeben
+     * @param categories
+     * @return
+     */
     public List<Building> getBuildingList(BuildingCategory... categories)
     {
         List<Building> buildingList;
@@ -103,6 +128,11 @@ public class BuildingManager implements IXmlParsing
         }
     }
 
+    /**
+     * Parst das Node-Element zum Building-Objekt und fuegt es zur Liste hinzu.
+     * @param category
+     * @param node
+     */
     private void addElement(BuildingCategory category, Node node)
     {
         if (category == null)
@@ -218,11 +248,11 @@ public class BuildingManager implements IXmlParsing
             }
             this.buildings.add(building);
 
-            Log.d("Created " + building.getClass().getSimpleName(), category.getName() + " - " + name);
+            Log.d("BuildingManagerDebug ", "Created " + building.getClass().getSimpleName() + ": " + category.getName() + " - " + name);
         }
         else
         {
-            Log.d("BuildingError", "Could not add a building from category " + category.getName() + " because name or id is missing!" );
+            Log.d("BuildingManagerDebug", "Could not add a building from category " + category.getName() + " because name or id is missing!" );
         }
     }
 
