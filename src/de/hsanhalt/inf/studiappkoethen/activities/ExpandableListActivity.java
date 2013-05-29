@@ -7,6 +7,7 @@ import de.hsanhalt.inf.studiappkoethen.util.ExpandableListViewAdapter;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ExpandableListView;
+import android.widget.ListAdapter;
 
 public class ExpandableListActivity extends android.app.ExpandableListActivity
 {
@@ -19,7 +20,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 		setContentView(R.layout.activity_expandablelist);
 		
 		elv=(ExpandableListView)findViewById(R.id.expandableListView1);
-		//elv.setAdapter(new ExpandableListView(this));
+		//elv.setAdapter(new ExpandableListView(this)); //TODO
 	}
 
 	@Override
