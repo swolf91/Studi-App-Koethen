@@ -47,6 +47,9 @@ public class GoogleMapsActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		
+        byte categorieID = this.getIntent().getByteExtra("category", (byte) -1);
+        byte buildingID = this.getIntent().getByteExtra("building", (byte) -1);
+	
 		setContentView(R.layout.activity_googlemaps);
 		
 		for(int i = 0; i < filterOptions.length; i++) {
@@ -59,14 +62,16 @@ public class GoogleMapsActivity extends Activity
         map = myMapFragment.getMap();
         map.setMyLocationEnabled(true);        
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
-	    map.moveCamera(CameraUpdateFactory.newLatLngZoom(KOETHEN, startZoomLevel));
+        
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(KOETHEN, startZoomLevel));
 	    map.animateCamera(CameraUpdateFactory.zoomTo(startZoomLevel), 2000, null);
 	    map.setOnCameraChangeListener(getCameraChangeListener());
-	    
-	    
 	    setMarkersOnCloseZoomLevel();
-		
+        
+        if(categorieID != -1 && buildingID != -1)
+        {
+        	setSelectionOnDestination(categorieID, buildingID);
+        }
 	}
 
 	@Override
@@ -107,6 +112,21 @@ public class GoogleMapsActivity extends Activity
 			default:
 				return super.onOptionsItemSelected(item);
 		}
+	}
+	
+	public void setSelectionOnDestination(byte categoryId, byte buildingId) {
+		int i = 0;
+		boolean matchedMarkerFound = false;
+		while((!displayedMarkers.isEmpty()) && (i < displayedMarkers.size()) && (!matchedMarkerFound)) {
+			if((displayedMarkers.get(i).getCategId() == categoryId) && (displayedMarkers.get(i).getBuildId() == buildingId)) {
+				matchedMarkerFound = true;
+			} else {
+				i++;
+			}
+		}
+		map.moveCamera(CameraUpdateFactory.newLatLngZoom(displayedMarkers.get(i).getMarker().getPosition(), startZoomLevel));
+		displayedMarkers.get(i).getMarker().showInfoWindow();
+	    //map.animateCamera(CameraUpdateFactory.zoomTo(startZoomLevel), 2000, null);
 	}
 	
 	public void setMarkersOnCloseZoomLevel(){		//Setzen aller Marker

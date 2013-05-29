@@ -68,7 +68,12 @@ public class MainActivity extends Activity
         switch (view.getId())
         {
             case R.id.btn_googlemaps:
-                startActivity(new Intent(this, GoogleMapsActivity.class));
+            	
+            	Intent intentGoogle = new Intent(this, GoogleMapsActivity.class);
+                intentGoogle.putExtra("category", (byte) -1);
+                intentGoogle.putExtra("building", (byte) -1);
+                this.startActivity(intentGoogle);
+                //startActivity(new Intent(this, GoogleMapsActivity.class));
                 break;
             case id.btn_koethen:
                 Intent intent = new Intent(this, DetailActivity.class);
