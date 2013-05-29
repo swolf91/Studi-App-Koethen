@@ -33,11 +33,6 @@ public class QuizActivity extends Activity
             startActivity(intent);
             return true;
 
-//        case R.id.action_list:
-//            startActivity(new Intent(this, ExpandableListActivity.class));
-//            return true;
-
-
         default:
             return super.onOptionsItemSelected(item);
         }
