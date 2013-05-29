@@ -1,7 +1,7 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.util.ElvAdapter;
+import de.hsanhalt.inf.studiappkoethen.util.ExpandableListViewAdapter;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ExpandableListView;
