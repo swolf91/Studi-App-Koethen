@@ -164,4 +164,12 @@ public final class BuildingCategoryManager implements IXmlParsing
 
         return buildingCategories;
     }
+    /**
+     * Holt die Anzahl der Kategorien.
+     * @return Anzahl der Kategorieen
+     */
+    public int getsize(){
+    	return this.categoryMap.size();
+    }
+    
 }
