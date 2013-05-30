@@ -1,4 +1,4 @@
-package de.hsanhalt.inf.studiappkoethen.util.xml.buildings;
+package de.hsanhalt.inf.studiappkoethen.xml.buildings;
 
 public class BuildingCategory
 {

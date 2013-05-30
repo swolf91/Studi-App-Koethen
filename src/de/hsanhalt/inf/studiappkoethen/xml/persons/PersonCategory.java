@@ -1,4 +1,4 @@
-package de.hsanhalt.inf.studiappkoethen.util.xml.persons;
+package de.hsanhalt.inf.studiappkoethen.xml.persons;
 
 public class PersonCategory
 {

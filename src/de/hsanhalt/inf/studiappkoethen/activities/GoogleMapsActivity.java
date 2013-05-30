@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
 import de.hsanhalt.inf.studiappkoethen.activities.classes.MergedMarkers;
 import de.hsanhalt.inf.studiappkoethen.activities.classes.ExtendetMarker;
 import android.app.Activity;
@@ -16,7 +16,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptor;

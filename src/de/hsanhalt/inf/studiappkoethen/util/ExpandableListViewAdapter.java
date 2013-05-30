@@ -2,19 +2,17 @@ package de.hsanhalt.inf.studiappkoethen.util;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategory;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
-import android.app.ExpandableListActivity;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ListAdapter;
+
 /**
  * Der ExpandableListView Adapter
  * hier werden die Daten in die Activity geladen

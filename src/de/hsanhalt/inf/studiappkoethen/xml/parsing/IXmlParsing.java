@@ -1,4 +1,4 @@
-package de.hsanhalt.inf.studiappkoethen.util.xml.parsing;
+package de.hsanhalt.inf.studiappkoethen.xml.parsing;
 
 import org.w3c.dom.Node;
 

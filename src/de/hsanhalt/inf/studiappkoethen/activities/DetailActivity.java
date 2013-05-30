@@ -16,11 +16,11 @@ import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategory;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.CollegeBuilding;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.CollegeBuilding;
 
 public class DetailActivity extends Activity
 {
@@ -86,9 +86,6 @@ public class DetailActivity extends Activity
             {
                 this.setContentView(R.layout.activity_detail_withoutimage);
             }
-
-//            TextView textView = (TextView) this.findViewById(R.id.detail_description);
-//            this.setTextView(textView);
             this.setTextViews();
         }
     }

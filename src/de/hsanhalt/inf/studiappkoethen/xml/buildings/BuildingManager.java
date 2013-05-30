@@ -1,11 +1,11 @@
-package de.hsanhalt.inf.studiappkoethen.util.xml.buildings;
+package de.hsanhalt.inf.studiappkoethen.xml.buildings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import android.util.Log;
-import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.IXmlParsing;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 

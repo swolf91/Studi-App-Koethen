@@ -11,7 +11,7 @@ import android.app.AlertDialog.Builder;
 import android.content.SharedPreferences;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.id;
-import de.hsanhalt.inf.studiappkoethen.util.xml.parsing.XmlParser;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 
 
 public class MainActivity extends Activity

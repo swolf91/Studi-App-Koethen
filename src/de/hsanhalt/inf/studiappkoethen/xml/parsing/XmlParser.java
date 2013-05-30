@@ -1,4 +1,4 @@
-package de.hsanhalt.inf.studiappkoethen.util.xml.parsing;
+package de.hsanhalt.inf.studiappkoethen.xml.parsing;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,10 +11,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import android.content.res.AssetManager;
 import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.util.StringUtils;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategoryManager;
-import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingManager;
-import de.hsanhalt.inf.studiappkoethen.util.xml.persons.PersonManager;
-import de.hsanhalt.inf.studiappkoethen.util.xml.persons.PersonCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
