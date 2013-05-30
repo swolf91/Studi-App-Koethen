@@ -88,6 +88,7 @@
         <longitude>119582960</longitude>
         <description>Werkstattgebaeude</description>
         <url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Prakt.-und Forschungshalle.JPG</registerImage>
     </building>
     <building>
     <id>5</id>
@@ -119,6 +120,7 @@
         <longitude>119682250</longitude>
         <description>Elektrotechniklabor</description>
         <url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
     </building>
     <building>
     <id>7</id>
