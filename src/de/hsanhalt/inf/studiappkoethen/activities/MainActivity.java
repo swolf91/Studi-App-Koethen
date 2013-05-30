@@ -67,7 +67,7 @@ public class MainActivity extends Activity
     {
         switch (view.getId())
         {
-            case R.id.btn_googlemaps:
+            case id.btn_karte:
             	
             	Intent intentGoogle = new Intent(this, GoogleMapsActivity.class);
                 intentGoogle.putExtra("category", (byte) -1);
