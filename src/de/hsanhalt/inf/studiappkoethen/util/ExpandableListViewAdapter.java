@@ -47,10 +47,10 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		
 		 for(int i=0;i<size;i++){
 			 
-			 parentEntries[i]=childEntries[i][0]=category[i].getName();
 			 List<Building> tmp= new ArrayList<Building>();
 			 tmp=bmanager.getInstance().getBuildingList(category[i]);
 			 childEntries[i]= new String[tmp.size()];
+			 parentEntries[i]=childEntries[i][0]=category[i].getName();
 			 
 			 for(int k=0;k<tmp.size();i++)
 				 childEntries[i][k]=tmp.remove(0).getName();
@@ -69,7 +69,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 //						 //Wenn das aktuelle Gebaeude einer Kategorie zugeordnet wurde
 //						 //(sollte immer klappen - ausser ein Gebaeude hat keine Kategorie)
 //
-//					 categoryEntries.add(it.getBuilding());	 //Fuege das Gebaeude der richtigen Kategorie zu
+//					 categoryEntries.add(it);	 //Fuege das Gebaeude der richtigen Kategorie zu
 //					 
 //
 //				 }
@@ -149,6 +149,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
 		return true;
 	}
+	
+	
 
 
 }
