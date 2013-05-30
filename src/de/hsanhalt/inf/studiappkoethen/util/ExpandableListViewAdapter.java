@@ -7,11 +7,14 @@ import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+import android.R.layout;
 import android.content.Context;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListView;
 
 /**
  * Der ExpandableListView Adapter
@@ -20,30 +23,32 @@ import android.widget.BaseExpandableListAdapter;
  *
  */
 public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
+	
 	private Context context;
-
 	BuildingCategoryManager bc;//Zugriff auf Kategorien
-	int size=bc.getInstance().getSize(); //Anzahl aller Kategorien (4 oder 3.. kp weiss ich atm nich lol)
-	String[] categoryEntries=new String[size];
+	int parentSize=bc.getInstance().getSize(); //Anzahl aller Kategorien (4 oder 3.. kp weiss ich atm nich lol -> dynamisch)
+	int childSize=0;
+	private static String [] parentEntries; //Unsere Kategorien
+	private static String [][] childEntries; // Alle Geb‰ude passend zur Kategorie!
 	BuildingManager bmanager; // Zugriff auf Gebaeude
-	List<Building> buildingList= new ArrayList<Building>();
+	
 
 
 	/**
 	 * Laedt alle Gebaeude, nach Kategorie geordnet, in die ExpandableList
 	 * @param newcontext
 	 */
-	//TODO Parameter!
+	
 	public ExpandableListViewAdapter(Context newcontext){
 
-		 this.context=newcontext;
+		 this.context=newcontext; //hiermit wird die ExpandableListView alias Content bekannt gemacht.
 
-		 BuildingCategory []category = new BuildingCategory[size]; // hier sind alle Kategorien drin
+		 BuildingCategory []category = new BuildingCategory[parentSize]; // hier sind alle Kategorien drin
 		 category=bc.getInstance().getBuildingCategories();
-		 String [] parentEntries = new String[size];
-		 String [][] childEntries= new String[size][];
+		 parentEntries = new String[parentSize];
+		 childEntries= new String[parentSize][];
 		
-		 for(int i=0;i<size;i++){
+		 for(int i=0;i<parentSize;i++){
 			 
 			 List<Building> tmp= new ArrayList<Building>();
 			 tmp=bmanager.getInstance().getBuildingList(category[i]);
@@ -83,62 +88,78 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
 		return false;
 	}
-
+	
+	/**
+	 * Hier werden die im Konstruktor gefuellten werte zurueckgegeben.
+	 */
 	@Override
 	public Object getChild(int groupPosition, int childPosition)
 	{
 
-		return null;
+		return childEntries[groupPosition][childPosition];
 	}
-
+	/*
+	 * TODO Note has to be filled 
+	 */
 	@Override
 	public long getChildId(int groupPosition, int childPosition)
 	{
-
-		return 0;
+		return childPosition;
 	}
-
+	
+	/**
+	 * TODO
+	 */
 	@Override
 	public View getChildView(int groupPosition, int childPosition,boolean isLastChild, View convertView, ViewGroup parent)
 	{
-
+			
 		return null;
 	}
-
+	/**
+	 * Gibt die Groeﬂe des jeweiligen Gruppeneintrages zurueck.
+	 */
 	@Override
 	public int getChildrenCount(int groupPosition)
 	{
-
-		return 0;
+		return parentEntries[groupPosition].length();
 	}
-
+	/**
+	 * Gibt die gewuenschte Gruppe zurueck.
+	 */
 	@Override
 	public Object getGroup(int groupPosition)
 	{
 
-		return null;
+		return parentEntries[groupPosition];
 	}
-
+	/**
+	 * Gibt die Gruppengroeﬂe zurueck.
+	 */
 	@Override
 	public int getGroupCount()
 	{
-
-		return 0;
+		return parentSize;
 	}
-
+	/**
+	 * Gibt die GruppenId zurueck.
+	 */
 	@Override
 	public long getGroupId(int groupPosition)
 	{
 
-		return 0;
+		return groupPosition;
 	}
 
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
-			View convertView, ViewGroup parent)
+			View view, ViewGroup parent)
 	{
-
+		if (view==null)
+//			LayoutInflater inf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//			view = inf.inflate(R, layout) //TODO hier war ich beim letzten mal!
 		return null;
+		return parent;
 	}
 
 	@Override
