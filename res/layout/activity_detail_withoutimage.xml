@@ -144,5 +144,6 @@
         android:text="@string/detail_button_mapview"
         android:id="@+id/detail_button_mapview"
         android:layout_gravity="center"
-        android:layout_marginTop="-50dp" />
+        android:layout_marginTop="-50dp"
+        android:onClick="openMap" />
 </LinearLayout>

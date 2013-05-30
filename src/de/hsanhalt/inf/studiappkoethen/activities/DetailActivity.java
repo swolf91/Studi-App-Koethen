@@ -177,6 +177,20 @@ public class DetailActivity extends Activity
         }
     }
 
+    public void openMap(View view)
+    {
+        if(this.building != null && view.getId() == id.detail_button_mapview)
+        {
+            if(this.building.getLatitude() != null && this.building.getLongitude() != null)
+            {
+                Intent intent = new Intent(this, GoogleMapsActivity.class);
+                intent.putExtra("categoryID", this.building.getBuildingCategory().getID());
+                intent.putExtra("buildingID", this.building.getID());
+                this.startActivity(intent);
+            }
+        }
+    }
+
     /**
      * Diese Methode wird aufgerufen, wenn auf das Bild geklickt wird. Sie oeffnet die
      * ImageActivity und uebergibt den Pfad zum Bild als Parameter
