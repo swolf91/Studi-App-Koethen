@@ -132,7 +132,7 @@ public final class BuildingCategoryManager implements IXmlParsing
             }
             else if(subNode.getNodeName().equals("setIcon"))
             {
-                iconPath = subNode.getTextContent();
+                iconPath = "images/" + subNode.getTextContent();
             }
         }
 
@@ -168,7 +168,8 @@ public final class BuildingCategoryManager implements IXmlParsing
      * Holt die Anzahl der Kategorien.
      * @return Anzahl der Kategorieen
      */
-    public int getSize(){
+    public int getSize()
+    {
     	return this.categoryMap.size();
     }
     
