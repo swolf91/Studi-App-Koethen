@@ -1,9 +1,11 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
 import java.io.IOException;
+import java.net.URL;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -12,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.util.xml.buildings.BuildingCategory;
@@ -156,9 +159,21 @@ public class DetailActivity extends Activity
                 textView.setVisibility(View.VISIBLE);
                 textView.setText(this.building.getDescription());
             }
+        }
+    }
 
-//            textView.setText(text);
-//            textView.setMovementMethod(new ScrollingMovementMethod());
+    public void openUrl(View view)
+    {
+        if(this.building != null && view.getId() == id.detail_textView_homepage)
+        {
+            URL url = this.building.getURL();
+            if(url != null)
+            {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url.toString()));
+                this.startActivity(intent);
+            }
+
         }
     }
 

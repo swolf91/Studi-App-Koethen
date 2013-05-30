@@ -150,6 +150,9 @@
                     android:layout_gravity="left"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:textColor="#1010ff"
+                    android:onClick="openUrl"
+                    android:clickable="true"
                     android:visibility="gone"/>
 
                 <TextView
