@@ -2,43 +2,6 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="150dp">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="5dp"
-            android:id="@+id/detail_arrow_left"
-            android:layout_gravity="center_horizontal|top"
-            android:onClick="onImageChange"
-            android:background="#FFAAAAAA" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginRight="60dp"
-            android:layout_marginLeft="5dp"
-            android:id="@+id/detail_image"
-            android:layout_gravity="center_horizontal|top"
-            android:onClick="onImageClick"
-        />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="-55dp"
-            android:layout_marginTop="50dp"
-            android:id="@+id/detail_arrow_right"
-            android:layout_gravity="center_horizontal|top"
-            android:onClick="onImageChange"
-            android:background="#FFAAAAAA" />
-
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -48,119 +11,161 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"  >
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name:"
-                android:id="@+id/detail_textView_name_headline"
-                android:textStyle="bold"
-                android:layout_gravity="left"
-                android:layout_marginLeft="5dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/detail_description"
-                android:id="@+id/detail_textView_name"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_arrow_left"
+                    android:layout_gravity="center_horizontal|top"
+                    android:onClick="onImageChange"
+                    android:background="#FFAAAAAA" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Adresse"
-                android:id="@+id/detail_textView_adress_headline"
-                android:textStyle="bold"
-                android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
-                android:visibility="gone" />
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_image"
+                    android:layout_gravity="center_horizontal|top"
+                    android:onClick="onImageClick"
+                />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/detail_textView_adress"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:visibility="gone" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-55dp"
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/detail_arrow_right"
+                    android:layout_gravity="center_horizontal|top"
+                    android:onClick="onImageChange"
+                    android:background="#FFAAAAAA" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gebaeudenummer"
-                android:id="@+id/detail_textView_buildingnumber_headline"
-                android:textStyle="bold"
-                android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
-                android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"  >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/detail_textView_buildingnumber"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:id="@+id/detail_textView_name_headline"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fachbereichsnummer"
-                android:id="@+id/detail_textView_facultynumber_headline"
-                android:textStyle="bold"
-                android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail_description"
+                    android:id="@+id/detail_textView_name"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/detail_textView_facultynumber"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse"
+                    android:id="@+id/detail_textView_adress_headline"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Homepage"
-                android:id="@+id/detail_textView_homepage_headline"
-                android:textStyle="bold"
-                android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/detail_textView_adress"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/detail_textView_homepage"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gebaeudenummer"
+                    android:id="@+id/detail_textView_buildingnumber_headline"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Beschreibung"
-                android:id="@+id/detail_textView_description_headline"
-                android:textStyle="bold"
-                android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/detail_textView_buildingnumber"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/detail_textView_description"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fachbereichsnummer"
+                    android:id="@+id/detail_textView_facultynumber_headline"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/detail_textView_facultynumber"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Homepage"
+                    android:id="@+id/detail_textView_homepage_headline"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/detail_textView_homepage"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beschreibung"
+                    android:id="@+id/detail_textView_description_headline"
+                    android:textStyle="bold"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/detail_textView_description"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
