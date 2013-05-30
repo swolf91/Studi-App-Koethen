@@ -4,18 +4,15 @@ public class Quiz
 {
     private final byte id;
 
-    private Question[] questions;
+    private final Question[] questions;
 
-    public Quiz(byte id, int numberOfQuestions)
-    {
-        this.id = id;
-        this.questions = new Question[numberOfQuestions];
-    }
+    private final String startMessage;
 
-    public Quiz(byte id, Question[] questions)
+    public Quiz(byte id, Question[] questions, String startMessage)
     {
         this.id = id;
         this.questions = questions;
+        this.startMessage = startMessage;
     }
 
     public byte getID()
@@ -28,13 +25,13 @@ public class Quiz
         return this.questions[id];
     }
 
-    public void addQuestion(Question question)
-    {
-        this.questions[question.getID()] = question;
-    }
-
     public int getNumberOfQuestions()
     {
         return this.questions.length;
+    }
+
+    public String getStartMessage()
+    {
+        return this.startMessage;
     }
 }

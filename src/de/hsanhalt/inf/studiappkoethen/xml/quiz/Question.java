@@ -1,5 +1,7 @@
 package de.hsanhalt.inf.studiappkoethen.xml.quiz;
 
+import java.util.List;
+
 public class Question
 {
     /**
@@ -20,7 +22,7 @@ public class Question
     /**
      * die ID der richtigen Antwort im answer-Array
      */
-    private final int rightAnswer;
+    private final List<Integer> correctAnswers;
 
     /**
      * Der Text, der nach Beantwortung der Frage kommen soll.
@@ -32,13 +34,13 @@ public class Question
      */
     private final String hint;
 
-    public Question(byte id, String question, String hint, String[] answers, int rightAnswer, String result)
+    public Question(byte id, String question, String hint, String[] answers, List<Integer> correctAnswers, String result)
     {
         this.id = id;
         this.question = question;
         this.hint = hint;
         this.answers = answers;
-        this.rightAnswer = rightAnswer;
+        this.correctAnswers = correctAnswers;
         this.result = result;
     }
 
@@ -62,9 +64,9 @@ public class Question
         return this.answers;
     }
 
-    public int getRightAnswerID()
+    public boolean isCorrectAnswer(int id)
     {
-        return this.rightAnswer;
+        return this.correctAnswers.contains(id);
     }
 
     public String getResult()

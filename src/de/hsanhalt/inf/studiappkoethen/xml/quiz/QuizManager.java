@@ -58,7 +58,7 @@ public class QuizManager implements IXmlParsing
 
             byte id = -1;
             List<Question> questions = new ArrayList<>();
-            String startmsg;
+            String startmsg = null;
 
             for(int i = 0; i < nodeList.getLength(); i++)
             {
@@ -76,6 +76,16 @@ public class QuizManager implements IXmlParsing
                     startmsg = subNode.getTextContent();
                 }
             }
+
+            if(id == -1 || questions.isEmpty())
+            {
+                Log.e("QuizManagerError", "Could not create quiz!");
+                return;
+            }
+
+            Quiz quiz = new Quiz(id, questions.toArray(new Question[questions.size()]), startmsg);
+            Log.d("QuizManagerDebug", "Created Quiz: " + quiz.getID() + " with " + quiz.getNumberOfQuestions() + " questions.");
+            this.quizList.add(quiz);
         }
     }
 
@@ -84,7 +94,7 @@ public class QuizManager implements IXmlParsing
         byte id = -1;
         String question = null;
         List<String> answer = new ArrayList<>(4);
-        int rightAnswerID = -1;
+        List<Integer> correctAnswers = new ArrayList<>(1);
         String hint = null;
         String result = null;
 
@@ -106,14 +116,13 @@ public class QuizManager implements IXmlParsing
                 else if(subNode.getNodeName().equals("answer"))
                 {
                     answer.add(content);
-//                    if(subNode.hasAttributes())
-//                    {
-//                        Node attribute = subNode.getAttributes().getNamedItem("answer");
-//                        Log.d("QuizManager", "answer mit Attribute: " + attribute.getTextContent());
-//                    }
-                    if(subNode.hasAttributes())     // TODO ueberarbeiten und sicherer machen :p
+                    if(subNode.hasAttributes())
                     {
-                        rightAnswerID = answer.size() - 1;
+                        Node attribute = subNode.getAttributes().getNamedItem("answer");
+                        if(attribute != null && attribute.getTextContent().equals("true"))
+                        {
+                            correctAnswers.add(answer.size() - 1);
+                        }
                     }
                 }
                 else if(subNode.getNodeName().equals("hint"))
@@ -127,12 +136,15 @@ public class QuizManager implements IXmlParsing
             }
         }
 
-        if(id == -1 || question == null || answer.isEmpty() || rightAnswerID == -1)
+        if(id == -1 || question == null || answer.isEmpty() || correctAnswers.isEmpty())
         {
+            Log.e("QuizManagerError", "Could not parse question!");
             return null;
         }
 
-        return new Question(id, question, hint, answer.toArray(new String[answer.size()]), rightAnswerID, result);
+        Question quest = new Question(id, question, hint, answer.toArray(new String[answer.size()]), correctAnswers, result);
+        Log.d("QuizManagerDebug", "Created question: " +  id);
+        return quest;
     }
 
     /**

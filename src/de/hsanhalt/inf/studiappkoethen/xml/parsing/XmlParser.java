@@ -15,6 +15,7 @@ import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.quiz.QuizManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -154,7 +155,8 @@ public class XmlParser
     	PERSONS(PersonManager.getInstance()),
         BUILDINGS(BuildingManager.getInstance()),
         BUILDINGCATEGORIES(BuildingCategoryManager.getInstance()),
-        PERSONCATEGORIES(PersonCategoryManager.getInstance());
+        PERSONCATEGORIES(PersonCategoryManager.getInstance()),
+        QUIZ(QuizManager.getInstance());
 
         private IXmlParsing instance;
 
