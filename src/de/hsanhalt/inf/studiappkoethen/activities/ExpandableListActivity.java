@@ -83,7 +83,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 	private OnChildClickListener expandableListItemClicked = new OnChildClickListener () {
 		public boolean onChildClick(ExpandableListView parent, View view,int groupPosition,int childPosition,long id){
 			
-			//TODO hier kommt der aufruf zur Detail Activity des jeweiligen Gebäudes hin
+			//TODO hier kommt der aufruf zur Detail Activity des jeweiligen Gebaeudes hin
 			return false;
 		}
 	};
