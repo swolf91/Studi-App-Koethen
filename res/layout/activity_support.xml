@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"  >
+            
+             <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+           	 	android:layout_marginLeft="5dp"
+           	 	android:text="Allgemein:\n"
+            	android:textStyle="bold" />
+           
+             <TextView
+      			android:layout_width="wrap_content"
+       			android:layout_height="wrap_content"
+        		android:text="@string/support_text"
+        		android:layout_gravity="left"
+        		android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="Google Map:\n"
+                android:textStyle="bold" />
+             
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_text"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+            
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Campus Quiz:\n"
+                android:textStyle="bold"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_text"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

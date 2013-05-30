@@ -31,6 +31,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="de.hsanhalt.inf.studiappkoethen.activities.MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +48,7 @@
         <activity android:name=".activities.DetailActivity"></activity>
         <activity android:name=".activities.ExpandableListActivity"></activity>
         <activity android:name=".activities.ImageActivity"></activity>
+        <activity android:name=".activities.SupportActivity"></activity>
     </application>
 
 </manifest>

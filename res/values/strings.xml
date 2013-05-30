@@ -8,6 +8,7 @@
     <string name="action_bars">Bars</string>
     <string name="action_main">Hauptseite</string>
     <string name="action_list">Liste</string>
+    <string name="action_support">Hilfe</string>
     <string name="app_name">Studi-App Koethen</string>
     <string name="hello_world">Hello world!</string>
     <string name="campus">Campus</string>
@@ -18,5 +19,7 @@
     <string name="detail_description">Es wurde kein gueltiges Gebaeude zur Anzeige ausgewaehlt!</string>
     <string name="detail_button_mapview">Auf Karte anzeigen</string>
     <string name="image_errormsg">Das Bild konnte nicht geladen werden</string>
-
+    <string name="support_text">Hier entsteht die in-App Hilfe zum Programm \nIch hoffe das die Seite euch hilft in der App die Funktionen zu nutzen.</string>
+    <string name="map_text">zu wissen ist ,dass manche Symbole bis jetzt mehrere Beudeutungen haben und diese durch mehrfaches Klicken wechseln.</string>
+    <string name="quiz_text">Das Quiz führt dich einmal an den Campus-Gebäuden vorbei und danach erfährst du, wie gut du deinen Campus bereits kennst.</string>
 </resources>

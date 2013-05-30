@@ -94,6 +94,9 @@ public class MainActivity extends Activity
             moveTaskToBack(true);
             return true;
 
+        case R.id.action_support:
+            startActivity(new Intent(this, SupportActivity.class));
+            return true;
 
         default:
             return super.onOptionsItemSelected(item);
