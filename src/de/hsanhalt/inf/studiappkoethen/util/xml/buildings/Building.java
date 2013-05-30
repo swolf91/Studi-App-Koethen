@@ -224,13 +224,5 @@ public class Building
     {
         return this.getName();
     }
-    
-    /**
-     * Gibt das Building Objekt zurueck.
-     * 
-     */
-    public Building getBuilding(){
-    	return this;
-    	
-    }
+   
 }
