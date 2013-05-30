@@ -159,6 +159,10 @@ public class DetailActivity extends Activity
         }
     }
 
+    /**
+     * Oeffnet die Homepage des Gebaeudes
+     * @param view
+     */
     public void openUrl(View view)
     {
         if(this.building != null && view.getId() == id.detail_textView_homepage)
@@ -174,6 +178,10 @@ public class DetailActivity extends Activity
         }
     }
 
+    /**
+     * Oeffnet die Karte und zeigt das Gebaeude dort an.
+     * @param view
+     */
     public void openMap(View view)
     {
         if(this.building != null && view.getId() == id.detail_button_mapview)
@@ -181,8 +189,8 @@ public class DetailActivity extends Activity
             if(this.building.getLatitude() != null && this.building.getLongitude() != null)
             {
                 Intent intent = new Intent(this, GoogleMapsActivity.class);
-                intent.putExtra("categoryID", this.building.getBuildingCategory().getID());
-                intent.putExtra("buildingID", this.building.getID());
+                intent.putExtra("category", this.building.getBuildingCategory().getID());
+                intent.putExtra("building", this.building.getID());
                 this.startActivity(intent);
             }
         }
