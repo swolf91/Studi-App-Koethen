@@ -117,8 +117,7 @@ public class BuildingManager implements IXmlParsing
                 Node subNode = nodes.item(i);
                 if (subNode.getNodeName().equals("categoryID"))
                 {
-                    category = BuildingCategoryManager.getInstance()
-                                                      .getCategory(Byte.valueOf(subNode.getTextContent()));
+                    category = BuildingCategoryManager.getInstance().getCategory(Byte.valueOf(subNode.getTextContent()));
                 }
                 else if (subNode.getNodeName().equals("building"))
                 {

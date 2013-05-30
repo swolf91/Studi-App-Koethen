@@ -3,7 +3,9 @@ package de.hsanhalt.inf.studiappkoethen.xml.quiz;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -104,6 +106,11 @@ public class QuizManager implements IXmlParsing
                 else if(subNode.getNodeName().equals("answer"))
                 {
                     answer.add(content);
+//                    if(subNode.hasAttributes())
+//                    {
+//                        Node attribute = subNode.getAttributes().getNamedItem("answer");
+//                        Log.d("QuizManager", "answer mit Attribute: " + attribute.getTextContent());
+//                    }
                     if(subNode.hasAttributes())     // TODO ueberarbeiten und sicherer machen :p
                     {
                         rightAnswerID = answer.size() - 1;
