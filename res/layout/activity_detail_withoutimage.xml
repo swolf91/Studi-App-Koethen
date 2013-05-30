@@ -30,7 +30,8 @@
                 android:text="@string/detail_description"
                 android:id="@+id/detail_textView_name"
                 android:layout_gravity="left"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,6 +50,7 @@
                 android:id="@+id/detail_textView_adress"
                 android:layout_gravity="left"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:visibility="gone" />
 
             <TextView
@@ -68,6 +70,7 @@
                 android:id="@+id/detail_textView_buildingnumber"
                 android:layout_gravity="left"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:visibility="gone"/>
 
             <TextView
@@ -87,6 +90,7 @@
                 android:id="@+id/detail_textView_facultynumber"
                 android:layout_gravity="left"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:visibility="gone"/>
 
             <TextView
@@ -106,6 +110,7 @@
                 android:id="@+id/detail_textView_homepage"
                 android:layout_gravity="left"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:visibility="gone"/>
 
             <TextView
@@ -125,6 +130,7 @@
                 android:id="@+id/detail_textView_description"
                 android:layout_gravity="left"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:visibility="gone"/>
         </LinearLayout>
     </ScrollView>
