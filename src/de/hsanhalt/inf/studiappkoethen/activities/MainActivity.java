@@ -67,7 +67,7 @@ public class MainActivity extends Activity
     {
         switch (view.getId())
         {
-            case id.btn_karte:
+            case id.main_imageview_map:
             	
             	Intent intentGoogle = new Intent(this, GoogleMapsActivity.class);
                 intentGoogle.putExtra("category", (byte) -1);
@@ -75,7 +75,7 @@ public class MainActivity extends Activity
                 this.startActivity(intentGoogle);
                 //startActivity(new Intent(this, GoogleMapsActivity.class));
                 break;
-            case id.btn_koethen:
+            case id.main_imageview_city:
                 Intent intent = new Intent(this, DetailActivity.class);
                 intent.putExtra("category", (byte) 5);
                 intent.putExtra("building", (byte) 5);

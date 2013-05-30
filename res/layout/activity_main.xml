@@ -1,43 +1,42 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/mainactivity_background"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:padding="0dp">
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="95dp"
-        android:id="@+id/btn_koethen"
-        android:layout_gravity="center"
-        android:onClick="onButtonClick"
-        android:background="#ff0000"
-        android:layout_margin="0dp" />
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="90dp"
-        android:onClick="onButtonClick"
-        android:background="#ffff00"
-        android:id="@+id/btn_campus" />
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="85dp"
-        android:onClick="onButtonClick"
-        android:background="#00ff00"
-        android:id="@+id/btn_entdeckertour" />
+    android:weightSum="4"
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:id="@+id/main_imageview_city"
+        android:layout_gravity="center"
         android:onClick="onButtonClick"
-        android:background="#0000ff"
-        android:id="@+id/btn_karte" />
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/main_imageview_campus"
+        android:layout_gravity="center"
+        android:onClick="onButtonClick"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/main_imageview_tour"
+        android:layout_gravity="center"
+        android:onClick="onButtonClick"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/main_imageview_map"
+        android:layout_gravity="center"
+        android:onClick="onButtonClick"
+        android:layout_weight="1" />
 </LinearLayout>
