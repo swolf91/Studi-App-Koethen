@@ -1,4 +1,4 @@
-package de.hsanhalt.inf.studiappkoethen.activities.classes;
+package de.hsanhalt.inf.studiappkoethen.util;
 
 import java.util.List;
 
