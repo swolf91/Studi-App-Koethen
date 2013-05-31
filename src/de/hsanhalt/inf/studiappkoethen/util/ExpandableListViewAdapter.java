@@ -7,6 +7,7 @@ import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+import android.R;
 import android.R.layout;
 import android.content.Context;
 import android.util.Log;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 /**
  * Der ExpandableListView Adapter
@@ -31,6 +33,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	private static String [] parentEntries; //Unsere Kategorien
 	private static String [][] childEntries; // Alle Gebäude passend zur Kategorie!
 	BuildingManager bmanager; // Zugriff auf Gebaeude
+	private LayoutInflater inflater;
 	
 
 
@@ -40,8 +43,9 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	 */
 	
 	public ExpandableListViewAdapter(Context newcontext){
-
-		 this.context=newcontext; //hiermit wird die ExpandableListView alias Content bekannt gemacht.
+		
+		
+		 inflater = LayoutInflater.from(newcontext);
 
 		 BuildingCategory []category = new BuildingCategory[parentSize]; // hier sind alle Kategorien drin
 		 category=bc.getInstance().getBuildingCategories();
@@ -62,31 +66,30 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		 
 		 Log.d("ExtpandableListView","Created parentEntries : " + parentEntries.length + "and childEntries : "+childEntries.length );
 		 
-		 
-//		 while(buildingList.iterator().hasNext()){
-//
-//			 Building it=buildingList.iterator().next();
-//
-//				 for(int i=0;i<size;i++){
-//					 if(it.getBuildingCategory().equals(category[i]))
-//						 //Wenn das aktuelle Gebaeude einer Kategorie zugeordnet wurde
-//						 //(sollte immer klappen - ausser ein Gebaeude hat keine Kategorie)
-//
-//					 categoryEntries.add(it);	 //Fuege das Gebaeude der richtigen Kategorie zu
-//					 
-//
-//				 }
-//
-//		 }
+/*		 
+		 while(buildingList.iterator().hasNext()){
 
+			 Building it=buildingList.iterator().next();
+
+				 for(int i=0;i<size;i++){
+					 if(it.getBuildingCategory().equals(category[i]))
+						 //Wenn das aktuelle Gebaeude einer Kategorie zugeordnet wurde
+						 //(sollte immer klappen - ausser ein Gebaeude hat keine Kategorie)
+
+					 categoryEntries.add(it);	 //Fuege das Gebaeude der richtigen Kategorie zu
+					 
+
+				 }
+
+		 }
+*/
  	}
 
 
 	@Override
 	public boolean hasStableIds()
 	{
-
-		return false;
+		return true;
 	}
 	
 	/**
@@ -98,8 +101,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
 		return childEntries[groupPosition][childPosition];
 	}
-	/*
-	 * TODO Note has to be filled 
+	/**
+	 * Gibt die ID der Untergrupopeneintraege zurueck.
 	 */
 	@Override
 	public long getChildId(int groupPosition, int childPosition)
@@ -108,14 +111,42 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	}
 	
 	/**
-	 * TODO
+	 * Gibt das View Objekt bzgl. der Child-Elemente (Untergruppe) zurueck. 
+	 * TODO layouts fehlen
+	 */
+	public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View view, ViewGroup parent)
+	{	
+        if (view == null) {
+//            view = inflater.inflate(R.layout.list_item_child, view,false);
+        }
+
+//        TextView textView = (TextView) view.findViewById(R.id.list_item_text_child);
+       
+//        textView.setText(childEntries[groupPosition][childPosition]);
+
+       
+        return view;
+	}
+	/**
+	 * Gibt das View Objekt bzgl. der Parent-Elemente (Obergruppe) zurueck.
+	 * TODO layouts fehlen
 	 */
 	@Override
-	public View getChildView(int groupPosition, int childPosition,boolean isLastChild, View convertView, ViewGroup parent)
+	public View getGroupView(int groupPosition, boolean isExpanded, View view, ViewGroup parent)
 	{
-			
-		return null;
+
+		 if (view == null) {
+//	            view = inflater.inflate(R.layout.list_item_parent, parent,false);
+	        }
+
+//	        TextView textView = (TextView) view.findViewById(R.id.list_item_text_view);
+	       
+//	        textView.setText(getGroup(groupPosition).toString());
+
+	        
+	        return view;
 	}
+	
 	/**
 	 * Gibt die Groeße des jeweiligen Gruppeneintrages zurueck.
 	 */
@@ -142,7 +173,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		return parentSize;
 	}
 	/**
-	 * Gibt die GruppenId zurueck.
+	 * Gibt die Gruppen-ID zurueck.
 	 */
 	@Override
 	public long getGroupId(int groupPosition)
@@ -151,16 +182,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		return groupPosition;
 	}
 
-	@Override
-	public View getGroupView(int groupPosition, boolean isExpanded,
-			View view, ViewGroup parent)
-	{
-		if (view==null)
-//			LayoutInflater inf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//			view = inf.inflate(R, layout) //TODO hier war ich beim letzten mal!
-		return null;
-		return parent;
-	}
+
 
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition)
@@ -168,7 +190,10 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
 		return true;
 	}
-	
+
+
+
+
 	
 
 
