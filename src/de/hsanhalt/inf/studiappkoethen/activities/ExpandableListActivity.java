@@ -34,7 +34,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 		//Spinner ist zur "Vorschau" der Gruppenelemente
 		Spinner spinner = (Spinner) findViewById(R.id.expandableListView1);
 		
-		//ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R. , android.R.layout.simple_spinner_dropdown_item); TODO "Spinner" - Layout einfuergen
+//		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R. , android.R.layout.simple_spinner_dropdown_item); TODO "Spinner" - Layout einfuergen
 		
 		//Layout das genutzt werden soll festlegen, wenn die Auswahlliste angezeigt wird
 //		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -83,7 +83,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 	private OnChildClickListener expandableListItemClicked = new OnChildClickListener () {
 		public boolean onChildClick(ExpandableListView parent, View view,int groupPosition,int childPosition,long id){
 			
-			//TODO hier kommt der aufruf zur Detail Activity des jeweiligen Gebaeudes hin
+			//TODO hier kommt der Aufruf zur Detail Activity des jeweiligen Gebaeudes hin
 			return false;
 		}
 	};
@@ -94,7 +94,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 		
 		public boolean onGroupClick(ExpandableListView parent, View view, int groupPosition, long id) {
 			
-			//TODO wenn die oberen Gruppenelemente gekickt sollen nur die jeweiligen Child Elemente aufgerufen werden.
+			//TODO wenn die oberen Gruppenelemente geklickt sollen nur die jeweiligen Child Elemente aufgerufen werden.
 			return false;
 		}
 	};
