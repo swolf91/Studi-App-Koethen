@@ -70,9 +70,53 @@ public class GoogleMapsActivity extends Activity
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.googlemaps_filter, menu);
+		
 		return true;
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		byte index = -1;
+		boolean filterOn = false;
+		switch(item.getItemId()) {
+			case R.id.filteritem01:
+				index = 0;
+				break;
+			case R.id.filteritem02:
+				index = 1; 
+				break;
+			case R.id.filteritem03:
+				index = 2; 
+				break;
+			case R.id.filteritem04:
+				index = 3; 
+				break;
+			case R.id.filteritem05:
+				index = 4; 
+				break;
+			default:
+				break;
+		}
+		
+		if(index >= 0) {
+			for(int i = 0; i < specialFilter.size(); i++) {
+				if(specialFilter.get(i).getCategory() == index) {
+					filterOn = true;
+					specialFilter.remove(i);
+				}
+			}
+			if(!filterOn) {
+				specialFilter.add(new FilterItem(index));
+			}
+			
+			clearAllMarkers();
+	    	setMarkersDependingOnFilter();
+		}
+		
+		return super.onOptionsItemSelected(item);
+	}
+
 	public BitmapDescriptor getCategoryIcon(byte category) {
 		switch(category){			// Bestimmung des Icons
 			case 2:
