@@ -11,6 +11,7 @@ import android.app.AlertDialog.Builder;
 import android.content.SharedPreferences;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.id;
+import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 
 
@@ -70,8 +71,21 @@ public class MainActivity extends Activity
             case id.main_imageview_map:
             	
             	Intent intentGoogle = new Intent(this, GoogleMapsActivity.class);
-                intentGoogle.putExtra("category", (byte) -1);
-                intentGoogle.putExtra("building", (byte) -1);
+            	/*
+            	// * Beispiel für Initialisierung des Filters für GoogleMaps
+            	
+            	FilterBundle newFilter = new FilterBundle((byte) 2);
+            	newFilter.addNewBuilding((byte) 1);
+            	newFilter.addNewBuilding((byte) 2);
+            	newFilter.addNewBuilding((byte) 3);
+            	newFilter.addNewBuilding((byte) 4);
+            	newFilter.addNewCategory((byte) 2);
+            	newFilter.addNewCategory((byte) 3);
+            	newFilter.addNewBuilding((byte) 1);
+            	
+            	intentGoogle.putExtras(newFilter.getBundle());
+            	*/
+            	
                 this.startActivity(intentGoogle);
                 //startActivity(new Intent(this, GoogleMapsActivity.class));
                 break;

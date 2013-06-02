@@ -3,6 +3,18 @@ package de.hsanhalt.inf.studiappkoethen.util;
 import android.os.Bundle;
 
 /*
+ * Anwendung:
+ * 
+ * 		FilterBundle newFilter = new FilterBundle(categoryId); -> Erstellt ein neues FilterBundle mit der Kategorie [categoryId].
+ * 
+ * 		newFilter.addNewBuilding(buildingId); -> Fügt ein Gebäude mit der ID [buildingId] zu der zuletzt erstellten Kategorie hinzu.
+ * 												 Wird kein Gebäude hinzugefügt, wird die ganze Kategorie angezeigt.
+ * 
+ * 		newFilter.addNewCategory(nextCategoryId); -> Schließt die letzte Kategorie ab und erstellt eine Neue mit der Id [nextCategoryId]. 
+ * 
+ * 		newFilter.getBundle(); -> Gibt das fertige Filter-Bundle zurück.
+ * 
+ * 
 Aufbau des Bundles:
 
 	categoryBundle {
