@@ -22,6 +22,7 @@ import android.widget.TextView;
  * Der ExpandableListView Adapter
  * hier werden die Daten in die Activity geladen
  * @author G. Kauf
+ * Grundfunktionalität ist gegeben.
  *
  */
 public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
@@ -33,7 +34,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	private static String [] parentEntries; //Unsere Kategorien
 	private static String [][] childEntries; // Alle Gebaeude passend zur Kategorie!
 	BuildingManager bmanager; // Zugriff auf Gebaeude
-	private LayoutInflater inflater;
+
 	
 
 
@@ -44,8 +45,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	
 	public ExpandableListViewAdapter(Context newcontext){
 		
-		
-		 inflater = LayoutInflater.from(newcontext);
+		context=newcontext;
+
 
 		 BuildingCategory []category = new BuildingCategory[parentSize]; // hier sind alle Kategorien drin
 		 category=bc.getInstance().getBuildingCategories();
@@ -112,39 +113,47 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	
 	/**
 	 * Gibt das View Objekt bzgl. der Child-Elemente (Untergruppe) zurueck. 
-	 * TODO layouts fehlen
+	 * 
 	 */
 	public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View view, ViewGroup parent)
 	{	
-        if (view == null) {
-//            view = inflater.inflate(R.layout.list_item_child, view,false);
-        }
+//        if (view == null) {
+////            view = inflater.inflate(R.layout.list_item_child, view,false);
+//        }
+//
+////        TextView textView = (TextView) view.findViewById(R.id.list_item_text_child);
+//       
+////        textView.setText(childEntries[groupPosition][childPosition]);
 
-//        TextView textView = (TextView) view.findViewById(R.id.list_item_text_child);
-       
-//        textView.setText(childEntries[groupPosition][childPosition]);
-
-       
-        return view;
+		TextView tv= new TextView(context);
+        tv.setText(childEntries[groupPosition][childPosition]);
+        tv.setPadding(30, 5, 5,5);
+        tv.setTextSize(20);
+        return tv;
 	}
 	/**
 	 * Gibt das View Objekt bzgl. der Parent-Elemente (Obergruppe) zurueck.
-	 * TODO layouts fehlen
+	 * 
 	 */
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded, View view, ViewGroup parent)
 	{
 
-		 if (view == null) {
-//	            view = inflater.inflate(R.layout.list_item_parent, parent,false);
-	        }
+//		 if (view == null) {
+////	            view = inflater.inflate(R.layout.list_item_parent, parent,false);
+//	        }
+//
+////	        TextView textView = (TextView) view.findViewById(R.id.list_item_text_view);
+//	       
+////	        textView.setText(getGroup(groupPosition).toString());
 
-//	        TextView textView = (TextView) view.findViewById(R.id.list_item_text_view);
-	       
-//	        textView.setText(getGroup(groupPosition).toString());
-
+		TextView tv= new TextView(context);
+        tv.setText(parentEntries[groupPosition]);
+        tv.setPadding(50, 5, 5,5);
+        tv.setTextSize(20);
+        return tv;
 	        
-	        return view;
+	        
 	}
 	
 	/**
