@@ -31,7 +31,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	int parentSize=bc.getInstance().getSize(); //Anzahl aller Kategorien (4 oder 3.. kp weiss ich atm nich lol -> dynamisch)
 	int childSize=0;
 	private static String [] parentEntries; //Unsere Kategorien
-	private static String [][] childEntries; // Alle Geb‰ude passend zur Kategorie!
+	private static String [][] childEntries; // Alle Gebaeude passend zur Kategorie!
 	BuildingManager bmanager; // Zugriff auf Gebaeude
 	private LayoutInflater inflater;
 	
@@ -148,7 +148,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	}
 	
 	/**
-	 * Gibt die Groeﬂe des jeweiligen Gruppeneintrages zurueck.
+	 * Gibt die Groesse des jeweiligen Gruppeneintrages zurueck.
 	 */
 	@Override
 	public int getChildrenCount(int groupPosition)
@@ -165,7 +165,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		return parentEntries[groupPosition];
 	}
 	/**
-	 * Gibt die Gruppengroeﬂe zurueck.
+	 * Gibt die Gruppengroesse zurueck.
 	 */
 	@Override
 	public int getGroupCount()

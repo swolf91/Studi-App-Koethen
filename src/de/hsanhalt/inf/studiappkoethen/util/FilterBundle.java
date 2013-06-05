@@ -7,12 +7,12 @@ import android.os.Bundle;
  * 
  * 		FilterBundle newFilter = new FilterBundle(categoryId); -> Erstellt ein neues FilterBundle mit der Kategorie [categoryId].
  * 
- * 		newFilter.addNewBuilding(buildingId); -> Fügt ein Gebäude mit der ID [buildingId] zu der zuletzt erstellten Kategorie hinzu.
- * 												 Wird kein Gebäude hinzugefügt, wird die ganze Kategorie angezeigt.
+ * 		newFilter.addNewBuilding(buildingId); -> Fuegt ein Gebaeude mit der ID [buildingId] zu der zuletzt erstellten Kategorie hinzu.
+ * 												 Wird kein Gebaeude hinzugefuegt, wird die ganze Kategorie angezeigt.
  * 
- * 		newFilter.addNewCategory(nextCategoryId); -> Schließt die letzte Kategorie ab und erstellt eine Neue mit der Id [nextCategoryId]. 
+ * 		newFilter.addNewCategory(nextCategoryId); -> Schliesst die letzte Kategorie ab und erstellt eine Neue mit der Id [nextCategoryId].
  * 
- * 		newFilter.getBundle(); -> Gibt das fertige Filter-Bundle zurück.
+ * 		newFilter.getBundle(); -> Gibt das fertige Filter-Bundle zurï¿½ck.
  * 
  * 
 Aufbau des Bundles:
@@ -20,31 +20,31 @@ Aufbau des Bundles:
 	categoryBundle {
 		category = "ID der Kategorie"
 		nextBuilding {
-			building = "ID des Gebäudes"
+			building = "ID des Gebï¿½udes"
 			nextBuilding {
-				building = "ID des nächsten Gebäudes"
+				building = "ID des nï¿½chsten Gebï¿½udes"
 				nextBuilding {
 					...
 				}
 			}
 		}
 		nextCategory {
-			category = "ID der nächsten Kategorie"
+			category = "ID der nï¿½chsten Kategorie"
 			nextBuilding {
-				building = "ID des Gebäudes"
+				building = "ID des Gebï¿½udes"
 				nextBuilding {
-					building = "ID des nächsten Gebäudes"
+					building = "ID des nï¿½chsten Gebï¿½udes"
 					nextBuilding {
 						...
 					}
 				}
 			}
 			nextCategory {
-				category = "ID der übernächsten Kategorie"
+				category = "ID der ï¿½bernï¿½chsten Kategorie"
 				nextBuilding {
-					building = "ID des Gebäudes"
+					building = "ID des Gebï¿½udes"
 					nextBuilding {
-						building = "ID des nächsten Gebäudes"
+						building = "ID des nï¿½chsten Gebï¿½udes"
 						nextBuilding {
 							...
 						}

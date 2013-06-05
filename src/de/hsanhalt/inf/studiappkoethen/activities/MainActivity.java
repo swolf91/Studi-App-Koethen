@@ -72,7 +72,7 @@ public class MainActivity extends Activity
             	
             	Intent intentGoogle = new Intent(this, GoogleMapsActivity.class);
             	/*
-            	// * Beispiel für Initialisierung des Filters für GoogleMaps
+            	// * Beispiel fuer Initialisierung des Filters fuer GoogleMaps
             	
             	FilterBundle newFilter = new FilterBundle((byte) 2);
             	newFilter.addNewBuilding((byte) 1);
