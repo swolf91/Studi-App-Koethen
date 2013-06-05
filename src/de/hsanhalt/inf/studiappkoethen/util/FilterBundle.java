@@ -20,31 +20,31 @@ Aufbau des Bundles:
 	categoryBundle {
 		category = "ID der Kategorie"
 		nextBuilding {
-			building = "ID des Geb�udes"
+			building = "ID des Gebaeudes"
 			nextBuilding {
-				building = "ID des n�chsten Geb�udes"
+				building = "ID des naechsten Gebaeudes"
 				nextBuilding {
 					...
 				}
 			}
 		}
 		nextCategory {
-			category = "ID der n�chsten Kategorie"
+			category = "ID der naechsten Kategorie"
 			nextBuilding {
-				building = "ID des Geb�udes"
+				building = "ID des Gebaeudes"
 				nextBuilding {
-					building = "ID des n�chsten Geb�udes"
+					building = "ID des naechsten Gebaeudes"
 					nextBuilding {
 						...
 					}
 				}
 			}
 			nextCategory {
-				category = "ID der �bern�chsten Kategorie"
+				category = "ID der uebernaechsten Kategorie"
 				nextBuilding {
-					building = "ID des Geb�udes"
+					building = "ID des Gebaeudes"
 					nextBuilding {
-						building = "ID des n�chsten Geb�udes"
+						building = "ID des naechsten Gebaeudes"
 						nextBuilding {
 							...
 						}
