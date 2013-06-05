@@ -1,6 +1,7 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.MenuItem;
 import de.hsanhalt.inf.studiappkoethen.R;
@@ -9,12 +10,16 @@ import android.os.Bundle;
 
 public class QuizActivity extends Activity
 {
+    SharedPreferences quizPreferences ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_quiz);
+        quizPreferences = getSharedPreferences("Quiz Status", MODE_PRIVATE);
     }
 
 

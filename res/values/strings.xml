@@ -19,7 +19,15 @@
     <string name="detail_description">Es wurde kein gueltiges Gebaeude zur Anzeige ausgewaehlt!</string>
     <string name="detail_button_mapview">Auf Karte anzeigen</string>
     <string name="image_errormsg">Das Bild konnte nicht geladen werden</string>
-    <string name="support_text">Hier entsteht die in-App Hilfe zum Programm \nIch hoffe das die Seite euch hilft in der App die Funktionen zu nutzen.</string>
-    <string name="map_text">zu wissen ist ,dass manche Symbole bis jetzt mehrere Beudeutungen haben und diese durch mehrfaches Klicken wechseln.</string>
-    <string name="quiz_text">Das Quiz führt dich einmal an den Campus-Gebäuden vorbei und danach erfährst du, wie gut du deinen Campus bereits kennst.</string>
+    <string name="filter_text">Mithilfe des Filters, welcher im oberen Optionsmenü zu finden ist,\nkönnen die verschiedenen Gebäudegruppen ein oder ausgeblendet werden.
+                               Diese Funktion soll dir die Übersicht auf der Köthen Map erleichtern und dabei helfen schneller ein bestimmtes Objekt zu finden.</string>
+    <string name="marker_text">Die Marker stellen verschiedene Gebäudegruppen dar. Jeder Marker auf der Karte steht für ein Gebäude oder einen wichtigen Ort.Um nähere Informationen über
+                               einen Punkt heraus zu finden,muss man einfach auf den entsprechenden Marker drücken und es öffnet sich ein kleines Informationsfenster\n\nWeiterhin ist es bis jetzt so,
+                               dass wenn mehrere Gebäude an einem Fleck sind diese durch mehrmaliges Drücken auf den Marker durchgewählt werden können.</string>
+    <string name="support_text">Willkommen in dem Hilfe-Bereich der Studi App Köthen. Wir haben uns Mühe gegeben alles einfach und intuitiv zu gestalten ,aber da du hier bis um
+                                weitere Sachen zu erfahren haben wir verschiedene Sachen gelistet.</string>
+    <string name="map_text">Zu wissen ist ,dass manche Symbole auf der Karte bis jetzt mehrere Bedeutungen haben und diese durch mehrfaches Klicken wechseln.
+                            \nBerührt Ihr den Infokasten oberhalb des Markers wird eine Seite mit wichtigsten Informationen geöffnet.</string>
+    <string name="quiz_text">Das Quiz soll dich animieren eine Runde durch Köthen und über deinen neuen Campus zu gehen.\nDabei werden dir Gebäude-spezifische Fragen gestellt
+                             und du kannst dein Wissen über Köthen unter Beweis stellen. Viel Spaß damit und solltest du einmal keine Lust mehr haben wird es automatisch an der aktuellen Position gespeichert.</string>
 </resources>
