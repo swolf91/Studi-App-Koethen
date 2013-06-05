@@ -10,7 +10,7 @@ import android.os.Bundle;
 
 public class QuizActivity extends Activity
 {
-    SharedPreferences quizPreferences ;
+    SharedPreferences quizPreferences ;    //Wird als Integer gespeichert und gibt die zuletzt gelöste Frage zurück
 
 
     @Override
@@ -20,6 +20,7 @@ public class QuizActivity extends Activity
 
         setContentView(R.layout.activity_quiz);
         quizPreferences = getSharedPreferences("Quiz Status", MODE_PRIVATE);
+        quizPreferences.getInt("Quiz Status",0);
     }
 
 

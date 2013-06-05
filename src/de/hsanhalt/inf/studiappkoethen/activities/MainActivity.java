@@ -10,6 +10,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.SharedPreferences;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.drawable;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
@@ -44,7 +45,7 @@ public class MainActivity extends Activity
 		    mPreferences.edit().putBoolean("firstStart", false).commit();
 	    
 			Builder builder = new AlertDialog.Builder(this);
-			builder.setIcon(R.drawable.ic_launcher);
+			builder.setIcon(drawable.app_launcher);
 			builder.setTitle("Willkommen");
 			builder.setMessage("Hi Ersties,\nhoffe ihr könnt unsere App gebrauchen und viel Spass damit.");
 			builder.setCancelable(true);
