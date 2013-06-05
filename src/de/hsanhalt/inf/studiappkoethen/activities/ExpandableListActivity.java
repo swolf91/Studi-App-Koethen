@@ -52,7 +52,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 		
 		expandableListView.setAdapter(expandableListViewAdapter);
 		
-		expandAll(); //TODO nur eins Expandieren lassen
+		expandAll(); //TODO nur eins Expandieren lassen wenn die Liste an sich funktioniert.
 		
 		
 //		Button add = (Button) findViewById(R.id.) // hier muss ein Button hin
@@ -93,9 +93,9 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 	private OnGroupClickListener expandableListGroupClicked = new OnGroupClickListener () {
 		
 		public boolean onGroupClick(ExpandableListView parent, View view, int groupPosition, long id) {
+			expandableListView.expandGroup(groupPosition);
 			
-			//TODO wenn die oberen Gruppenelemente geklickt sollen nur die jeweiligen Child Elemente aufgerufen werden.
-			return false;
+			return true; //TODO überprüfen ob true ok ist.
 		}
 	};
 	
