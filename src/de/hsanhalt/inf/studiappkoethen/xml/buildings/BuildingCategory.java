@@ -54,4 +54,10 @@ public class BuildingCategory
     {
         return this.iconPath;
     }
+
+    @Override
+    public String toString()
+    {
+        return this.getName();
+    }
 }

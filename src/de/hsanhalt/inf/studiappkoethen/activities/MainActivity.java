@@ -69,6 +69,10 @@ public class MainActivity extends Activity
     {
         switch (view.getId())
         {
+        	case id.main_imageview_campus:
+        		Intent expandableListIntent = new Intent (this,ExpandableListActivity.class);
+        		this.startActivity(expandableListIntent);
+        		break;
             case id.main_imageview_map:
             	
             	Intent intentGoogle = new Intent(this, GoogleMapsActivity.class);
