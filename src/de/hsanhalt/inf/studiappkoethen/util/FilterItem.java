@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * Die Klasse FilterItem wird zum Aufbau des GoogleMaps-Filters, für die angezeigten Gebäude benötigt. 
+ * Die Klasse FilterItem wird zum Aufbau des GoogleMaps-Filters, fuer die angezeigten Gebaeude benoetigt.
  */
 
 public class FilterItem
