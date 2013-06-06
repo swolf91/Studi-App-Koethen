@@ -1,110 +1,62 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
-import android.R.id;
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
-//import android.support.v4.widget.SearchViewCompatIcs.MySearchView;
-import android.view.MenuItem;
-import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.util.ExpandableListViewAdapter;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ListAdapter;
-import android.widget.Spinner;
 import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ExpandableListView.OnGroupClickListener;
+import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListAdapter;
+import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListEntry;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
 
 public class ExpandableListActivity extends Activity
 {
-	
-	private ExpandableListView expandableListView;
-	private ExpandableListAdapter expandableListViewAdapter;
-	/**
-	 * diese Methode baut de ExpandableList auf und zeigt sie an
-	 */
+    ExpandableListAdapter expandableListAdapter;
+    ExpandableListView expandableListView;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.activity_expandablelist);
 
-        this.expandableListView = (ExpandableListView) findViewById(R.id.expandablelist_expandablelistview_list);
-		//Spinner ist zur "Vorschau" der Gruppenelemente
-//		Spinner spinner = (Spinner) findViewById(R.id.expandableListView1);
-		
-//		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R. , android.R.layout.simple_spinner_dropdown_item); TODO "Spinner" - Layout einfuergen
-		
-		//Layout das genutzt werden soll festlegen, wenn die Auswahlliste angezeigt wird
-//		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		
-		//den Adapter zum Spinner hinzufuegen
-//		spinner.setAdapter(adapter);
-		
-		
-		//weitere Daten laden also die ganzen Parent und Child Dinger
-		
-		//referenz auf unsere Exp Liste holen
-		
-		
-		expandableListViewAdapter = new ExpandableListViewAdapter(ExpandableListActivity.this);
-		
-		expandableListView.setAdapter(expandableListViewAdapter);
-		
-//		expandAll();
-		
-		
-//		Button add = (Button) findViewById(R.id.) // hier muss ein Button hin
-				
-			
-		//listener fuer die Child Liste
-//		expandableListView.setOnChildClickListener()		
-		
-		
-		
-		
-		
-	}
-	/**
-	 * Alle Gruppen werden auf OnClick geoeffnet.
-	 */
-	private void expandAll()
-	{
-		int count = expandableListViewAdapter.getGroupCount();
-		for(int i=0;i<count;i++){
-			expandableListView.expandGroup(i);
-		}
-		
-	}
-	/**
-	 * Ereignis das bei "OnClick" auf das Untermenue der ExpandableList ausgeloest wird.
-	 */
-	private OnChildClickListener expandableListItemClicked = new OnChildClickListener () {
-		public boolean onChildClick(ExpandableListView parent, View view,int groupPosition,int childPosition,long id){
-			
-			//TODO hier kommt der Aufruf zur Detail Activity des jeweiligen Gebaeudes hin
-			return false;
-		}
-	};
-	/**
-	 * Ereignis das bei "OnOlick" auf die Kategorieelemente der ExpandableList ausgeloest wird.
-	 */
-	private OnGroupClickListener expandableListGroupClicked = new OnGroupClickListener () {
-		
-		public boolean onGroupClick(ExpandableListView parent, View view, int groupPosition, long id) {
-			expandableListView.expandGroup(groupPosition);
-			
-			return true; //TODO ueberpruefen ob true ok ist.
-		}
-	};
-	
-	
-	
-	
+        //Expandable list aus dem Layout laden
+        this.expandableListView = (ExpandableListView) findViewById(R.id.expandablelist_expandablelist_list);
+
+        //Adapter erstellen
+        this.expandableListAdapter = new ExpandableListAdapter(this, this.loadData());
+        //Adapter an ExpandableListView anhaengen
+        this.expandableListView.setAdapter(this.expandableListAdapter);
+
+        //listener for child row click
+        this.expandableListView.setOnChildClickListener(myListItemClicked);
+    }
+
+    /**
+     * laedt die Daten fuer den ExpandableListAdapter
+     */
+    private List<ExpandableListEntry> loadData()
+    {
+        List<ExpandableListEntry> entryList = new ArrayList<ExpandableListEntry>();
+        BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
+        BuildingManager buildingManager = BuildingManager.getInstance();
+        for(BuildingCategory buildingCategory : buildingCategoryManager.getBuildingCategories())
+        {
+            List<Building> buildings = buildingManager.getBuildingList(buildingCategory);
+            entryList.add(new ExpandableListEntry(buildingCategory, buildings.toArray(new Building[buildings.size()])));
+        }
+        return entryList;
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -137,17 +89,20 @@ public class ExpandableListActivity extends Activity
         default:
             return super.onOptionsItemSelected(item);
         }
-
-    }
-    
-    public void onClick(View v){
-    	
-    	switch(v.getId()){
-    		
-    	}
-    	
     }
 
+    //our child listener
+    private OnChildClickListener myListItemClicked =  new OnChildClickListener()
+    {
+        public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
+        {
+            Intent intent = new Intent(getBaseContext(), DetailActivity.class);
+            intent.putExtra("category", ((BuildingCategory)expandableListAdapter.getGroup(groupPosition)).getID());
+            intent.putExtra("building", ((Building)expandableListAdapter.getChild(groupPosition, childPosition)).getID());
+            startActivity(intent);
+            return true;
+        }
+    };
 
 
 }

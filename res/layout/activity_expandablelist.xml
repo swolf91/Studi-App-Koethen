@@ -1,12 +1,26 @@
-<LinearLayout
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ExpandableListView
-        android:id="@+id/expandablelist_expandablelistview_list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+    <TextView
+        android:id="@+id/expandablelist_textview_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="Gebaeudeliste:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
 
-</LinearLayout>
+    <ExpandableListView
+        android:id="@+id/expandablelist_expandablelist_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/expandablelist_textview_headline" />
+
+</RelativeLayout>
