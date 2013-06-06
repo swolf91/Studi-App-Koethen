@@ -15,11 +15,11 @@
         <latitude>517550372</latitude>
         <longitude>119686104</longitude>
         <description>
-Die Bibliothe der Hochschule umfasst ein grosses Sortiment von Fachzeitschrift, Buechern und zum Glueck auch online erreichbare Ebooks und digitale Zeitschrften.
-Weiterhin gbt es einen Lesesaal wo viele Exemplare vorhanden sind und gleich dort durchwälzt werden können.
-Sollte es euch einmal dorthin verschlagen, findet ihr die Bibliothek in der 3. Etage des roten Gebaeudes und beachtet die Oeffnungszeiten:
-mo - do: 9:30 Uhr - 17:00 Uhr
-fr:      9:30 Uhr - 15:00 Uhr		
+	Die Bibliothe der Hochschule umfasst ein grosses Sortiment von Fachzeitschrift, Buechern und zum Glueck auch online erreichbare Ebooks und digitale Zeitschrften.
+	Weiterhin gbt es einen Lesesaal wo viele Exemplare vorhanden sind und gleich dort durchwälzt werden können.
+	Sollte es euch einmal dorthin verschlagen, findet ihr die Bibliothek in der 3. Etage des roten Gebaeudes und beachtet die Oeffnungszeiten:
+	mo - do: 9:30 Uhr - 17:00 Uhr
+	fr:      9:30 Uhr - 15:00 Uhr		
 		</description>
         <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
         <registerImage>buildings/Gebaeude01.JPG</registerImage>
@@ -39,9 +39,9 @@ fr:      9:30 Uhr - 15:00 Uhr
         <latitude>517550370</latitude>
         <longitude>119686116</longitude>
         <description>
-Der Fachbereich 6 ist innerhalb Koethen der groesste der HS Anhalt und umfasst die Bereiche Elektrotechnik, Maschinenbau und Wirtschaftsingenieurwesen.
-Weiterhin ist dieser Bereich sehr praxisbezogen und soll dadurch Technikinteressierte anziehen.
-Der derzeitige Dekan ist Prof. Dr. Juergen Schwarz und ist bei uns auch unter der Personenkategorie zu finden.
+	Der Fachbereich 6 ist innerhalb Koethen der groesste der HS Anhalt und umfasst die Bereiche Elektrotechnik, Maschinenbau und Wirtschaftsingenieurwesen.
+	Weiterhin ist dieser Bereich sehr praxisbezogen und soll dadurch Technikinteressierte anziehen.
+	Der derzeitige Dekan ist Prof. Dr. Juergen Schwarz und ist bei uns auch unter der Personenkategorie zu finden.
         </description>
         <url>http://www.emw.hs-anhalt.de/www/</url>
         <registerImage>buildings/Gebaeude01.JPG</registerImage>
@@ -61,9 +61,9 @@ Der derzeitige Dekan ist Prof. Dr. Juergen Schwarz und ist bei uns auch unter de
         <latitude>517550370</latitude>
         <longitude>119686116</longitude>
         <description>
-Dieser Fachbereich beschaeftigt sich mit den Gebieten Angwandte Biowissenschaften und Prozesstechnik und glaenzt durch moderne LAbore und Messtechniken.
-Im FB 7 ist Prof. Dr. Joachim Breme als Dekan taetig und fuer den Bereich MAthematik spezialisiert.
-	    </description>
+	Dieser Fachbereich beschaeftigt sich mit den Gebieten Angewandte Biowissenschaften und Prozesstechnik und glaenzt durch moderne LAbore und Messtechniken.
+	Im FB 7 ist Prof. Dr. Joachim Breme als Dekan taetig und fuer den Bereich MAthematik spezialisiert.
+	</description>
         <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
         <registerImage>buildings/Gebaeude02.JPG</registerImage>
         <registerImage>buildings/Gebaeude02_2.JPG</registerImage>
@@ -81,10 +81,10 @@ Im FB 7 ist Prof. Dr. Joachim Breme als Dekan taetig und fuer den Bereich MAthem
          <latitude>517550370</latitude>
         <longitude>119686116</longitude>
         <description>
-Dieses Gebaeude umfasst viele Bereiche der Verwaltung, so sind unter anderem die Abteilungen
-ASA, AAA, FTTZ und ZIK zu finden.
-Weiterhin sind dort das Präsidium und verschiedene Dezernate fuer die interne Verwaltung zugaenglich.
-            zentr. Wache
+	Dieses Gebaeude umfasst viele Bereiche der Verwaltung, so sind unter anderem die Abteilungen
+	ASA, AAA, FTTZ und ZIK zu finden.
+	Weiterhin sind dort das Präsidium und verschiedene Dezernate fuer die interne Verwaltung zugaenglich.
+        zentr. Wache
         </description>
         <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Gebaeude03.JPG</registerImage>
@@ -102,8 +102,8 @@ Weiterhin sind dort das Präsidium und verschiedene Dezernate fuer die interne V
         <latitude>517548510</latitude>
         <longitude>119582960</longitude>
         <description>
-Diese Bereiche sind fuer die Studenten des Fachbereichs 6 unentbehrlich, da dort viele technische Ausbildungen und Projekte durchgefuehrt werden.
-		</description>
+	Diese Bereiche sind fuer die Studenten des Fachbereichs 6 unentbehrlich, da dort viele technische Ausbildungen und Projekte durchgefuehrt werden.
+	</description>
         <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Prakt.-und Forschungshalle.JPG</registerImage>
     </building>
@@ -120,9 +120,9 @@ Diese Bereiche sind fuer die Studenten des Fachbereichs 6 unentbehrlich, da dort
        <latitude>517550370</latitude>
         <longitude>119686116</longitude>
         <description>
-Fuer die mit grosser sozialer Ader und dem Beduerfnis sich auch neben dem Studium um studentische Angelegenheiten zu kuemmern ist das der richtige Platz.
-Und sonst koenntet ihr die Fachschaft ja auch so unterstuetzen, denn bei uns im FB 5 gibts immer Grillen und andere Angebote der Fachschaft.
-		</description>
+	Fuer die mit grosser sozialer Ader und dem Beduerfnis sich auch neben dem Studium um studentische Angelegenheiten zu kuemmern ist das der richtige Platz.
+	Und sonst koenntet ihr die Fachschaft ja auch so unterstuetzen, denn bei uns im FB 5 gibts immer Grillen und andere Angebote der Fachschaft.
+	</description>
         <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
         <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
     </building>
@@ -139,8 +139,8 @@ Und sonst koenntet ihr die Fachschaft ja auch so unterstuetzen, denn bei uns im 
         <latitude>517540140</latitude>
         <longitude>119682250</longitude>
         <description>
-Hier ist die Zugehoerigkeit ja eindeutig und ich kann selbst auch nichts genaueres sagen, da ich selbst noch nie drin gewesen bin. 
-Aber hat bestimmt viel mit der Fachrichtung zu tun.
+	Hier ist die Zugehoerigkeit ja eindeutig und ich kann selbst auch nichts genaueres sagen, da ich selbst noch nie drin gewesen bin. 
+	Aber hat bestimmt viel mit der Fachrichtung zu tun.
         </description>
 		<url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
@@ -158,10 +158,10 @@ Aber hat bestimmt viel mit der Fachrichtung zu tun.
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
         <description>
-Dieses Gebaeude ist fuer alle wichtig, die sich in Sachen Fremdsprachen weiterbilden wollen.
-Den hier gibt es die Moeglichkeit die Zertifikate fuer Englisch und Franzoesisch zu erhalten.
-Auch unsere auslaendischen Studierenden werden hier in Sachen Deutschkenntinisse weitergebildet.
-		</description>
+	Dieses Gebaeude ist fuer alle wichtig, die sich in Sachen Fremdsprachen weiterbilden wollen.
+	Den hier gibt es die Moeglichkeit die Zertifikate fuer Englisch und Franzoesisch zu erhalten.
+	Auch unsere auslaendischen Studierenden werden hier in Sachen Deutschkenntinisse weitergebildet.
+	</description>
         <url>http://www.inf.hs-anhalt.de/sprachenzentrum/sprachenzentrum/</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
@@ -180,12 +180,12 @@ Auch unsere auslaendischen Studierenden werden hier in Sachen Deutschkenntinisse
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
         <description>
-Hier innerhalb meines persoenlichen Lieblingsfachbereiches sind die Bereiche Informatik und Sprachen untergebracht.
-Dabei werden die mathematischen und programmiertechnischen Grundlagen geschaffen, 
-um im spaeteren Verlauf an ersten Softwareprojekten arbeiten zu koennen 
-oder auch Spiel bis ins Detail zu untersuchen und auszuwerten.
-Unser Dekanat wird durch Frau Prof. Dr. Ursula Fissgus vertreten und sie ist selbst innerhalb der Bereiche Programmierung und Softwaretechnik taetig.
-		</description>
+	Hier innerhalb meines persoenlichen Lieblingsfachbereiches sind die Bereiche Informatik und Sprachen untergebracht.
+	Dabei werden die mathematischen und programmiertechnischen Grundlagen geschaffen, 
+	um im spaeteren Verlauf an ersten Softwareprojekten arbeiten zu koennen 
+	oder auch Spiel bis ins Detail zu untersuchen und auszuwerten.
+	Unser Dekanat wird durch Frau Prof. Dr. Ursula Fissgus vertreten und sie ist selbst innerhalb der Bereiche Programmierung und Softwaretechnik taetig.
+	</description>
         <url>http://www.inf.hs-anhalt.de/</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
@@ -203,11 +203,11 @@ Unser Dekanat wird durch Frau Prof. Dr. Ursula Fissgus vertreten und sie ist sel
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
         <description>
-Um die Frage zu klaeren, um was es sich bei einem Studienkolleg handelt hier eine kurze Beschreibung:
-Die Studienkollegs bieten ausländischen Studierenden aus zahlreichen Ländern eine sprachliche und fachbezogene Studienpropädeutik 
-und stellen damit eine Art Vorstudium dar. Dazu führen sie in Schwerpunktkursen einjährigen Vorbereitungsunterricht durch 
-und nehmen die Feststellungsprüfung ab.
-		</description>
+	Um die Frage zu klaeren, um was es sich bei einem Studienkolleg handelt hier eine kurze Beschreibung:
+	Die Studienkollegs bieten ausländischen Studierenden aus zahlreichen Ländern eine sprachliche und fachbezogene Studienpropädeutik 
+	und stellen damit eine Art Vorstudium dar. Dazu führen sie in Schwerpunktkursen einjährigen Vorbereitungsunterricht durch 
+	und nehmen die Feststellungsprüfung ab.
+	</description>
         <url>http://www.hs-anhalt.de/international/landesstudienkolleg.html</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
@@ -223,11 +223,11 @@ und nehmen die Feststellungsprüfung ab.
         <latitude>517557047</latitude>
         <longitude>119602829</longitude>
         <description>
-Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstuetzen, 
-erste Rahmenbedingungen fuer die professionelle Projektausarbeitung zu ermoeglichen.
-Weiterhin koennen hier verschiedene Technologiezweige durch Rechnernetze, Medienbereitstellung 
-oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden..   		
-		</description>
+	Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstuetzen, 
+	erste Rahmenbedingungen fuer die professionelle Projektausarbeitung zu ermoeglichen.
+	Weiterhin koennen hier verschiedene Technologiezweige durch Rechnernetze, Medienbereitstellung 
+	oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden..   		
+	</description>
         <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
         <registerImage>buildings/Technologiezentrum.JPG</registerImage>
         <registerImage>buildings/Technologiezentrum_2.JPG</registerImage>
@@ -243,9 +243,9 @@ oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden..
         <latitude>517540844</latitude>
         <longitude>119645339</longitude>
         <description>
-Fuer alle Sportinteressierten und denen die nach einem Ausgleich zum Studium suchen wird hier ein umfangreiches Sportpaket angeboten.
-Welches viele Sportarten und natürlich auch Fuss oder Volleyball mt einschliesst.		
-		</description>
+	Fuer alle Sportinteressierten und denen die nach einem Ausgleich zum Studium suchen wird hier ein umfangreiches Sportpaket angeboten.
+	Welches viele Sportarten und natürlich auch Fuss oder Volleyball mt einschliesst.		
+	</description>
         <url>http://193.25.32.158/hochschulsport/index.php/koethen/aktuelles</url>
         <registerImage>buildings/Sporthalle.JPG</registerImage>
         <registerImage>buildings/Sporthalle_2.JPG</registerImage>
@@ -261,11 +261,11 @@ Welches viele Sportarten und natürlich auch Fuss oder Volleyball mt einschliess
         <latitude>517539986</latitude>
         <longitude>119664018</longitude>
         <description>
-Die Hauptmensa wurde erst vor kurzem komplett neu renoviert und alles kann jetzt seinen gewohnten Gang gehen.
-Das Essenangebot ist mal mehr oder weniger nach meinem Geschmack,
-aber um schon frueh darueber Bescheid zu wissen hier eine Empfehlung:
-Mithilfe der Mensa-App koennt ihr jeden Tag nachschauen was es die Woche ueber gibt.
-		</description>
+	Die Hauptmensa wurde erst vor kurzem komplett neu renoviert und alles kann jetzt seinen gewohnten Gang gehen.
+	Das Essenangebot ist mal mehr oder weniger nach meinem Geschmack,
+	aber um schon frueh darueber Bescheid zu wissen hier eine Empfehlung:
+	Mithilfe der Mensa-App koennt ihr jeden Tag nachschauen was es die Woche ueber gibt.
+	</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
         <registerImage>buildings/Studentenwerk.JPG</registerImage>
     </building>
@@ -282,9 +282,9 @@ Mithilfe der Mensa-App koennt ihr jeden Tag nachschauen was es die Woche ueber g
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
         <description>
-Fuer das Gebaeude in der Lohmannstrasse gibt es eine eigene Mensa, hier sollte eigentlich alles gleich sein.
-Nur man sollte aufpassen wann man vor hat dort essen zu gehen, denn das Essen kann schon mal schneller weg sein. 		
-		</description>
+	Fuer das Gebaeude in der Lohmannstrasse gibt es eine eigene Mensa, hier sollte eigentlich alles gleich sein.
+	Nur man sollte aufpassen wann man vor hat dort essen zu gehen, denn das Essen kann schon mal schneller weg sein. 		
+	</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-lohmannstrasse/</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
