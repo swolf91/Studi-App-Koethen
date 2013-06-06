@@ -25,7 +25,7 @@ public class QuizManager implements IXmlParsing
 
     private QuizManager()
     {
-        this.quizList = new ArrayList<>(3);
+        this.quizList = new ArrayList<Quiz>(3);
     }
 
     public Quiz getQuiz(byte id)
@@ -62,7 +62,7 @@ public class QuizManager implements IXmlParsing
             NodeList nodeList = node.getChildNodes();
 
             byte id = -1;
-            List<Question> questions = new ArrayList<>();
+            List<Question> questions = new ArrayList<Question>();
             String startmsg = null;
             String name = null;
 
@@ -103,8 +103,8 @@ public class QuizManager implements IXmlParsing
     {
         byte id = -1;
         String question = null;
-        List<String> answer = new ArrayList<>(4);
-        List<Integer> correctAnswers = new ArrayList<>(1);
+        List<String> answer = new ArrayList<String>(4);
+        List<Integer> correctAnswers = new ArrayList<Integer>(1);
         String hint = null;
         String result = null;
         byte buildingCategory = -1;

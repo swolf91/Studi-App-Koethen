@@ -20,7 +20,7 @@ import android.widget.ExpandableListView.OnGroupClickListener;
 public class ExpandableListActivity extends android.app.ExpandableListActivity
 {
 	
-	private ExpandableListView expandableListView;
+	private ExpandableListView expandableListView= (ExpandableListView) findViewById(android.R.id.list);;
 	private ExpandableListAdapter expandableListViewAdapter;
 	/**
 	 * diese Methode baut de ExpandableList auf und zeigt sie an
@@ -32,7 +32,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 		setContentView(R.layout.activity_expandablelist);
 		
 		//Spinner ist zur "Vorschau" der Gruppenelemente
-		Spinner spinner = (Spinner) findViewById(R.id.expandableListView1);
+//		Spinner spinner = (Spinner) findViewById(R.id.expandableListView1);
 		
 //		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R. , android.R.layout.simple_spinner_dropdown_item); TODO "Spinner" - Layout einfuergen
 		
@@ -46,13 +46,13 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 		//weitere Daten laden also die ganzen Parent und Child Dinger
 		
 		//referenz auf unsere Exp Liste holen
-		expandableListView = (ExpandableListView) findViewById(R.id.expandableListView1);
+		
 		
 		expandableListViewAdapter = new ExpandableListViewAdapter(ExpandableListActivity.this);
 		
 		expandableListView.setAdapter(expandableListViewAdapter);
 		
-		expandAll(); //TODO nur eins Expandieren lassen wenn die Liste an sich funktioniert.
+//		expandAll();
 		
 		
 //		Button add = (Button) findViewById(R.id.) // hier muss ein Button hin
