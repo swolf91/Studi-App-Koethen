@@ -33,7 +33,7 @@ import de.hsanhalt.inf.studiappkoethen.xml.quiz.QuizManager;
 public class QuizActivity extends Activity
 {
     private List<Boolean> answers;
-    private QuizManager quizManager;
+    private Quiz quiz;
     SharedPreferences quizPreferences ;    // Gibt die id des zuletzt geloesten Quizes zurueck.
 
     @Override
@@ -44,19 +44,26 @@ public class QuizActivity extends Activity
         this.setContentView(R.layout.activity_quiz);
         quizPreferences = getSharedPreferences("Quiz Status", MODE_PRIVATE);
 
-        this.quizManager = QuizManager.getInstance();
         byte lastQuiz = (byte) quizPreferences.getInt("lastQuiz", -1);
 
         if(lastQuiz != -1)
         {
+            this.quiz = QuizManager.getInstance().getQuiz(lastQuiz);
             // TODO load quiz!
 
             TextView textView = (TextView) this.findViewById(id.quiz_textView_noquiz);
             textView.setVisibility(View.GONE);
 
             // TODO status laden!
-            Quiz quiz = this.quizManager.getQuiz(lastQuiz);
-            this.load(quiz);
+
+            this.load();
+
+            if(this.answers.size() >= quiz.getNumberOfQuestions())
+            {
+                this.clear();
+                this.recreate();
+                return;
+            }
 
             textView = (TextView) this.findViewById(id.quiz_textView_question_headline);
             textView.setVisibility(View.VISIBLE);
@@ -67,88 +74,86 @@ public class QuizActivity extends Activity
             textView.setText(quiz.getQuestion(this.answers.size()).getQuestion());
 
             this.answers.add(false);
-            this.save(quiz);
+            this.save();
         }
     }
 
-    private void load(Quiz quiz)
+    private void load()
     {
         this.answers = new ArrayList<Boolean>(quiz.getNumberOfQuestions());
 
         FileInputStream fileInputStream = null;
-        BufferedInputStream bufferedInputStream = null;
-        DataInputStream dataInputStream = null;
 
         try
         {
-            fileInputStream = this.openFileInput("quiz" + quiz.getID());
-            bufferedInputStream = new BufferedInputStream(fileInputStream);
-            dataInputStream = new DataInputStream(bufferedInputStream);
-
-            while(true)
+            try
             {
-                this.answers.add(Boolean.valueOf(dataInputStream.readBoolean()));
+                fileInputStream = this.openFileInput("quiz" + quiz.getID());
             }
+            catch (FileNotFoundException ignored)
+            {
+                return;
+            }
+            while(fileInputStream.available() != 0)
+            {
+                this.answers.add(Boolean.valueOf(fileInputStream.read() != 0));
+            }
+            Log.d("QuizActivity", "Quiz-file: quiz" + quiz.getID() + " was parsed successfully. Found " + this.answers.size() + " answers.");
         }
-        catch (FileNotFoundException ignored)
+        catch(Exception e)
         {
-            Log.d("QuizActivityDebug", "Can't found file quiz" + quiz.getID() + "!");
-        }
-        catch (Exception e)
-        {
-            Log.e("QuizActivityError", "Can't read FileInputStream from quiz" + quiz.getID() + "!", e);
+             Log.e("QuizActivityError", "Couldn't load the last quiz state!", e);
         }
         finally
         {
             try
             {
                 fileInputStream.close();
-                bufferedInputStream.close();
-                dataInputStream.close();
             }
             catch (Exception e)
             {
-                Log.e("QuizActivityError", "Failed to load quiz status. Can't close files!", e);
+                Log.e("QuizActivityError", "Couldn't close the quiz file: quiz" + quiz.getID() + "!", e);
             }
         }
+
     }
 
-    private void save(Quiz quiz)
+    private void save()
     {
         FileOutputStream fileOutputStream = null;
-        BufferedOutputStream bufferedOutputStream = null;
-        DataOutputStream dataOutputStream = null;
 
         try
         {
             fileOutputStream = this.openFileOutput("quiz" + quiz.getID(), Context.MODE_PRIVATE);
-            bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
-            dataOutputStream = new DataOutputStream(bufferedOutputStream);
 
             for(Boolean bool : this.answers)
             {
-                dataOutputStream.writeBoolean(bool);
+                fileOutputStream.write(bool ? 1 : 0);
             }
         }
         catch (Exception e)
         {
-            Log.e("QuizActivity", "Can't write the quiz status for quiz" + quiz.getID() + "!", e);
+            Log.e("QuizActivityError", "Couldn't save the current quiz state: quiz" + quiz.getID() + "!", e);
         }
         finally
         {
             try
             {
                 fileOutputStream.close();
-                bufferedOutputStream.close();
-                dataOutputStream.close();
             }
             catch (Exception e)
             {
-                Log.e("QuizActivity", "Can't close the quiz save file quiz" + quiz.getID() + "!", e);
+                Log.e("QuizActivityError", "Couldn't close the quiz file: quiz" + quiz.getID() + "!", e);
             }
         }
     }
 
+    private void clear()
+    {
+        this.answers.clear();
+        this.save();
+        this.quizPreferences.edit().putInt("lastQuiz", -1).commit();
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
