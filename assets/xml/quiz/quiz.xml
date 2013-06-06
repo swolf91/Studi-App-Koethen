@@ -1,7 +1,7 @@
 <quiz>
     <id>0</id>
     <name>Standard Campusquiz</name>
-    <startmessage>Das Quiz beginnt vor dem roten Gebäude (01). Die Auswertung erfolgt nach dem kompletten Rundgang.</startmessage>
+    <startmessage>Das Quiz beginnt vor dem roten Gebaeude (01). Die Auswertung erfolgt nach dem kompletten Rundgang.</startmessage>
     <question>
         <id>0</id>
         <buildingCategory>0</buildingCategory>
