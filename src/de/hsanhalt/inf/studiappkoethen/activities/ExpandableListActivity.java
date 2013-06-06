@@ -1,5 +1,7 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
+import android.R.id;
+import android.app.Activity;
 import android.content.Intent;
 //import android.support.v4.widget.SearchViewCompatIcs.MySearchView;
 import android.view.MenuItem;
@@ -17,10 +19,10 @@ import android.widget.Spinner;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 
-public class ExpandableListActivity extends android.app.ExpandableListActivity
+public class ExpandableListActivity extends Activity
 {
 	
-	private ExpandableListView expandableListView= (ExpandableListView) findViewById(android.R.id.list);;
+	private ExpandableListView expandableListView;
 	private ExpandableListAdapter expandableListViewAdapter;
 	/**
 	 * diese Methode baut de ExpandableList auf und zeigt sie an
@@ -29,8 +31,9 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_expandablelist);
-		
+		this.setContentView(R.layout.activity_expandablelist);
+
+        this.expandableListView = (ExpandableListView) findViewById(R.id.expandablelist_expandablelistview_list);
 		//Spinner ist zur "Vorschau" der Gruppenelemente
 //		Spinner spinner = (Spinner) findViewById(R.id.expandableListView1);
 		
