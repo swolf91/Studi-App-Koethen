@@ -16,6 +16,7 @@ import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
+import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
@@ -189,8 +190,11 @@ public class DetailActivity extends Activity
             if(this.building.getLatitude() != null && this.building.getLongitude() != null)
             {
                 Intent intent = new Intent(this, GoogleMapsActivity.class);
-                intent.putExtra("category", this.building.getBuildingCategory().getID());
-                intent.putExtra("building", this.building.getID());
+
+                FilterBundle filterBundle = new FilterBundle(this.building.getBuildingCategory().getID());
+                filterBundle.addNewBuilding(this.building.getID());
+
+                intent.putExtras(filterBundle.getBundle());
                 this.startActivity(intent);
             }
         }
