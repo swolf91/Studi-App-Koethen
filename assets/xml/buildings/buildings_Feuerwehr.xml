@@ -12,6 +12,8 @@
         <latitude>517493400</latitude>
         <longitude>119741800</longitude>
         <description>Feuerwehr Koethen</description>
+        <registerImage>buildings/Feuerwehr.jpg</registerImage>
+        <registerImage>buildings/Feuerwehr_1.jpg</registerImage>
     </building>
     
 </buildings>
