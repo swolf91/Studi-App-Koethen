@@ -9,6 +9,7 @@
     <string name="action_main">Hauptseite</string>
     <string name="action_list">Liste</string>
     <string name="action_support">Hilfe</string>
+    <string name="action_select_quiz">Quiz auswaehlen</string>
     <string name="app_name">Studi-App Koethen</string>
     <string name="hello_world">Hello world!</string>
     <string name="campus">Campus</string>

@@ -25,7 +25,7 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_main);
-        mPreferences = getSharedPreferences("firstStart", MODE_PRIVATE);
+        this.mPreferences = getSharedPreferences("firstStart", MODE_PRIVATE);
 
         if (!XmlParser.isCreated())
         {
@@ -40,9 +40,9 @@ public class MainActivity extends Activity
 	{  
 	   super.onResume();
 	   
-	   if (mPreferences.getBoolean("firstStart", true)) 
+	   if (this.mPreferences.getBoolean("firstStart", true))
 	   {
-		    mPreferences.edit().putBoolean("firstStart", false).commit();
+		    this.mPreferences.edit().putBoolean("firstStart", false).commit();
 	    
 			Builder builder = new AlertDialog.Builder(this);
 			builder.setIcon(drawable.app_launcher);
@@ -91,11 +91,12 @@ public class MainActivity extends Activity
                 //startActivity(new Intent(this, GoogleMapsActivity.class));
                 break;
             case id.main_imageview_city:
-                Intent intent = new Intent(this, DetailActivity.class);
-                intent.putExtra("category", (byte) 5);
-                intent.putExtra("building", (byte) 5);
 
-                this.startActivity(intent);
+                break;
+
+            case id.main_imageview_tour:
+                Intent intentQuiz = new Intent(this, QuizActivity.class);
+                this.startActivity(intentQuiz);
                 break;
         }
     }

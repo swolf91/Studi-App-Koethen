@@ -12,31 +12,35 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/main_imageview_city"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:onClick="onButtonClick"
+        android:src="@drawable/mainactivity_button_koethen"
         android:layout_weight="1" />
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/main_imageview_campus"
-        android:layout_gravity="center"
+        android:layout_gravity="right"
         android:onClick="onButtonClick"
+        android:src="@drawable/mainactivity_button_campus"
         android:layout_weight="1" />
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/main_imageview_tour"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:onClick="onButtonClick"
+        android:src="@drawable/mainactivity_button_tour"
         android:layout_weight="1" />
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/main_imageview_map"
-        android:layout_gravity="center"
+        android:layout_gravity="right"
         android:onClick="onButtonClick"
+        android:src="@drawable/mainactivity_button_karte"
         android:layout_weight="1" />
 </LinearLayout>
