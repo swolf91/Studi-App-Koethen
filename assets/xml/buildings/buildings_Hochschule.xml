@@ -14,7 +14,7 @@
         </collegeBuilding>
         <latitude>517550372</latitude>
         <longitude>119686104</longitude>
-        <description>Hochschulbibliothek HS Anhalt in Koethen
+        <description>
 Die Bibliothe der Hochschule umfasst ein grosses Sortiment von Fachzeitschrift, Buechern und zum Glueck auch online erreichbare Ebooks und digitale Zeitschrften.
 Weiterhin gbt es einen Lesesaal wo viele Exemplare vorhanden sind und gleich dort durchwälzt werden können.
 Sollte es euch einmal dorthin verschlagen, findet ihr die Bibliothek in der 3. Etage des roten Gebaeudes und beachtet die Oeffnungszeiten:
@@ -38,7 +38,7 @@ fr:      9:30 Uhr - 15:00 Uhr
         </collegeBuilding>
         <latitude>517550370</latitude>
         <longitude>119686116</longitude>
-        <description>Dekanat Fachbereich 6
+        <description>
 Der Fachbereich 6 ist innerhalb Koethen der groesste der HS Anhalt und umfasst die Bereiche Elektrotechnik, Maschinenbau und Wirtschaftsingenieurwesen.
 Weiterhin ist dieser Bereich sehr praxisbezogen und soll dadurch Technikinteressierte anziehen.
 Der derzeitige Dekan ist Prof. Dr. Juergen Schwarz und ist bei uns auch unter der Personenkategorie zu finden.
@@ -60,7 +60,7 @@ Der derzeitige Dekan ist Prof. Dr. Juergen Schwarz und ist bei uns auch unter de
         </collegeBuilding>
         <latitude>517550370</latitude>
         <longitude>119686116</longitude>
-        <description>Dekanat Fachbereich 7
+        <description>
 Dieser Fachbereich beschaeftigt sich mit den Gebieten Angwandte Biowissenschaften und Prozesstechnik und glaenzt durch moderne LAbore und Messtechniken.
 Im FB 7 ist Prof. Dr. Joachim Breme als Dekan taetig und fuer den Bereich MAthematik spezialisiert.
 	    </description>
@@ -80,7 +80,7 @@ Im FB 7 ist Prof. Dr. Joachim Breme als Dekan taetig und fuer den Bereich MAthem
         </collegeBuilding>
          <latitude>517550370</latitude>
         <longitude>119686116</longitude>
-        <description>Lehr- u. Verwaltungsgebaeude
+        <description>
 Dieses Gebaeude umfasst viele Bereiche der Verwaltung, so sind unter anderem die Abteilungen
 ASA, AAA, FTTZ und ZIK zu finden.
 Weiterhin sind dort das Präsidium und verschiedene Dezernate fuer die interne Verwaltung zugaenglich.
@@ -101,7 +101,7 @@ Weiterhin sind dort das Präsidium und verschiedene Dezernate fuer die interne V
         </collegeBuilding>
         <latitude>517548510</latitude>
         <longitude>119582960</longitude>
-        <description>Werkstattgebaeude
+        <description>
 Diese Bereiche sind fuer die Studenten des Fachbereichs 6 unentbehrlich, da dort viele technische Ausbildungen und Projekte durchgefuehrt werden.
 		</description>
         <url>http://www.hs-anhalt.de/</url>
@@ -119,7 +119,7 @@ Diese Bereiche sind fuer die Studenten des Fachbereichs 6 unentbehrlich, da dort
         </collegeBuilding>
        <latitude>517550370</latitude>
         <longitude>119686116</longitude>
-        <description>Studentenrat und Fachschaft
+        <description>
 Fuer die mit grosser sozialer Ader und dem Beduerfnis sich auch neben dem Studium um studentische Angelegenheiten zu kuemmern ist das der richtige Platz.
 Und sonst koenntet ihr die Fachschaft ja auch so unterstuetzen, denn bei uns im FB 5 gibts immer Grillen und andere Angebote der Fachschaft.
 		</description>
@@ -138,7 +138,7 @@ Und sonst koenntet ihr die Fachschaft ja auch so unterstuetzen, denn bei uns im 
         </collegeBuilding>
         <latitude>517540140</latitude>
         <longitude>119682250</longitude>
-        <description>Elektrotechniklabor
+        <description>
 Hier ist die Zugehoerigkeit ja eindeutig und ich kann selbst auch nichts genaueres sagen, da ich selbst noch nie drin gewesen bin. 
 Aber hat bestimmt viel mit der Fachrichtung zu tun.
         </description>
@@ -157,7 +157,7 @@ Aber hat bestimmt viel mit der Fachrichtung zu tun.
         </collegeBuilding>
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
-        <description>Sprachenzentrum Koethen
+        <description>
 Dieses Gebaeude ist fuer alle wichtig, die sich in Sachen Fremdsprachen weiterbilden wollen.
 Den hier gibt es die Moeglichkeit die Zertifikate fuer Englisch und Franzoesisch zu erhalten.
 Auch unsere auslaendischen Studierenden werden hier in Sachen Deutschkenntinisse weitergebildet.
@@ -179,7 +179,7 @@ Auch unsere auslaendischen Studierenden werden hier in Sachen Deutschkenntinisse
         </collegeBuilding>
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
-        <description>Fachbereich 5
+        <description>
 Hier innerhalb meines persoenlichen Lieblingsfachbereiches sind die Bereiche Informatik und Sprachen untergebracht.
 Dabei werden die mathematischen und programmiertechnischen Grundlagen geschaffen, 
 um im spaeteren Verlauf an ersten Softwareprojekten arbeiten zu koennen 
@@ -202,7 +202,7 @@ Unser Dekanat wird durch Frau Prof. Dr. Ursula Fissgus vertreten und sie ist sel
         </collegeBuilding>
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
-        <description>Studienkolleg Koethen
+        <description>
 Um die Frage zu klaeren, um was es sich bei einem Studienkolleg handelt hier eine kurze Beschreibung:
 Die Studienkollegs bieten ausländischen Studierenden aus zahlreichen Ländern eine sprachliche und fachbezogene Studienpropädeutik 
 und stellen damit eine Art Vorstudium dar. Dazu führen sie in Schwerpunktkursen einjährigen Vorbereitungsunterricht durch 
@@ -222,7 +222,7 @@ und nehmen die Feststellungsprüfung ab.
         <collegeBuilding></collegeBuilding>
         <latitude>517557047</latitude>
         <longitude>119602829</longitude>
-        <description>Technologiezentrum
+        <description>
 Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstuetzen, 
 erste Rahmenbedingungen fuer die professionelle Projektausarbeitung zu ermoeglichen.
 Weiterhin koennen hier verschiedene Technologiezweige durch Rechnernetze, Medienbereitstellung 
@@ -242,7 +242,7 @@ oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden..
         <collegeBuilding></collegeBuilding>
         <latitude>517540844</latitude>
         <longitude>119645339</longitude>
-        <description>Hochschulsport
+        <description>
 Fuer alle Sportinteressierten und denen die nach einem Ausgleich zum Studium suchen wird hier ein umfangreiches Sportpaket angeboten.
 Welches viele Sportarten und natürlich auch Fuss oder Volleyball mt einschliesst.		
 		</description>
@@ -260,12 +260,11 @@ Welches viele Sportarten und natürlich auch Fuss oder Volleyball mt einschliess
         <collegeBuilding></collegeBuilding>
         <latitude>517539986</latitude>
         <longitude>119664018</longitude>
-        <description>Mensa am Hauptkampus
+        <description>
 Die Hauptmensa wurde erst vor kurzem komplett neu renoviert und alles kann jetzt seinen gewohnten Gang gehen.
 Das Essenangebot ist mal mehr oder weniger nach meinem Geschmack,
 aber um schon frueh darueber Bescheid zu wissen hier eine Empfehlung:
-Mithilfe der Mensa-App koennt ihr jeden Tag nachschauen was es die Woche ueber gibt:
-https://play.google.com/store/apps/details?id=it.peinhardt.android.meine.mensa
+Mithilfe der Mensa-App koennt ihr jeden Tag nachschauen was es die Woche ueber gibt.
 		</description>
         <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
         <registerImage>buildings/Studentenwerk.JPG</registerImage>
@@ -282,7 +281,7 @@ https://play.google.com/store/apps/details?id=it.peinhardt.android.meine.mensa
         </collegeBuilding>
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
-        <description>Mensa in der Lohmannstrasse
+        <description>
 Fuer das Gebaeude in der Lohmannstrasse gibt es eine eigene Mensa, hier sollte eigentlich alles gleich sein.
 Nur man sollte aufpassen wann man vor hat dort essen zu gehen, denn das Essen kann schon mal schneller weg sein. 		
 		</description>

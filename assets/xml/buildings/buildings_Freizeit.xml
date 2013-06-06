@@ -4,15 +4,18 @@
 
     <building>
         <id>0</id>
-        <name>Paradise Inn</name>
+        <name>Kino Koethen</name>
         <street>Weintraubenstrasse</street>
-        <houseNumber>14</houseNumber>
+        <houseNumber>15</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-        <latitude>517515261</latitude>
-        <longitude>119814620</longitude>
-        <description>Paradise Inn – Cocktail und Cafe Bar</description>
-        <url>http://www.yellowmap.de/Details/t9q8cq4PAASI_ELQIuInlw==.aspx</url>
+        <latitude>517516980</latitude>
+        <longitude>119816820</longitude>
+        <description>
+Cine Circus Koethen ist der richtige Ort wenn ihr nicht weit weg wollt, 
+um einen Flm zu sehen egal ob 2D oder 3d alles wird geboten.
+</description>
+        <url>http://www.cine-circus.de/index.php</url>
     </building>
     <building>
         <id>1</id>
@@ -23,7 +26,9 @@
         <city>Koethen</city>
         <latitude>517517751</latitude>
         <longitude>119822303</longitude>
-        <description>Dilan Doener Koethen</description>
+        <description>
+Der Dilan Doener in Koethen ist auch eine beliebte Anlaufstelle zum mittag.
+		</description>
         <url>http://dilan-doener.jimdo.com/</url>
     </building>
     <building>
@@ -35,20 +40,11 @@
         <city>Koethen</city>
         <latitude>517564600</latitude>
         <longitude>119853700</longitude>
-        <description>Rostbratwurstgrill Koethen</description>
+        <description>
+Die breiten sich immer weiter aus und sind jetzt glaub ich drei mal in Koethen zu finden.
+Aber fuer den schnellen Hunger immer gut.		
+		</description>
         <url>http://rostbratwurstgrill.de/details.php?ID=28</url>
-    </building>
-    <building>
-        <id>3</id>
-        <name>Lackfabrik</name>
-        <street>Augustenstrasse</street>
-        <houseNumber>44</houseNumber>
-        <postalCode>06366</postalCode>
-        <city>Koethen</city>
-        <latitude>517571668</latitude>
-        <longitude>119824462</longitude>
-        <description>Lackfabrik Koethen</description>
-        <url>http://www.clubfeeling.de/clubs/lackfabrik-koethen-koethen/</url>
     </building>
     <building>
         <id>4</id>
@@ -59,7 +55,10 @@
         <city>Koethen</city>
         <latitude>517539986</latitude>
         <longitude>119664018</longitude>
-        <description>Mensakeller - Studentendisco Koethen</description>
+        <description>
+Es ist die Studentendisco in Koethen.
+Mittwochs ist immer irgendeine Motto-Party und sonst haengen ueberall Flyer und Plakate die euch informieren.
+		</description>
         <url>http://www.mensakeller.com/</url>
         <registerImage>buildings/Mensakeller.JPG</registerImage>
     </building>
@@ -72,7 +71,10 @@
         <city>Koethen</city>
         <latitude>517552250</latitude>
         <longitude>119597090</longitude>
-        <description>Studentenclub im Wohnheim 6</description>
+        <description>
+Im VT Club ist dienstags Motto-Abend und ihr findet ihn im Keller des Wohnheims 6.
+Aber ihr koennt auch beim Grillen draussen sitzen.
+		</description>
         <url>http://www.vt-club.de/index.php</url>
         <registerImage>buildings/VTClub.JPG</registerImage>
     </building>
