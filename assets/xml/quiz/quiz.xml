@@ -159,7 +159,7 @@
     <question>
         <id>16</id>
         <buildingCategory>0</buildingCategory>
-        <building>8</building>
+        <building>7</building>
         <question>Welcher Fachbereich befindet sich in der Lohmannstraße?</question>
         <answer answer="true">Fachbereich 5</answer>
         <answer>Fachbereich 2</answer>
