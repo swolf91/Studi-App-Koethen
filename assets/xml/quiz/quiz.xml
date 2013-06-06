@@ -1,10 +1,11 @@
 <quiz>
     <id>0</id>
-    <startmessage>Das Quiz beginnt vor dem roten Gebäude (01). Die Auswertung erfolgt nach dem kompletten Rundgang.</startmessage>
+    <name>Standard Campusquiz</name>
+    <startmessage>Das Quiz beginnt vor dem roten Gebï¿½ude (01). Die Auswertung erfolgt nach dem kompletten Rundgang.</startmessage>
     <question>
         <id>0</id>
-        <question>Wie viele Fenster hat das rote Gebäude in der 2. Etage an der Frontseite?</question>
-        <hint>Stell dich direkt vor den Haupteingang des Gebäudes und zähle durch.</hint>
+        <question>Wie viele Fenster hat das rote Gebï¿½ude in der 2. Etage an der Frontseite?</question>
+        <hint>Stell dich direkt vor den Haupteingang des Gebï¿½udes und zï¿½hle durch.</hint>
         <answer answer="true">22</answer>
         <answer>33</answer>
         <answer>44</answer>
@@ -13,25 +14,25 @@
     <question>
         <id>1</id>
         <question>In welcher Etage befindet sich die Hochschulbibliothek?</question>
-        <hint>Schau dir das Hauptgebäude von Innen an.</hint>
+        <hint>Schau dir das Hauptgebï¿½ude von Innen an.</hint>
         <answer answer="true">2. Etage</answer>
         <answer>5. Etage</answer>
         <answer>Keller</answer>
-        <result>Gehe nun zum grünen Gebäude (02)</result>
+        <result>Gehe nun zum grï¿½nen Gebï¿½ude (02)</result>
     </question>
     <question>
         <id>2</id>
-        <question>Wann wurde das Gebäude als Laborgebäude eingweiht?</question>
-        <hint>Tafel neben dem Gebäude (02)</hint>
+        <question>Wann wurde das Gebï¿½ude als Laborgebï¿½ude eingweiht?</question>
+        <hint>Tafel neben dem Gebï¿½ude (02)</hint>
         <answer answer="true">1926</answer>
         <answer>1924</answer>
         <answer>1953</answer>
-        <result>Gehe nun zum weißen Gebäude (03)</result>
+        <result>Gehe nun zum weiï¿½en Gebï¿½ude (03)</result>
     </question>
     <question>
         <id>3</id>
-        <question>Was ist nicht im weißen Gebäude vertreten.</question>
-        <hint>Tafel neben dem Gebäude (03)</hint>
+        <question>Was ist nicht im weiï¿½en Gebï¿½ude vertreten.</question>
+        <hint>Tafel neben dem Gebï¿½ude (03)</hint>
         <answer answer="true">Sprachenzentrum</answer>
         <answer>Hochschulverwaltung</answer>
         <answer>Akademisches Auslandsamt</answer>
@@ -56,20 +57,20 @@
     </question>
     <question>
         <id>6</id>
-        <question>Wie heißt der Studentenclub im Wohnheim 6?</question>
-        <hint>Er befindet sich nicht an der Hauptstraße, aber ist trotzdem sehr gut sichtbar.</hint>
+        <question>Wie heiï¿½t der Studentenclub im Wohnheim 6?</question>
+        <hint>Er befindet sich nicht an der Hauptstraï¿½e, aber ist trotzdem sehr gut sichtbar.</hint>
         <answer answer="true">VT-Club</answer>
         <answer>HS-Club</answer>
         <answer>Mensakeller</answer>
-        <result>Gehe nun zum Hugo-Junkers-Gebäude (73)</result>
+        <result>Gehe nun zum Hugo-Junkers-Gebï¿½ude (73)</result>
     </question>
     <question>
         <id>7</id>
-        <question>Welches Tier ist vor dem Gebäude und neben dem Haupteingang zu sehen?</question>
+        <question>Welches Tier ist vor dem Gebï¿½ude und neben dem Haupteingang zu sehen?</question>
         <hint>Das Tier ist ein Modell und nicht echt.</hint>
         <answer answer="true">Kuh</answer>
         <answer>Ziege</answer>
-        <answer>Bär</answer>
+        <answer>Bï¿½r</answer>
         <result>Gehe nun zum Technologiezentrum</result>
     </question>
     <question>
@@ -83,39 +84,39 @@
     </question>
     <question>
         <id>09</id>
-        <question>Wie heißt das preiswerte und beliebte Gericht in der Hochschulmensa?</question>
-        <hint>Das Gericht kostet in der Regel 1.50€ für Studenten</hint>
-        <answer answer="true">Sprintmenü</answer>
-        <answer>Chillmenü</answer>
-        <answer>MenüToGo</answer>
+        <question>Wie heiï¿½t das preiswerte und beliebte Gericht in der Hochschulmensa?</question>
+        <hint>Das Gericht kostet in der Regel 1.50ï¿½ fï¿½r Studenten</hint>
+        <answer answer="true">Sprintmenï¿½</answer>
+        <answer>Chillmenï¿½</answer>
+        <answer>Menï¿½ToGo</answer>
         <result>Gehe nun zur Studentendisco (Mensakeller)</result>
     </question>
     <question>
         <id>10</id>
         <question>Welche Biermarke wird offensichtlich beworben?</question>
-        <hint>Das Logo ist direkt über dem Eingang zum Mensakeller erkennbar.</hint>
+        <hint>Das Logo ist direkt ï¿½ber dem Eingang zum Mensakeller erkennbar.</hint>
         <answer answer="true">Becks</answer>
         <answer>Sternburger</answer>
         <answer>Radeberger</answer>
-        <result>Gehe nun in Richtung Lohmannstraße 23 und nutze den Weg über den Marktplatz, da allgemeine Fragen folgen.</result>
+        <result>Gehe nun in Richtung Lohmannstraï¿½e 23 und nutze den Weg ï¿½ber den Marktplatz, da allgemeine Fragen folgen.</result>
     </question>
     <question>
         <id>11</id>
-        <question>Welche Fachbereiche sind in Köthen vertreten?</question>
+        <question>Welche Fachbereiche sind in Kï¿½then vertreten?</question>
         <answer answer="true">5,6 und 7</answer>
         <answer>1,2 und 3</answer>
         <answer>5,7 und 4</answer>
     </question>
     <question>
         <id>12</id>
-        <question>Wie wird die Stadt Köthen noch genannt?</question>
+        <question>Wie wird die Stadt Kï¿½then noch genannt?</question>
         <answer answer="true">Bachstadt</answer>
         <answer>Hansestadt</answer>
         <answer>Bauhausstadt</answer>
     </question>
     <question>
         <id>13</id>
-        <question>Wie heißt die Kirche auf dem Markt?</question>
+        <question>Wie heiï¿½t die Kirche auf dem Markt?</question>
         <answer answer="true">St. Jakob</answer>
         <answer>St. Agnus</answer>
         <answer>St. Anna</answer>
@@ -129,43 +130,43 @@
     </question>
     <question>
         <id>15</id>
-        <question>Welche Farben sind im Stadtwappen von Köthen vertreten?</question>
+        <question>Welche Farben sind im Stadtwappen von Kï¿½then vertreten?</question>
         <answer answer="true">rot und blau</answer>
-        <answer>grün und gelb</answer>
+        <answer>grï¿½n und gelb</answer>
         <answer>orange und lila</answer>
-        <result>Du solltest nun das Gebäude 23 in der Lohmannstraße erreicht haben, um weitere Fragen beantworten zu können.</result>
+        <result>Du solltest nun das Gebï¿½ude 23 in der Lohmannstraï¿½e erreicht haben, um weitere Fragen beantworten zu kï¿½nnen.</result>
     </question>
     <question>
         <id>16</id>
-        <question>Welcher Fachbereich befindet sich in der Lohmannstraße?</question>
+        <question>Welcher Fachbereich befindet sich in der Lohmannstraï¿½e?</question>
         <answer answer="true">Fachbereich 5</answer>
         <answer>Fachbereich 2</answer>
         <answer>Fachbereich 6</answer>
     </question>
     <question>
         <id>17</id>
-        <question>Wie heißt dieses Gebäude genau?</question>
+        <question>Wie heiï¿½t dieses Gebï¿½ude genau?</question>
         <hint>Tafel neben dem Haupteingang an der Vorderseite</hint>
-        <answer answer="true">Ratke Gebäude</answer>
-        <answer>rotes Gebäude</answer>
-        <answer>Hugo-Junkers Gebäude</answer>
-        <result>Gehe nun hinter das Gebäude 23</result>
+        <answer answer="true">Ratke Gebï¿½ude</answer>
+        <answer>rotes Gebï¿½ude</answer>
+        <answer>Hugo-Junkers Gebï¿½ude</answer>
+        <result>Gehe nun hinter das Gebï¿½ude 23</result>
     </question>
     <question>
         <id>18</id>
-        <question>Welches Wohnheim befindet sich hinter dem Gebäude 23?</question>
+        <question>Welches Wohnheim befindet sich hinter dem Gebï¿½ude 23?</question>
  	<answer answer="true">Wohnheim 1</answer>
         <answer>Wohnheim 3</answer>
         <answer>Wohnheim 4</answer>
-        <result>Gehe nun in das Gebäude der Lohmannstraße</result>
+        <result>Gehe nun in das Gebï¿½ude der Lohmannstraï¿½e</result>
     </question>
     <question>
         <id>19</id>
-        <question>Wie viele Computer stehen im Gebäude 23?</question>
+        <question>Wie viele Computer stehen im Gebï¿½ude 23?</question>
         <hint></hint>
         <answer answer="true">50</answer>
         <answer answer="true">100</answer>
         <answer answer="true">150</answer>
-        <result>Wir wissen es selber nicht und zählen hätte zu lange gedauert.</result>
+        <result>Wir wissen es selber nicht und zï¿½hlen hï¿½tte zu lange gedauert.</result>
     </question>
 </quiz>

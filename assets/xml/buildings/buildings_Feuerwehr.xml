@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <categoryID>5</categoryID>
+
+    <building>
+    <id>0</id>
+        <name>Feuerwehr</name>
+        <street>Bärteichpromenade</street>
+        <houseNumber>12</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>517493400</latitude>
+        <longitude>119741800</longitude>
+        <description>Feuerwehr Koethen</description>
+    </building>
+    
+</buildings>

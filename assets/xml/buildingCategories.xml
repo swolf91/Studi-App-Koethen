@@ -3,25 +3,42 @@
     <category>
         <id>0</id>
         <name>Hochschule</name>
+		<setIcon>buildingcategories/Hochschule.png</setIcon>
     </category>
     <category>
         <id>1</id>
-        <name>Verkehr</name>
+        <name>Nahverkehr</name>
+		<setIcon>buildingcategories/Nahverkehr.png</setIcon>
     </category>
     <category>
         <id>2</id>
         <name>Aemter</name>
+		<setIcon>buildingcategories/Aemter.png</setIcon>
     </category>
-    <category>
+	<category>
         <id>3</id>
-        <name>Sondergebaeude</name>
+        <name>Freizeit</name>
+		<setIcon>buildingcategories/Essen.png</setIcon>
     </category>
     <category>
         <id>4</id>
-        <name>Freizeit</name>
+        <name>Wohnheime</name>
+		<setIcon>buildingcategories/Wohnheime.png</setIcon>
     </category>
     <category>
         <id>5</id>
-        <name>Wohnheime</name>
+        <name>Feuerwehr</name>
+		<setIcon>buildingcategories/Feuerwehr.png</setIcon>
     </category>
+	<category>
+        <id>6</id>
+        <name>Polizei</name>
+		<setIcon>buildingcategories/Polizei.png</setIcon>
+    </category>
+	<category>
+        <id>7</id>
+        <name>Krankenhaus</name>
+		<setIcon>buildingcategories/Krankenhaus.png</setIcon>
+    </category>
+    
 </buildingCategories>
