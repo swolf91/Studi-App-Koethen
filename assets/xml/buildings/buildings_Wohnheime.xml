@@ -14,8 +14,8 @@
         </collegeBuilding>
         <latitude>517447423</latitude>
         <longitude>119821665</longitude>
-        <registerImage>buildings/WH1.jpg</registerImage>
-        <registerImage>buildings/WH1_2.jpg</registerImage>
+        <registerImage>buildings/WH1.JPG</registerImage>
+        <registerImage>buildings/WH1_2.JPG</registerImage>
     </building>
     
         <building>
@@ -30,7 +30,7 @@
         </collegeBuilding>
         <latitude>517549900</latitude>
         <longitude>119663200</longitude>
-        <registerImage>buildings/WH2.jpg</registerImage>
+        <registerImage>buildings/WH2.JPG</registerImage>
 
     </building>
     
@@ -46,7 +46,7 @@
         </collegeBuilding>
         <latitude>517548600</latitude>
         <longitude>119657200</longitude>
-        <registerImage>buildings/WH3.jpg</registerImage>
+        <registerImage>buildings/WH3.JPG</registerImage>
     </building>
     
         <building>
@@ -61,7 +61,7 @@
         </collegeBuilding>
         <latitude>517544624</latitude>
         <longitude>119647807</longitude>
-        <registerImage>buildings/WH4.jpg</registerImage>
+        <registerImage>buildings/WH4.JPG</registerImage>
     </building>
     
         <building>
@@ -76,7 +76,7 @@
         </collegeBuilding>
         <latitude>517552828</latitude>
         <longitude>119652915</longitude>
-        <registerImage>buildings/WH5.jpg</registerImage>
+        <registerImage>buildings/WH5.JPG</registerImage>
     </building>
     
         <building>

@@ -3,6 +3,10 @@ package de.hsanhalt.inf.studiappkoethen.util;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Die Klasse FilterItem wird zum Aufbau des GoogleMaps-Filters, für die angezeigten Gebäude benötigt. 
+ */
+
 public class FilterItem
 {
 	private byte category;

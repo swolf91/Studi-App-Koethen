@@ -12,6 +12,8 @@
         <latitude>517541224</latitude>
         <longitude>119930895</longitude>
         <description>Polizeirevier Anhalt-Bitterfeld, Sitz Koethen</description>
+        <registerImage>buildings/Polizei.JPG</registerImage>
+        <registerImage>buildings/Polizei_1.JPG</registerImage>
     </building>
 
 </buildings>

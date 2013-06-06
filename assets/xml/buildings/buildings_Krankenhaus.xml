@@ -13,6 +13,10 @@
         <longitude>119711300</longitude>
         <description>Krankenhaus Koethen</description>
         <url>http://www.rhoen-klinikum-ag.com/rka/cms/koe_2/deu/index.html</url>
+        <registerImage>buildings/Krankenhaus.JPG</registerImage>
+        <registerImage>buildings/Krankenhaus_1.JPG</registerImage>
+        <registerImage>buildings/Krankenhaus_2.JPG</registerImage>
+        <registerImage>buildings/Krankenhaus_3.JPG</registerImage>
     </building>
 	
 </buildings>
