@@ -97,6 +97,8 @@ public class QuizManager implements IXmlParsing
         List<Integer> correctAnswers = new ArrayList<>(1);
         String hint = null;
         String result = null;
+        byte buildingCategory = -1;
+        byte building = -1;
 
         if(node.hasChildNodes())
         {
@@ -133,16 +135,24 @@ public class QuizManager implements IXmlParsing
                 {
                     result = content;
                 }
+                else if(subNode.getNodeName().equals("buildingCategory"))
+                {
+                    buildingCategory = Byte.valueOf(content);
+                }
+                else if(subNode.getNodeName().equals("building"))
+                {
+                    building = Byte.valueOf(content);
+                }
             }
         }
 
-        if(id == -1 || question == null || answer.isEmpty() || correctAnswers.isEmpty())
+        if(id == -1 || question == null || answer.isEmpty() || correctAnswers.isEmpty() || (building >= 0 && buildingCategory < 0) || (building < 0 && buildingCategory >= 0))
         {
             Log.e("QuizManagerError", "Could not parse question!");
             return null;
         }
 
-        Question quest = new Question(id, question, hint, answer.toArray(new String[answer.size()]), correctAnswers, result);
+        Question quest = new Question(id, buildingCategory, building, question, hint, answer.toArray(new String[answer.size()]), correctAnswers, result);
         Log.d("QuizManagerDebug", "Created question: " +  id);
         return quest;
     }

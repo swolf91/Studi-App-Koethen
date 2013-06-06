@@ -95,7 +95,7 @@ public class ExpandableListActivity extends android.app.ExpandableListActivity
 		public boolean onGroupClick(ExpandableListView parent, View view, int groupPosition, long id) {
 			expandableListView.expandGroup(groupPosition);
 			
-			return true; //TODO überprüfen ob true ok ist.
+			return true; //TODO ueberpruefen ob true ok ist.
 		}
 	};
 	

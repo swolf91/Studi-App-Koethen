@@ -22,7 +22,7 @@ import android.widget.TextView;
  * Der ExpandableListView Adapter
  * hier werden die Daten in die Activity geladen
  * @author G. Kauf
- * Grundfunktionalität ist gegeben.
+ * Grundfunktionalitaet ist gegeben.
  *
  */
 public class ExpandableListViewAdapter extends BaseExpandableListAdapter {

@@ -2,6 +2,11 @@ package de.hsanhalt.inf.studiappkoethen.xml.quiz;
 
 import java.util.List;
 
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+
 public class Question
 {
     /**
@@ -34,7 +39,11 @@ public class Question
      */
     private final String hint;
 
-    public Question(byte id, String question, String hint, String[] answers, List<Integer> correctAnswers, String result)
+    private final byte buildingCategory;
+
+    private final byte building;
+
+    public Question(byte id, byte buildingCategory, byte building, String question, String hint, String[] answers, List<Integer> correctAnswers, String result)
     {
         this.id = id;
         this.question = question;
@@ -42,6 +51,9 @@ public class Question
         this.answers = answers;
         this.correctAnswers = correctAnswers;
         this.result = result;
+
+        this.buildingCategory = buildingCategory;
+        this.building = building;
     }
 
     public byte getID()
@@ -72,5 +84,11 @@ public class Question
     public String getResult()
     {
         return this.result;
+    }
+
+    public Building getBuilding()
+    {
+        BuildingCategory category = BuildingCategoryManager.getInstance().getCategory(this.buildingCategory);
+        return BuildingManager.getInstance().getBuilding(category, this.building);
     }
 }
