@@ -15,7 +15,7 @@
 	Cine Circus Koethen ist der richtige Ort wenn ihr nicht weit weg wollt, 
 	um einen Flm zu sehen egal ob 2D oder 3D alles wird geboten.
 	</description>
-	<registerImage>buildings/Kino.jpg</registerImage>
+	<registerImage>buildings/Kino.JPG</registerImage>
         <url>http://www.cine-circus.de/index.php</url>
     </building>
     <building>
@@ -31,7 +31,7 @@
 	Der Dilan Doener in Koethen ist auch eine beliebte Anlaufstelle zum Mittag.
 	</description>
         <url>http://dilan-doener.jimdo.com/</url>
-        <registerImage>buildings/DilanDoener.jpg</registerImage>
+        <registerImage>buildings/DilanDoener.JPG</registerImage>
     </building>
     <building>
         <id>2</id>
@@ -46,7 +46,7 @@
 	Mittlerweile schon sehr verbreitet, doch immer lecker. Die Rostbratwurstgrill-Kette ist die Adresse für den schnellen Hunger zwischendurch.
 	</description>
         <url>http://rostbratwurstgrill.de/details.php?ID=28</url>
-        <registerImage>buildings/Rostbratwurst1_1.jpg</registerImage>
+        <registerImage>buildings/Rostbratwurst1_1.JPG</registerImage>
     </building>
         <building>
         <id>3</id>
@@ -61,8 +61,8 @@
 	Mittlerweile schon sehr verbreitet, doch immer lecker. Die Rostbratwurstgrill-Kette ist die Adresse für den schnellen Hunger zwischendurch.
 	</description>
         <url>http://rostbratwurstgrill.de/details.php?ID=28</url>
-        <registerImage>buildings/Rostbratwurst2_1.jpg</registerImage>
-        <registerImage>buildings/Rostbratwurst2_2.jpg</registerImage>
+        <registerImage>buildings/Rostbratwurst2_1.JPG</registerImage>
+        <registerImage>buildings/Rostbratwurst2_2.JPG</registerImage>
     </building>
     <building>
         <id>4</id>
