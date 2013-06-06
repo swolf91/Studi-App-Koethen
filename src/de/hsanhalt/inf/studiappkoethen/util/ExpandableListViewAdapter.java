@@ -1,6 +1,7 @@
 package de.hsanhalt.inf.studiappkoethen.util;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
@@ -25,9 +26,9 @@ import android.widget.TextView;
  * Grundfunktionalitaet ist gegeben.
  *
  */
-public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
-	
-	
+public class ExpandableListViewAdapter extends BaseExpandableListAdapter
+{
+
 	private Context context;
 	BuildingCategoryManager bc;//Zugriff auf Kategorien
 	int parentSize=bc.getInstance().getSize(); //Anzahl aller Kategorien (4 oder 3.. kp weiss ich atm nich lol -> dynamisch)
@@ -57,22 +58,24 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		context=newcontext;
 
 
-
-		 BuildingCategory []category = new BuildingCategory[parentSize]; // hier sind alle Kategorien drin
-		 category=bc.getInstance().getBuildingCategories();
+        BuildingCategory[] category=bc.getInstance().getBuildingCategories();   // hier sind alle Kategorien drin
 		 parentEntries = new String[parentSize];
-		 childEntries= new String[parentSize][];
+		 childEntries = new String[parentSize][];
 		
-		 for(int i=0;i<parentSize;i++){
-			 
-			 List<Building> tmp= new ArrayList<Building>();
-			 tmp=bmanager.getInstance().getBuildingList(category[i]);
+		 for(int i=0;i<parentSize;i++)
+         {
+			 List<Building> tmp = bmanager.getInstance().getBuildingList(category[i]);
 			 childEntries[i]= new String[tmp.size()];
+
 			 parentEntries[i]=childEntries[i][0]=category[i].getName();
-			 
-			 for(int k=0;k<tmp.size();i++)
-				 childEntries[i][k]=tmp.remove(0).getName();
-			 
+
+             Iterator<Building> iter = tmp.iterator();
+             int k = 0;
+             while(iter.hasNext())
+             {
+                 this.childEntries[i][k++] = iter.next().getName();
+                 iter.remove();
+             }
 		 }
 		 
 		 Log.d("ExtpandableListView","Created parentEntries : " + parentEntries.length + "and childEntries : "+childEntries.length );
