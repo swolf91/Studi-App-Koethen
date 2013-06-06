@@ -4,17 +4,19 @@
     <startmessage>Das Quiz beginnt vor dem roten Gebäude (01). Die Auswertung erfolgt nach dem kompletten Rundgang.</startmessage>
     <question>
         <id>0</id>
+        <buildingCategory>0</buildingCategory>
+        <building>0</building>
         <question>Wie viele Fenster hat das rote Gebäude in der 2. Etage an der Frontseite?</question>
         <hint>Stell dich direkt vor den Haupteingang des Gebäudes und zähle durch.</hint>
         <answer answer="true">22</answer>
         <answer>33</answer>
         <answer>44</answer>
         <result>Nun geht es um die Hochschulbibliothek.</result>
-        <buildingCategory>0</buildingCategory>
-        <building>0</building>
     </question>
     <question>
         <id>1</id>
+        <buildingCategory>0</buildingCategory>
+        <building>0</building>
         <question>In welcher Etage befindet sich die Hochschulbibliothek?</question>
         <hint>Schau dir das Hauptgebäude von Innen an.</hint>
         <answer answer="true">2. Etage</answer>
@@ -24,6 +26,8 @@
     </question>
     <question>
         <id>2</id>
+        <buildingCategory>0</buildingCategory>
+        <building>2</building>
         <question>Wann wurde das Gebäude als Laborgebäude eingweiht?</question>
         <hint>Tafel neben dem Gebäude (02)</hint>
         <answer answer="true">1926</answer>
@@ -33,6 +37,8 @@
     </question>
     <question>
         <id>3</id>
+        <buildingCategory>0</buildingCategory>
+        <building>3</building>
         <question>Was ist nicht im weißen Gebäude vertreten.</question>
         <hint>Tafel neben dem Gebäude (03)</hint>
         <answer answer="true">Sprachenzentrum</answer>
@@ -42,6 +48,8 @@
     </question>
     <question>
         <id>4</id>
+        <buildingCategory>0</buildingCategory>
+        <building>11</building>
         <question>Wie weit reicht das Sportangebot der Hochschule?</question>
         <hint></hint>
         <answer answer="true">Aerobic - Volleyball</answer>
@@ -51,6 +59,8 @@
     </question>
     <question>
         <id>5</id>
+        <buildingCategory>4</buildingCategory>
+        <building>4</building>
         <question>Wie viele Etagen hat dieses Haus?</question>
         <answer answer="true">10</answer>
         <answer>5</answer>
@@ -59,6 +69,8 @@
     </question>
     <question>
         <id>6</id>
+        <buildingCategory>4</buildingCategory>
+        <building>5</building>
         <question>Wie heißt der Studentenclub im Wohnheim 6?</question>
         <hint>Er befindet sich nicht an der Hauptstraße, aber ist trotzdem sehr gut sichtbar.</hint>
         <answer answer="true">VT-Club</answer>
@@ -67,7 +79,7 @@
         <result>Gehe nun zum Hugo-Junkers-Gebäude (73)</result>
     </question>
     <question>
-        <id>7</id>
+        <id>7</id>        
         <question>Welches Tier ist vor dem Gebäude und neben dem Haupteingang zu sehen?</question>
         <hint>Das Tier ist ein Modell und nicht echt.</hint>
         <answer answer="true">Kuh</answer>
@@ -77,6 +89,8 @@
     </question>
     <question>
         <id>8</id>
+        <buildingCategory>0</buildingCategory>
+        <building>10</building>
         <question>Was befindet neben dem Technologiezentrum?</question>
         <hint>Stell dich vor den Haupteingang und schau nach links.</hint>
         <answer answer="true">Sportplatz</answer>
@@ -86,6 +100,8 @@
     </question>
     <question>
         <id>09</id>
+        <buildingCategory>0</buildingCategory>
+        <building>12</building>
         <question>Wie heißt das preiswerte und beliebte Gericht in der Hochschulmensa?</question>
         <hint>Das Gericht kostet in der Regel 1.50 Euro für Studenten</hint>
         <answer answer="true">Sprintmenü</answer>
@@ -95,6 +111,8 @@
     </question>
     <question>
         <id>10</id>
+        <buildingCategory>3</buildingCategory>
+        <building>4</building>
         <question>Welche Biermarke wird offensichtlich beworben?</question>
         <hint>Das Logo ist direkt über dem Eingang zum Mensakeller erkennbar.</hint>
         <answer answer="true">Becks</answer>
@@ -140,6 +158,8 @@
     </question>
     <question>
         <id>16</id>
+        <buildingCategory>0</buildingCategory>
+        <building>8</building>
         <question>Welcher Fachbereich befindet sich in der Lohmannstraße?</question>
         <answer answer="true">Fachbereich 5</answer>
         <answer>Fachbereich 2</answer>
@@ -147,6 +167,8 @@
     </question>
     <question>
         <id>17</id>
+        <buildingCategory>0</buildingCategory>
+        <building>8</building>
         <question>Wie heißt dieses Gebäude genau?</question>
         <hint>Tafel neben dem Haupteingang an der Vorderseite</hint>
         <answer answer="true">Ratke Gebäude</answer>
@@ -156,6 +178,8 @@
     </question>
     <question>
         <id>18</id>
+        <buildingCategory>4</buildingCategory>
+        <building>0</building>
         <question>Welches Wohnheim befindet sich hinter dem Gebäude 23?</question>
  	<answer answer="true">Wohnheim 1</answer>
         <answer>Wohnheim 3</answer>
@@ -164,6 +188,8 @@
     </question>
     <question>
         <id>19</id>
+        <buildingCategory>0</buildingCategory>
+        <building>8</building>
         <question>Wie viele Computer stehen im Gebäude 23?</question>
         <hint></hint>
         <answer answer="true">50</answer>
