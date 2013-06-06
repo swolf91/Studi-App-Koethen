@@ -160,7 +160,7 @@ public class GoogleMapsActivity extends Activity
 	}
 	
 	public BitmapDescriptor getCategoryIcon(byte category) {
-		
+		/*
 		BuildingCategoryManager bcm = BuildingCategoryManager.getInstance();
 		String path = null;
 		
@@ -172,7 +172,7 @@ public class GoogleMapsActivity extends Activity
 				}
 			}
 		}
-		if(path == null) {
+		if(path == null) {/**/
 			switch(category){			// Bestimmung des Icons
 				case 2:
 					return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_blue);
@@ -180,7 +180,7 @@ public class GoogleMapsActivity extends Activity
 					return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_red);
 				default:
 					return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher);
-			}
+			}/*
 		} else {
 			return BitmapDescriptorFactory.fromPath(path);
 		}/**/
