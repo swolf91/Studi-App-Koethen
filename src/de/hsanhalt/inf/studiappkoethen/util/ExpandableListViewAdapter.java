@@ -29,20 +29,20 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	
 	
 	private Context context;
-//	BuildingCategoryManager bc;//Zugriff auf Kategorien
-//	int parentSize=bc.getInstance().getSize(); //Anzahl aller Kategorien (4 oder 3.. kp weiss ich atm nich lol -> dynamisch)
+	BuildingCategoryManager bc;//Zugriff auf Kategorien
+	int parentSize=bc.getInstance().getSize(); //Anzahl aller Kategorien (4 oder 3.. kp weiss ich atm nich lol -> dynamisch)
 	int childSize=0;
-//	private static String [] parentEntries; //Unsere Kategorien
-//	private static String [][] childEntries; // Alle Gebaeude passend zur Kategorie!
-	private static String[][]testc={	
-				{"UnterNummer 1"},
-				{"UnterNummer 2"},
-				{"UnterNummer 3"},
-				{"UnterNummer 4"},
-				{"UnterNummer 5"}
-	};
-	private static String[] testp={"Nummer1","Nummer 2","Nummer 3", "Nummer 4","Nummer 5"};
-//	BuildingManager bmanager; // Zugriff auf Gebaeude
+	private static String [] parentEntries; //Unsere Kategorien
+	private static String [][] childEntries; // Alle Gebaeude passend zur Kategorie!
+//	private static String[][]testc={	
+//				{"UnterNummer 1"},
+//				{"UnterNummer 2"},
+//				{"UnterNummer 3"},
+//				{"UnterNummer 4"},
+//				{"UnterNummer 5"}
+//	};
+//	private static String[] testp={"Nummer1","Nummer 2","Nummer 3", "Nummer 4","Nummer 5"};
+	BuildingManager bmanager; // Zugriff auf Gebaeude
 
 
 
@@ -56,7 +56,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		
 		context=newcontext;
 
-/*
+
 
 		 BuildingCategory []category = new BuildingCategory[parentSize]; // hier sind alle Kategorien drin
 		 category=bc.getInstance().getBuildingCategories();
@@ -76,7 +76,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 		 }
 		 
 		 Log.d("ExtpandableListView","Created parentEntries : " + parentEntries.length + "and childEntries : "+childEntries.length );
-		 */
+		 
 /*		 
 		 while(buildingList.iterator().hasNext()){
 
@@ -110,8 +110,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	public Object getChild(int groupPosition, int childPosition)
 	{
 
-//		return childEntries[groupPosition][childPosition];
-		return testc[groupPosition][childPosition];
+		return childEntries[groupPosition][childPosition];
+//		return testc[groupPosition][childPosition];
 	}
 	/**
 	 * Gibt die ID der Untergrupopeneintraege zurueck.
@@ -138,10 +138,13 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
 		TextView tv= new TextView(context);
 //        tv.setText(childEntries[groupPosition][childPosition]);
-		tv.setText(testc[groupPosition][childPosition]);
+//		tv.setText(testc[groupPosition][childPosition]);
+		
+		tv.setText(childEntries[childPosition][0]);
         tv.setPadding(30, 5, 5,5);
         tv.setTextSize(20);
         return tv;
+		
 	}
 	/**
 	 * Gibt das View Objekt bzgl. der Parent-Elemente (Obergruppe) zurueck.
@@ -161,7 +164,7 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
 		TextView tv= new TextView(context);
 //        tv.setText(parentEntries[groupPosition]);
-		tv.setText(testp[groupPosition]);
+		tv.setText(parentEntries[groupPosition]);
         tv.setPadding(50, 5, 5,5);
         tv.setTextSize(20);
         return tv;
@@ -175,8 +178,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	@Override
 	public int getChildrenCount(int groupPosition)
 	{
-//		return parentEntries[groupPosition].length();
-		return testc.length;
+		return parentEntries[groupPosition].length();
+//		return testc.length;
 	}
 	/**
 	 * Gibt die gewuenschte Gruppe zurueck.
@@ -185,8 +188,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	public Object getGroup(int groupPosition)
 	{
 
-//		return parentEntries[groupPosition];
-		return testp[groupPosition];
+		return parentEntries[groupPosition];
+//		return testp[groupPosition];
 	}
 	/**
 	 * Gibt die Gruppengroesse zurueck.
@@ -194,8 +197,8 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 	@Override
 	public int getGroupCount()
 	{
-//		return parentSize;
-		return testp.length;
+		return parentSize;
+//		return testp.length;
 	}
 	/**
 	 * Gibt die Gruppen-ID zurueck.
