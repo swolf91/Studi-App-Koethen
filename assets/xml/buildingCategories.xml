@@ -23,7 +23,7 @@
     <category>
         <id>4</id>
         <name>Wohnheime</name>
-		<setIcon>buildingcategories/Wohnheime.png</setIcon>
+		<setIcon>buildingcategories/Wohnheim.png</setIcon>
     </category>
     <category>
         <id>5</id>
