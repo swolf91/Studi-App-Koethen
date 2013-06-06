@@ -1,10 +1,13 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.graphics.Bitmap;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.id;
+import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
@@ -160,30 +163,29 @@ public class GoogleMapsActivity extends Activity
 	}
 	
 	public BitmapDescriptor getCategoryIcon(byte category) {
-		/*
-		BuildingCategoryManager bcm = BuildingCategoryManager.getInstance();
-		String path = null;
-		
-		
-		for(BuildingCategory buildingCategory : bcm.getBuildingCategories()) {
-			if(category == buildingCategory.getID()) {
-				if(buildingCategory.getIconPath() != null) {
-					path = buildingCategory.getIconPath();
-				}
-			}
+
+		BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
+        BitmapDescriptor bitmapDescriptor = null;
+		String path = buildingCategoryManager.getCategory(category).getIconPath();
+
+		if(path != null)
+        {
+            try
+            {
+                Bitmap bitmap = AndroidUtils.getBitmapFromAsset(this.getAssets(), path);
+                bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(bitmap);
+            }
+            catch (IOException e)
+            {
+                bitmapDescriptor = null;
+                Log.e("GoogleMapsActivity", "Can't load category icon " + category + "!");
+            }
 		}
-		if(path == null) {/**/
-			switch(category){			// Bestimmung des Icons
-				case 2:
-					return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_blue);
-				case 3:
-					return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_red);
-				default:
-					return BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher);
-			}/*
-		} else {
-			return BitmapDescriptorFactory.fromPath(path);
-		}/**/
+        if(bitmapDescriptor == null)     // Festlegen eines Default-Bildchens
+        {
+            bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher);
+		}
+        return bitmapDescriptor;
 	}
 	
 	private boolean setFilter() {									// Auslesen und Verarbeiten der uebergebenen Daten zur Filtereinstellung
