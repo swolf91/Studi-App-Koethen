@@ -12,9 +12,10 @@
         <latitude>517516980</latitude>
         <longitude>119816820</longitude>
         <description>
-Cine Circus Koethen ist der richtige Ort wenn ihr nicht weit weg wollt, 
-um einen Flm zu sehen egal ob 2D oder 3d alles wird geboten.
-</description>
+	Cine Circus Koethen ist der richtige Ort wenn ihr nicht weit weg wollt, 
+	um einen Flm zu sehen egal ob 2D oder 3D alles wird geboten.
+	</description>
+	<registerImage>buildings/Kino.jpg</registerImage>
         <url>http://www.cine-circus.de/index.php</url>
     </building>
     <building>
@@ -27,13 +28,14 @@ um einen Flm zu sehen egal ob 2D oder 3d alles wird geboten.
         <latitude>517517751</latitude>
         <longitude>119822303</longitude>
         <description>
-Der Dilan Doener in Koethen ist auch eine beliebte Anlaufstelle zum mittag.
-		</description>
+	Der Dilan Doener in Koethen ist auch eine beliebte Anlaufstelle zum Mittag.
+	</description>
         <url>http://dilan-doener.jimdo.com/</url>
+        <registerImage>buildings/DilanDoener.jpg</registerImage>
     </building>
     <building>
         <id>2</id>
-        <name>Rostbratwurstgrill</name>
+        <name>Rostbratwurstgrill Leopoldstrasse</name>
         <street>Leopoldstrasse</street>
         <houseNumber>67a</houseNumber>
         <postalCode>06366</postalCode>
@@ -41,10 +43,26 @@ Der Dilan Doener in Koethen ist auch eine beliebte Anlaufstelle zum mittag.
         <latitude>517564600</latitude>
         <longitude>119853700</longitude>
         <description>
-Die breiten sich immer weiter aus und sind jetzt glaub ich drei mal in Koethen zu finden.
-Aber fuer den schnellen Hunger immer gut.		
-		</description>
+	Mittlerweile schon sehr verbreitet, doch immer lecker. Die Rostbratwurstgrill-Kette ist die Adresse für den schnellen Hunger zwischendurch.
+	</description>
         <url>http://rostbratwurstgrill.de/details.php?ID=28</url>
+        <registerImage>buildings/Rostbratwurst1_1.jpg</registerImage>
+    </building>
+        <building>
+        <id>3</id>
+        <name>Rostbratwurstgrill Lohmannstrasse</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>75</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <latitude>517456300</latitude>
+        <longitude>119722860</longitude>
+        <description>
+	Mittlerweile schon sehr verbreitet, doch immer lecker. Die Rostbratwurstgrill-Kette ist die Adresse für den schnellen Hunger zwischendurch.
+	</description>
+        <url>http://rostbratwurstgrill.de/details.php?ID=28</url>
+        <registerImage>buildings/Rostbratwurst2_1.jpg</registerImage>
+        <registerImage>buildings/Rostbratwurst2_2.jpg</registerImage>
     </building>
     <building>
         <id>4</id>
@@ -56,9 +74,9 @@ Aber fuer den schnellen Hunger immer gut.
         <latitude>517539986</latitude>
         <longitude>119664018</longitude>
         <description>
-Es ist die Studentendisco in Koethen.
-Mittwochs ist immer irgendeine Motto-Party und sonst haengen ueberall Flyer und Plakate die euch informieren.
-		</description>
+	Es ist die Studentendisco in Koethen.
+	Mittwochs ist immer irgendeine Motto-Party und sonst haengen ueberall Flyer und Plakate, welche euch informieren aus.
+	</description>
         <url>http://www.mensakeller.com/</url>
         <registerImage>buildings/Mensakeller.JPG</registerImage>
     </building>
@@ -72,9 +90,9 @@ Mittwochs ist immer irgendeine Motto-Party und sonst haengen ueberall Flyer und 
         <latitude>517552250</latitude>
         <longitude>119597090</longitude>
         <description>
-Im VT Club ist dienstags Motto-Abend und ihr findet ihn im Keller des Wohnheims 6.
-Aber ihr koennt auch beim Grillen draussen sitzen.
-		</description>
+	Im VT Club ist dienstags Motto-Abend und ihr findet ihn im Keller des Wohnheims 6.
+	Aber ihr koennt auch beim Grillen draussen sitzen.
+	</description>
         <url>http://www.vt-club.de/index.php</url>
         <registerImage>buildings/VTClub.JPG</registerImage>
     </building>
