@@ -82,14 +82,16 @@ public class QuizActivity extends Activity
         menu.setHeaderTitle("Quiz Auswahl");
         for(Quiz quiz : quizManager.getQuizs())
         {
-            menu.add(0, v.getId(), 0, quiz.getName());
+            menu.add(0, quiz.getID(), 0, quiz.getName());
         }
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item)
     {
+        this.quizPreferences.edit().putInt("lastQuiz", item.getItemId()).commit();
         Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+        this.recreate();
         return true;
     }
 
