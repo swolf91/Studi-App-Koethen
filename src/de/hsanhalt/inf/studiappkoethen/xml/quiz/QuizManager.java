@@ -40,6 +40,11 @@ public class QuizManager implements IXmlParsing
         return null;
     }
 
+    public Quiz[] getQuizs()
+    {
+        return this.quizList.toArray(new Quiz[this.quizList.size()]);
+    }
+
     /**
      * Fuegt alle Inhalte innerhalb der Node in die Klasse ein.
      *
@@ -59,6 +64,7 @@ public class QuizManager implements IXmlParsing
             byte id = -1;
             List<Question> questions = new ArrayList<>();
             String startmsg = null;
+            String name = null;
 
             for(int i = 0; i < nodeList.getLength(); i++)
             {
@@ -75,15 +81,19 @@ public class QuizManager implements IXmlParsing
                 {
                     startmsg = subNode.getTextContent();
                 }
+                else if(subNode.getNodeName().equals("name"))
+                {
+                    name = subNode.getTextContent();
+                }
             }
 
-            if(id == -1 || questions.isEmpty())
+            if(id == -1 || questions.isEmpty() || name == null)
             {
                 Log.e("QuizManagerError", "Could not create quiz!");
                 return;
             }
 
-            Quiz quiz = new Quiz(id, questions.toArray(new Question[questions.size()]), startmsg);
+            Quiz quiz = new Quiz(id, name, questions.toArray(new Question[questions.size()]), startmsg);
             Log.d("QuizManagerDebug", "Created Quiz: " + quiz.getID() + " with " + quiz.getNumberOfQuestions() + " questions.");
             this.quizList.add(quiz);
         }

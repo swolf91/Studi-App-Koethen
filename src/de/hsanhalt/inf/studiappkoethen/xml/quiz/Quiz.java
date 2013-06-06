@@ -6,13 +6,16 @@ public class Quiz
 
     private final Question[] questions;
 
+    private final String name;
+
     private final String startMessage;
 
-    public Quiz(byte id, Question[] questions, String startMessage)
+    public Quiz(byte id, String name, Question[] questions, String startMessage)
     {
         this.id = id;
         this.questions = questions;
         this.startMessage = startMessage;
+        this.name = name;
     }
 
     public byte getID()
@@ -33,5 +36,10 @@ public class Quiz
     public String getStartMessage()
     {
         return this.startMessage;
+    }
+
+    public String getName()
+    {
+        return this.name;
     }
 }
