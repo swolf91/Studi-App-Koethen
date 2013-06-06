@@ -9,6 +9,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import de.hsanhalt.inf.studiappkoethen.R;
 
+/*
+ * ...still in Progress 
+ */
+
 public class MergedMarkers
 {
 

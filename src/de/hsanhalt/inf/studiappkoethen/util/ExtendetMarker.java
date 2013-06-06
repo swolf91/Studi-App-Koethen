@@ -2,6 +2,10 @@ package de.hsanhalt.inf.studiappkoethen.util;
 
 import com.google.android.gms.maps.model.Marker;
 
+/*
+ * ...still in Progress 
+ */
+
 public class ExtendetMarker
 {
 	private Marker eMarker;

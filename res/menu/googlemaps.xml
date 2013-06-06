@@ -3,7 +3,7 @@
 	<item
         android:id="@+id/action_filter"
         android:orderInCategory="100"
-        android:showAsAction="never"
+        android:showAsAction="always"
         android:title="@string/action_filter"/>
     <item
         android:id="@+id/action_main"
