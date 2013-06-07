@@ -21,12 +21,15 @@ import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import de.hsanhalt.inf.studiappkoethen.R;
 import android.app.Activity;
 import android.os.Bundle;
 import de.hsanhalt.inf.studiappkoethen.R.id;
+import de.hsanhalt.inf.studiappkoethen.util.quiz.QuizState;
 import de.hsanhalt.inf.studiappkoethen.xml.quiz.Quiz;
 import de.hsanhalt.inf.studiappkoethen.xml.quiz.QuizManager;
 
@@ -34,56 +37,88 @@ public class QuizActivity extends Activity
 {
     private List<Boolean> answers;
     private Quiz quiz;
+    private QuizState state;
     SharedPreferences quizPreferences ;    // Gibt die id des zuletzt geloesten Quizes zurueck.
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
         this.setContentView(R.layout.activity_quiz);
-        quizPreferences = getSharedPreferences("Quiz Status", MODE_PRIVATE);
 
+        this.quizPreferences = this.getSharedPreferences("Quiz Status", MODE_PRIVATE);
         byte lastQuiz = (byte) quizPreferences.getInt("lastQuiz", -1);
 
         if(lastQuiz != -1)
         {
             this.quiz = QuizManager.getInstance().getQuiz(lastQuiz);
-            // TODO load quiz!
+            this.state = this.load();
 
-            TextView textView = (TextView) this.findViewById(id.quiz_textView_noquiz);
-            textView.setVisibility(View.GONE);
-
-            // TODO status laden!
-
-            this.load();
-
-            if(this.answers.size() >= quiz.getNumberOfQuestions())
+            if(this.state == QuizState.WELCOME_MESSAGE)
             {
-                this.clear();
-                this.recreate();
-                return;
+                TextView textView = (TextView) this.findViewById(id.quiz_textView_message);
+                textView.setVisibility(View.VISIBLE);
+                textView.setText(quiz.getStartMessage());
+
+                Button button = (Button) this.findViewById(id.quiz_button_nextstage);
+                button.setVisibility(View.VISIBLE);
+                button.setText("Quiz starten!");
             }
+            else if(this.state == QuizState.QUESTION)
+            {
+                TextView textView = (TextView) this.findViewById(id.quiz_textView_question_headline);
+                textView.setVisibility(View.VISIBLE);
 
-            textView = (TextView) this.findViewById(id.quiz_textView_question_headline);
+                textView = (TextView) this.findViewById(id.quiz_textView_question);
+                textView.setVisibility(View.VISIBLE);
+
+                textView.setText(quiz.getQuestion(this.answers.size()).getQuestion());
+
+                // TODO buttons anfuegen!
+
+                Button button = (Button) this.findViewById(id.quiz_button_nextstage);
+                button.setVisibility(View.VISIBLE);
+                button.setOnClickListener(new OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        answers.add(false);
+                        nextStage(v);
+                    }
+                });
+                button.setText("weiter!");
+            }
+            else if(this.state == QuizState.RESULT)
+            {
+                TextView textView = (TextView) this.findViewById(id.quiz_textView_message);
+                textView.setVisibility(View.VISIBLE);
+                textView.setText(quiz.getQuestion(this.answers.size() - 1).getResult());
+
+                Button button = (Button) this.findViewById(id.quiz_button_nextstage);
+                button.setVisibility(View.VISIBLE);
+                button.setText("zur nachsten Frage!");
+            }
+            else if(this.state == QuizState.ANALYSIS)
+            {
+                TextView textView = (TextView) this.findViewById(id.quiz_textView_message);
+                textView.setVisibility(View.VISIBLE);
+                textView.setText("Analyse!");
+            }
+        }
+        else
+        {
+            TextView textView = (TextView) this.findViewById(id.quiz_textView_noquiz);
             textView.setVisibility(View.VISIBLE);
-
-            textView = (TextView) this.findViewById(id.quiz_textView_question);
-            textView.setVisibility(View.VISIBLE);
-
-            textView.setText(quiz.getQuestion(this.answers.size()).getQuestion());
-
-            this.answers.add(false);
-            this.save();
         }
     }
 
-    private void load()
+    private QuizState load()
     {
         this.answers = new ArrayList<Boolean>(quiz.getNumberOfQuestions());
 
         FileInputStream fileInputStream = null;
-
+        QuizState state = QuizState.QUESTION;
         try
         {
             try
@@ -92,8 +127,9 @@ public class QuizActivity extends Activity
             }
             catch (FileNotFoundException ignored)
             {
-                return;
+                return QuizState.WELCOME_MESSAGE;
             }
+            state = QuizState.getByID(fileInputStream.read());
             while(fileInputStream.available() != 0)
             {
                 this.answers.add(Boolean.valueOf(fileInputStream.read() != 0));
@@ -115,17 +151,20 @@ public class QuizActivity extends Activity
                 Log.e("QuizActivityError", "Couldn't close the quiz file: quiz" + quiz.getID() + "!", e);
             }
         }
-
+        return state;
     }
 
-    private void save()
+    private void save(QuizState state)
     {
         FileOutputStream fileOutputStream = null;
 
         try
         {
             fileOutputStream = this.openFileOutput("quiz" + quiz.getID(), Context.MODE_PRIVATE);
-
+            if(state != null)
+            {
+                fileOutputStream.write(state.getID());
+            }
             for(Boolean bool : this.answers)
             {
                 fileOutputStream.write(bool ? 1 : 0);
@@ -148,11 +187,19 @@ public class QuizActivity extends Activity
         }
     }
 
-    private void clear()
+    public void nextStage(View view)
     {
-        this.answers.clear();
-        this.save();
-        this.quizPreferences.edit().putInt("lastQuiz", -1).commit();
+        if(view.getId() == id.quiz_button_nextstage)
+        {
+            this.state = QuizState.getNextState(this.state, this.quiz, this.answers.size());
+            if(this.state == null)
+            {
+                this.answers.clear();
+                this.quizPreferences.edit().remove("lastQuiz").commit();
+            }
+            this.save(this.state);
+            this.recreate();
+        }
     }
 
     @Override
