@@ -12,12 +12,12 @@ import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.R.layout;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter
+public class ExpandableListAdapter<G, C> extends BaseExpandableListAdapter
 {
     private Context context;
-    private List<ExpandableListEntry> entryList;
+    private List<ExpandableListEntry<G, C>> entryList;
 
-    public ExpandableListAdapter(Context context, List<ExpandableListEntry> entryList)
+    public ExpandableListAdapter(Context context, List<ExpandableListEntry<G, C>> entryList)
     {
         this.context = context;
         this.entryList = entryList;
@@ -36,13 +36,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
     }
 
     @Override
-    public Object getGroup(int groupPosition)
+    public G getGroup(int groupPosition)
     {
         return this.entryList.get(groupPosition).getGroup();
     }
 
     @Override
-    public Object getChild(int groupPosition, int childPosition)
+    public C getChild(int groupPosition, int childPosition)
     {
         return this.entryList.get(groupPosition).getChilds()[childPosition];
     }

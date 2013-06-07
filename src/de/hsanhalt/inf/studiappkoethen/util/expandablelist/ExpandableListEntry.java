@@ -1,22 +1,22 @@
 package de.hsanhalt.inf.studiappkoethen.util.expandablelist;
 
-public class ExpandableListEntry
+public class ExpandableListEntry<G, C>
 {
-    private Object group;
-    private Object[] childs;
+    private G group;
+    private C[] childs;
 
-    public ExpandableListEntry(Object group, Object... childs)
+    public ExpandableListEntry(G group, C... childs)
     {
         this.group = group;
         this.childs = childs;
     }
 
-    public Object[] getChilds()
+    public C[] getChilds()
     {
         return childs;
     }
 
-    public Object getGroup()
+    public G getGroup()
     {
         return this.group;
     }

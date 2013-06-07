@@ -18,10 +18,14 @@ import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.Person;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategory;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
 
 public class ExpandableListActivity extends Activity
 {
-    ExpandableListAdapter expandableListAdapter;
+    ExpandableListAdapter<BuildingCategory, Building> expandableListAdapter;
     ExpandableListView expandableListView;
 
 	@Override
@@ -34,7 +38,7 @@ public class ExpandableListActivity extends Activity
         this.expandableListView = (ExpandableListView) findViewById(R.id.expandablelist_expandablelist_list);
 
         //Adapter erstellen
-        this.expandableListAdapter = new ExpandableListAdapter(this, this.loadData());
+        this.expandableListAdapter = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList());
         //Adapter an ExpandableListView anhaengen
         this.expandableListView.setAdapter(this.expandableListAdapter);
 
@@ -43,17 +47,30 @@ public class ExpandableListActivity extends Activity
     }
 
     /**
-     * laedt die Daten fuer den ExpandableListAdapter
+     * laedt die Gebaeude-Daten fuer den ExpandableListAdapter
      */
-    private List<ExpandableListEntry> loadData()
+    private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList()
     {
-        List<ExpandableListEntry> entryList = new ArrayList<ExpandableListEntry>();
+        List<ExpandableListEntry<BuildingCategory, Building>> entryList = new ArrayList<ExpandableListEntry<BuildingCategory, Building>>();
         BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
         BuildingManager buildingManager = BuildingManager.getInstance();
         for(BuildingCategory buildingCategory : buildingCategoryManager.getBuildingCategories())
         {
             List<Building> buildings = buildingManager.getBuildingList(buildingCategory);
-            entryList.add(new ExpandableListEntry(buildingCategory, buildings.toArray(new Building[buildings.size()])));
+            entryList.add(new ExpandableListEntry<BuildingCategory, Building>(buildingCategory, buildings.toArray(new Building[buildings.size()])));
+        }
+        return entryList;
+    }
+
+    private List<ExpandableListEntry<PersonCategory, Person>> getPersonList()
+    {
+        List<ExpandableListEntry<PersonCategory, Person>> entryList = new ArrayList<ExpandableListEntry<PersonCategory, Person>>();
+        PersonCategoryManager personCategoryManager = PersonCategoryManager.getInstance();
+        PersonManager personManager = PersonManager.getInstance();
+        for(PersonCategory personCategory : personCategoryManager.getPersonCategories())
+        {
+            List<Person> persons = personManager.getPersonList(personCategory);
+            entryList.add(new ExpandableListEntry<PersonCategory, Person>(personCategory, persons.toArray(new Person[persons.size()])));
         }
         return entryList;
     }
@@ -97,8 +114,8 @@ public class ExpandableListActivity extends Activity
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
         {
             Intent intent = new Intent(getBaseContext(), DetailActivity.class);
-            intent.putExtra("category", ((BuildingCategory)expandableListAdapter.getGroup(groupPosition)).getID());
-            intent.putExtra("building", ((Building)expandableListAdapter.getChild(groupPosition, childPosition)).getID());
+            intent.putExtra("category", expandableListAdapter.getGroup(groupPosition).getID());
+            intent.putExtra("building", expandableListAdapter.getChild(groupPosition, childPosition).getID());
             startActivity(intent);
             return true;
         }

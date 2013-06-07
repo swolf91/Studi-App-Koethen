@@ -115,4 +115,16 @@ public class PersonCategoryManager implements IXmlParsing
 
         return true;
     }
+
+    public PersonCategory[] getPersonCategories()
+    {
+        PersonCategory[] personCategories = new PersonCategory[this.categoryMap.size()];
+
+        int i = 0;
+        for(Entry<Byte, PersonCategory> entry : this.categoryMap.entrySet())
+        {
+            personCategories[i++] = entry.getValue();
+        }
+        return personCategories;
+    }
 }
