@@ -27,7 +27,10 @@ public class ExpandableListActivity extends Activity
 {
     ExpandableListAdapter<BuildingCategory, Building> expandableListAdapter;
     ExpandableListView expandableListView;
-
+    
+    /**
+     * Initialaufbau der ExpandableList Activity.Gibt der Activity den Adapter und den Listener.
+     */
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -47,7 +50,7 @@ public class ExpandableListActivity extends Activity
     }
 
     /**
-     * laedt die Gebaeude-Daten fuer den ExpandableListAdapter
+     * laedt die Gebaeude-Daten fuer den ExpandableListAdapter.
      */
     private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList()
     {
@@ -61,7 +64,10 @@ public class ExpandableListActivity extends Activity
         }
         return entryList;
     }
-
+    /**
+     * Lädt die Personen-Daten fuer den ExpandableListAdapter.
+     * @return Liste mit Eintraegen.
+     */
     private List<ExpandableListEntry<PersonCategory, Person>> getPersonList()
     {
         List<ExpandableListEntry<PersonCategory, Person>> entryList = new ArrayList<ExpandableListEntry<PersonCategory, Person>>();
@@ -74,15 +80,20 @@ public class ExpandableListActivity extends Activity
         }
         return entryList;
     }
-
+    /**
+     * TODO
+     */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		// Inflate the menu; this adds items to the action bar if it is present.
+//		 Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.expandable_list, menu);
 		return true;
 	}
 
+	/**
+	 * Beschreibt die Funktionen der ExpandableList Activity.
+	 */
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -108,7 +119,9 @@ public class ExpandableListActivity extends Activity
         }
     }
 
-    //our child listener
+    /**
+     * Listener für die Klicks auf die ExpandableList.
+     */
     private OnChildClickListener myListItemClicked =  new OnChildClickListener()
     {
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
