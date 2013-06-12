@@ -5,9 +5,7 @@ public class ExpandableListEntry<G, C>
     private G group;
     private C[] childs;
     /**
-     * Dieses Objekt wird verwendet um DIe ExpandableList zu fuellen (Personen- oder Gebaude-Objekte).
-     * @param group Die jeweilige Kategorie.
-     * @param childs Das jeweilige Objekt das zur Kategorie gehört.
+     * Baut ein Objekt zum Eintrag in die ExpandableList. Ein Eintrag enthaelt eine Gruppe und beliebig viele Unterelemente.
      */
     public ExpandableListEntry(G group, C... childs)
     {
@@ -15,15 +13,16 @@ public class ExpandableListEntry<G, C>
         this.childs = childs;
     }
     /**
-     *  Gibt untergeordnete Elemente zurueck.
+     * 
+     * Gibt die Unterelemente des aktuellen Objekts zurueck.
      */
     public C[] getChilds()
     {
         return childs;
     }
     /**
-     * Gibt die Kategorie zurueck.
-     * 
+     * Gibt die Kategorien des aktuellen Objekts zurueck.
+     * @return
      */
     public G getGroup()
     {

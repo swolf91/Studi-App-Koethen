@@ -16,55 +16,75 @@ public class ExpandableListAdapter<G, C> extends BaseExpandableListAdapter
 {
     private Context context;
     private List<ExpandableListEntry<G, C>> entryList;
-
+    /**
+     * Erzeugt den Adapter der ExpandableList
+     * @param context 
+     * @param entryList Eintraege der ExpandableList
+     */
     public ExpandableListAdapter(Context context, List<ExpandableListEntry<G, C>> entryList)
     {
         this.context = context;
         this.entryList = entryList;
     }
-
+    /**
+     * Gibt die Anzahl der Kategorien zurueck.
+     */
     @Override
     public int getGroupCount()
     {
         return this.entryList.size();
     }
-
+    /**
+     * Gibt die Anzahl Elemente der Kategorie zurueck. 
+     */
     @Override
     public int getChildrenCount(int groupPosition)
     {
         return this.entryList.get(groupPosition).getChilds().length;
     }
-
+    /**
+     * Gibt die jeweilige Kategorie passend zur Position zurueck.
+     */
     @Override
     public G getGroup(int groupPosition)
     {
         return this.entryList.get(groupPosition).getGroup();
     }
-
+    /**
+     * Gibt das jeweilige untere Element der Kategorie zurueck
+     */
     @Override
     public C getChild(int groupPosition, int childPosition)
     {
         return this.entryList.get(groupPosition).getChilds()[childPosition];
     }
-
+    /**
+     * Gibt eine eindeutige ID der Kategorie zurueck.
+     */
     @Override
     public long getGroupId(int groupPosition)
     {
         return groupPosition;
     }
-
+    /**
+     * Gibt eine eindeutige ID des unteren Elements einer kategorie zurueck.
+     */
     @Override
     public long getChildId(int groupPosition, int childPosition)
     {
         return childPosition;
     }
-
+    /**
+     * Gibt "true" zurueck wenn die IDs sich nicht aendern.
+     */
     @Override
     public boolean hasStableIds()
     {
         return true;
     }
-
+    /**
+     * Gibt ein View-Objekt mit Text und Layout zum anzeigen zurueck.
+     */
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent)
     {
@@ -78,7 +98,9 @@ public class ExpandableListAdapter<G, C> extends BaseExpandableListAdapter
 
         return convertView;
     }
-
+    /**
+     * Gibt ein View-Objekt, des Unterelementes mit Text und Layout, zum anzeigen zurueck.
+     */
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent)
     {
@@ -91,7 +113,9 @@ public class ExpandableListAdapter<G, C> extends BaseExpandableListAdapter
         textView.setText(this.getChild(groupPosition, childPosition).toString());
         return convertView;
     }
-
+    /**
+     * Ist "true" wenn die Unterelemente der Kategorie selektierbar sein duerfen.
+     */
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition)
     {
