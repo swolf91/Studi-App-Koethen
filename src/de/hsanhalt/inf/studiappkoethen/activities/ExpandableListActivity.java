@@ -1,6 +1,7 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import android.app.Activity;
@@ -18,6 +19,7 @@ import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.CollegeBuilding;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.Person;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
@@ -35,13 +37,13 @@ public class ExpandableListActivity extends Activity
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.activity_expandablelist);
+		this.setContentView(R.layout.activity_expandablelist_koethen);
 
         //Expandable list aus dem Layout laden
         this.expandableListView = (ExpandableListView) findViewById(R.id.expandablelist_expandablelist_list);
 
         //Adapter erstellen
-        this.expandableListAdapter = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList());
+        this.expandableListAdapter = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(true)); //TODO -> Koethen bzw. Campus
         //Adapter an ExpandableListView anhaengen
         this.expandableListView.setAdapter(this.expandableListAdapter);
 
@@ -51,17 +53,37 @@ public class ExpandableListActivity extends Activity
 
     /**
      * laedt die Gebaeude-Daten fuer den ExpandableListAdapter.
+     * @param true, wenn es ein Campusgebaeude ist; false, wenn es ein Gebaeude aus Koethen ist, dass nicht zum Campus gehoert.
      */
-    private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList()
+    private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList(boolean isCampusBuilding)
     {
         List<ExpandableListEntry<BuildingCategory, Building>> entryList = new ArrayList<ExpandableListEntry<BuildingCategory, Building>>();
         BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
         BuildingManager buildingManager = BuildingManager.getInstance();
+       
         for(BuildingCategory buildingCategory : buildingCategoryManager.getBuildingCategories())
         {
             List<Building> buildings = buildingManager.getBuildingList(buildingCategory);
-            entryList.add(new ExpandableListEntry<BuildingCategory, Building>(buildingCategory, buildings.toArray(new Building[buildings.size()])));
+            
+            Iterator<Building> it = buildings.iterator();
+            while(it.hasNext()){
+            	Building building = it.next();
+            	if(!(building instanceof CollegeBuilding) && isCampusBuilding)
+            	{
+            		it.remove();
+        		}
+            	if(it instanceof CollegeBuilding && !isCampusBuilding){
+            		it.remove();
+            	}
+            	
+            }
+            
+            if(!buildings.isEmpty())
+            {
+            	entryList.add(new ExpandableListEntry<BuildingCategory, Building>(buildingCategory, buildings.toArray(new Building[buildings.size()])));
+            } 
         }
+
         return entryList;
     }
     /**
