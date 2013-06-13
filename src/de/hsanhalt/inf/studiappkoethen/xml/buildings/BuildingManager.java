@@ -199,7 +199,13 @@ public class BuildingManager implements IXmlParsing
             }
             else if (nodeName.equals("description"))
             {
-                description = content;
+                String[] descriptionLines = content.trim().split("\n");
+                description = "";
+                for(String line : descriptionLines)
+                {
+                    description += line.trim() + "\n";
+                }
+
             }
             else if (nodeName.equals("url"))
             {
