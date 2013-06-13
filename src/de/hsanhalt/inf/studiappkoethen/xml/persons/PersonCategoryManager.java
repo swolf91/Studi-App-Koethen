@@ -127,4 +127,9 @@ public class PersonCategoryManager implements IXmlParsing
         }
         return personCategories;
     }
+    
+    public int getSize()
+    {
+    	return this.categoryMap.size();
+    }
 }

@@ -42,6 +42,20 @@ public class PersonManager implements IXmlParsing
     }
 
 
+    public Person getPerson(PersonCategory category, byte id)
+    {
+    	for(Person person : this.person)
+    	{
+    		if(person.getPersonCategory().equals(category) && person.getID() == id)
+    		{
+    			return person;
+    		}
+    	}
+		return null;
+    
+    }
+    
+    
     /**
      * Gibt fuer 0..n Kategorien eine Personenliste zurueck.
      *
@@ -113,6 +127,7 @@ public class PersonManager implements IXmlParsing
             return;
         }
 
+        byte id = -1;
         String name = null;
         String surname = null;
         String state = null;
@@ -146,6 +161,10 @@ public class PersonManager implements IXmlParsing
             if (nodeName.equals("name"))
             {
                 name = content;
+            }
+            else if(nodeName.equals("id"))
+            {
+            	id = Byte.valueOf(content);
             }
             else if (nodeName.equals("surname"))
             {
@@ -246,7 +265,7 @@ public class PersonManager implements IXmlParsing
 
         Person newPerson;
 
-        newPerson = new Person(category, name, surname, state, specialField, street, houseNumber, postalCode, city, buildings, room, description, profession, module.toArray(new String[module.size()]), responsibility.toArray(new String[responsibility.size()]), talkTime, phone, email, url);
+        newPerson = new Person(category,id, name, surname, state, specialField, street, houseNumber, postalCode, city, buildings, room, description, profession, module.toArray(new String[module.size()]), responsibility.toArray(new String[responsibility.size()]), talkTime, phone, email, url);
 
         this.person.add(newPerson);
 

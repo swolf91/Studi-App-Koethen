@@ -5,6 +5,8 @@ import java.net.URL;
 public class Person
 {
     private final PersonCategory personCategory;
+    
+    private final byte id;
     /**
      * beinhaltet den Namen der Person
      */
@@ -88,10 +90,11 @@ public class Person
      * @param module         Lehrbereiche.
      * @param responsibility Zustaendigkeit.
      */
-    public Person(PersonCategory personCategory, String name, String surname, String state, String specialField, String street, String houseNumber, String postalCode, String city, String building, String room, String description, String profession, String[] module, String[] responsibility, String talkTime, String phone, String email, String url)
+    public Person(PersonCategory personCategory,Byte id, String name, String surname, String state, String specialField, String street, String houseNumber, String postalCode, String city, String building, String room, String description, String profession, String[] module, String[] responsibility, String talkTime, String phone, String email, String url)
     {
 
         this.personCategory = personCategory;
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.state = state;
@@ -134,7 +137,7 @@ public class Person
      */
     public PersonCategory getPersonCategory()
     {
-        return personCategory;
+        return this.personCategory;
     }
 
     /**
@@ -142,7 +145,12 @@ public class Person
      */
     public String getName()
     {
-        return name;
+        return this.name;
+    }
+    
+    public byte getID()
+    {
+    	return this.id;
     }
 
     /**
@@ -150,7 +158,7 @@ public class Person
      */
     public String getSurname()
     {
-        return surname;
+        return this.surname;
     }
 
     /**
@@ -158,7 +166,7 @@ public class Person
      */
     public String getState()
     {
-        return state;
+        return this.state;
     }
 
     /**
@@ -166,7 +174,7 @@ public class Person
      */
     public String getSpecialField()
     {
-        return specialField;
+        return this.specialField;
     }
 
     /**
@@ -174,7 +182,7 @@ public class Person
      */
     public String getStreet()
     {
-        return street;
+        return this.street;
     }
 
     /**
@@ -182,7 +190,7 @@ public class Person
      */
     public String gethouseNumber()
     {
-        return houseNumber;
+        return this.houseNumber;
     }
 
     /**
@@ -190,7 +198,7 @@ public class Person
      */
     public String getPostalCode()
     {
-        return postalCode;
+        return this.postalCode;
     }
 
     /**
@@ -198,7 +206,7 @@ public class Person
      */
     public String getCity()
     {
-        return city;
+        return this.city;
     }
 
     /**
@@ -206,7 +214,7 @@ public class Person
      */
     public String getBuilding()
     {
-        return building;
+        return this.building;
     }
 
     /**
@@ -214,7 +222,7 @@ public class Person
      */
     public String getRoom()
     {
-        return room;
+        return this.room;
     }
 
     /**
@@ -222,7 +230,7 @@ public class Person
      */
     public String getDescription()
     {
-        return description;
+        return this.description;
     }
 
     /**
@@ -230,7 +238,7 @@ public class Person
      */
     public String getProfession()
     {
-        return profession;
+        return this.profession;
     }
 
     /**
@@ -238,7 +246,7 @@ public class Person
      */
     public String[] getModuls()
     {
-        return module;
+        return this.module;
     }
 
     /**
@@ -246,7 +254,7 @@ public class Person
      */
     public String[] getResponsibilities()
     {
-        return responsibility;
+        return this.responsibility;
     }
 
     /**
@@ -254,7 +262,7 @@ public class Person
      */
     public String getTalkTime()
     {
-        return talkTime;
+        return this.talkTime;
     }
 
     /**
@@ -262,7 +270,7 @@ public class Person
      */
     public String getPhone()
     {
-        return phone;
+        return this.phone;
     }
 
     /**
@@ -270,7 +278,7 @@ public class Person
      */
     public String getEmail()
     {
-        return email;
+        return this.email;
     }
 
     /**
@@ -278,7 +286,7 @@ public class Person
      */
     public URL getUrl()
     {
-        return url;
+        return this.url;
     }
 
     /**
