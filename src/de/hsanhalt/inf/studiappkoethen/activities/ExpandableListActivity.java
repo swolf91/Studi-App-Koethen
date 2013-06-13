@@ -72,7 +72,7 @@ public class ExpandableListActivity extends Activity
             	{
             		it.remove();
         		}
-            	if(it instanceof CollegeBuilding && !isCampusBuilding){
+            	if(building instanceof CollegeBuilding && !isCampusBuilding){
             		it.remove();
             	}
             	
