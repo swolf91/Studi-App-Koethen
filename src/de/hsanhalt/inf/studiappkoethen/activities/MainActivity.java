@@ -70,9 +70,11 @@ public class MainActivity extends Activity
         switch (view.getId())
         {
         	case id.main_imageview_campus:
-        		Intent expandableListIntent = new Intent (this,ExpandableListActivity.class);
-        		this.startActivity(expandableListIntent);
+        		Intent expandableListIntentCampus = new Intent (this,ExpandableListActivity.class);
+        		expandableListIntentCampus.putExtra("campus", (byte) -1);
+        		this.startActivity(expandableListIntentCampus);
         		break;
+
             case id.main_imageview_map:
             	
             	Intent intentGoogle = new Intent(this, GoogleMapsActivity.class);
@@ -95,7 +97,9 @@ public class MainActivity extends Activity
                 //startActivity(new Intent(this, GoogleMapsActivity.class));
                 break;
             case id.main_imageview_city:
-
+            	Intent expandableListIntentCity= new Intent (this,ExpandableListActivity.class);
+            	expandableListIntentCity.putExtra("buildings", (byte) -1);
+        		this.startActivity(expandableListIntentCity);
                 break;
 
             case id.main_imageview_tour:

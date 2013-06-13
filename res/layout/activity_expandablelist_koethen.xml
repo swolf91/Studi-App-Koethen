@@ -19,7 +19,7 @@
         android:textStyle="bold" />
 
     <ExpandableListView
-        android:id="@+id/expandablelist_expandablelist_list"
+        android:id="@+id/expandableListView_Koethen"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_below="@id/expandablelist_textview_headline" />

@@ -7,12 +7,14 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListAdapter;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListEntry;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
@@ -24,35 +26,61 @@ import de.hsanhalt.inf.studiappkoethen.xml.persons.Person;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
-
+/**
+ * 
+ * Enthaelt alle Funktionen um Interaktionen mit der ExpandableList ACtivity zu verwalten.
+ *
+ */
 public class ExpandableListActivity extends Activity
 {
-    ExpandableListAdapter<BuildingCategory, Building> expandableListAdapter;
-    ExpandableListView expandableListView;
     
-    /**
-     * Initialaufbau der ExpandableList Activity.Gibt der Activity den Adapter und den Listener.
+    ExpandableListView expandableListView;
+    ExpandableListAdapter<PersonCategory, Person> expandableListAdapterPerson;
+    ExpandableListAdapter<BuildingCategory, Building> expandableListAdapterBuilding;
+    
+    /** TODO ACHTUNG!!!!!!! DIESE KLASSE WURDE MIT DEM ERWEITERTEN SOURCECODE NOCH NICHT GETESTET!!!!!!!!!!
+     * 
+     * Initialaufbau der ExpandableList Activity.Gibt der Activity den Adapter und den Listener (jeweils fuer Personen und Gebaeude Objekte).
      */
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.activity_expandablelist_koethen);
+		
+		byte buildingsID=this.getIntent().getByteExtra("buildings", (byte) -1);
+		byte campusID=this.getIntent().getByteExtra("campus", (byte) -1);
+		
+		if(campusID != -1 && buildingsID != -1){
+			if(buildingsID > -1){
+					
+				
+				this.setContentView(R.layout.activity_expandablelist_koethen);
+		        this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Koethen);
+		        this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(false)); 
+		        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
+			}
+			
+		
+			if(campusID > -1){
+				
+				this.setContentView(R.layout.activity_expandablelist_campus);
+				this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Campus);
+		        this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
+		        this.expandableListView.setAdapter(this.expandableListAdapterPerson);
+			}
 
-        //Expandable list aus dem Layout laden
-        this.expandableListView = (ExpandableListView) findViewById(R.id.expandablelist_expandablelist_list);
-
-        //Adapter erstellen
-        this.expandableListAdapter = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(true)); //TODO -> Koethen bzw. Campus
-        //Adapter an ExpandableListView anhaengen
-        this.expandableListView.setAdapter(this.expandableListAdapter);
-
-        //listener for child row click
-        this.expandableListView.setOnChildClickListener(myListItemClicked);
+	        this.expandableListView.setOnChildClickListener(myListItemClicked);
+		}
+		else{
+			if(campusID==-1){
+				Log.d("ExpandableListActivity","Kein Campus Objekt verfuegbar!");
+			}else
+				Log.d("ExpandableListActivity","Kein Gebaeude Objekt verfuegbar!");
+		}
     }
 
     /**
-     * laedt die Gebaeude-Daten fuer den ExpandableListAdapter.
+     * Laedt die Gebaeude-Daten fuer den ExpandableListAdapter.
      * @param true, wenn es ein Campusgebaeude ist; false, wenn es ein Gebaeude aus Koethen ist, dass nicht zum Campus gehoert.
      */
     private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList(boolean isCampusBuilding)
@@ -103,12 +131,13 @@ public class ExpandableListActivity extends Activity
         return entryList;
     }
     /**
-     * TODO
+     * Holt das Menue, wenn das Optionsmenue erstellt wird.
+     * (wird nicht genutzt, )
      */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-//		 Inflate the menu; this adds items to the action bar if it is present.
+		 
 		getMenuInflater().inflate(R.menu.expandable_list, menu);
 		return true;
 	}
@@ -131,11 +160,6 @@ public class ExpandableListActivity extends Activity
             startActivity(intent);
             return true;
 
-//        case R.id.action_list:			//TODO rausnehmen wenn Liste fertig ist
-//            startActivity(new Intent(this, ExpandableListActivity.class));
-//            return true;
-
-
         default:
             return super.onOptionsItemSelected(item);
         }
@@ -149,8 +173,8 @@ public class ExpandableListActivity extends Activity
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
         {
             Intent intent = new Intent(getBaseContext(), DetailActivity.class);
-            intent.putExtra("category", expandableListAdapter.getGroup(groupPosition).getID());
-            intent.putExtra("building", expandableListAdapter.getChild(groupPosition, childPosition).getID());
+            intent.putExtra("category", expandableListAdapterBuilding.getGroup(groupPosition).getID());
+            intent.putExtra("building", expandableListAdapterBuilding.getChild(groupPosition, childPosition).getID());
             startActivity(intent);
             return true;
         }

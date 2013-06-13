@@ -1,11 +1,17 @@
 package de.hsanhalt.inf.studiappkoethen.util.expandablelist;
-
+/**
+ * Objekt fuer Eintrag in die ExpandableList. Ein Eintrag enthaelt eine Gruppe und beliebig viele Unterelemente.
+ * @author mh
+ *
+ * @param <G>
+ * @param <C>
+ */
 public class ExpandableListEntry<G, C>
 {
     private G group;
     private C[] childs;
     /**
-     * Baut ein Objekt zum Eintrag in die ExpandableList. Ein Eintrag enthaelt eine Gruppe und beliebig viele Unterelemente.
+     * Konstruktor fuer die benoetigten Items der Liste.
      */
     public ExpandableListEntry(G group, C... childs)
     {
