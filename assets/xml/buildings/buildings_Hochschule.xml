@@ -179,7 +179,7 @@
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
         <description>
-	Hier innerhalb meines Dies ist der Fachbereich, welcher der Ursprung fuer dies Applikation ist. 
+	Dies ist der Fachbereich, welcher der Ursprung fuer diese Applikation ist. 
 	Der Fachbereich 5 beschaeftigt sich mit den Studienrichtungen Informatik und Sprachen. 
 	Dabei werden die mathematischen, programmier- und informationstechnischen Grundlagen fuer spaetere Projekte geschaffen. 
 	Dies ist nur ein kleiner Ausschnitt. Allgemein wird die volle Breite des Informatikspektrums abgedeckt und gelehrt. 
@@ -202,7 +202,6 @@
         <latitude>517461145</latitude>
         <longitude>119843346</longitude>
         <description>
-	Um die Frage zu klaeren, um was es sich bei einem Studienkolleg handelt hier eine kurze Beschreibung:
 	Die Studienkollegs bieten ausländischen Studierenden aus zahlreichen Ländern eine sprachliche und fachbezogene Studienpropädeutik 
 	und stellen damit eine Art Vorstudium dar. Dazu führen sie in Schwerpunktkursen einjährigen Vorbereitungsunterricht durch 
 	und nehmen die Feststellungsprüfung ab.
@@ -222,10 +221,9 @@
         <latitude>517557047</latitude>
         <longitude>119602829</longitude>
         <description>
-	Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstuetzen, 
-	erste Rahmenbedingungen fuer die professionelle Projektausarbeitung zu ermoeglichen.
+	Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstuetzen und erste Rahmenbedingungen fuer die professionelle Projektausarbeitung zu ermoeglichen.
 	Weiterhin koennen hier verschiedene Technologiezweige durch Rechnernetze, Medienbereitstellung 
-	oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden..   		
+	oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden.  		
 	</description>
         <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
         <registerImage>buildings/Technologiezentrum.JPG</registerImage>
