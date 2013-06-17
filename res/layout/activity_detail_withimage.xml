@@ -185,7 +185,8 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:text="@string/detail_button_mapview"
+        android:text=""
+        android:background="@drawable/detailactivity_mapbutton"
         android:id="@+id/detail_button_mapview"
         android:layout_gravity="center"
         android:layout_marginTop="-50dp"
