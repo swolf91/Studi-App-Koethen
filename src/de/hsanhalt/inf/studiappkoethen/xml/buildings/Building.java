@@ -108,6 +108,15 @@ public class Building
     }
 
     /**
+     * Gibt die Telefonnummer des Gebaeudes zurueck.
+     * @return
+     */
+    public String getPhoneNumber()
+    {
+        return this.phoneNumber;
+    }
+
+    /**
      * Gibt den Namen des Gebaeudes zurueck.
      */
     public String getName()

@@ -114,6 +114,18 @@ public class DetailActivity extends Activity
                 textView.setText(value);
             }
 
+            if(this.building.getPhoneNumber() != null)
+            {
+                textView = (TextView) this.findViewById(id.detail_textView_phonenumber_headline);
+                textView.setVisibility(View.VISIBLE);
+
+                textView = (TextView) this.findViewById(id.detail_textView_phonenumber_headline);
+                textView.setVisibility(View.VISIBLE);
+
+                textView.setText(this.building.getPhoneNumber());
+            }
+
+
             if(this.building instanceof CollegeBuilding)
             {
                 CollegeBuilding collegeBuilding = (CollegeBuilding) this.building;
