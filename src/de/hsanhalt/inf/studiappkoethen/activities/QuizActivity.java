@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -19,13 +20,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.drawable;
 import de.hsanhalt.inf.studiappkoethen.R.id;
+import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
 import de.hsanhalt.inf.studiappkoethen.util.quiz.QuizState;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
 import de.hsanhalt.inf.studiappkoethen.xml.quiz.Question;
 import de.hsanhalt.inf.studiappkoethen.xml.quiz.Quiz;
 import de.hsanhalt.inf.studiappkoethen.xml.quiz.QuizManager;
@@ -37,7 +42,49 @@ public class QuizActivity extends Activity
     private List<Boolean> answers;
     private Quiz quiz;
     private QuizState state;
-    SharedPreferences quizPreferences ;    // Gibt die id des zuletzt geloesten Quizes zurueck.
+    private SharedPreferences quizPreferences ;    // Gibt die id des zuletzt geloesten Quizes zurueck.
+
+    private OnClickListener OnButtonClickListener = new OnClickListener()
+    {
+        @Override
+        public void onClick(View v)
+        {
+            if(v.getId() == QuizState.WELCOME_MESSAGE.hashCode() * Button.class.hashCode() || v.getId() == QuizState.ANALYSIS.hashCode() * Button.class.hashCode())
+            {
+                nextStage(0);
+            }
+            else if(v.getId() == QuizState.RESULT.hashCode() * Button.class.hashCode())
+            {
+                nextStage(answers.size() - 1);
+            }
+            else if(v.getId() == QuizState.QUESTION.hashCode() * Button.class.hashCode() * String.class.hashCode())
+            {
+                Toast.makeText(context, quiz.getQuestion(answers.size()).getHint(), Toast.LENGTH_LONG).show();
+            }
+            else if(v.getId() == QuizState.QUESTION.hashCode() * Button.class.hashCode() * GoogleMapsActivity.class.hashCode())
+            {
+                Building building = quiz.getQuestion(answers.size()).getBuilding();
+                FilterBundle filterBundle = new FilterBundle(building.getBuildingCategory().getID());
+                filterBundle.addNewBuilding(building.getID());
+
+                Intent intent = new Intent(context, GoogleMapsActivity.class);
+                intent.putExtras(filterBundle.getBundle());
+                startActivity(intent);
+            }
+            else
+            {
+                int amount = v.getId() - (QuizState.QUESTION.hashCode() * Button.class.hashCode());
+                Question question = quiz.getQuestion(answers.size());
+                if(amount >= 0 && amount < question.getAnswers().length)
+                {
+                    boolean result = question.isCorrectAnswer(amount);
+                    Toast.makeText(context, result ? "richtig" : "falsch", Toast.LENGTH_SHORT).show();
+                    answers.add(result);
+                    nextStage(answers.size() - 1);
+                }
+            }
+        }
+    };
 
     public QuizActivity()
     {
@@ -54,6 +101,12 @@ public class QuizActivity extends Activity
         this.quizPreferences = this.getSharedPreferences("Quiz Status", MODE_PRIVATE);
         byte lastQuiz = (byte) quizPreferences.getInt("lastQuiz", -1);
 
+        LinearLayout linearLayout = (LinearLayout) this.findViewById(id.quiz_linearlayout_mainlayout);
+
+        TextView messageView = new TextView(this);
+        messageView.setPadding(10, 10, 10, 10);
+        messageView.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
+
         if(lastQuiz != -1)
         {
             this.quiz = QuizManager.getInstance().getQuiz(lastQuiz);
@@ -61,27 +114,63 @@ public class QuizActivity extends Activity
 
             if(this.state == QuizState.WELCOME_MESSAGE)
             {
-                TextView textView = (TextView) this.findViewById(id.quiz_textView_message);
-                textView.setVisibility(View.VISIBLE);
-                textView.setText(quiz.getStartMessage());
+                MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+                params.setMargins(0, 0, 0, 75);
+                messageView.setLayoutParams(new LinearLayout.LayoutParams(params));
+                messageView.setText(quiz.getStartMessage());
+                linearLayout.addView(messageView);
 
-                Button button = (Button) this.findViewById(id.quiz_button_nextstage);
-                button.setVisibility(View.VISIBLE);
+                params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
+                params.setMargins(0, -75, 0, 0);
+                Button button = new Button(this);
+                button.setLayoutParams(new LinearLayout.LayoutParams(params));
                 button.setText("Quiz starten!");
+                button.setOnClickListener(this.OnButtonClickListener);
+                button.setId(this.state.hashCode() * Button.class.hashCode());
+                linearLayout.addView(button);
             }
             else if(this.state == QuizState.QUESTION)
             {
-                TextView textView = (TextView) this.findViewById(id.quiz_textView_question_headline);
-                textView.setVisibility(View.VISIBLE);
-
-                textView = (TextView) this.findViewById(id.quiz_textView_question);
-                textView.setVisibility(View.VISIBLE);
-
                 Question question = this.quiz.getQuestion(this.answers.size());
 
-                textView.setText(question.getQuestion());
+                boolean hasBuilding = question.getBuilding() != null;
+                boolean hasHint = question.getHint() != null;
 
-                LinearLayout linearLayout = (LinearLayout) this.findViewById(id.quiz_linearlayout_mainlayout);
+                if(hasBuilding || hasHint)
+                {
+                    LinearLayout linearLayoutInner = new LinearLayout(this);
+                    linearLayoutInner.setPadding(0,0,0,0);
+                    linearLayoutInner.setOrientation(LinearLayout.HORIZONTAL);
+                    linearLayoutInner.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 75));
+                    linearLayout.addView(linearLayoutInner);
+
+                    if(hasBuilding)
+                    {
+                        Button button = new Button(this);
+                        MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
+                        params.setMargins(0, 0, 75, 0);
+                        button.setLayoutParams(new LinearLayout.LayoutParams(params));
+                        button.setText("Auf Karte anzeigen!");
+                        button.setId(state.hashCode() * Button.class.hashCode() * GoogleMapsActivity.class.hashCode());
+                        button.setOnClickListener(this.OnButtonClickListener);
+                        linearLayoutInner.addView(button);
+                    }
+                    if(hasHint)
+                    {
+                        Button button = new Button(this);
+                        MarginLayoutParams params = new MarginLayoutParams(60, 60);
+                        params.setMargins(hasBuilding ? -75 : linearLayout.getWidth() - 75, 0, 0, 0);
+                        button.setLayoutParams(new LinearLayout.LayoutParams(params));
+                        button.setBackgroundDrawable(this.getResources().getDrawable(drawable.quiz_hint_button));
+                        button.setId(state.hashCode() * Button.class.hashCode() * String.class.hashCode());
+                        button.setOnClickListener(this.OnButtonClickListener);
+                        linearLayoutInner.addView(button);
+                    }
+                }
+
+                messageView.setText(question.getQuestion());
+                messageView.setTypeface(Typeface.DEFAULT_BOLD);
+                linearLayout.addView(messageView);
 
                 int i = 0;
                 for(String answer : question.getAnswers())
@@ -91,66 +180,68 @@ public class QuizActivity extends Activity
                     button.setText(answer);
                     button.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
                     button.setHeight(50);
-                    button.setId(i++);
-                    button.setOnClickListener(onAnswer);
+                    button.setId(state.hashCode() * Button.class.hashCode() + (i++));
+                    button.setOnClickListener(this.OnButtonClickListener);
                     linearLayout.addView(button);
                 }
 
             }
             else if(this.state == QuizState.RESULT)
             {
-                TextView textView = (TextView) this.findViewById(id.quiz_textView_message);
-                textView.setVisibility(View.VISIBLE);
-                textView.setText(quiz.getQuestion(this.answers.size() - 1).getResult());
+                MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+                params.setMargins(0, 0, 0, 75);
+                messageView.setLayoutParams(new LinearLayout.LayoutParams(params));
+                messageView.setText(quiz.getQuestion(this.answers.size() - 1).getResult());
+                linearLayout.addView(messageView);
 
-                Button button = (Button) this.findViewById(id.quiz_button_nextstage);
-                button.setVisibility(View.VISIBLE);
-                button.setText("zur nachsten Frage!");
+                params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
+                params.setMargins(0, -75, 0, 0);
+                Button button = new Button(this);
+                button.setLayoutParams(new LinearLayout.LayoutParams(params));
+                button.setText("zur naechsten Frage!");
+                button.setOnClickListener(this.OnButtonClickListener);
+                button.setId(this.state.hashCode() * Button.class.hashCode());
+                linearLayout.addView(button);
             }
             else if(this.state == QuizState.ANALYSIS)
             {
-                TextView textView = (TextView) this.findViewById(id.quiz_textView_message);
-                textView.setVisibility(View.VISIBLE);
-
-                int rightAnswers = 0;
-                for(Boolean bool : this.answers)
+                int numberOfCorrectAnswers = 0;
+                for(boolean bool : this.answers)
                 {
                     if(bool)
                     {
-                        rightAnswers++;
+                        numberOfCorrectAnswers++;
                     }
                 }
-                textView.setText("Analyse! Du hast " + rightAnswers + "/" + this.answers.size() + " Fragen richtig beantwortet. Glueckwunsch");
+                MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+                params.setMargins(0, 0, 0, 75);
+                messageView.setLayoutParams(new LinearLayout.LayoutParams(params));
+                messageView.setText("Glueckwunsch! " + numberOfCorrectAnswers + " von " + this.quiz.getNumberOfQuestions() + " Fragen wurden richtig beantwortet." );
+                linearLayout.addView(messageView);
 
-
-                Button button = (Button) this.findViewById(id.quiz_button_nextstage);
-                button.setVisibility(View.VISIBLE);
-                button.setOnClickListener(new OnClickListener()
-                {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        answers.add(false);
-                        nextStage(v);
-                    }
-                });
-                button.setText("Fertig!");
+                params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
+                params.setMargins(0, -75, 0, 0);
+                Button button = new Button(this);
+                button.setLayoutParams(new LinearLayout.LayoutParams(params));
+                button.setText("Quiz beenden!");
+                button.setOnClickListener(this.OnButtonClickListener);
+                button.setId(this.state.hashCode() * Button.class.hashCode());
+                linearLayout.addView(button);
             }
         }
-        else
+        else    // Wird aufgerufen, wenn kein Quiz ausgewaehlt ist!
         {
-            TextView textView = (TextView) this.findViewById(id.quiz_textView_noquiz);
-            textView.setVisibility(View.VISIBLE);
+            messageView.setText("STARTNACHRICHT! QUIZ WAEHLEN!");
+            linearLayout.addView(messageView);
         }
     }
 
-
     private QuizState load()
     {
-        this.answers = new ArrayList<Boolean>(quiz.getNumberOfQuestions());
+        this.answers = new ArrayList<>(quiz.getNumberOfQuestions());
 
         FileInputStream fileInputStream = null;
-        QuizState state = QuizState.QUESTION;
+        QuizState state = QuizState.WELCOME_MESSAGE;
         try
         {
             try
@@ -159,12 +250,16 @@ public class QuizActivity extends Activity
             }
             catch (FileNotFoundException ignored)
             {
-                return QuizState.WELCOME_MESSAGE;
+                return state;
             }
             state = QuizState.getByID(fileInputStream.read());
             while(fileInputStream.available() != 0)
             {
                 this.answers.add(Boolean.valueOf(fileInputStream.read() != 0));
+            }
+            if(state == null && this.answers.isEmpty())
+            {
+                state = QuizState.WELCOME_MESSAGE;
             }
             Log.d("QuizActivity", "Quiz-file: quiz" + quiz.getID() + " was parsed successfully. Found " + this.answers.size() + " answers.");
         }
@@ -219,17 +314,9 @@ public class QuizActivity extends Activity
         }
     }
 
-    public void nextStage(View view)
+    public void nextStage(int questionNumber)
     {
-        if(view.getId() == id.quiz_button_nextstage)
-        {
-            this.nextStage();
-        }
-    }
-
-    public void nextStage()
-    {
-        this.state = QuizState.getNextState(this.state, this.quiz, this.answers.size());
+        this.state = QuizState.getNextState(this.state, this.quiz, questionNumber);
         if(this.state == null)
         {
             this.answers.clear();
@@ -294,30 +381,4 @@ public class QuizActivity extends Activity
         getMenuInflater().inflate(R.menu.quiz, menu);
         return true;
     }
-
-    private OnClickListener onAnswer = new OnClickListener()
-    {
-        /**
-         * Called when a view has been clicked.
-         *
-         * @param v The view that was clicked.
-         */
-        @Override
-        public void onClick(View v)
-        {
-            int id = v.getId();
-            Question question = quiz.getQuestion(answers.size());
-            if(id < 0 || id >= question.getAnswers().length)
-            {
-                return;
-            }
-            boolean result = false;
-            if(question.isCorrectAnswer(id))
-            {
-                result = true;
-            }
-            answers.add(result);
-            nextStage();
-        }
-    };
 }

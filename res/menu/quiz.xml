@@ -19,7 +19,7 @@
         android:id="@+id/action_select_quiz"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:icon="@drawable/questionmark_quizselection2"
+        android:icon="@drawable/questionmark_quizselection"
         android:title="@string/action_select_quiz" />
 
 </menu>
