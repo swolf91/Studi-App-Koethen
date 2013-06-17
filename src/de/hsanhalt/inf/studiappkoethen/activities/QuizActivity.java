@@ -93,7 +93,7 @@ public class QuizActivity extends Activity
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState)               // TODO javadoc
     {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_quiz);
@@ -107,7 +107,7 @@ public class QuizActivity extends Activity
         messageView.setPadding(10, 10, 10, 10);
         messageView.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
 
-        if(lastQuiz != -1)
+        if(lastQuiz != -1)                                                                     // TODO refacotoring (minimize code duplication)
         {
             this.quiz = QuizManager.getInstance().getQuiz(lastQuiz);
             this.state = this.load();
@@ -173,7 +173,7 @@ public class QuizActivity extends Activity
                 linearLayout.addView(messageView);
 
                 int i = 0;
-                for(String answer : question.getAnswers())
+                for(String answer : question.getAnswers())         // TODO position randomly
                 {
                     Button button = new Button(this);
                     button.setVisibility(View.VISIBLE);
