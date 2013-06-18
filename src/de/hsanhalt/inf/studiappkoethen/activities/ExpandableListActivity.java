@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListAdapter;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListEntry;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
@@ -47,36 +46,29 @@ public class ExpandableListActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		
-		byte buildingsID=this.getIntent().getByteExtra("buildings", (byte) -1);
-		byte campusID=this.getIntent().getByteExtra("campus", (byte) -1);
+		boolean isCampus;
+		isCampus=(this.getIntent().getBooleanExtra("isCampus",true));
 		
-		if(campusID != -1 && buildingsID != -1){
-			if(buildingsID > -1){
-					
-				
-				this.setContentView(R.layout.activity_expandablelist_koethen);
-		        this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Koethen);
-		        this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(false)); 
-		        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
-			}
+		if(isCampus){
 			
-		
-			if(campusID > -1){
-				
-				this.setContentView(R.layout.activity_expandablelist_campus);
-				this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Campus);
-		        this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
-		        this.expandableListView.setAdapter(this.expandableListAdapterPerson);
-			}
+			this.setContentView(R.layout.activity_expandablelist_campus);
+			this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Campus);
+	        this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
+	        this.expandableListView.setAdapter(this.expandableListAdapterPerson);
+		}else{
 
-	        this.expandableListView.setOnChildClickListener(myListItemClicked);
+			this.setContentView(R.layout.activity_expandablelist_koethen);
+	        this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Koethen);
+	        this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(false)); 
+	        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
+			
 		}
-		else{
-			if(campusID==-1){
-				Log.d("ExpandableListActivity","Kein Campus Objekt verfuegbar!");
-			}else
-				Log.d("ExpandableListActivity","Kein Gebaeude Objekt verfuegbar!");
-		}
+		this.expandableListView.setOnChildClickListener(myListItemClicked);
+		// wenn auf Koethen dann
+		// expandable list laedt alle geb auﬂer campus-geb
+		// sonst exp list bekommt nur campus bilder
+		
+
     }
 
     /**
@@ -123,16 +115,24 @@ public class ExpandableListActivity extends Activity
         List<ExpandableListEntry<PersonCategory, Person>> entryList = new ArrayList<ExpandableListEntry<PersonCategory, Person>>();
         PersonCategoryManager personCategoryManager = PersonCategoryManager.getInstance();
         PersonManager personManager = PersonManager.getInstance();
+        
         for(PersonCategory personCategory : personCategoryManager.getPersonCategories())
-        {
-            List<Person> persons = personManager.getPersonList(personCategory);
-            entryList.add(new ExpandableListEntry<PersonCategory, Person>(personCategory, persons.toArray(new Person[persons.size()])));
+        { 
+        	List<Person> persons = personManager.getPersonList(personCategory);
+        
+	      
+	        
+	        if(!persons.isEmpty())
+	        {
+	        	entryList.add(new ExpandableListEntry<PersonCategory, Person>(personCategory, persons.toArray(new Person[persons.size()])));
+	        	
+	        } 
         }
         return entryList;
     }
     /**
      * Holt das Menue, wenn das Optionsmenue erstellt wird.
-     * (wird nicht genutzt, )
+     * (wird nicht genutzt )
      */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)

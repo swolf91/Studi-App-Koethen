@@ -71,7 +71,7 @@ public class MainActivity extends Activity
         {
         	case id.main_imageview_campus:
         		Intent expandableListIntentCampus = new Intent (this,ExpandableListActivity.class);
-        		expandableListIntentCampus.putExtra("campus", (byte) -1);
+        		expandableListIntentCampus.putExtra("isCampus", true);
         		this.startActivity(expandableListIntentCampus);
         		break;
 
@@ -98,7 +98,7 @@ public class MainActivity extends Activity
                 break;
             case id.main_imageview_city:
             	Intent expandableListIntentCity= new Intent (this,ExpandableListActivity.class);
-            	expandableListIntentCity.putExtra("buildings", (byte) -1);
+            	expandableListIntentCity.putExtra("isCampus", false);
         		this.startActivity(expandableListIntentCity);
                 break;
 
