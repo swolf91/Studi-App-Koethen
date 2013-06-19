@@ -94,6 +94,9 @@ public class GoogleMapsActivity extends Activity
 				this.registerForContextMenu(view);
 				this.openContextMenu(view);
 				return true;
+			case R.id.action_focus:
+				setFocus();
+				return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
