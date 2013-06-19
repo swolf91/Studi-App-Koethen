@@ -18,9 +18,7 @@ import de.hsanhalt.inf.studiappkoethen.util.ExtendetMarker;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.text.style.BulletSpan;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -28,7 +26,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.BitmapDescriptor;
@@ -70,6 +67,8 @@ public class GoogleMapsActivity extends Activity
 	    
 	    map.setOnCameraChangeListener(getCameraChangeListener());
         
+	    map.setMyLocationEnabled(true);		// Aktivieren der Anzeige des eigenen Standortes
+	    
 	    getCategories();	// Ermitteln der Kategorie-Anzahl
 	    
 	    setFilter();			// Bestimmung der Filtereinstellungen
@@ -118,7 +117,6 @@ public class GoogleMapsActivity extends Activity
 			
 			MenuItem item = menu.add(0, category, 0, str);
 			item.setCheckable(true);
-			
 			
 			for(FilterItem fItem : specialFilter) {		// Bestimmt, ob eine Checkbox true oder false ist
 				if(fItem.getCategory() == category) {
@@ -205,8 +203,6 @@ public class GoogleMapsActivity extends Activity
 				nextCategory = filterBundle.getBundle(sNextCategory);	// Auslesen des Bundles fuer die naechste Kategorie
 				buildings = filterBundle.getBundle(sNextBuilding);		// Auslesen des Bundles fuer die Gebaeude der momentanen Kategorie
 				category = filterBundle.getByte(sCategory);				// Auslesen der momentanen Kategorie
-				
-				
 				
 				if(buildings == null) {
 					specialFilter.add(new FilterItem(category));		// Werden keine Gebaeude fuer diese Kategorie angegeben, wird im Filter die ganze Kategorie akzeptiert
@@ -304,11 +300,9 @@ public class GoogleMapsActivity extends Activity
 			if((building.getLatitude() != null) && (building.getLongitude() != null) && filterContainsBuilding(categoryId, buildingId))
 			{																	// ... um damit den Filter abzufragen. Die Breiten- und Laengengrade muessen ebenfalls vorhanden sein.
 				createNewMarker(building);											// Ein neuer Marker wird erstellt ...
-				
-				averageLatitude = averageLatitude + building.getExactLatitude();	// und die Daten zur Durchschnittsberechnung fuer die Kameraposition bearbeitet.
+				averageLatitude = averageLatitude + building.getExactLatitude();	// ... und die Daten zur Durchschnittsberechnung fuer die Kameraposition bearbeitet.
 				averageLongitude = averageLongitude + building.getExactLongitude();
 				numberFilterItems ++;
-				
 			}
 		}
 	}
@@ -381,7 +375,6 @@ public class GoogleMapsActivity extends Activity
 						if((dTotal < triggerDistance) && (dTotal > 0.0)) {
 							mergableMarkersFound = true;
 							
-							
 							Log.w("MARKERS FOUND", displayedMarkers.get(i).getMarker().getTitle() + " <-> " + displayedMarkers.get(j).getMarker().getTitle() + " = " + dTotal);
 						}
 						j++;
@@ -442,8 +435,6 @@ public class GoogleMapsActivity extends Activity
 						splitMergedMarkers();		// Teilen von kombinierten Markern
 					}
 					
-					//Toast.makeText(getApplicationContext(), str, Toast.LENGTH_LONG).show();
-				
 					previousZoomLevel = currentZoomLevel;
 				}
 			}
