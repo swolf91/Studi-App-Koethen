@@ -4,11 +4,13 @@
         android:id="@+id/action_focus"
         android:orderInCategory="100"
         android:showAsAction="always"
+        android:icon="@drawable/icon_map_focus"
         android:title="@string/action_focus"/>
 	<item
         android:id="@+id/action_filter"
         android:orderInCategory="100"
         android:showAsAction="always"
+        android:icon="@drawable/icon_map_filter"
         android:title="@string/action_filter"/>
     <item
         android:id="@+id/action_close"
