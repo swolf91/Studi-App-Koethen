@@ -119,7 +119,7 @@ public class DetailActivity extends Activity
                 textView = (TextView) this.findViewById(id.detail_textView_phonenumber_headline);
                 textView.setVisibility(View.VISIBLE);
 
-                textView = (TextView) this.findViewById(id.detail_textView_phonenumber_headline);
+                textView = (TextView) this.findViewById(id.detail_textView_phonenumber);
                 textView.setVisibility(View.VISIBLE);
 
                 textView.setText(this.building.getPhoneNumber());

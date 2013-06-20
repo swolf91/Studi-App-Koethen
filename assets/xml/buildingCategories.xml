@@ -3,12 +3,12 @@
     <category>
         <id>0</id>
         <name>Hochschulbibliothek</name>
-		<setIcon>buildingcategories/Hochschule.png</setIcon>
+		<setIcon>buildingcategories/HSBibliothek.png</setIcon>
     </category>
     <category>
         <id>1</id>
         <name>Fachbereiche</name>
-		<setIcon>buildingcategories/Hochschule.png</setIcon>
+		<setIcon>buildingcategories/Fachbereich.png</setIcon>
     </category>
     <category>
         <id>2</id>
@@ -18,7 +18,7 @@
     <category>
         <id>3</id>
         <name>Technik</name>
-		<setIcon>buildingcategories/Hochschule.png</setIcon>
+		<setIcon>buildingcategories/Technik.png</setIcon>
     </category>
     <category>
         <id>4</id>
