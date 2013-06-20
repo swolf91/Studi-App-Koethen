@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/questionmark_quizselection" />
+        android:onClick="onButtonClick"
+        android:src="@drawable/geb_el2" />
 
     <ImageView
         android:id="@+id/imageView_Persons"
@@ -21,8 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        
-        android:src="@drawable/questionmark_quizselection" />
+        android:onClick="onButtonClick"
+        android:src="@drawable/pers_el2" />
 
     <ExpandableListView
         android:id="@+id/expandableListView_Campus"

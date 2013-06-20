@@ -6,14 +6,19 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.ImageView;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListAdapter;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListEntry;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
@@ -36,9 +41,10 @@ public class ExpandableListActivity extends Activity
     ExpandableListView expandableListView;
     ExpandableListAdapter<PersonCategory, Person> expandableListAdapterPerson;
     ExpandableListAdapter<BuildingCategory, Building> expandableListAdapterBuilding;
+    SharedPreferences expListPreferences;
+    boolean showBuildings;
     
-    /** TODO engaging test...
-     * 
+    /**  
      * Initialaufbau der ExpandableList Activity.Gibt der Activity den Adapter und den Listener (jeweils fuer Personen und Gebaeude Objekte).
      */
 	@Override
@@ -46,33 +52,71 @@ public class ExpandableListActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		
-		boolean isCampus;
-		isCampus=(this.getIntent().getBooleanExtra("isCampus",true));
+		this.expListPreferences = this.getSharedPreferences("lastBuildingPushState", MODE_PRIVATE);
+		showBuildings=this.expListPreferences.getBoolean("showBuildings", true);
 		
+		
+		boolean isCampus=this.getIntent().getBooleanExtra("isCampus",true);
+				
 		if(isCampus){
 			
 			this.setContentView(R.layout.activity_expandablelist_campus);
 			this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Campus);
-//	        this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
-//	        this.expandableListView.setAdapter(this.expandableListAdapterPerson);
-		}else{
-
+			
+			if(this.showBuildings)
+			{
+				ImageView imageView = (ImageView) this.findViewById(R.id.imageView_Buildings);
+				imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.geb_el));
+				this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus)); 
+		        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
+		        
+			}else{
+				ImageView imageView = (ImageView) this.findViewById(R.id.imageView_Persons);
+				imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.pers_el));
+				this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
+			    this.expandableListView.setAdapter(this.expandableListAdapterPerson);
+			}
+	       
+				
+		}
+		else{
+			
+			this.showBuildings=true;
 			this.setContentView(R.layout.activity_expandablelist_koethen);
 	        this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Koethen);
-	        
+	        this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus)); 
+	        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
 			
 		}
-		this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus)); 
-        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
-		this.expandableListView.setOnChildClickListener(myListItemClicked);
-		// wenn auf Koethen dann
-		// expandable list laedt alle geb außer campus-geb
-		// sonst exp list bekommt nur campus bilder
 		
+		this.expandableListView.setOnChildClickListener(myListItemClicked);
 
     }
+	
+	public void onButtonClick(View view)
+	{
+		Boolean state = null;
+		switch(view.getId()){
+			case id.imageView_Buildings:
+				state = true;
+				break;
 
-    /**
+			case id.imageView_Persons:{
+				state = false;
+				break;
+			}
+		}
+		
+		if(state != null && state != this.showBuildings)
+		{
+			this.expListPreferences.edit().putBoolean("showBuildings", state).commit();
+			this.recreate();
+		}
+	}
+	
+
+
+	/**
      * Laedt die Gebaeude-Daten fuer den ExpandableListAdapter.
      * @param true, wenn es ein Campusgebaeude ist; false, wenn es ein Gebaeude aus Koethen ist, dass nicht zum Campus gehoert.
      */
@@ -108,7 +152,7 @@ public class ExpandableListActivity extends Activity
         return entryList;
     }
     /**
-     * Lädt die Personen-Daten fuer den ExpandableListAdapter.
+     * Laedt die Personen-Daten fuer den ExpandableListAdapter.
      * @return Liste mit Eintraegen.
      */
     private List<ExpandableListEntry<PersonCategory, Person>> getPersonList()
@@ -167,19 +211,25 @@ public class ExpandableListActivity extends Activity
     }
 
     /**
-     * Listener für die Klicks auf die ExpandableList.
+     * Listener fuer die Klicks auf die ExpandableList.
      */
     private OnChildClickListener myListItemClicked =  new OnChildClickListener()
     {
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
         {
-            Intent intent = new Intent(getBaseContext(), DetailActivity.class);
-            intent.putExtra("category", expandableListAdapterBuilding.getGroup(groupPosition).getID());
-            intent.putExtra("building", expandableListAdapterBuilding.getChild(groupPosition, childPosition).getID());
-            startActivity(intent);
+        	if(showBuildings){
+        		Intent intent = new Intent(getBaseContext(), DetailActivity.class);
+                intent.putExtra("category", expandableListAdapterBuilding.getGroup(groupPosition).getID());
+                intent.putExtra("building", expandableListAdapterBuilding.getChild(groupPosition, childPosition).getID());
+                startActivity(intent);
+        	}else{
+        		//TODO Personen laden
+        	}
+            
             return true;
         }
     };
+        
 
 
 }

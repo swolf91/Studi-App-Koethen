@@ -304,4 +304,9 @@ public class Person
         }
         return tmp;
     }
+    
+    public String toString()
+    {
+    	return this.getName();
+    }
 }
