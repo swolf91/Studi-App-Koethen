@@ -179,7 +179,7 @@ public class QuizActivity extends Activity
 
                 List<Button> buttonlist = new ArrayList<>(question.getAnswers().length);
                 int i = 0;
-                for(String answer : question.getAnswers())         // TODO position randomly
+                for(String answer : question.getAnswers())
                 {
                     Button button = new Button(this);
                     button.setVisibility(View.VISIBLE);
