@@ -2,7 +2,27 @@
 <buildingCategories>
     <category>
         <id>0</id>
-        <name>Hochschule</name>
+        <name>Hochschulbibliothek</name>
+		<setIcon>buildingcategories/Hochschule.png</setIcon>
+    </category>
+    <category>
+        <id>1</id>
+        <name>Fachbereiche</name>
+		<setIcon>buildingcategories/Hochschule.png</setIcon>
+    </category>
+    <category>
+        <id>2</id>
+        <name>Studentisches</name>
+		<setIcon>buildingcategories/Hochschule.png</setIcon>
+    </category>
+    <category>
+        <id>3</id>
+        <name>Technik</name>
+		<setIcon>buildingcategories/Hochschule.png</setIcon>
+    </category>
+    <category>
+        <id>4</id>
+        <name>AuslaendischeStudenten</name>
 		<setIcon>buildingcategories/Hochschule.png</setIcon>
     </category>
     <category>
