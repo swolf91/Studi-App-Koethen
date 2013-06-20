@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+    <categoryID>0</categoryID>
+
+    <building>
+    <id>0</id>
+        <name>Hochschulbibliothek</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>57</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>01</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517550372</latitude>
+        <longitude>119686104</longitude>
+        <description>
+	Die Hochschulbibliothek umfasst ein grosses Sortiment an Fachzeitschriften und Buechern. 
+	Des Weiteren kann man die Inhalte auch Online abrufen. Aus dem Netzwerk der Hochschule Anhalt hat man kompletten Zugriff und von Extern nur eingeschränkt.
+	Weiterhin gibt es einen Lesesaal, welcher viele Exemplare vor Ort bereitstellt.
+	Die Bibliothek der Hochschule Anhalt befindet sich in der 3. Etage des roten Gebaeudes.
+	Öffnungszeiten:
+	Mo. – Do.: 09.30 Uhr – 17.00 Uhr, Fr.: 09.30 Uhr – 15.00 Uhr		
+	</description>
+        <url>http://www.hs-anhalt.de/hsb-home/standorte/koethen.html</url>
+        <registerImage>buildings/Gebaeude01.JPG</registerImage>
+        <registerImage>buildings/Gebaeude01_2.JPG</registerImage>
+    </building>
+
+</buildings>
