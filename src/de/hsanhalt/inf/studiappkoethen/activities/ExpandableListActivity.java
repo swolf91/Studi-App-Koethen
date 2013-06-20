@@ -37,7 +37,7 @@ public class ExpandableListActivity extends Activity
     ExpandableListAdapter<PersonCategory, Person> expandableListAdapterPerson;
     ExpandableListAdapter<BuildingCategory, Building> expandableListAdapterBuilding;
     
-    /** TODO ACHTUNG!!!!!!! DIESE KLASSE WURDE MIT DEM ERWEITERTEN SOURCECODE NOCH NICHT GETESTET!!!!!!!!!!
+    /** TODO engaging test...
      * 
      * Initialaufbau der ExpandableList Activity.Gibt der Activity den Adapter und den Listener (jeweils fuer Personen und Gebaeude Objekte).
      */
@@ -53,16 +53,17 @@ public class ExpandableListActivity extends Activity
 			
 			this.setContentView(R.layout.activity_expandablelist_campus);
 			this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Campus);
-	        this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
-	        this.expandableListView.setAdapter(this.expandableListAdapterPerson);
+//	        this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
+//	        this.expandableListView.setAdapter(this.expandableListAdapterPerson);
 		}else{
 
 			this.setContentView(R.layout.activity_expandablelist_koethen);
 	        this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Koethen);
-	        this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(false)); 
-	        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
+	        
 			
 		}
+		this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus)); 
+        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
 		this.expandableListView.setOnChildClickListener(myListItemClicked);
 		// wenn auf Koethen dann
 		// expandable list laedt alle geb auﬂer campus-geb
