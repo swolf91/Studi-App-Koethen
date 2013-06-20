@@ -180,7 +180,7 @@ public class QuizActivity extends Activity
                 messageView.setTextSize(18f);
                 linearLayout.addView(messageView);
 
-                List<Button> buttonlist = new ArrayList<>(question.getAnswers().length);
+                List<Button> buttonlist = new ArrayList<Button>(question.getAnswers().length);
                 int i = 0;
                 for(String answer : question.getAnswers())
                 {
@@ -286,7 +286,7 @@ public class QuizActivity extends Activity
 
     private QuizState load()
     {
-        this.answers = new ArrayList<>(quiz.getNumberOfQuestions());
+        this.answers = new ArrayList<Boolean>(quiz.getNumberOfQuestions());
 
         FileInputStream fileInputStream = null;
         QuizState state = QuizState.WELCOME_MESSAGE;
