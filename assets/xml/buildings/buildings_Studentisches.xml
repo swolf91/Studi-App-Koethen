@@ -1,3 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>2</categoryID>
+    
+    <building>
+    <id>0</id>
+        <name>Studentenrat</name>
+        <street>Fasanerieallee</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>08</numberOfBuilding>
+        </collegeBuilding>
+       <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
+        <description>
+Der Studentenrat unterstuetzt die Studierenden in vielen Bereichen.
+Jeder Student kann sich neben dem Studium für die Belange anderer einsetzen und sich im Studentenrat einschreiben bzw. waehlen lassen.
+Sollte dies nicht funktionieren, bleibt immer noch der Weg in die einzelnen Fachschaften in den Fachbereichen.
+Der Studentenrat, wie auch die Fachschaften haben ein Interesse daran zu helfen, deshalb kann man bei Problemen immer auf diese zurückgreifen.
+</description>
+        <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
+        <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
+    </building>
+    
+    <building>
+    <id>1</id>
+        <name>Sporthalle</name>
+        <street>Antoinettenstrasse</street>
+        <houseNumber>34</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding></collegeBuilding>
+        <latitude>517540844</latitude>
+        <longitude>119645339</longitude>
+        <description>
+Die Turnhalle steht symbolisch fuer das reichhaltige Sportangebot der Hochschule Anhalt.
+Sportinteressierte kommen definitiv auf ihre Kosten. Aber auch als Ausgleich neben dem Studium lässt sich etwas finden.
+Die Sportangebote sind an verschiedenen Stellen auf dem Kampus, wie auch im Internet beschrieben und terminiert.
+Haltet einfach die Augen offen…
+</description>
+        <url>http://193.25.32.158/hochschulsport/index.php/koethen/aktuelles</url>
+        <registerImage>buildings/Sporthalle.JPG</registerImage>
+        <registerImage>buildings/Sporthalle_2.JPG</registerImage>
+    </building>
+    
+    <building>
+    <id>2</id>
+        <name>Mensa Hauptkampus</name>
+        <street>Fasanerieallee</street>
+        <houseNumber>1a</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding></collegeBuilding>
+        <latitude>517539986</latitude>
+        <longitude>119664018</longitude>
+        <description>
+Die komplett sanierte Mensa am Hauptkampus macht optisch einen sehr guten Eindruck. Verschiedene Gerichte, wie auch der preisliche Vorteil, laden zum Essen ein.
+Das Essensangebot ist sehr reichhaltig und abwechslungsreich.
+Es gibt zum Essensangebot der Mensa Köthen eine direkte Applikation zum Herunterladen.
+</description>
+        <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
+        <registerImage>buildings/Studentenwerk.JPG</registerImage>
+    </building>
+    
+        <building>
+    <id>3</id>
+        <name>Mensa Lohmannstrasse</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06354</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>23</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
+        <description>
+Da das Gebaeude in der Lohmannstrasse etwas abseits vom Hauptkampus ist, gibt es hier eine eigene Mensa.
+Diese ist kleiner und bietet nur beschränkt das Angebot vom Hauptkampus.
+</description>
+        <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-lohmannstrasse/</url>
+        <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
+        <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
+    </building>
+    
+    <building>
+    <id>4</id>
+        <name>Lehr- und Verwaltungsgebaeude</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>03</numberOfBuilding>
+        </collegeBuilding>
+         <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
+        <description>
+Das Lehr- und Verwaltungsgebaeude umfasst, wie der Name schon sagt, viele Bereiche der Verwaltung. Dazu gehören folgende Abteilungen: ASA, AAA, FTTZ und ZIK. Darüber hinaus ist das Präsidium der Hochschule Anhalt im Lehr- und Verwaltungsgebaeude angesiedelt. Für die interne Verwaltung sind verschiedene Dezernate zugaenglich.
+Die zentrale Wache hat ebenso ihren Platz im Lehr- und Verwaltungsgebaeude.
+        </description>
+        <url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Gebaeude03.JPG</registerImage>
+    </building>
+    
+    </buildings>
