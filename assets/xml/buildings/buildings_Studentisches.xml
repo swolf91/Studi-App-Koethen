@@ -104,7 +104,26 @@ Die zentrale Wache hat ebenso ihren Platz im Lehr- und Verwaltungsgebaeude.
         <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Gebaeude03.JPG</registerImage>
     </building>
-    
+
+    <building>
+    <id>5</id>
+        <name>Technische Verwaltung</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>13</numberOfBuilding>
+        </collegeBuilding>
+         <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
+        <description>Technische Leitung, Bauangelegenheiten, 
+        Liegenschaftsverwaltung, Verträge, Vermietungen, Kopiergeräte, 
+        Poststelle 
+        </description>
+        <url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Gebaeude03.JPG</registerImage>
+    </building>
 
     
     </buildings>
