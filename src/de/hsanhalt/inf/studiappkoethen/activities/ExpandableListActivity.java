@@ -100,7 +100,7 @@ public class ExpandableListActivity extends Activity
 		
 
 		// wenn auf Koethen dann
-		// expandable list laedt alle geb außer campus-geb
+		// expandable list laedt alle geb ausser campus-geb
 		// sonst exp list bekommt nur campus bilder
 		
 
@@ -192,7 +192,7 @@ public class ExpandableListActivity extends Activity
         return entryList;
     }
     /**
-     * Lädt die Personen-Daten fuer den ExpandableListAdapter.
+     * Laedt die Personen-Daten fuer den ExpandableListAdapter.
      * @return Liste mit Eintraegen.
      */
     private List<ExpandableListEntry<PersonCategory, Person>> getPersonList()
@@ -251,7 +251,7 @@ public class ExpandableListActivity extends Activity
     }
 
     /**
-     * Listener für die Klicks auf die ExpandableList.
+     * Listener fuer die Klicks auf die ExpandableList.
      */
     private OnChildClickListener myListItemClicked =  new OnChildClickListener()
     {
