@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import android.app.Activity;
 import android.content.Context;
@@ -26,7 +27,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.R.drawable;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
 import de.hsanhalt.inf.studiappkoethen.util.quiz.QuizState;
@@ -144,24 +144,29 @@ public class QuizActivity extends Activity
                     linearLayoutInner.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 75));
                     linearLayout.addView(linearLayoutInner);
 
+                    Button buildingButton = new Button(this);
+                    MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
+                    params.setMargins(0, 0, 75, 0);
+                    buildingButton.setLayoutParams(new LinearLayout.LayoutParams(params));
+                    linearLayoutInner.addView(buildingButton);
+
                     if(hasBuilding)
                     {
-                        Button button = new Button(this);
-                        MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
-                        params.setMargins(0, 0, 75, 0);
-                        button.setLayoutParams(new LinearLayout.LayoutParams(params));
-                        button.setText("Auf Karte anzeigen!");
-                        button.setId(state.hashCode() * Button.class.hashCode() * GoogleMapsActivity.class.hashCode());
-                        button.setOnClickListener(this.OnButtonClickListener);
-                        linearLayoutInner.addView(button);
+                        buildingButton.setText("Auf Karte anzeigen!");
+                        buildingButton.setId(state.hashCode() * Button.class.hashCode() * GoogleMapsActivity.class.hashCode());
+                        buildingButton.setOnClickListener(this.OnButtonClickListener);
+                    }
+                    else
+                    {
+                        buildingButton.setVisibility(View.INVISIBLE);
                     }
                     if(hasHint)
                     {
                         Button button = new Button(this);
-                        MarginLayoutParams params = new MarginLayoutParams(60, 60);
-                        params.setMargins(hasBuilding ? -75 : linearLayout.getWidth() - 75, 0, 0, 0);
+                        params = new MarginLayoutParams(60, 60);
+                        params.setMargins(-75, 0, 0, 0);
                         button.setLayoutParams(new LinearLayout.LayoutParams(params));
-                        button.setBackgroundDrawable(this.getResources().getDrawable(drawable.quiz_hint_button));
+                        button.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.quiz_hint_button));
                         button.setId(state.hashCode() * Button.class.hashCode() * String.class.hashCode());
                         button.setOnClickListener(this.OnButtonClickListener);
                         linearLayoutInner.addView(button);
@@ -172,6 +177,7 @@ public class QuizActivity extends Activity
                 messageView.setTypeface(Typeface.DEFAULT_BOLD);
                 linearLayout.addView(messageView);
 
+                List<Button> buttonlist = new ArrayList<>(question.getAnswers().length);
                 int i = 0;
                 for(String answer : question.getAnswers())         // TODO position randomly
                 {
@@ -182,9 +188,15 @@ public class QuizActivity extends Activity
                     button.setHeight(50);
                     button.setId(state.hashCode() * Button.class.hashCode() + (i++));
                     button.setOnClickListener(this.OnButtonClickListener);
-                    linearLayout.addView(button);
+                    buttonlist.add(button);
                 }
-
+                Random random = new Random();
+                while(!buttonlist.isEmpty())
+                {
+                    Button button = buttonlist.get(random.nextInt(buttonlist.size()));
+                    linearLayout.addView(button);
+                    buttonlist.remove(button);
+                }
             }
             else if(this.state == QuizState.RESULT)
             {
