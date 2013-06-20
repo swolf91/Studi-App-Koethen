@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/scrollView"
-        android:layout_marginBottom="50dp" >
+        android:layout_marginBottom="65dp" >
 
         <LinearLayout
             android:orientation="vertical"
@@ -205,10 +205,14 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:text=""
-        android:background="@drawable/detailactivity_mapbutton"
+        android:text="Auf Karte anzeigen!"
+        android:background="@drawable/button"
         android:id="@+id/detail_button_mapview"
         android:layout_gravity="center"
-        android:layout_marginTop="-50dp"
-        android:onClick="openMap" />
+        android:layout_marginTop="-60dp"
+        android:onClick="openMap"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        />
 </LinearLayout>
