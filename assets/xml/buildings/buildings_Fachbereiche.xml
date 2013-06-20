@@ -1,3 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>1</categoryID>
+<building>
+    <id>0</id>
+        <name>Dekanat Fachbereich 6</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>01</numberOfBuilding>
+            <numberOfFaculty>6</numberOfFaculty>
+        </collegeBuilding>
+        <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
+        <description>
+Der Fachbereich 6 ist der Groesste am Standort Köthen.
+Dieser Fachbereich bieten die Studienrichtungen Elektrotechnik, Maschinenbau und Wirtschaftsingenieurwesen an.
+Technikinteressierte werden durch das praxisnahe Studium begeistert und angezogen. Naehere Informationen zum derzeitigen Dekan „Prof. Dr. Juergen Schwarz“ finden Sie in unserer Personenkategorie.
+        </description>
+        <url>http://www.emw.hs-anhalt.de/www/</url>
+        <registerImage>buildings/Gebaeude01.JPG</registerImage>
+        <registerImage>buildings/Gebaeude01_2.JPG</registerImage>
+    </building>
+    <building>
+    <id>1</id>
+        <name>Dekanat Fachbereich 7</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>02</numberOfBuilding>
+            <numberOfFaculty>7</numberOfFaculty>
+        </collegeBuilding>
+        <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
+        <description>
+Am Fachbereich 7 erlernen die Studenten die Gebiete der Angewandten Biowissenschaften und Prozesstechnik. Vor Ort werden moderne Labore, wie auch interessante Messtechniken geboten.
+Prof. Dr. Joachim Breme ist Dekan des Fachbereichs 7 und spezialisiert im Bereich Mathematik.
+</description>
+        <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
+        <registerImage>buildings/Gebaeude02.JPG</registerImage>
+        <registerImage>buildings/Gebaeude02_2.JPG</registerImage>
+    </building>
+    <building>
+    <id>2</id>
+        <name>Dekanat Fachbereich 5</name>
+        <street>Lohmannstrasse</street>
+        <houseNumber>23</houseNumber>
+        <postalCode>06354</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>23</numberOfBuilding>
+            <numberOfFaculty>5</numberOfFaculty>
+        </collegeBuilding>
+        <latitude>517461145</latitude>
+        <longitude>119843346</longitude>
+        <description>
+Dies ist der Fachbereich, welcher der Ursprung fuer diese Applikation ist.
+Der Fachbereich 5 beschaeftigt sich mit den Studienrichtungen Informatik und Sprachen.
+Dabei werden die mathematischen, programmier- und informationstechnischen Grundlagen fuer spaetere Projekte geschaffen.
+Dies ist nur ein kleiner Ausschnitt. Allgemein wird die volle Breite des Informatikspektrums abgedeckt und gelehrt.
+Frau Prof. Dr. Ursula Fissgus ist die Dekanin, welche selbst im Bereich Programmierung und Softwaretechnik taetig ist.
+</description>
+        <url>http://www.inf.hs-anhalt.de/</url>
+        <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
+        <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
+    </building>
+</buildings>
