@@ -11,16 +11,11 @@
   
   <category>
     <id>1</id>
-    <name>Studienberatung</name>
+    <name>Studientisches</name>
   </category>
   
   <category>
     <id>2</id>
-    <name>AuslaendischeBeratung</name>
-  </category>
-  
-  <category>
-    <id>3</id>
     <name>APP Erschaffer</name>
   </category>
   
