@@ -149,8 +149,8 @@ public class PersonManager implements IXmlParsing
 
         NodeList list = node.getChildNodes();
         
-        ArrayList<String> module = new ArrayList<>();       //zum Fuellen der Arrays nutzen wir Arraylisten um leere Elemente zu vermeiden.
-        ArrayList<String> responsibility = new ArrayList<>();
+        ArrayList<String> module = new ArrayList<String>();       //zum Fuellen der Arrays nutzen wir Arraylisten um leere Elemente zu vermeiden.
+        ArrayList<String> responsibility = new ArrayList<String>();
         
         for (int i = 0; i < list.getLength(); i++)
         {
