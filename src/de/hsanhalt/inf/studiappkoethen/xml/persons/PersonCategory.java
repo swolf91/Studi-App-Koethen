@@ -20,4 +20,9 @@ public class PersonCategory
     {
         return this.name;
     }
+    
+    public String toString()
+    {
+    	return this.getName();
+    }
 }
