@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<personCategories>
 
-<persons>
-  
   <category>
     <id>0</id>
     <name>Dekane</name>
@@ -9,7 +8,7 @@
   
   <category>
     <id>1</id>
-    <name>Studientisches</name>
+    <name>Studentisches</name>
   </category>
   
   <category>
@@ -17,4 +16,4 @@
     <name>APP Erschaffer</name>
   </category>
   
-</persons>
+</personCategories>

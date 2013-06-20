@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <persons>
-<category>0</category>
+    <categoryID>0</categoryID>
     <person>
-    <common>
-<id>0</id>
+        <id>0</id>
         <name>Ursula-Brigitte</name>
         <surname>Fissgus</surname>
         <state>Prof. Dr.</state>
@@ -18,32 +17,25 @@
         <room>132</room>
         <description></description>
 
-    </common>
-    <universityDepartment>
         <professions>
-<profession>Softwaretechnik</profession>
-<profession>Softwareentwicklung</profession>
-<profession>Compiler und Laufzeitsysteme</profession>
-</professions>
+            <profession>Softwaretechnik</profession>
+            <profession>Softwareentwicklung</profession>
+            <profession>Compiler und Laufzeitsysteme</profession>
+        </professions>
         <modules>
-<module>Softwaretechnik</module>
-</modules>
+            <module>Softwaretechnik</module>
+        </modules>
         <responsibility>Dekanin</responsibility>
-
-    </universityDepartment>
-    <contact>
 
         <talkTime></talkTime>
         <phone>+49-3496-67-3121</phone>
         <email>u.fissgus@inf.hs-anhlt.de</email>
         <url>http://www.inf.hs-anhalt.de/fachbereich/personal/profs/fissgus/</url>
 
-    </contact>
-</person>
+    </person>
 
-<person>
-    <common>
-<id>1</id>
+    <person>
+        <id>1</id>
         <name>Juergen</name>
         <surname>Schwarz</surname>
         <state>Prof. Dr.</state>
@@ -57,55 +49,48 @@
         <room>219</room>
         <description></description>
 
-    </common>
-    <universityDepartment>
-
         <profession>Leistungselektronik und Antriebe</profession>
         <module></module>
         <responsibility>Dekan</responsibility>
 
-    </universityDepartment>
-    <contact>
-
         <talkTime></talkTime>
         <phone>+49 (0) 3496 67 2334</phone>
-        <email>  dekan@emw.hs-anhalt.de</email>
+        <email>dekan@emw.hs-anhalt.de</email>
         <url>http://www.emw.hs-anhalt.de/www/menschen/professoren/prof-dr-j-schwarz.html</url>
 
-    </contact>
     </person>
 
-<person>
-    <common>
-<id>2</id>
-        <name>Joachim</name>
-        <surname>Breme</surname>
-        <state>Prof. Dr.</state>
-        <specialField>7</specialField>
-        <street>Bernburger Strasse</street>
-        <houseNumber>55</houseNumber>
-        <postalCode>06366</postalCode>
-        <city>Koethen</city>
+    <person>
+        <common>
+            <id>2</id>
+            <name>Joachim</name>
+            <surname>Breme</surname>
+            <state>Prof. Dr.</state>
+            <specialField>7</specialField>
+            <street>Bernburger Strasse</street>
+            <houseNumber>55</houseNumber>
+            <postalCode>06366</postalCode>
+            <city>Koethen</city>
 
-        <buildings>02</buildings>
-        <room>213</room>
-        <description></description>
+            <buildings>02</buildings>
+            <room>213</room>
+            <description></description>
 
-    </common>
-    <universityDepartment>
+        </common>
+        <universityDepartment>
 
-        <profession>Mathematik</profession>
-        <module></module>
-        <responsibility>Dekan</responsibility>
+            <profession>Mathematik</profession>
+            <module></module>
+            <responsibility>Dekan</responsibility>
 
-    </universityDepartment>
-    <contact>
+        </universityDepartment>
+        <contact>
 
-        <talkTime></talkTime>
-        <phone>+49 (0) 3496 67 2517</phone>
-        <email>dekan@bwp.hs-anhalt.de</email>
-        <url>http://www.bwp.hs-anhalt.de/fachbereich/dekanat.html</url>
+            <talkTime></talkTime>
+            <phone>+49 (0) 3496 67 2517</phone>
+            <email>dekan@bwp.hs-anhalt.de</email>
+            <url>http://www.bwp.hs-anhalt.de/fachbereich/dekanat.html</url>
 
-    </contact>
-</person>
+        </contact>
+    </person>
 </persons>

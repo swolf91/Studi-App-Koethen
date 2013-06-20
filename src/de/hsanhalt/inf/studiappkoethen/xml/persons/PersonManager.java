@@ -149,8 +149,8 @@ public class PersonManager implements IXmlParsing
 
         NodeList list = node.getChildNodes();
         
-        ArrayList<String> module = new ArrayList<String>();       //zum Fuellen der Arrays nutzen wir Arraylisten um leere Elemente zu vermeiden.
-        ArrayList<String> responsibility = new ArrayList<String>();
+        ArrayList<String> module = new ArrayList<>();       //zum Fuellen der Arrays nutzen wir Arraylisten um leere Elemente zu vermeiden.
+        ArrayList<String> responsibility = new ArrayList<>();
         
         for (int i = 0; i < list.getLength(); i++)
         {
@@ -269,7 +269,7 @@ public class PersonManager implements IXmlParsing
 
         this.person.add(newPerson);
 
-        Log.d("Created " + person.getClass().getSimpleName(), category.getName() + " - " + name);
+        Log.d("Created " + newPerson.getClass().getSimpleName(), category.getName() + " - " + newPerson.getName());
     }
 
     /**

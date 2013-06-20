@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <persons>
-<category>1</category>
+    <categoryID>1</categoryID>
 
-<person>
-    <common>
-<id>0</id>
+    <person>
+        <id>0</id>
         <name>Doris</name>
         <surname>Quabis</surname>
         <state>Frau</state>
@@ -19,27 +18,19 @@
         <room>14</room>
         <description></description>
 
-    </common>
-    <universityDepartment>
-
         <profession></profession>
         <module></module>
         <responsibility>Allgemeine Studienberatung</responsibility>
-
-    </universityDepartment>
-    <contact>
 
         <talkTime></talkTime>
         <phone>+49 3496 67 5203</phone>
         <email>beratung@hs-anhalt.de</email>
         <url>http://www.hs-anhalt.de/nc/studium/service-fuer-studierende/allgemeine-studienberatung.html</url>
 
-    </contact>
-</person>  
+    </person>
 
-<person>
-    <common>
-<id>1</id>
+    <person>
+        <id>1</id>
         <name>Ingrid</name>
         <surname>Heuer</surname>
         <state>Frau</state>
@@ -53,22 +44,16 @@
         <room>007</room>
         <description></description>
 
-    </common>
-    <universityDepartment>
-
         <profession></profession>
         <module></module>
         <responsibility>Studentische Angelegenheiten</responsibility>
 
-    </universityDepartment>
-    <contact>
-
         <talkTime></talkTime>
         <phone>+49 (0) 3496 67 5229</phone>
         <email>i.heuer@asa.hs-anhalt.de</email>
-        <url>http://www.hs-anhalt.de/nc/studium/service-fuer-studierende/abteilung-studentische-angelegenheiten.html</url>
+        <url>http://www.hs-anhalt.de/nc/studium/service-fuer-studierende/abteilung-studentische-angelegenheiten.html
+        </url>
 
-    </contact>
-</person>
+    </person>
 
 </persons>
