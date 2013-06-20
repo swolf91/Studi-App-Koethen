@@ -108,31 +108,23 @@ public class ExpandableListActivity extends Activity
 	
 	public void onButtonClick(View view)
 	{
+		Boolean state = null;
 		switch(view.getId()){
-			case id.imageView_Buildings:{
-				if(showBuildings){
-					
-					
-					
-					this.expListPreferences.edit().putBoolean("showBuildings", true).commit();
-					
-					
-				}
-
+			case id.imageView_Buildings:
+				state = true;
 				break;
-			}
-			case id.imageView_Persons:{
-				if(showBuildings){
-					
-					
-					this.expListPreferences.edit().putBoolean("showBuildings", false).commit();
-					
-				}
 
+			case id.imageView_Persons:{
+				state = false;
 				break;
 			}
 		}
-		this.recreate();
+		
+		if(state != null && state != this.showBuildings)
+		{
+			this.expListPreferences.edit().putBoolean("showBuildings", state).commit();
+			this.recreate();
+		}
 	}
 	
 	
