@@ -10,7 +10,7 @@
         <postalCode>06366</postalCode>
         <city>Koethen</city>
         <collegeBuilding>
-            <numberOfBuilding>08</numberOfBuilding>
+            <numberOfBuilding>07</numberOfBuilding>
         </collegeBuilding>
        <latitude>517550370</latitude>
         <longitude>119686116</longitude>
@@ -21,7 +21,7 @@ Sollte dies nicht funktionieren, bleibt immer noch der Weg in die einzelnen Fach
 Der Studentenrat, wie auch die Fachschaften haben ein Interesse daran zu helfen, deshalb kann man bei Problemen immer auf diese zurückgreifen.
 </description>
         <url>http://www.hs-anhalt.de/hochschule/struktur/studierendenrat.html</url>
-        <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
+        <registerImage>buildings/gebaeude0708.JPG</registerImage>
     </building>
     
     <building>
@@ -104,5 +104,7 @@ Die zentrale Wache hat ebenso ihren Platz im Lehr- und Verwaltungsgebaeude.
         <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Gebaeude03.JPG</registerImage>
     </building>
+    
+
     
     </buildings>
