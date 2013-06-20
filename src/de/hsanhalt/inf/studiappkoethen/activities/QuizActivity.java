@@ -24,10 +24,12 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.id;
+import de.hsanhalt.inf.studiappkoethen.R.string;
 import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
 import de.hsanhalt.inf.studiappkoethen.util.quiz.QuizState;
 import de.hsanhalt.inf.studiappkoethen.xml.buildings.Building;
@@ -243,8 +245,10 @@ public class QuizActivity extends Activity
         }
         else    // Wird aufgerufen, wenn kein Quiz ausgewaehlt ist!
         {
-            messageView.setText("STARTNACHRICHT! QUIZ WAEHLEN!");
-            linearLayout.addView(messageView);
+            ScrollView scrollView = new ScrollView(this);
+            messageView.setText(this.getResources().getString(string.quiz_startmsg));
+            scrollView.addView(messageView);
+            linearLayout.addView(scrollView);
         }
     }
 
