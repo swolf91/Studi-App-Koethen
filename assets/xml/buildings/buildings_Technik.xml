@@ -1,3 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
     <categoryID>3</categoryID>
+    
+<building>
+    <id>0</id>
+        <name>Technoligiezentrum</name>
+        <street>Hubertus</street>
+        <houseNumber>1a</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding></collegeBuilding>
+        <latitude>517557047</latitude>
+        <longitude>119602829</longitude>
+        <description>
+Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstuetzen und erste Rahmenbedingungen fuer die professionelle Projektausarbeitung zu ermoeglichen.
+Weiterhin koennen hier verschiedene Technologiezweige durch Rechnernetze, Medienbereitstellung
+oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden.
+</description>
+        <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
+        <registerImage>buildings/Technologiezentrum.JPG</registerImage>
+        <registerImage>buildings/Technologiezentrum_2.JPG</registerImage>
+    </building>
+    
+        <building>
+    <id>1</id>
+        <name>Elektrotechniklabor</name>
+        <street>Fasaneriallee</street>
+        <houseNumber>1a</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>13</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517540140</latitude>
+        <longitude>119682250</longitude>
+        <description>
+Das Elektrotechniklabor dient den technikinteressierten Studenten zur Ausbildung und Weiterbildung.
+        </description>
+<url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
+    </building>
+    
+        <building>
+    <id>2</id>
+        <name>Werkstattgebaeude</name>
+        <street>Hubertus</street>
+        <houseNumber>56</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>07</numberOfBuilding>
+        </collegeBuilding>
+        <latitude>517548510</latitude>
+        <longitude>119582960</longitude>
+        <description>
+Das Werkstattgebaeude dient dem Fachbereich 6 zur technischen Ausbildung, sowie der Durchführung von Projekten.
+</description>
+        <url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Prakt.-und Forschungshalle.JPG</registerImage>
+    </building>
+    
+    </buildings>
