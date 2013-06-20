@@ -49,4 +49,28 @@
         \n
         \nViel Spaß beim Kennenlernen eures Campuses!
     </string>
+    <string name="quiz_analysis_verybad">
+        Du sollste doch deinen Campus begehen und dir alles anschauen und nicht nur wild rumklicken.
+        \nHoffentlich wird es naechstes mal besser. Du hast nur =p Prozent richtig beantwortet. Was =c/=q richtig beantwortete Fragen entspricht.
+    </string>
+    <string name="quiz_analysis_bad">
+        Naja, das kannst du auch besser. String dich naechstes mal besser an.
+        \nDu hast =p Prozent des Quizes richtig beantwortet. Das entspricht =c-=q Fragen.
+    </string>
+    <string name="quiz_analysis_medium">
+        Kopf hoch, begehe den Campus einfach noch einmal und beim naechsten Mal klappt es bestimmt besser.
+        \nImmerhin hast du schon =p Prozent bzw =c/=q Fragen richtig beantwortet.
+    </string>
+    <string name="quiz_analysis_good">
+        Gar nicht mal so schlecht. Du kennst immerhin schon mehr als die Haelfte von deinem Campus und hast
+        %p Prozent bzw =c/=q Fragen richtig beantwortet.
+    </string>
+    <string name="quiz_analysis_verygood">
+        Grossartig! Das muss dir erstmal einer nachmachen. Du hast fast alle Fragen richtig beanwort.
+        \nUm genau zu sein =p Prozent bzw =c/=q Fragen. Weiter so!
+    </string>
+    <string name="quiz_analysis_perfekt">
+        Alter Schwede! Du bist wohl wirklich mit dem Quiz durch Koethen gelaufen?
+        \nDu hast anscheinend alle Fragen (=p Prozent) richtig beantwortet. Dann kann im Studium doch gar nichts mehr schief laufen.
+    </string>
 </resources>

@@ -177,6 +177,7 @@ public class QuizActivity extends Activity
 
                 messageView.setText(question.getQuestion());
                 messageView.setTypeface(Typeface.DEFAULT_BOLD);
+                messageView.setTextSize(18f);
                 linearLayout.addView(messageView);
 
                 List<Button> buttonlist = new ArrayList<>(question.getAnswers().length);
@@ -227,11 +228,42 @@ public class QuizActivity extends Activity
                         numberOfCorrectAnswers++;
                     }
                 }
+                float percentage = (float)numberOfCorrectAnswers / (float)this.quiz.getNumberOfQuestions();
+
                 MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
                 params.setMargins(0, 0, 0, 75);
                 messageView.setLayoutParams(new LinearLayout.LayoutParams(params));
-                messageView.setText("Glueckwunsch! " + numberOfCorrectAnswers + " von " + this.quiz.getNumberOfQuestions() + " Fragen wurden richtig beantwortet." );
                 linearLayout.addView(messageView);
+
+                String message;
+                if(numberOfCorrectAnswers >= this.quiz.getNumberOfQuestions())
+                {
+                    message = this.getResources().getString(string.quiz_analysis_perfekt);
+                }
+                else if(percentage > 0.8f)
+                {
+                    message = this.getResources().getString(string.quiz_analysis_verygood);
+                }
+                else if(percentage > 0.6f)
+                {
+                    message = this.getResources().getString(string.quiz_analysis_good);
+                }
+                else if(percentage > 0.4f)
+                {
+                    message = this.getResources().getString(string.quiz_analysis_medium);
+                }
+                else if(percentage > 0.2f)
+                {
+                    message = this.getResources().getString(string.quiz_analysis_bad);
+                }
+                else
+                {
+                    message = this.getResources().getString(string.quiz_analysis_verybad);
+                }
+                message = message.replace("=p", ((int)(100 * percentage)) + "");
+                message = message.replace("=q", this.quiz.getNumberOfQuestions() + "");
+                message = message.replace("=c", numberOfCorrectAnswers + "");
+                messageView.setText(message);
 
                 params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
                 params.setMargins(0, -75, 0, 0);
