@@ -60,4 +60,23 @@ Das Werkstattgebaeude dient dem Fachbereich 6 zur technischen Ausbildung, sowie 
         <registerImage>buildings/Prakt.-und Forschungshalle.JPG</registerImage>
     </building>
     
+<building>
+    <id>3</id>
+        <name>Mess- und Regeltechnik</name>
+        <street>Bernburger Strasse</street>
+        <houseNumber>55</houseNumber>
+        <postalCode>06366</postalCode>
+        <city>Koethen</city>
+        <collegeBuilding>
+            <numberOfBuilding>03</numberOfBuilding>
+        </collegeBuilding>
+         <latitude>517550370</latitude>
+        <longitude>119686116</longitude>
+        <description>
+M+R Meß- und Regelungstechnik GmbH
+        </description>
+        <url>http://www.hs-anhalt.de/</url>
+        <registerImage>buildings/Gebaeude0708.JPG</registerImage>
+</building>
+    
     </buildings>
