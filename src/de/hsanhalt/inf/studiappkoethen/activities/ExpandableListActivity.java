@@ -3,17 +3,12 @@ package de.hsanhalt.inf.studiappkoethen.activities;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ImageView;
@@ -32,8 +27,9 @@ import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
 /**
  * 
- * Enthaelt alle Funktionen um Interaktionen mit der ExpandableList ACtivity zu verwalten.
- *
+ * Enthaelt alle Funktionen um Interaktionen zwischen ExpandableList und ExpandableListActivity zu verwalten.
+ * @author Stefan Wolf, Gordian Kauf
+ * @version 1.0
  */
 public class ExpandableListActivity extends Activity
 {
@@ -45,7 +41,11 @@ public class ExpandableListActivity extends Activity
     boolean showBuildings;
     
     /**  
-     * Initialaufbau der ExpandableList Activity.Gibt der Activity den Adapter und den Listener (jeweils fuer Personen und Gebaeude Objekte).
+     * Initialaufbau der ExpandableList Activity.
+     * Unterscheidet Koethener Gebaeude und Campus-Gebaeude. 
+     * Bei den Campusgebaeude werden neben den Gebaeuden noch Personen angefuehrt.
+     * Fuer die Campusgebaeudeliste gibt es zwei Buttons zum wechseln, oberhalb der Liste.
+     * 
      */
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -93,6 +93,11 @@ public class ExpandableListActivity extends Activity
 
     }
 	
+	/**
+	 * Hier werden die Klicks auf die Buttons zum Wechseln der Personen und Gebaeuden (Oberkategorie: Campusgebaeude) ausgewertet.
+	 * 
+	 * @param view ->Zum Erfassen des selektierten Bereiches.
+	 */
 	public void onButtonClick(View view)
 	{
 		Boolean state = null;
@@ -117,8 +122,9 @@ public class ExpandableListActivity extends Activity
 
 
 	/**
-     * Laedt die Gebaeude-Daten fuer den ExpandableListAdapter.
+     * Laedt die Gebaeude-Daten fuer den ExpandableListAdapter in einem speziellem Objekt für Listeneintraege.
      * @param true, wenn es ein Campusgebaeude ist; false, wenn es ein Gebaeude aus Koethen ist, dass nicht zum Campus gehoert.
+     * @return neue Listeneintraege
      */
     private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList(boolean isCampusBuilding)
     {
@@ -175,20 +181,10 @@ public class ExpandableListActivity extends Activity
         }
         return entryList;
     }
-    /**
-     * Holt das Menue, wenn das Optionsmenue erstellt wird.
-     * (wird nicht genutzt )
-     */
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-		 
-		getMenuInflater().inflate(R.menu.expandable_list, menu);
-		return true;
-	}
 
 	/**
-	 * Beschreibt die Funktionen der ExpandableList Activity.
+	 * Beschreibt die Standartfunktionen (Schliessen und Startseite) der ExpandableList Activity.
+	 * @return Ist true, wenn eine Ausfuehrung erfolgreich war.
 	 */
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
@@ -212,6 +208,7 @@ public class ExpandableListActivity extends Activity
 
     /**
      * Listener fuer die Klicks auf die ExpandableList.
+     * @return false wird hier nicht benoetigt.
      */
     private OnChildClickListener myListItemClicked =  new OnChildClickListener()
     {

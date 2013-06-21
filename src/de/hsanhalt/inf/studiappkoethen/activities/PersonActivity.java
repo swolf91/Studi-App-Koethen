@@ -22,10 +22,18 @@ import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
 
+/**
+ * Detailanzeige Activity fuer die Personen.
+ * @author Stefan Wolf
+ *
+ */
 public class PersonActivity extends Activity
 {
 	Person person = null;
-
+	/**
+	 * Konstruiert das passende Personen Objekt fuer die gewuenschte Auswahl.
+	 * @param Instanzdaten
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -33,7 +41,9 @@ public class PersonActivity extends Activity
 		byte categorieID = this.getIntent().getByteExtra("category", (byte) -1);   // ruft die ID der Kategorie aus den uebergebenen Parametern ab
         byte personID = this.getIntent().getByteExtra("person", (byte) -1);   // ruft die ID der Person aus den uebergebenen Parametern ab
 	}
-
+	/**
+	 * Fuegt den Text aus der Personen XML in die entsprechenden Views zum anzeigen ein.
+	 */
 	private void setTextViews()
 	{
 		 if(this.person != null)
@@ -55,6 +65,10 @@ public class PersonActivity extends Activity
 	            }
 	         }
 	}
+	/**
+	 * Beschreibt die Standartfunktionen (Schliessen und Startseite) der Personen Activity.
+	 * @return Ist true, wenn eine Ausfuehrung erfolgreich war.
+	 */
 	@Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -70,7 +84,7 @@ public class PersonActivity extends Activity
             startActivity(intent);
             return true;
 
-//        case R.id.action_list:
+//        case R.id.action_list: //TODO never used!?
 //            startActivity(new Intent(this, ExpandableListActivity.class));
 //            return true;
 
@@ -82,7 +96,7 @@ public class PersonActivity extends Activity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
+    public boolean onCreateOptionsMenu(Menu menu) //TODO never used? delete?!
     {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.detail, menu);

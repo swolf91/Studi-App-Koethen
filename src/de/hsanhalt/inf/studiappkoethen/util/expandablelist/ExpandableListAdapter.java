@@ -11,7 +11,14 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.R.layout;
-
+/**
+ * Diese Klasse ist zur Laufzeit da,
+ * um die Werte fuer Personen und Gebaeude zu kombinieren, die der ExpandableListAdapter weiterverarbeitet.
+ * @author Stefan Wolf, Gordian Kauf
+ *
+ * @param <G> Liste der Gebaeude oder Personen
+ * @param <C> zugehoerige Kategorie
+ */
 public class ExpandableListAdapter<G, C> extends BaseExpandableListAdapter
 {
     private Context context;
@@ -67,7 +74,7 @@ public class ExpandableListAdapter<G, C> extends BaseExpandableListAdapter
         return groupPosition;
     }
     /**
-     * Gibt eine eindeutige ID des unteren Elements einer kategorie zurueck.
+     * Gibt eine eindeutige ID des unteren Elements einer Kategorie zurueck.
      */
     @Override
     public long getChildId(int groupPosition, int childPosition)
