@@ -12,7 +12,7 @@ import android.content.SharedPreferences;
 import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.drawable;
 import de.hsanhalt.inf.studiappkoethen.R.id;
-import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
+import de.hsanhalt.inf.studiappkoethen.R.string;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 
 
@@ -46,8 +46,8 @@ public class MainActivity extends Activity
 	    
 			Builder builder = new AlertDialog.Builder(this);
 			builder.setIcon(drawable.app_launcher);
-			builder.setTitle("Willkommen");
-			builder.setMessage("Hi Ersties,\nhoffe ihr könnt unsere App gebrauchen und viel Spass damit.");
+			builder.setTitle(this.getResources().getString(string.main_dialog_headline));
+			builder.setMessage(this.getResources().getString(string.main_dialog_message));
 			builder.setCancelable(true);
 			builder.setPositiveButton(android.R.string.ok,null);
 	        

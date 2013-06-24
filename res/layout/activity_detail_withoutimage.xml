@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name:"
+                android:text="@string/detail_name_headline"
                 android:id="@+id/detail_textView_name_headline"
                 android:textStyle="bold"
                 android:layout_gravity="left"
@@ -40,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Adresse"
+                android:text="@string/detail_adresse_headline"
                 android:id="@+id/detail_textView_adress_headline"
                 android:textStyle="bold"
                 android:layout_gravity="left"
@@ -60,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Telefonnummer"
+                android:text="@string/detail_phonenumber_headline"
                 android:id="@+id/detail_textView_phonenumber_headline"
                 android:textStyle="bold"
                 android:layout_gravity="left"
@@ -80,7 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gebaeudenummer"
+                android:text="@string/detail_buildingnumber_headline"
                 android:id="@+id/detail_textView_buildingnumber_headline"
                 android:textStyle="bold"
                 android:layout_gravity="left"
@@ -100,7 +100,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fachbereichsnummer"
+                android:text="@string/detail_facultynumber_headline"
                 android:id="@+id/detail_textView_facultynumber_headline"
                 android:textStyle="bold"
                 android:layout_gravity="left"
@@ -120,7 +120,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Homepage"
+                android:text="@string/detail_homepage_headline"
                 android:id="@+id/detail_textView_homepage_headline"
                 android:textStyle="bold"
                 android:layout_gravity="left"
@@ -143,7 +143,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Beschreibung"
+                android:text="@string/detail_description_headline"
                 android:id="@+id/detail_textView_description_headline"
                 android:textStyle="bold"
                 android:layout_gravity="left"

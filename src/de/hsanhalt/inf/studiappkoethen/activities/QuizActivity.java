@@ -126,7 +126,7 @@ public class QuizActivity extends Activity
                 params.setMargins(0, -75, 0, 0);
                 Button button = new Button(this);
                 button.setLayoutParams(new LinearLayout.LayoutParams(params));
-                button.setText("Quiz starten!");
+                button.setText(this.getResources().getString(string.quiz_button_startbutton));
                 button.setOnClickListener(this.OnButtonClickListener);
                 button.setId(this.state.hashCode() * Button.class.hashCode());
                 linearLayout.addView(button);
@@ -154,7 +154,7 @@ public class QuizActivity extends Activity
 
                     if(hasBuilding)
                     {
-                        buildingButton.setText("Auf Karte anzeigen!");
+                        buildingButton.setText(this.getResources().getString(string.detail_mapbutton));
                         buildingButton.setId(state.hashCode() * Button.class.hashCode() * GoogleMapsActivity.class.hashCode());
                         buildingButton.setOnClickListener(this.OnButtonClickListener);
                     }
@@ -213,7 +213,7 @@ public class QuizActivity extends Activity
                 params.setMargins(0, -75, 0, 0);
                 Button button = new Button(this);
                 button.setLayoutParams(new LinearLayout.LayoutParams(params));
-                button.setText("zur naechsten Frage!");
+                button.setText(this.getResources().getString(string.quiz_button_nextquestion));
                 button.setOnClickListener(this.OnButtonClickListener);
                 button.setId(this.state.hashCode() * Button.class.hashCode());
                 linearLayout.addView(button);
@@ -269,7 +269,7 @@ public class QuizActivity extends Activity
                 params.setMargins(0, -75, 0, 0);
                 Button button = new Button(this);
                 button.setLayoutParams(new LinearLayout.LayoutParams(params));
-                button.setText("Quiz beenden!");
+                button.setText(this.getResources().getString(string.quiz_button_exitquiz));
                 button.setOnClickListener(this.OnButtonClickListener);
                 button.setId(this.state.hashCode() * Button.class.hashCode());
                 linearLayout.addView(button);
@@ -406,7 +406,7 @@ public class QuizActivity extends Activity
         super.onCreateContextMenu(menu, v, menuInfo);
 
         QuizManager quizManager = QuizManager.getInstance();
-        menu.setHeaderTitle("Quiz Auswahl");
+        menu.setHeaderTitle(this.getResources().getString(string.quiz_context_choosequiz));
         for(Quiz quiz : quizManager.getQuizs())
         {
             menu.add(0, quiz.getID(), 0, quiz.getName());

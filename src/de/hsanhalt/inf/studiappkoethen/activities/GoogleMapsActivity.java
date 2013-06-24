@@ -178,12 +178,11 @@ public class GoogleMapsActivity extends Activity
 		if(filterBundle != null) {									// Wenn keine Daten uebergeben wurden, ueberspringe das Auslesen der Daten
 			while(filterBundle != null) {							// Das FilterBundle wird, am Ende der Schleife, gleich der naechsten Kategorie gesetzt.
 																	// Existiert keine naechste Kategorie wird die Schleife beendet
-				Bundle nextCategory = new Bundle();
-				Bundle buildings = new Bundle();
+
 				byte category;
-				
-				nextCategory = filterBundle.getBundle(sNextCategory);	// Auslesen des Bundles fuer die naechste Kategorie
-				buildings = filterBundle.getBundle(sNextBuilding);		// Auslesen des Bundles fuer die Gebaeude der momentanen Kategorie
+
+                Bundle nextCategory = filterBundle.getBundle(sNextCategory);	// Auslesen des Bundles fuer die naechste Kategorie
+                Bundle buildings = filterBundle.getBundle(sNextBuilding);		// Auslesen des Bundles fuer die Gebaeude der momentanen Kategorie
 				category = filterBundle.getByte(sCategory);				// Auslesen der momentanen Kategorie
 				
 				if(buildings == null) {
@@ -192,8 +191,8 @@ public class GoogleMapsActivity extends Activity
 					FilterItem newFilter = new FilterItem(category);	// Ansonsten wird ein neues FilterItem erstellt in der die Kategorie und die Gebaeude abgelegt werden
 					while(buildings != null) {							// Hier wird das selbe Prinzip angewandt, wie mit der Kategorie-Schleife (siehe oben)
 						byte newBuilding = buildings.getByte(sBuilding);
-						Bundle nextBuilding = new Bundle();
-						nextBuilding = buildings.getBundle(sNextBuilding);
+
+						Bundle nextBuilding = buildings.getBundle(sNextBuilding);
 						
 						newFilter.addBuilding(newBuilding);
 						buildings = nextBuilding;
@@ -309,7 +308,7 @@ public class GoogleMapsActivity extends Activity
 	
 	
 	public void clearAllMarkers() {				// Loeschen aller dargestellten Marker
-		while(displayedMarkers.isEmpty() == false) {
+		while(!displayedMarkers.isEmpty()) {
 			Marker first = displayedMarkers.get(0).getMarker();
 			displayedMarkers.remove(0);
 			first.remove();

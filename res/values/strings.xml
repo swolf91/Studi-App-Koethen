@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="action_settings">Settings</string>
     <string name="action_close">Beenden</string>
     <string name="action_filter">Filter</string>
@@ -17,8 +16,18 @@
     <string name="koethen">Köthen</string>
     <string name="karte">Karte</string>
     <string name="entdeckertour">Entdeckertour</string>
+    <string name="main_dialog_headline">Willkommen</string>
+    <string name="main_dialog_message">Herzlichen Willkommen in unserer App. Diese soll ein Campus-Fuehrer fuer Koethen darstellen\nWir hoffen, dass ihr damit etwas anfangen koennt und wuenschen euch viel Spass.</string>
     <string name="title_activity_expandable_list">ExpandableListActivity</string>
     <string name="detail_description">Es wurde kein gueltiges Gebaeude zur Anzeige ausgewaehlt!</string>
+    <string name="detail_name_headline">Name:</string>
+    <string name="detail_adresse_headline">Adresse:</string>
+    <string name="detail_phonenumber_headline">Telefonnummer:</string>
+    <string name="detail_buildingnumber_headline">Gebaeudenummer:</string>
+    <string name="detail_facultynumber_headline">Fachbereichsnummer:</string>
+    <string name="detail_homepage_headline">Homepage:</string>
+    <string name="detail_description_headline">Beschreibung:</string>
+    <string name="detail_mapbutton">Auf Karte anzeigen!</string>
     <string name="detail_button_mapview">Auf Karte anzeigen</string>
     <string name="image_errormsg">Das Bild konnte nicht geladen werden</string>
     <string name="filter_text">Mithilfe des Filters, welcher im oberen Optionsmenü zu finden ist,\nkönnen die verschiedenen Gebäudegruppen ein oder ausgeblendet werden.
@@ -63,7 +72,7 @@
     </string>
     <string name="quiz_analysis_good">
         Gar nicht mal so schlecht. Du kennst immerhin schon mehr als die Haelfte von deinem Campus und hast
-        %p Prozent bzw =c/=q Fragen richtig beantwortet.
+        =p Prozent bzw =c/=q Fragen richtig beantwortet.
     </string>
     <string name="quiz_analysis_verygood">
         Grossartig! Das muss dir erstmal einer nachmachen. Du hast fast alle Fragen richtig beanwort.
@@ -73,4 +82,8 @@
         Alter Schwede! Du bist wohl wirklich mit dem Quiz durch Koethen gelaufen?
         \nDu hast anscheinend alle Fragen (=p Prozent) richtig beantwortet. Dann kann im Studium doch gar nichts mehr schief laufen.
     </string>
+    <string name="quiz_button_startbutton">Quiz starten!</string>
+    <string name="quiz_button_nextquestion">Zur naechsten Frage!</string>
+    <string name="quiz_button_exitquiz">Quiz beenden</string>
+    <string name="quiz_context_choosequiz">Quiz-Auswahl</string>
 </resources>

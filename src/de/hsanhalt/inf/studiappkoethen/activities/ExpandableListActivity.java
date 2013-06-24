@@ -25,6 +25,7 @@ import de.hsanhalt.inf.studiappkoethen.xml.persons.Person;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategory;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
+
 /**
  * 
  * Enthaelt alle Funktionen um Interaktionen zwischen ExpandableList und ExpandableListActivity zu verwalten.
@@ -33,7 +34,6 @@ import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
  */
 public class ExpandableListActivity extends Activity
 {
-    
     ExpandableListView expandableListView;
     ExpandableListAdapter<PersonCategory, Person> expandableListAdapterPerson;
     ExpandableListAdapter<BuildingCategory, Building> expandableListAdapterBuilding;
@@ -55,11 +55,10 @@ public class ExpandableListActivity extends Activity
 		this.expListPreferences = this.getSharedPreferences("lastBuildingPushState", MODE_PRIVATE);
 		showBuildings=this.expListPreferences.getBoolean("showBuildings", true);
 		
-		
 		boolean isCampus=this.getIntent().getBooleanExtra("isCampus",true);
 				
-		if(isCampus){
-			
+		if(isCampus)
+        {
 			this.setContentView(R.layout.activity_expandablelist_campus);
 			this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Campus);
 			
@@ -67,26 +66,25 @@ public class ExpandableListActivity extends Activity
 			{
 				ImageView imageView = (ImageView) this.findViewById(R.id.imageView_Buildings);
 				imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.geb_el));
-				this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus)); 
+				this.expandableListAdapterBuilding = new ExpandableListAdapter<>(this, this.getBuildingList(isCampus));
 		        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
 		        
-			}else{
+			}
+            else
+            {
 				ImageView imageView = (ImageView) this.findViewById(R.id.imageView_Persons);
 				imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.pers_el));
-				this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList()); 
+				this.expandableListAdapterPerson = new ExpandableListAdapter<>(this, this.getPersonList());
 			    this.expandableListView.setAdapter(this.expandableListAdapterPerson);
 			}
-	       
-				
 		}
-		else{
-			
+		else
+        {
 			this.showBuildings=true;
 			this.setContentView(R.layout.activity_expandablelist_koethen);
 	        this.expandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Koethen);
-	        this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus)); 
+	        this.expandableListAdapterBuilding = new ExpandableListAdapter<>(this, this.getBuildingList(isCampus));
 	        this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
-			
 		}
 		
 		this.expandableListView.setOnChildClickListener(myListItemClicked);
@@ -122,13 +120,13 @@ public class ExpandableListActivity extends Activity
 
 
 	/**
-     * Laedt die Gebaeude-Daten fuer den ExpandableListAdapter in einem speziellem Objekt für Listeneintraege.
-     * @param true, wenn es ein Campusgebaeude ist; false, wenn es ein Gebaeude aus Koethen ist, dass nicht zum Campus gehoert.
+     * Laedt die Gebaeude-Daten fuer den ExpandableListAdapter in einem speziellem Objekt fuer Listeneintraege.
+     * @param isCampusBuilding - true, wenn es ein Campusgebaeude ist; false, wenn es ein Gebaeude aus Koethen ist, dass nicht zum Campus gehoert.
      * @return neue Listeneintraege
      */
     private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList(boolean isCampusBuilding)
     {
-        List<ExpandableListEntry<BuildingCategory, Building>> entryList = new ArrayList<ExpandableListEntry<BuildingCategory, Building>>();
+        List<ExpandableListEntry<BuildingCategory, Building>> entryList = new ArrayList<>();
         BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
         BuildingManager buildingManager = BuildingManager.getInstance();
        
@@ -151,7 +149,7 @@ public class ExpandableListActivity extends Activity
             
             if(!buildings.isEmpty())
             {
-            	entryList.add(new ExpandableListEntry<BuildingCategory, Building>(buildingCategory, buildings.toArray(new Building[buildings.size()])));
+            	entryList.add(new ExpandableListEntry<>(buildingCategory, buildings.toArray(new Building[buildings.size()])));
             } 
         }
 
@@ -163,7 +161,7 @@ public class ExpandableListActivity extends Activity
      */
     private List<ExpandableListEntry<PersonCategory, Person>> getPersonList()
     {
-        List<ExpandableListEntry<PersonCategory, Person>> entryList = new ArrayList<ExpandableListEntry<PersonCategory, Person>>();
+        List<ExpandableListEntry<PersonCategory, Person>> entryList = new ArrayList<>();
         PersonCategoryManager personCategoryManager = PersonCategoryManager.getInstance();
         PersonManager personManager = PersonManager.getInstance();
         
@@ -175,7 +173,7 @@ public class ExpandableListActivity extends Activity
 	        
 	        if(!persons.isEmpty())
 	        {
-	        	entryList.add(new ExpandableListEntry<PersonCategory, Person>(personCategory, persons.toArray(new Person[persons.size()])));
+	        	entryList.add(new ExpandableListEntry<>(personCategory, persons.toArray(new Person[persons.size()])));
 	        	
 	        } 
         }
@@ -214,12 +212,15 @@ public class ExpandableListActivity extends Activity
     {
         public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id)
         {
-        	if(showBuildings){
+        	if(showBuildings)
+            {
         		Intent intent = new Intent(getBaseContext(), DetailActivity.class);
                 intent.putExtra("category", expandableListAdapterBuilding.getGroup(groupPosition).getID());
                 intent.putExtra("building", expandableListAdapterBuilding.getChild(groupPosition, childPosition).getID());
                 startActivity(intent);
-        	}else{
+        	}
+            else
+            {
         		//TODO Personen laden
         	}
             

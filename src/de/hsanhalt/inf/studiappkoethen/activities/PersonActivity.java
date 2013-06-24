@@ -1,38 +1,23 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
-import java.io.IOException;
-import java.net.URL;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.R.id;
-import de.hsanhalt.inf.studiappkoethen.util.AndroidUtils;
-import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.Person;
-import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategory;
-import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
-import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
 
 /**
- * Detailanzeige Activity fuer die Personen.
- * @author Stefan Wolf
- *
+ * Detailanzeige Activity fuer die Personen. *
  */
 public class PersonActivity extends Activity
 {
 	Person person = null;
 	/**
 	 * Konstruiert das passende Personen Objekt fuer die gewuenschte Auswahl.
-	 * @param Instanzdaten
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
