@@ -86,4 +86,8 @@
     <string name="quiz_button_nextquestion">Zur naechsten Frage!</string>
     <string name="quiz_button_exitquiz">Quiz beenden</string>
     <string name="quiz_context_choosequiz">Quiz-Auswahl</string>
+
+    <string name="detail_person_state">Anrede:</string>
+    <string name="detail_person_name">Vorname:</string>
+    <string name="detail_person_surname">Vorname:</string>
 </resources>

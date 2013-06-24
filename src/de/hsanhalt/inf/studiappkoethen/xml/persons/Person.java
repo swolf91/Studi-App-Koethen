@@ -12,7 +12,7 @@ public class Person
      */
     private final String name;
     /**
-     * beinhaltet den Vornamen der Person
+     * beinhaltet den Nachnamen der Person
      */
     private final String surname;
     /**
@@ -307,6 +307,11 @@ public class Person
     
     public String toString()
     {
-    	return this.getName();
+        String tmp = "";
+        if(this.state != null)
+        {
+            tmp += this.state + " ";
+        }
+    	return tmp + this.getName() + " " + this.getSurname();
     }
 }
