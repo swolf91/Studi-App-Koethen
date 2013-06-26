@@ -66,14 +66,14 @@ public class ExpandableListActivity extends Activity
             {
                 ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Buildings);
                 imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.geb_el));
-                this.expandableListAdapterBuilding = new ExpandableListAdapter<>(this, this.getBuildingList(isCampus));
+                this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus));
                 this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
             }
             else
             {
                 ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Persons);
                 imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.pers_el));
-                this.expandableListAdapterPerson = new ExpandableListAdapter<>(this, this.getPersonList());
+                this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList());
                 this.expandableListView.setAdapter(this.expandableListAdapterPerson);
             }
         }
@@ -82,7 +82,7 @@ public class ExpandableListActivity extends Activity
             this.showBuildings = true;
             this.setContentView(R.layout.activity_expandablelist_koethen);
             this.expandableListView = (ExpandableListView)findViewById(R.id.expandableListView_Koethen);
-            this.expandableListAdapterBuilding = new ExpandableListAdapter<>(this, this.getBuildingList(isCampus));
+            this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus));
             this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
         }
 
@@ -125,7 +125,7 @@ public class ExpandableListActivity extends Activity
      */
     private List<ExpandableListEntry<BuildingCategory, Building>> getBuildingList(boolean isCampusBuilding)
     {
-        List<ExpandableListEntry<BuildingCategory, Building>> entryList = new ArrayList<>();
+        List<ExpandableListEntry<BuildingCategory, Building>> entryList = new ArrayList<ExpandableListEntry<BuildingCategory, Building>>();
         BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
         BuildingManager buildingManager = BuildingManager.getInstance();
 
@@ -149,7 +149,7 @@ public class ExpandableListActivity extends Activity
 
             if (!buildings.isEmpty())
             {
-                entryList.add(new ExpandableListEntry<>(buildingCategory, buildings.toArray(new Building[buildings.size()])));
+                entryList.add(new ExpandableListEntry<BuildingCategory, Building>(buildingCategory, buildings.toArray(new Building[buildings.size()])));
             }
         }
 
@@ -163,7 +163,7 @@ public class ExpandableListActivity extends Activity
      */
     private List<ExpandableListEntry<PersonCategory, Person>> getPersonList()
     {
-        List<ExpandableListEntry<PersonCategory, Person>> entryList = new ArrayList<>();
+        List<ExpandableListEntry<PersonCategory, Person>> entryList = new ArrayList<ExpandableListEntry<PersonCategory, Person>>();
         PersonCategoryManager personCategoryManager = PersonCategoryManager.getInstance();
         PersonManager personManager = PersonManager.getInstance();
 
@@ -173,7 +173,7 @@ public class ExpandableListActivity extends Activity
 
             if (!persons.isEmpty())
             {
-                entryList.add(new ExpandableListEntry<>(personCategory, persons.toArray(new Person[persons.size()])));
+                entryList.add(new ExpandableListEntry<PersonCategory, Person>(personCategory, persons.toArray(new Person[persons.size()])));
             }
         }
         return entryList;

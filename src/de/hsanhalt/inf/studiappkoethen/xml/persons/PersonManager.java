@@ -216,7 +216,7 @@ public class PersonManager implements IXmlParsing
             }
             else if (nodeName.equals("modules"))
             {
-                                                    //TODO xml an der Stelle ueberarbeiten & Implementierung ueberdenken
+                                                    //xml an der Stelle ueberarbeiten & Implementierung evtl. ueberdenken
                                                     // Grund dafuer ist, dass getChildNodes mehr childs zurueck gibt, als vorhanden sind!
             										
                 NodeList childList = subNode.getChildNodes();

@@ -32,7 +32,7 @@ public class PersonDetailActivity extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        this.setContentView(layout.activity_person);
+        this.setContentView(layout.activity_person_detail_withimage);
 
         byte categorieID = this.getIntent()
                                .getByteExtra("category", (byte)-1);   // ruft die ID der Kategorie aus den uebergebenen Parametern ab
