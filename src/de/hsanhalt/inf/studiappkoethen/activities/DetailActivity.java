@@ -261,7 +261,7 @@ public class DetailActivity extends Activity
 
             /*
              * Wenn neuer Index ungleich des alten Indexes ist, wird innerhalb der if-Anweisung das Bild gewechselt.
-             * Dies ist nur, damit ein gleiches Bild nicht nochmal geladen wird, man koennte aber darauf verzichen.
+             * Dies ist nur, damit ein gleiches Bild nicht nochmal geladen wird, man koennte aber darauf verzichten.
              */
             if(newIndex != this.pictureIndex)
             {
