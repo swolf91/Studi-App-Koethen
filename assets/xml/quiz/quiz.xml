@@ -13,6 +13,9 @@
         <answer>33</answer>
         <answer>44</answer>
         <result>Nun geht es um die Hochschulbibliothek.
+        
+        
+        
     			Wusstest du schon? Früher in Köthen gab es bereits eine Ingenieursschule, das Polytechnikum. 
 				Heute studieren und forschen rund 3500 Studierende und 55 Professoren an der FH in Köthen.
 				</result>
@@ -27,6 +30,9 @@
         <answer>5. Etage</answer>
         <answer>Keller</answer>
         <result>Gehe nun zum grünen Gebäude (02)
+        
+        
+        
 				Wusstest du schon? An den 3 Standortbibliotheken in Köthen, Bernburg und Dessau wird der Zugriff auf mehr 
 				als 385.000 Bände an Fachliteratur zur Verfügung gestellt. Zudem bietet das Campusnetz den Onlinezugriff 
 				auf mehr als 7.000 Ebooks und 38.000 Zeitschriftentitel.
@@ -42,6 +48,9 @@
         <answer>1924</answer>
         <answer>1953</answer>
         <result>Gehe nun zum weißen Gebäude (03)
+        
+        
+        
 				Wusstest du schon? Das grüne Gebäude gehört zu den ältesten Hochschulgebäuden in Köthen und dient seit 1926 als Erweiterungsbau für die Lehranstalt.
 				Am 15.Mai 2013 wurde es im Rahmen einer langen Renovierungsphase feierlich eingeweiht.
 		</result>
@@ -56,6 +65,9 @@
         <answer>Hochschulverwaltung</answer>
         <answer>Akademisches Auslandsamt</answer>
         <result>Gehe nun zur Turnhalle
+        
+        
+        
 				Wusstest du schon? Die Hochschule Anhalt wurde 1991 gegründet. 
 				Zurzeit sind etwa 7400 Studenten an allen drei Standorten immatrikuliert. 
 		</result>
@@ -70,6 +82,9 @@
         <answer>Golf - Tennis</answer>
         <answer>Eishockey - Curling</answer>
         <result>Gehe nun zum Wohnheim 5
+        
+        
+        
 				Wusstest du schon? Allen Studenten und Hochschulangehörigen wird umfangreiches Sportangebot bereitet 
 				und jährlích findet ein Sommerfest des Hochschulsports statt. 
 		</result>
@@ -83,6 +98,9 @@
         <answer>5</answer>
         <answer>15</answer>
         <result>Gehe nun zum Wohnheim 6
+        
+        
+        
 				Wusstest du schon? 
 				Dass das Studentewerk Halle auch für die Wohnraumvermittlung in Köthen zuständig ist.
 		
@@ -98,6 +116,9 @@
         <answer>HS-Club</answer>
         <answer>Mensakeller</answer>
         <result>Gehe nun zum Hugo-Junkers-Gebäude (73)
+        
+        
+        
 				Wusstest du schon? Der VT Club hat einen Internetauftritt auf Facebook 
 				und informiert dort regelmäßig über anstehende Veranstaltungen.
 				</result>
@@ -110,6 +131,9 @@
         <answer>Ziege</answer>
         <answer>Bär</answer>
         <result>Gehe nun zum Technologiezentrum
+        
+        
+        
 				Wusstest du schon? Hugo Junkers lebte von 1859 bis 1935 und gründete 1895 ind Dessau die Firma Junkers und Co.
 				Weiterhin schuf er wichtige Kenntnisse in den bereichen Flugzeugbau und Metallbau.
 				</result>
@@ -124,6 +148,9 @@
         <answer>Fachbereich 5</answer>
         <answer>Schwimmhalle</answer>
         <result>Gehe nun zur Mensa am Hauptcampus
+        
+        
+        
 				Wusstest du schon? Das Technologiezentrum ist die perfekte Anlaufstelle für technologieorientierte Unternehmen und 
 				bietet den geeigneten Rahmen für erste Entwicklungschritte.
 		</result>
@@ -138,6 +165,9 @@
         <answer>Chillmenü</answer>
         <answer>MenüToGo</answer>
         <result>Gehe nun zur Studentendisco (Mensakeller)
+        
+        
+        
 				Wusstest du schon? Um die Wartezeiten an den Kassen zu verkürzen, wurde ein bargeldloser Zahlungsverkehr mittels Chipkarte eingeführt. 
 				Dieser Chip befindet sich auf dem Studentenausweis.
 		</result>
@@ -152,6 +182,9 @@
         <answer>Sternburger</answer>
         <answer>Radeberger</answer>
         <result>Gehe nun in Richtung Lohmannstraße 23 und nutze den Weg über den Marktplatz, da allgemeine Fragen folgen.
+				
+				
+				
 				Wusstest du schon? Der Mensakeller bietet zusätzlich zu den Musikveranstaltungen regelmäßig Kinovorstellungen mt aktuellen Filmen an.
 		</result>
     </question>
@@ -162,6 +195,9 @@
         <answer>1,2 und 3</answer>
         <answer>5,7 und 4</answer>
 		<result>Ich hoffe ihr seit noch unterwegs.
+			
+			
+			
 				Wusstest du schon? 69 Bachelor- und Masterstudiengänge bereiten 8.020, davon 2038 internationale, 
 				Studenten an sieben Fachbereichen auf das Berufsleben vor.</result>
     </question>
@@ -172,6 +208,9 @@
         <answer>Hansestadt</answer>
         <answer>Bauhausstadt</answer>
 		<result>Ihr habts bald gechafft :-)
+		
+		
+		
 				Wusstest du schon? Köthen ist die  Welthauptstadt der Homöopathie.
 				Aktuell ist Köthen die Kreisstadt des Bereiches Anhalt-Bitterfeld und hat etwa 27.400 Einwohner.</result>
     </question>
@@ -181,7 +220,10 @@
         <answer answer="true">St. Jakob</answer>
         <answer>St. Agnus</answer>
         <answer>St. Anna</answer>
-		<result>Wusstest du schon? Das Schloss Köthen befindet sich im Herzen der Stadt 
+		<result>
+		
+		
+		Wusstest du schon? Das Schloss Köthen befindet sich im Herzen der Stadt 
 				und diente von 1244 bis 1845 als anhaltische Fürstenresidenz.
 				Es war außerdem seit 1629 Sitz der fruchtbringenden Gesellschaft, des ersten deutschen Sprachvereins, der 1617 in Weimar gegründet wurde.
 				</result>
@@ -192,7 +234,10 @@
         <answer answer="true">40 Meter</answer>
         <answer>50 Meter</answer>
         <answer>60 Meter</answer>
-		<result>Wusstest du schon? Johann Sebastian Bach wirkte in Köthen zwischen 1717 und 1732 als Hofkapellmeister Leopolds von Anhalt Köthen und schuff hier Teile seiner Brandenburgischen Konzerte 
+		<result>
+		
+		
+		Wusstest du schon? Johann Sebastian Bach wirkte in Köthen zwischen 1717 und 1732 als Hofkapellmeister Leopolds von Anhalt Köthen und schuff hier Teile seiner Brandenburgischen Konzerte 
 				und seines Zyklus das wohltemperierte Klavier.</result>
     </question>
     <question>
@@ -202,6 +247,9 @@
         <answer>grün und gelb</answer>
         <answer>orange und lila</answer>
         <result>Du solltest nun das Gebäude 23 in der Lohmannstraße erreicht haben, um weitere Fragen beantworten zu können.
+				
+				
+				
 				Wusstest du schon? Leopold von Anhalt Köthen war regierender Fürst von Anhalt Köthen. Er ist als Förderer 
 				und lebenslanger Freund Johann Sebastian Bachs in die Geschichte eingegangen.
 		</result>
@@ -214,7 +262,10 @@
         <answer answer="true">Fachbereich 5</answer>
         <answer>Fachbereich 2</answer>
         <answer>Fachbereich 6</answer>
-		<result>Wusstest du schon?
+		<result>		
+		
+		
+		Wusstest du schon?
 			    Rund 430 ausländische Studenten bereitet sich am Landesstudinekolleg auf ein erfoglreiches Studium in Deutschland vor.</result>
     </question>
     <question>
@@ -227,6 +278,9 @@
         <answer>rotes Gebäude</answer>
         <answer>Hugo-Junkers Gebäude</answer>
         <result>Gehe nun hinter das Gebäude 23
+				
+				
+				
 				Wusstest du schon? Der Namensgeber des Gebäudes, Wolfgang Ratke, lebte in der Zeit von 1618 bis 1620 in Köthen 
 				und gründete dort den ersten Schulbuchverlag sowie eine Schule für Jungen und Mädchen.</result>
     </question>
@@ -239,6 +293,9 @@
         <answer>Wohnheim 3</answer>
         <answer>Wohnheim 4</answer>
         <result>Gehe nun in das Gebäude der Lohmannstraße
+				
+				
+				
 				Wusstest du schon? Das Gebäude wird erst seit dem Jahr 2000 durch den Fachbereich Informatik und Sprachen benutzt.
 				Vorher wurde es bereits drei Jahre für die Organisationen des Studienkollegs 
 				und des europäischen Fernstudienzentrums im Hochschulverband Sachsen Anhalt genutzt.
