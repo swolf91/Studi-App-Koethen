@@ -22,11 +22,11 @@ Technikinteressierte werden durch das praxisnahe Studium begeistert und angezoge
         <url>http://www.emw.hs-anhalt.de/www/</url>
         <registerImage>buildings/Gebaeude01.JPG</registerImage>
         <registerImage>buildings/Gebaeude01_2.JPG</registerImage>
-        <registerImage>buildings/Raumplaene/rotesgebaeude01_KG</registerImage>
-        <registerImage>buildings/Raumplaene/rotesgebaeude01_EG</registerImage>
-        <registerImage>buildings/Raumplaene/rotesgebaeude01_1OG</registerImage>
-        <registerImage>buildings/Raumplaene/rotesgebaeude01_2OG</registerImage>
-        <registerImage>buildings/Raumplaene/rotesgebaeude01_3OG</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_KG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_EG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_1OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_2OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_3OG.jpg</registerImage>
     </building>
     <building>
     <id>1</id>
@@ -48,11 +48,11 @@ Prof. Dr. Joachim Breme ist Dekan des Fachbereichs 7 und spezialisiert im Bereic
         <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
         <registerImage>buildings/Gebaeude02.JPG</registerImage>
         <registerImage>buildings/Gebaeude02_2.JPG</registerImage>
-        <registerImage>buildings/Raumplaene/gruenesgebaeude02_KG</registerImage>
-        <registerImage>buildings/Raumplaene/gruenesgebaeude02_EG</registerImage>
-        <registerImage>buildings/Raumplaene/gruenesgebaeude02_1OG</registerImage>
-        <registerImage>buildings/Raumplaene/gruenesgebaeude02_2OG</registerImage>
-        <registerImage>buildings/Raumplaene/gruenesgebaeude02_3OG</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_KG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_EG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_1OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_2OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_3OG.jpg</registerImage>
     </building>
     <building>
     <id>2</id>
