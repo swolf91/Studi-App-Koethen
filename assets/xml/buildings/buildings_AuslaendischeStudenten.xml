@@ -21,6 +21,8 @@ Darueber hinaus kann man auch Lehrgaenge mit abschließenden Zertifikaten im Ber
         <url>http://www.inf.hs-anhalt.de/sprachenzentrum/sprachenzentrum/</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/Ratke_EG.png</registerImage>
+        <registerImage>buildings/Raumplaene/Ratke_OG.png</registerImage>
     </building>
     
     <building>
@@ -43,6 +45,8 @@ und nehmen die Feststellungspruefung ab.
         <url>http://www.hs-anhalt.de/international/landesstudienkolleg.html</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/Ratke_EG.png</registerImage>
+        <registerImage>buildings/Raumplaene/Ratke_OG.png</registerImage>
     </building>
  
      
