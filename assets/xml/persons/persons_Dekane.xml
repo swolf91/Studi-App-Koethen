@@ -15,15 +15,15 @@
         <buildings>23</buildings>
         <room>132</room>
         <description></description>
-        <professions>
-            <profession>Softwaretechnik</profession>
-            <profession>Softwareentwicklung</profession>
-            <profession>Compiler und Laufzeitsysteme</profession>
-        </professions>
+        <profession>Softwaretechnik</profession>
         <modules>
-            <module>Softwaretechnik</module>
+            <module>Softwearetechnik</module>
+            <module>Softwareentwicklung</module>
+	    <module>Compiler und Laufzeitsysteme</module>
         </modules>
-        <responsibility>Dekanin</responsibility>
+	<responsibilities>
+        	<responsibility>Leitung der Fakultaet</responsibility>
+	</responsibilities>
         <talkTime></talkTime>
         <phone>+49-3496-67-3121</phone>
         <email>u.fissgus@inf.hs-anhlt.de</email>
@@ -44,8 +44,10 @@
         <room>219</room>
         <description></description>
         <profession>Leistungselektronik und Antriebe</profession>
-        <module></module>
-        <responsibility>Dekan</responsibility>
+        <modules><module></module></modules>
+        <responsibilities>
+	<responsibility>Leitung der Fakultaet</responsibility>
+	</responsibilities>
         <talkTime></talkTime>
         <phone>+49 (0) 3496 67 2334</phone>
         <email>dekan@emw.hs-anhalt.de</email>
@@ -67,8 +69,10 @@
         <room>213</room>
         <description></description>
         <profession>Mathematik</profession>
-        <module></module>
-        <responsibility>Dekan</responsibility>
+        <modules><module></module></modules>
+	<responsibilities>
+        <responsibility>Leitung der Fakultaet</responsibility>
+	</responsibilities>
         <talkTime></talkTime>
         <phone>+49 (0) 3496 67 2517</phone>
         <email>dekan@bwp.hs-anhalt.de</email>
