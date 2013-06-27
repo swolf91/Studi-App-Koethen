@@ -16,7 +16,8 @@
         android:onClick="onButtonClick"
         android:scaleType="fitStart"
         android:src="@drawable/mainactivity_button_koethen"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:padding="1px" />
 
     <ImageView
         android:layout_width="fill_parent"
@@ -26,7 +27,8 @@
         android:onClick="onButtonClick"
         android:scaleType="fitEnd"
         android:src="@drawable/mainactivity_button_campus"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:padding="1px" />
 
     <ImageView
         android:layout_width="fill_parent"
@@ -36,7 +38,8 @@
         android:onClick="onButtonClick"
         android:scaleType="fitStart"
         android:src="@drawable/mainactivity_button_tour"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:padding="1px" />
 
     <ImageView
         android:layout_width="fill_parent"
@@ -46,5 +49,9 @@
         android:onClick="onButtonClick"
         android:scaleType="fitEnd"
         android:src="@drawable/mainactivity_button_karte"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:paddingBottom="5px"
+        android:paddingLeft="1px"
+        android:paddingTop="1px"
+        android:paddingRight="1px" />
 </LinearLayout>
