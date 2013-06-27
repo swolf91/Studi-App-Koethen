@@ -290,14 +290,19 @@ public class DetailActivity extends Activity
             return true;
 
         case R.id.action_main:
-            Intent intent  = new Intent(this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
+            Intent mainIntent  = new Intent(this, MainActivity.class);
+            mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(mainIntent);
             return true;
 
-//        case R.id.action_list:
-//            startActivity(new Intent(this, ExpandableListActivity.class));
-//            return true;
+        case R.id.action_list:
+            Intent listIntent = new Intent(this, ExpandableListActivity.class);
+            if(!(this.building instanceof CollegeBuilding))
+            {
+                listIntent.putExtra("isCampus", false);
+            }
+            startActivity(listIntent);
+            return true;
 
 
         default:
