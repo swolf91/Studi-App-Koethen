@@ -172,5 +172,6 @@
         android:layout_marginTop="-60dp"
         android:onClick="openMap"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffff" />
 </LinearLayout>

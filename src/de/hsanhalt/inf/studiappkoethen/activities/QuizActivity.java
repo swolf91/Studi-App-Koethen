@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +29,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.drawable;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.R.string;
 import de.hsanhalt.inf.studiappkoethen.util.FilterBundle;
@@ -123,8 +125,10 @@ public class QuizActivity extends Activity
                 linearLayout.addView(messageView);
 
                 params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
-                params.setMargins(0, -75, 0, 0);
+                params.setMargins(10, -80, 10, 10);
                 Button button = new Button(this);
+                button.setBackgroundDrawable(this.getResources().getDrawable(drawable.button));
+                button.setTextColor(Color.WHITE);
                 button.setLayoutParams(new LinearLayout.LayoutParams(params));
                 button.setText(this.getResources().getString(string.quiz_button_startbutton));
                 button.setOnClickListener(this.OnButtonClickListener);
@@ -148,7 +152,9 @@ public class QuizActivity extends Activity
 
                     Button buildingButton = new Button(this);
                     MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
-                    params.setMargins(0, 0, 75, 0);
+                    params.setMargins(10, 5, 85, 5);
+                    buildingButton.setBackgroundDrawable(this.getResources().getDrawable(drawable.button));
+                    buildingButton.setTextColor(Color.WHITE);
                     buildingButton.setLayoutParams(new LinearLayout.LayoutParams(params));
                     linearLayoutInner.addView(buildingButton);
 
@@ -210,8 +216,10 @@ public class QuizActivity extends Activity
                 linearLayout.addView(messageView);
 
                 params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
-                params.setMargins(0, -75, 0, 0);
+                params.setMargins(10, -80, 10, 10);
                 Button button = new Button(this);
+                button.setBackgroundDrawable(this.getResources().getDrawable(drawable.button));
+                button.setTextColor(Color.WHITE);
                 button.setLayoutParams(new LinearLayout.LayoutParams(params));
                 button.setText(this.getResources().getString(string.quiz_button_nextquestion));
                 button.setOnClickListener(this.OnButtonClickListener);
@@ -266,8 +274,10 @@ public class QuizActivity extends Activity
                 messageView.setText(message);
 
                 params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
-                params.setMargins(0, -75, 0, 0);
+                params.setMargins(10, -80, 10, 10);
                 Button button = new Button(this);
+                button.setBackgroundDrawable(this.getResources().getDrawable(drawable.button));
+                button.setTextColor(Color.WHITE);
                 button.setLayoutParams(new LinearLayout.LayoutParams(params));
                 button.setText(this.getResources().getString(string.quiz_button_exitquiz));
                 button.setOnClickListener(this.OnButtonClickListener);

@@ -64,7 +64,7 @@
     </string>
     <string name="quiz_analysis_bad">
         Naja, das kannst du auch besser. String dich naechstes mal besser an.
-        \nDu hast =p Prozent des Quizes richtig beantwortet. Das entspricht =c-=q Fragen.
+        \nDu hast =p Prozent des Quizes richtig beantwortet. Das entspricht =c/=q Fragen.
     </string>
     <string name="quiz_analysis_medium">
         Kopf hoch, begehe den Campus einfach noch einmal und beim naechsten Mal klappt es bestimmt besser.
@@ -75,7 +75,7 @@
         =p Prozent bzw =c/=q Fragen richtig beantwortet.
     </string>
     <string name="quiz_analysis_verygood">
-        Grossartig! Das muss dir erstmal einer nachmachen. Du hast fast alle Fragen richtig beanwort.
+        Grossartig! Das muss dir erstmal einer nachmachen. Du hast fast alle Fragen richtig beanwortet.
         \nUm genau zu sein =p Prozent bzw =c/=q Fragen. Weiter so!
     </string>
     <string name="quiz_analysis_perfekt">
