@@ -113,8 +113,7 @@ public class PersonDetailActivity extends Activity
         }        
         if (this.person.getProfession() != null)
         {
-        	String [] tmpProfession= resources.getStringArray(string.detail_person_profession);
-            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_profession), true));
+        	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_profession), true));
             linearLayout.addView(this.createTextView(this.person.getProfession(), false));
         }        
         if (this.person.getModuls() != null)
