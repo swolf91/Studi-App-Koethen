@@ -19,11 +19,12 @@ import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
 import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
 
 /**
- * Detailanzeige Activity fuer die Personen. *
+ * Detailanzeige Activity fuer die Personen. 
  */
 public class PersonDetailActivity extends Activity
 {
     private Person person = null;
+    
 
     /**
      * Konstruiert das passende Personen Objekt fuer die gewuenschte Auswahl.
@@ -118,21 +119,21 @@ public class PersonDetailActivity extends Activity
         }        
         if (this.person.getModuls() != null)
         {	
-        String [] tmpModulesHeadline = resources.getStringArray(string.detail_person_modules);
-        String [] tmpModules = this.person.getModuls();
+       
+        	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_modules), true));
+        	String [] tmpModules = this.person.getModuls();
         
-        	for(int i=0;i<tmpModulesHeadline.length;i++){
-	            linearLayout.addView(this.createTextView(tmpModulesHeadline[i], true));
-	            linearLayout.addView(this.createTextView(tmpModules[i], false));
+        	for(int i=0;i<tmpModules.length;i++){
+	             linearLayout.addView(this.createTextView(tmpModules[i], false));
         	}
         }        
         if (this.person.getResponsibilities() != null)
         {
-            String [] tmpResponsibilitiesHeadline = resources.getStringArray(string.detail_person_responsibility);
+        	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_responsibility), true));
             String [] tmpResponsibilities = this.person.getResponsibilities();
             
-            	for(int i=0;i<tmpResponsibilitiesHeadline.length;i++){
-    	            linearLayout.addView(this.createTextView(tmpResponsibilitiesHeadline[i], true));
+            	for(int i=0;i<tmpResponsibilities.length;i++){
+    	            
     	            linearLayout.addView(this.createTextView(tmpResponsibilities[i], false));
             	}
         }        

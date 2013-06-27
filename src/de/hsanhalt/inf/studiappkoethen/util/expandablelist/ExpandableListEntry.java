@@ -1,7 +1,6 @@
 package de.hsanhalt.inf.studiappkoethen.util.expandablelist;
 /**
  * Objekt fuer eine Eintrag in die ExpandableList. Ein Eintrag enthaelt eine Kategorie und beliebig viele Unterelemente.
- * @author Stefan Wolf, Gordian Kauf
  *
  * @param <G> Liste von Kategorieeintraegen
  * @param <C> Kategorie

@@ -31,8 +31,6 @@ import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
 /**
  * Enthaelt alle Funktionen um Interaktionen zwischen ExpandableList und ExpandableListActivity zu verwalten.
  *
- * @author Stefan Wolf, Gordian Kauf
- * @version 1.0
  */
 public class ExpandableListActivity extends Activity
 {

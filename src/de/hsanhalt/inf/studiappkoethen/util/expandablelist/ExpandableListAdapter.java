@@ -14,7 +14,6 @@ import de.hsanhalt.inf.studiappkoethen.R.layout;
 /**
  * Diese Klasse ist zur Laufzeit da,
  * um die Werte fuer Personen und Gebaeude zu kombinieren, die der ExpandableListAdapter weiterverarbeitet.
- * @author Stefan Wolf, Gordian Kauf
  *
  * @param <G> Liste der Gebaeude oder Personen
  * @param <C> zugehoerige Kategorie

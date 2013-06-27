@@ -1,7 +1,10 @@
 package de.hsanhalt.inf.studiappkoethen.xml.persons;
 
 import java.net.URL;
-
+/**
+ * In diesem Objekt finden sich alle Daten zu einer Person wieder.
+ *
+ */
 public class Person
 {
     private final PersonCategory personCategory;
@@ -147,7 +150,9 @@ public class Person
     {
         return this.name;
     }
-    
+    /**
+     * Gibt die ID einer Person zurueck.
+     */
     public byte getID()
     {
     	return this.id;
@@ -305,6 +310,9 @@ public class Person
         return tmp;
     }
     
+    /**
+     * Konvertiert eine Person zu einem String.
+     */
     public String toString()
     {
         String tmp = "";
