@@ -22,6 +22,11 @@ Technikinteressierte werden durch das praxisnahe Studium begeistert und angezoge
         <url>http://www.emw.hs-anhalt.de/www/</url>
         <registerImage>buildings/Gebaeude01.JPG</registerImage>
         <registerImage>buildings/Gebaeude01_2.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_KG</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_EG</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_1OG</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_2OG</registerImage>
+        <registerImage>buildings/Raumplaene/rotesgebaeude01_3OG</registerImage>
     </building>
     <building>
     <id>1</id>
@@ -43,6 +48,11 @@ Prof. Dr. Joachim Breme ist Dekan des Fachbereichs 7 und spezialisiert im Bereic
         <url>http://www.bwp.hs-anhalt.de/fachbereich.html</url>
         <registerImage>buildings/Gebaeude02.JPG</registerImage>
         <registerImage>buildings/Gebaeude02_2.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_KG</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_EG</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_1OG</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_2OG</registerImage>
+        <registerImage>buildings/Raumplaene/gruenesgebaeude02_3OG</registerImage>
     </building>
     <building>
     <id>2</id>
@@ -67,5 +77,7 @@ Frau Prof. Dr. Ursula Fissgus ist die Dekanin, welche selbst im Bereich Programm
         <url>http://www.inf.hs-anhalt.de/</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/Ratke_EG.png</registerImage>
+        <registerImage>buildings/Raumplaene/Ratke_OG.png</registerImage>
     </building>
 </buildings>
