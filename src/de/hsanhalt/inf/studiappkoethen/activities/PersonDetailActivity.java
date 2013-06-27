@@ -32,7 +32,7 @@ public class PersonDetailActivity extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        this.setContentView(layout.activity_person_detail_withimage);
+        this.setContentView(layout.activity_person_detail);
 
         byte categorieID = this.getIntent()
                                .getByteExtra("category", (byte)-1);   // ruft die ID der Kategorie aus den uebergebenen Parametern ab
@@ -51,10 +51,10 @@ public class PersonDetailActivity extends Activity
         PersonManager personManager = PersonManager.getInstance();
         this.person = personManager.getPerson(personCategoryManager.getCategory(categorieID), personID);
 
-        this.fillScrollView(linearLayout);
+        this.fillLinearLayout(linearLayout);
     }
 
-    private void fillScrollView(LinearLayout linearLayout)
+    private void fillLinearLayout(LinearLayout linearLayout)
     {
         Resources resources = this.getResources();
 
