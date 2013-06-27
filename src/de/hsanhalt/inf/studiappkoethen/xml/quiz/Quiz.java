@@ -2,10 +2,19 @@ package de.hsanhalt.inf.studiappkoethen.xml.quiz;
 
 public class Quiz
 {
+    /**
+     * ID des Quizzes
+     */
     private final byte id;
 
+    /**
+     * Array, dass die ganzen Fragen beinhaltet
+     */
     private final Question[] questions;
 
+    /**
+     * Name des Quizzes
+     */
     private final String name;
 
     private final String startMessage;

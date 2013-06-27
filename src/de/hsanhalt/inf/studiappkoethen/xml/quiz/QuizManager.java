@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -14,6 +13,10 @@ public class QuizManager implements IXmlParsing
     private static QuizManager INSTANCE;
     private List<Quiz> quizList;
 
+    /**
+     * Gibt eine Instanz dieser Klasse zurueck
+     * @return Instanz dieser Klasse
+     */
     public static QuizManager getInstance()
     {
         if(INSTANCE == null)
@@ -23,11 +26,19 @@ public class QuizManager implements IXmlParsing
         return INSTANCE;
     }
 
+    /**
+     * Konstruktor darf nur ueber getInstance() erstellt werden.
+     */
     private QuizManager()
     {
         this.quizList = new ArrayList<Quiz>(3);
     }
 
+    /**
+     * Gibt ein Quiz zurueck
+     * @param id - ID des Quizzes, dass zurueckgegeben werden soll
+     * @return
+     */
     public Quiz getQuiz(byte id)
     {
         for(Quiz quiz : quizList)
@@ -40,6 +51,10 @@ public class QuizManager implements IXmlParsing
         return null;
     }
 
+    /**
+     * Gibt ein Array mit allen Quizzen zurueck
+     * @return
+     */
     public Quiz[] getQuizs()
     {
         return this.quizList.toArray(new Quiz[this.quizList.size()]);
@@ -99,6 +114,11 @@ public class QuizManager implements IXmlParsing
         }
     }
 
+    /**
+     * parst die einzelnen Fragen aus der XML und gibt diese als Question-Objekt zurueck
+     * @param node
+     * @return
+     */
     private Question getQuestion(Node node)
     {
         byte id = -1;
