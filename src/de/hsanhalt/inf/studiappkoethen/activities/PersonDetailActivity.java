@@ -54,7 +54,10 @@ public class PersonDetailActivity extends Activity
 
         this.fillLinearLayout(linearLayout);
     }
-
+    /**
+     * Fuellt das Layout der Activity mit den Personendaten.
+     * @param linearLayout zum fuellen.
+     */
     private void fillLinearLayout(LinearLayout linearLayout)
     {
         Resources resources = this.getResources();
@@ -159,7 +162,13 @@ public class PersonDetailActivity extends Activity
         }        
         
     }
-
+    /**
+     * Verschoenert unsere Textviews.
+     * 
+     * @param label das zu bearbeitende Label.
+     * @param headline ist es eine Ueberschrift?
+     * @return gibt die verschoenerte TextView zurueck.
+     */
     private TextView createTextView(String label, boolean headline)
     {
         int padding = headline ? 10 : 20;

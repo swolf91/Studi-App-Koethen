@@ -8,7 +8,10 @@ import android.util.Log;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+/**
+ * Bekommt Daten aus der XML und fuegt diese zu einem Personen-Objekt zusammen.
+ *
+ */
 public class PersonManager implements IXmlParsing
 {
 
@@ -85,7 +88,10 @@ public class PersonManager implements IXmlParsing
         }
         return personList;
     }
-
+    
+    /**
+     * Wertet ein XML Knote aus und teilt jedem neuen Personenobjekt eine Kategorie zu.
+     */
     @Override
     public void addNode(Node node)
     {
@@ -273,9 +279,8 @@ public class PersonManager implements IXmlParsing
     }
 
     /**
-     * Sucht den Anfang der Person XML.
+     * Zur erkennung des Anfangs der Personen-XML. 
      *
-     * @return String
      */
     @Override
     public String getStartTag()
