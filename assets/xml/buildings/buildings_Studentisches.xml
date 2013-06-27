@@ -103,6 +103,10 @@ Die zentrale Wache hat ebenso ihren Platz im Lehr- und Verwaltungsgebaeude.
         </description>
         <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Gebaeude03.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_EG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_1OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_2OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_3OG.jpg</registerImage>
     </building>
 
     <building>
@@ -123,6 +127,10 @@ Die zentrale Wache hat ebenso ihren Platz im Lehr- und Verwaltungsgebaeude.
         </description>
         <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/gebaeude13.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_KG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_EG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_1OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_2OG.jpg</registerImage>
     </building>
 
     
