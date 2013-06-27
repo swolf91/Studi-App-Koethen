@@ -11,8 +11,7 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
-        android:weightSum="2"
-        android:background="#ffffff">
+        android:weightSum="2">
 
         <LinearLayout
             android:orientation="vertical"
@@ -30,9 +29,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:onClick="onButtonClick"
-                android:background="#ffffff"
-                android:src="@drawable/geb_el2"
-                android:layout_margin="3px" />
+                android:background="#e7e7e7"
+                android:src="@drawable/explist_gebaeude"
+                android:layout_margin="3px"
+                android:scaleType="center" />
 
         </LinearLayout>
 
@@ -53,9 +53,9 @@
                 android:layout_alignParentTop="true"
                 android:onClick="onButtonClick"
                 android:layout_margin="3px"
-                android:background="#ffffff"
-                android:src="@drawable/pers_el2"
-                />
+                android:background="#e7e7e7"
+                android:src="@drawable/explist_personen"
+                android:scaleType="center" />
         </LinearLayout>
     </LinearLayout>
 

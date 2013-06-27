@@ -7,6 +7,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,14 +66,14 @@ public class ExpandableListActivity extends Activity
             if (this.showBuildings)
             {
                 ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Buildings);
-                imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.geb_el));
+                imageView.setBackgroundColor(Color.rgb(255, 255, 255));
                 this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus));
                 this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
             }
             else
             {
                 ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Persons);
-                imageView.setImageDrawable(this.getResources().getDrawable(R.drawable.pers_el));
+                imageView.setBackgroundColor(Color.rgb(255, 255, 255));
                 this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList());
                 this.expandableListView.setAdapter(this.expandableListAdapterPerson);
             }
