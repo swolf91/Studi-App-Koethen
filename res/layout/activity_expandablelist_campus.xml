@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/detailactivity_background"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,23 +7,57 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView_Buildings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:onClick="onButtonClick"
-        android:src="@drawable/geb_el2" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:weightSum="2"
+        android:background="#ffffff">
 
-    <ImageView
-        android:id="@+id/imageView_Persons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:onClick="onButtonClick"
-        android:src="@drawable/pers_el2" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ff0000"
+            android:layout_margin="5px"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView_Buildings"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onButtonClick"
+                android:background="#ffffff"
+                android:src="@drawable/geb_el2"
+                android:layout_margin="3px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ff0000"
+            android:layout_margin="5px"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView_Persons"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onButtonClick"
+                android:layout_margin="3px"
+                android:background="#ffffff"
+                android:src="@drawable/pers_el2"
+                />
+        </LinearLayout>
+    </LinearLayout>
 
     <ExpandableListView
         android:id="@+id/expandableListView_Campus"
@@ -34,4 +68,4 @@
 
     </ExpandableListView>
 
-</RelativeLayout>
+</LinearLayout>
