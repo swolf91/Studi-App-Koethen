@@ -69,6 +69,95 @@ public class PersonDetailActivity extends Activity
 
         linearLayout.addView(this.createTextView(resources.getString(string.detail_person_surname), true));
         linearLayout.addView(this.createTextView(this.person.getSurname(), false));
+        
+        if (this.person.getSpecialField() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_specialfield), true));
+            linearLayout.addView(this.createTextView(this.person.getSpecialField(), false));
+        }
+        
+        if (this.person.getStreet() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_street), true));
+            linearLayout.addView(this.createTextView(this.person.getStreet(), false));
+        }        
+        if (this.person.gethouseNumber() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_buildingnumber), true));
+            linearLayout.addView(this.createTextView(this.person.gethouseNumber(), false));
+        }        
+        if (this.person.getPostalCode() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_postalcode), true));
+            linearLayout.addView(this.createTextView(this.person.getPostalCode(), false));
+        }        
+        if (this.person.getCity() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_city), true));
+            linearLayout.addView(this.createTextView(this.person.getCity(), false));
+        }        
+        if (this.person.getBuilding() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_buildings), true));
+            linearLayout.addView(this.createTextView(this.person.getBuilding(), false));
+        }        
+        if (this.person.getRoom() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_room), true));
+            linearLayout.addView(this.createTextView(this.person.getRoom(), false));
+        }        
+        if (this.person.getDescription() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_description), true));
+            linearLayout.addView(this.createTextView(this.person.getDescription(), false));
+        }        
+        if (this.person.getProfession() != null)
+        {
+        	String [] tmpProfession= resources.getStringArray(string.detail_person_profession);
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_profession), true));
+            linearLayout.addView(this.createTextView(this.person.getProfession(), false));
+        }        
+        if (this.person.getModuls() != null)
+        {	
+        String [] tmpModulesHeadline = resources.getStringArray(string.detail_person_modules);
+        String [] tmpModules = this.person.getModuls();
+        
+        	for(int i=0;i<tmpModulesHeadline.length;i++){
+	            linearLayout.addView(this.createTextView(tmpModulesHeadline[i], true));
+	            linearLayout.addView(this.createTextView(tmpModules[i], false));
+        	}
+        }        
+        if (this.person.getResponsibilities() != null)
+        {
+            String [] tmpResponsibilitiesHeadline = resources.getStringArray(string.detail_person_responsibility);
+            String [] tmpResponsibilities = this.person.getResponsibilities();
+            
+            	for(int i=0;i<tmpResponsibilitiesHeadline.length;i++){
+    	            linearLayout.addView(this.createTextView(tmpResponsibilitiesHeadline[i], true));
+    	            linearLayout.addView(this.createTextView(tmpResponsibilities[i], false));
+            	}
+        }        
+        if (this.person.getTalkTime() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_talktime), true));
+            linearLayout.addView(this.createTextView(this.person.getTalkTime(), false));
+        }        
+        if (this.person.getPhone() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_phone), true));
+            linearLayout.addView(this.createTextView(this.person.getPhone(), false));
+        }        
+        if (this.person.getEmail() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_email), true));
+            linearLayout.addView(this.createTextView(this.person.getEmail(), false));
+        }        
+        if (this.person.getUrl() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_url), true));
+            linearLayout.addView(this.createTextView(this.person.getUrl().toString(), false));
+        }        
+        
     }
 
     private TextView createTextView(String label, boolean headline)
