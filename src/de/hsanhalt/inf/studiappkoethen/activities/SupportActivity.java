@@ -1,14 +1,11 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
 import de.hsanhalt.inf.studiappkoethen.R;
-import de.hsanhalt.inf.studiappkoethen.R.layout;
-import de.hsanhalt.inf.studiappkoethen.R.menu;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 
 public class SupportActivity extends Activity
 {

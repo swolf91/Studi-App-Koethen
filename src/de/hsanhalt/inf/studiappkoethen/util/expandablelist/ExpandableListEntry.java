@@ -7,11 +7,18 @@ package de.hsanhalt.inf.studiappkoethen.util.expandablelist;
  */
 public class ExpandableListEntry<G, C>
 {
+    /**
+     * Der Oberpunkt von diesem Eintrag
+     */
     private G group;
+    /**
+     * Die Unterpunkte, die zu diesem Eintrag gehoeren.
+     */
     private C[] childs;
     /**
      * Konstruktor fuer die benoetigten Items der Liste.
-     * @param Kategorie und Kategorieeintraege
+     * @param group - Oberpunkt
+     * @param childs - Unterpunkte
      */
     public ExpandableListEntry(G group, C... childs)
     {

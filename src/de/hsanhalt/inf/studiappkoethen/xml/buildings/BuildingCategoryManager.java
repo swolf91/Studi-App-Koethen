@@ -55,25 +55,6 @@ public final class BuildingCategoryManager implements IXmlParsing
         return this.categoryMap.get(id);
     }
 
-    /**
-     * Gibt die Kategorie zurueck, die den jeweiligen Namen besitzt.
-     * @param name
-     * @return
-     */
-    public BuildingCategory getCategory(String name)
-    {
-//        TODO Diese Methode evtl umbauen (Levenstin Distance?)
-        for (Entry<Byte, BuildingCategory> entry : this.categoryMap.entrySet())
-        {
-            BuildingCategory category = entry.getValue();
-            if (category.getName().equals(name))
-            {
-                return category;
-            }
-        }
-        return null;
-    }
-
     @Override
     public void addNode(Node node)
     {
