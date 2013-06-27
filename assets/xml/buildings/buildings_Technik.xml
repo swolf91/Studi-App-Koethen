@@ -39,6 +39,10 @@ Das Elektrotechniklabor dient den technikinteressierten Studenten zur Ausbildung
         </description>
 <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Studentenrat_Werkstatt.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_KG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_EG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_1OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/technischeverwaltung13_2OG.jpg</registerImage>
     </building>
     
         <building>
@@ -77,6 +81,10 @@ M+R Meß- und Regelungstechnik GmbH
         </description>
         <url>http://www.hs-anhalt.de/</url>
         <registerImage>buildings/Gebaeude0708.JPG</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_EG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_1OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_2OG.jpg</registerImage>
+        <registerImage>buildings/Raumplaene/weissesgebaeude03_3OG.jpg</registerImage>
 </building>
     
     </buildings>
