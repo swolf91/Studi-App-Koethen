@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <quiz>
     <id>0</id>
     <name>Standard Campusquiz</name>
@@ -109,7 +110,7 @@
         <answer>Ziege</answer>
         <answer>Bär</answer>
         <result>Gehe nun zum Technologiezentrum
-				Wusstest du schon? Hugo Junkers lebte von 1859 bis 1935 und gründete 1895 ind Dessau die Firma Junkers & Co.
+				Wusstest du schon? Hugo Junkers lebte von 1859 bis 1935 und gründete 1895 ind Dessau die Firma Junkers und Co.
 				Weiterhin schuf er wichtige Kenntnisse in den bereichen Flugzeugbau und Metallbau.
 				</result>
     </question>

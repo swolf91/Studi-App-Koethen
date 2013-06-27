@@ -163,7 +163,12 @@ public class QuizManager implements IXmlParsing
                 }
                 else if(subNode.getNodeName().equals("result"))
                 {
-                    result = content;
+                    String[] tmp = content.split("\n");
+                    result = "";
+                    for(String string : tmp)
+                    {
+                        result += string.trim() + "\n";
+                    }
                 }
                 else if(subNode.getNodeName().equals("buildingCategory"))
                 {
