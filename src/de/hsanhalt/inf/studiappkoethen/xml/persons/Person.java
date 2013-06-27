@@ -25,7 +25,7 @@ public class Person
     /**
      * Fachgebiet der Person
      */
-    private final String specialField;          // TODO ueberlegen ob nicht vielleicht mehrere Fachgebiete vorhanden sein koennen!?
+    private final String specialField;
     /**
      * Strasse des Arbeitsortes einer Person
      */
