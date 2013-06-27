@@ -41,13 +41,26 @@ import de.hsanhalt.inf.studiappkoethen.xml.quiz.QuizManager;
 
 public class QuizActivity extends Activity
 {
-    private Context context;
-
+    /**
+     * beinhaltet ob die gegebenen Antworten richtig oder falsch waren
+     */
     private List<Boolean> answers;
+    /**
+     * beinhaltet das Quiz, dass gerade abgearbeitet wird
+     */
     private Quiz quiz;
+    /**
+     * beinhaltet die Station, in dem sich das Quiz gerade befindet
+     */
     private QuizState state;
+    /**
+     * liest die zuletzt abgearbeitete quizID aus.
+     */
     private SharedPreferences quizPreferences ;    // Gibt die id des zuletzt geloesten Quizes zurueck.
 
+    /**
+     * OnButtonClickListener, der Klicks auf Buttons verwaltet
+     */
     private OnClickListener OnButtonClickListener = new OnClickListener()
     {
         @Override
@@ -63,7 +76,7 @@ public class QuizActivity extends Activity
             }
             else if(v.getId() == QuizState.QUESTION.hashCode() * Button.class.hashCode() * String.class.hashCode())
             {
-                Toast.makeText(context, quiz.getQuestion(answers.size()).getHint(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), quiz.getQuestion(answers.size()).getHint(), Toast.LENGTH_LONG).show();
             }
             else if(v.getId() == QuizState.QUESTION.hashCode() * Button.class.hashCode() * GoogleMapsActivity.class.hashCode())
             {
@@ -71,7 +84,7 @@ public class QuizActivity extends Activity
                 FilterBundle filterBundle = new FilterBundle(building.getBuildingCategory().getID());
                 filterBundle.addNewBuilding(building.getID());
 
-                Intent intent = new Intent(context, GoogleMapsActivity.class);
+                Intent intent = new Intent(getBaseContext(), GoogleMapsActivity.class);
                 intent.putExtras(filterBundle.getBundle());
                 startActivity(intent);
             }
@@ -82,7 +95,7 @@ public class QuizActivity extends Activity
                 if(amount >= 0 && amount < question.getAnswers().length)
                 {
                     boolean result = question.isCorrectAnswer(amount);
-                    Toast.makeText(context, result ? "richtig" : "falsch", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), result ? "richtig" : "falsch", Toast.LENGTH_SHORT).show();
                     answers.add(result);
                     nextStage(answers.size() - 1);
                 }
@@ -90,14 +103,13 @@ public class QuizActivity extends Activity
         }
     };
 
-    public QuizActivity()
-    {
-        super();
-        this.context = this;
-    }
-
+    /**
+     * Erstellt das Layout des Quizes.
+     * Dieses wird aus der State die anzuzeigen wird erzeugt. Also die State gibt die Information
+     * @param savedInstanceState
+     */
     @Override
-    protected void onCreate(Bundle savedInstanceState)               // TODO javadoc
+    protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_quiz);
@@ -116,7 +128,7 @@ public class QuizActivity extends Activity
             this.quiz = QuizManager.getInstance().getQuiz(lastQuiz);
             this.state = this.load();
 
-            if(this.state == QuizState.WELCOME_MESSAGE)
+            if(this.state == QuizState.WELCOME_MESSAGE) // Layout wenn sich Quiz im Willkommensbildschirm befindet
             {
                 MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
                 params.setMargins(0, 0, 0, 75);
@@ -135,14 +147,14 @@ public class QuizActivity extends Activity
                 button.setId(this.state.hashCode() * Button.class.hashCode());
                 linearLayout.addView(button);
             }
-            else if(this.state == QuizState.QUESTION)
+            else if(this.state == QuizState.QUESTION) // Layout wenn sich Quiz im Fragebildschirm befindet
             {
                 Question question = this.quiz.getQuestion(this.answers.size());
 
                 boolean hasBuilding = question.getBuilding() != null;
                 boolean hasHint = question.getHint() != null;
 
-                if(hasBuilding || hasHint)
+                if(hasBuilding || hasHint)  // Erstellt extra-Bereich fuer Map- und Hinweisbutton
                 {
                     LinearLayout linearLayoutInner = new LinearLayout(this);
                     linearLayoutInner.setPadding(0,0,0,0);
@@ -207,7 +219,7 @@ public class QuizActivity extends Activity
                     buttonlist.remove(button);
                 }
             }
-            else if(this.state == QuizState.RESULT)
+            else if(this.state == QuizState.RESULT) // Layout wenn sich Quiz auf der Fragenauswertungsseite befindet
             {
                 MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
                 params.setMargins(0, 0, 0, 75);
@@ -226,7 +238,7 @@ public class QuizActivity extends Activity
                 button.setId(this.state.hashCode() * Button.class.hashCode());
                 linearLayout.addView(button);
             }
-            else if(this.state == QuizState.ANALYSIS)
+            else if(this.state == QuizState.ANALYSIS)  // Layout fuer die Auswertungsseite wenn Quiz beendet wurde
             {
                 int numberOfCorrectAnswers = 0;
                 for(boolean bool : this.answers)
@@ -294,6 +306,10 @@ public class QuizActivity extends Activity
         }
     }
 
+    /**
+     * Methode laedt das Quiz
+     * @return
+     */
     private QuizState load()
     {
         this.answers = new ArrayList<Boolean>(quiz.getNumberOfQuestions());
@@ -339,6 +355,10 @@ public class QuizActivity extends Activity
         return state;
     }
 
+    /**
+     * Methode speichert Quiz ab
+     * @param state
+     */
     private void save(QuizState state)
     {
         FileOutputStream fileOutputStream = null;
@@ -372,6 +392,10 @@ public class QuizActivity extends Activity
         }
     }
 
+    /**
+     * Ruft die naechste abzuarbeitende Seite im Quiz auf
+     * @param questionNumber
+     */
     public void nextStage(int questionNumber)
     {
         this.state = QuizState.getNextState(this.state, this.quiz, questionNumber);
