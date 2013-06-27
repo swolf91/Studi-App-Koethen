@@ -5,44 +5,44 @@
 
     <person>
         <id>0</id>
-        <name>Nils</name>
-        <surname>Anderson</surname>
+        <name>Anderson</name>
+        <surname>Nils</surname>
         <specialField>Nils ist Teamchef und fuer saemtliche Koordination, Zusammenhalt und Planung zustaendig.
         </specialField>
     </person>
 
     <person>
         <id>1</id>
-        <name>Stefan</name>
-        <surname>Wolf</surname>
+        <name>Wolf</name>
+        <surname>Stefan</surname>
         <specialField>Stefan ist der Quellcode-Guru und erklaert bzw. hilft wo er kann.</specialField>
     </person>
 
     <person>
         <id>2</id>
-        <name>Steven</name>
-        <surname>Piotter</surname>
+        <name>Piotter</name>
+        <surname>Steven</surname>
         <specialField>Steven ist der Designer und zustaendig fuer das Optische der App.</specialField>
     </person>
 
     <person>
         <id>3</id>
-        <name>Stefan</name>
-        <surname>Weichel</surname>
+        <name>Weichel</name>
+        <surname>Stefan</surname>
         <specialField>Stefan ist der Zustaendige fuer die GoogleMaps Integration der App.</specialField>
     </person>
 
     <person>
         <id>4</id>
-        <name>Gordian</name>
-        <surname>Kauf</surname>
+        <name>Kauf</name>
+        <surname>Gordian</surname>
         <specialField>Gordian ist die rechte Hand von Stefan Wolf und hilft bzw. programmiert.</specialField>
     </person>
 
     <person>
         <id>5</id>
-        <name>Sebastian</name>
-        <surname>Maurer</surname>
+        <name>Maurer</name>
+        <surname>Sebastian</surname>
         <specialField>Sebastian ist fuer Inhalte der App und die Erstellung, sowie Pflege von XML-Dateien
             verantwortlich.
         </specialField>

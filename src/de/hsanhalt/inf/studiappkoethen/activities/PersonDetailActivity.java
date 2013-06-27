@@ -119,7 +119,7 @@ public class PersonDetailActivity extends Activity
         	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_profession), true));
             linearLayout.addView(this.createTextView(this.person.getProfession(), false));
         }        
-        if (this.person.getModuls() != null)
+        if (this.person.getModuls() != null && this.person.getModuls().length>0)
         {	
        
         	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_modules), true));
@@ -129,7 +129,7 @@ public class PersonDetailActivity extends Activity
 	             linearLayout.addView(this.createTextView(tmpModules[i], false));
         	}
         }        
-        if (this.person.getResponsibilities() != null)
+        if (this.person.getResponsibilities() != null && this.person.getResponsibilities().length>0)
         {
         	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_responsibility), true));
             String [] tmpResponsibilities = this.person.getResponsibilities();

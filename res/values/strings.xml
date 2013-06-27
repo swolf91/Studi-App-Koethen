@@ -90,14 +90,14 @@
    	<string name="detail_person_state">Titel:</string>
   	<string name="detail_person_name">Name:</string>
    	<string name="detail_person_surname">Vorname:</string>
- 	<string name="detail_person_specialfield">Spezialisierung:</string>
+ 	<string name="detail_person_specialfield">Fachbereich:</string>
    	<string name="detail_person_street">Strasse:</string>
 	<string name="detail_person_buildingnumber">Hausnummer:</string>    
 	<string name="detail_person_postalcode">PLZ:</string>
 	<string name="detail_person_city">Ort:</string>
 	<string name="detail_person_buildings">Gebaeudenummer:</string>
 	<string name="detail_person_room">Raumnummer:</string>
-	<string name="detail_person_description">Berschreibung:</string>
+	<string name="detail_person_description">Beschreibung:</string>
 
 	<string name="detail_person_profession">Fachgebiet:</string>
 	<string name="detail_person_modules">Bietet folgende Module an:</string>
