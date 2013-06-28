@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_close">Beenden</string>
     <string name="action_filter">Filter</string>
+    <string name="action_filteroptions">Filteroptionen</string>
     <string name="action_hs">HS-Gebaeude</string>
     <string name="action_bars">Bars</string>
     <string name="action_main">Hauptseite</string>
@@ -30,11 +31,20 @@
     <string name="detail_mapbutton">Auf Karte anzeigen!</string>
     <string name="detail_button_mapview">Auf Karte anzeigen</string>
     <string name="image_errormsg">Das Bild konnte nicht geladen werden</string>
+    <string name="help_headline_support">Einleitung:</string>
+    <string name="help_headline_map">Campus Map:</string>
+    <string name="help_headline_marker">-Bedeutung der Marker</string>
+    <string name="help_headline_filter">-Benutzung des Filters</string>
+    <string name="help_headline_navigation">-Tipps zur Navigation</string>
+    <string name="help_headline_quiz">Campus Quiz:</string>
     <string name="filter_text">Mithilfe des Filters, welcher im oberen Optionsmenü zu finden ist,\nkönnen die verschiedenen Gebäudegruppen ein oder ausgeblendet werden.
                                Diese Funktion soll dir die Übersicht auf der Köthen Map erleichtern und dabei helfen schneller ein bestimmtes Objekt zu finden.</string>
     <string name="marker_text">Die Marker stellen verschiedene Gebäudegruppen dar. Jeder Marker auf der Karte steht für ein Gebäude oder einen wichtigen Ort.Um nähere Informationen über
                                einen Punkt heraus zu finden,muss man einfach auf den entsprechenden Marker drücken und es öffnet sich ein kleines Informationsfenster\n\nWeiterhin ist es bis jetzt so,
                                dass wenn mehrere Gebäude an einem Fleck sind diese durch mehrmaliges Drücken auf den Marker durchgewählt werden können.</string>
+    <string name="navigation_text">Zur besseren Navigation kann die eigene Position auf der Karte angezeigt werden. Hierfür ist es jedoch erforderlich, die Standortbestimmung in den Smartphone-Einstellungen zu aktivieren.
+        						Über den Button in der oberen rechten Ecke der Karte, kannst du dann die Karte auf deine Position zentrieren.
+								Im Optionsmenü gibt es neben dem Filtereinstellungen auch die Möglichkeit, die Position der Karte und deren Zoonstufe zurück auf den Anfangswert zu setzen.</string>
     <string name="support_text">Willkommen in dem Hilfe-Bereich der Studi App Köthen. Wir haben uns Mühe gegeben alles einfach und intuitiv zu gestalten ,aber da du hier bis um
                                 weitere Sachen zu erfahren haben wir verschiedene Sachen gelistet.</string>
     <string name="map_text">Zu wissen ist ,dass manche Symbole auf der Karte bis jetzt mehrere Bedeutungen haben und diese durch mehrfaches Klicken wechseln.

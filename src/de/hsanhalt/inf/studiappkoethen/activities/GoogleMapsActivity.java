@@ -81,13 +81,13 @@ public class GoogleMapsActivity extends Activity
 	public boolean onOptionsItemSelected(MenuItem item)	// Aufruf des Kontextmenues mit den Filteroptionen
 	{
 		switch(item.getItemId()) {
-			case R.id.action_filter:
-				View view = this.findViewById(id.action_filter);
+			case R.id.action_filter:					// Wenn der Filter ausgewählt wurde ... 
+				View view = this.findViewById(id.action_filter);	// ... erstelle View fuer das Contextmenue ...
 				this.registerForContextMenu(view);
-				this.openContextMenu(view);
+				this.openContextMenu(view);				// ... und zeige das Menue an
 				return true;
-			case R.id.action_focus:
-				setFocus();
+			case R.id.action_focus:						// Wenn der Focus gewählt wurde ...
+				setFocus();								// ... setzen den Focus zurueck.
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
@@ -99,7 +99,7 @@ public class GoogleMapsActivity extends Activity
 	{
 		super.onCreateContextMenu(menu, v, menuInfo);
 		BuildingCategoryManager bcm = BuildingCategoryManager.getInstance();
-		menu.setHeaderTitle("Filteroptionen");
+		menu.setHeaderTitle(R.string.action_filteroptions);
 		for(byte category : Categories) {				// Erstellt fuer jede vorhandene Kategorie eine Filter-Checkbox
 			String str = "";
 			for(BuildingCategory buildingCategory : bcm.getBuildingCategories()) {
@@ -147,13 +147,12 @@ public class GoogleMapsActivity extends Activity
 	}
 	
 	public BitmapDescriptor getCategoryIcon(byte category) {
-
 		BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
         BitmapDescriptor bitmapDescriptor = null;
-		String path = buildingCategoryManager.getCategory(category).getIconPath();
+		String path = buildingCategoryManager.getCategory(category).getIconPath();		// holen des Icon-Pfades fuer diese Kategorie
 
 		if(path != null) {
-            try {
+            try {		// festlegen des Icons als BitmapDescriptor
                 Bitmap bitmap = AndroidUtils.getBitmapFromAsset(this.getAssets(), path);
                 bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(bitmap);
             }
@@ -309,9 +308,9 @@ public class GoogleMapsActivity extends Activity
 	
 	public void clearAllMarkers() {				// Loeschen aller dargestellten Marker
 		while(!displayedMarkers.isEmpty()) {
-			Marker first = displayedMarkers.get(0).getMarker();
-			displayedMarkers.remove(0);
-			first.remove();
+			Marker first = displayedMarkers.get(0).getMarker();	// Bestimmung des ersten Markers mit Hilfe der Liste
+			displayedMarkers.remove(0);							// Löschen des Listeneintrages
+			first.remove();										// Löschen des Markers
 		}
 	}
 }
