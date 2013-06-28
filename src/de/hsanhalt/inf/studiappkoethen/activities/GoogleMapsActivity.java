@@ -89,6 +89,14 @@ public class GoogleMapsActivity extends Activity
 			case R.id.action_focus:						// Wenn der Focus gewählt wurde ...
 				setFocus();								// ... setzen den Focus zurueck.
 				return true;
+	        case R.id.action_close:
+	            moveTaskToBack(true);
+	            return true;
+	        case R.id.action_main:
+	            Intent intent  = new Intent(this, MainActivity.class);
+	            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+	            startActivity(intent);
+	            return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
