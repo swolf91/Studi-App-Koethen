@@ -17,7 +17,7 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:background="#ff0000"
+            android:background="#ae2323"
             android:layout_margin="5px"
             android:layout_weight="1"
             android:layout_gravity="center">
@@ -29,7 +29,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:onClick="onButtonClick"
-                android:background="#e7e7e7"
+                android:background="#d7d7d7"
                 android:src="@drawable/explist_gebaeude"
                 android:layout_margin="3px"
                 android:scaleType="center" />
@@ -40,7 +40,7 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:background="#ff0000"
+            android:background="#d7d7d7"
             android:layout_margin="5px"
             android:layout_weight="1"
             android:layout_gravity="center">
