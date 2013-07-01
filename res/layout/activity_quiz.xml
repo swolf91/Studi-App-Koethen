@@ -4,5 +4,5 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/quiz_linearlayout_mainlayout"
-    android:background="@drawable/quiz_background">
+    android:background="@drawable/fragezeichen">
 </LinearLayout>
