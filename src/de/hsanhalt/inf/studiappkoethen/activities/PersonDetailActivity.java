@@ -1,12 +1,16 @@
 package de.hsanhalt.inf.studiappkoethen.activities;
 
+import java.net.URL;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
@@ -218,5 +222,23 @@ public class PersonDetailActivity extends Activity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.detail, menu);
         return true;
+    }
+    /**
+     * Oeffnet die Homepage einer Person
+     * @param view
+     */
+    public void openUrl(View view)
+    {
+        if(this.person != null && view.getId() == id.detail_textView_homepage)
+        {
+            URL url = this.person.getUrl();
+            if(url != null)
+            {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url.toString()));
+                this.startActivity(intent);
+            }
+
+        }
     }
 }
