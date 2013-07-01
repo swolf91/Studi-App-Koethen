@@ -37,7 +37,7 @@
         android:layout_gravity="left"
         android:onClick="onButtonClick"
         android:scaleType="fitStart"
-        android:src="@drawable/mainactivity_button_tour"
+        android:src="@drawable/mainactivity_button_tour2"
         android:layout_weight="1"
         android:padding="1px" />
 
