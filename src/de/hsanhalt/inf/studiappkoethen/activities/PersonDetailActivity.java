@@ -207,9 +207,9 @@ public class PersonDetailActivity extends Activity
             startActivity(intent);
             return true;
 
-//        case R.id.action_list: //TODO never used!?
-//            startActivity(new Intent(this, ExpandableListActivity.class));
-//            return true;
+        case R.id.action_list:
+            startActivity(new Intent(this, ExpandableListActivity.class));
+            return true;
 
         default:
             return super.onOptionsItemSelected(item);
