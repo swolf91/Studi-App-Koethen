@@ -5,12 +5,14 @@ import java.net.URL;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
@@ -121,6 +123,18 @@ public class DetailActivity extends Activity
 
                 textView = (TextView) this.findViewById(id.detail_textView_phonenumber);
                 textView.setVisibility(View.VISIBLE);
+                textView.setTextColor(Color.BLUE);
+                textView.setClickable(true);
+                textView.setOnClickListener(new OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse("tel:" + building.getPhoneNumber()));
+                        startActivity(intent);
+                    }
+                });
 
                 textView.setText(this.building.getPhoneNumber());
             }
