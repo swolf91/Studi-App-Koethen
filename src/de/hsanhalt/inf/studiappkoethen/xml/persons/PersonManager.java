@@ -5,14 +5,15 @@ import java.util.Arrays;
 import java.util.List;
 
 import android.util.Log;
-import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParseException;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 /**
  * Bekommt Daten aus der XML und fuegt diese zu einem Personen-Objekt zusammen.
  *
  */
-public class PersonManager implements IXmlParsing
+public class PersonManager implements XmlParser
 {
 
     private static PersonManager INSTANCE;
@@ -24,7 +25,7 @@ public class PersonManager implements IXmlParsing
      */
     private PersonManager()
     {
-        this.person = new ArrayList<Person>();
+        this.person = new ArrayList<>();
                
     }
 
@@ -71,11 +72,11 @@ public class PersonManager implements IXmlParsing
         List<Person> personList;
         if (categories == null || categories.length == 0)
         {
-            personList = new ArrayList<Person>(this.person);
+            personList = new ArrayList<>(this.person);
         }
         else
         {
-            personList = new ArrayList<Person>();
+            personList = new ArrayList<>();
             List<PersonCategory> categoryList = Arrays.asList(categories);
 
             for (Person person : this.person)
@@ -93,11 +94,11 @@ public class PersonManager implements IXmlParsing
      * Wertet ein XML Knote aus und teilt jedem neuen Personenobjekt eine Kategorie zu.
      */
     @Override
-    public void addNode(Node node)
+    public void addNode(Node node) throws XmlParseException
     {
         if (!this.getStartTag().equals(node.getNodeName()))
         {
-            return;
+            throw new XmlParseException("Couldn't parse persons. Wrong node is given!");
         }
         if (node.hasChildNodes())
         {
@@ -113,7 +114,14 @@ public class PersonManager implements IXmlParsing
                 }
                 else if (subNode.getNodeName().equals("person"))
                 {
-                    this.addElement(category, subNode);
+                    try
+                    {
+                        this.addElement(category, subNode);
+                    }
+                    catch (XmlParseException e)
+                    {
+                        Log.e("PersonManager", "XmlParseException", e);
+                    }
                 }
             }
         }
@@ -125,12 +133,11 @@ public class PersonManager implements IXmlParsing
      * @param category wird benoetigt um schneller auf die Person zu schliessen.
      * @param node     aktueller XML Knoten
      */
-    private void addElement(PersonCategory category, Node node)
+    private void addElement(PersonCategory category, Node node) throws XmlParseException
     {
         if (category == null)
         {
-            Log.e("MatchPersonError", "Tried to match person without category.");
-            return;
+            throw new XmlParseException("Tried to match person without a category.");
         }
 
         byte id = -1;
@@ -146,8 +153,6 @@ public class PersonManager implements IXmlParsing
         String room = null;
         String description = null;
         String profession = null;
-        String[] modules = null;
-        String[] responsibilities = null;
         String talkTime = null;
         String phone = null;
         String email = null;
@@ -155,8 +160,8 @@ public class PersonManager implements IXmlParsing
 
         NodeList list = node.getChildNodes();
         
-        ArrayList<String> module = new ArrayList<String>();       //zum Fuellen der Arrays nutzen wir Arraylisten um leere Elemente zu vermeiden.
-        ArrayList<String> responsibility = new ArrayList<String>();
+        ArrayList<String> modules = new ArrayList<>();       //zum Fuellen der Arrays nutzen wir Arraylisten um leere Elemente zu vermeiden.
+        ArrayList<String> responsibilities = new ArrayList<>();
         
         for (int i = 0; i < list.getLength(); i++)
         {
@@ -222,33 +227,28 @@ public class PersonManager implements IXmlParsing
             }
             else if (nodeName.equals("modules"))
             {
-                                                    //xml an der Stelle ueberarbeiten & Implementierung evtl. ueberdenken
-                                                    // Grund dafuer ist, dass getChildNodes mehr childs zurueck gibt, als vorhanden sind!
-            										
                 NodeList childList = subNode.getChildNodes();
-              
 
                 for (int k = 0; k < childList.getLength(); k++)
                 {
-                	Node n =childList.item(k); 
-                	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE 
-                		module.add(childList.item(k).getNodeValue());  
-                	}
+                	subNode = childList.item(k);
+                    if(subNode.getNodeName().equals("module"))
+                    {
+                        modules.add(subNode.getTextContent());
+                    }
                 }
             }
             else if (nodeName.equals("responsibilities"))
             {
-                                                
                 NodeList childList = subNode.getChildNodes();
-                
- 
+
                 for (int k = 0; k < childList.getLength(); k++)
                 {
-                	Node n =childList.item(k);
-                	if(n.getNodeType()==1){ // 1 -> ELEMENT_NODE
-                		responsibility.add(childList.item(k).getNodeValue());
-                	}
-                    
+                    subNode = childList.item(k);
+                    if(subNode.getNodeName().equals("responsibility"))
+                    {
+                        responsibilities.add(subNode.getTextContent());
+                    }
                 }
             }
             else if (nodeName.equals("talkTime"))
@@ -269,13 +269,23 @@ public class PersonManager implements IXmlParsing
             }
         }
 
-        Person newPerson;
+        if(name == null)
+        {
+            throw new XmlParseException("Could not parse person. Forename (<name>) is unspecified!");
+        }
+        if(surname == null)
+        {
+            throw new XmlParseException("Could not parse person. Surname is unspecified!");
+        }
+        if(id == -1)
+        {
+            throw new XmlParseException("Could not parse person " + surname + "! Id is unspecified!");
+        }
 
-        newPerson = new Person(category,id, name, surname, state, specialField, street, houseNumber, postalCode, city, buildings, room, description, profession, module.toArray(new String[module.size()]), responsibility.toArray(new String[responsibility.size()]), talkTime, phone, email, url);
-
+        Person newPerson = new Person(category,id, name, surname, state, specialField, street, houseNumber, postalCode, city, buildings, room, description, profession, modules.toArray(new String[modules.size()]), responsibilities.toArray(new String[responsibilities.size()]), talkTime, phone, email, url);
         this.person.add(newPerson);
 
-        Log.d("Created " + newPerson.getClass().getSimpleName(), category.getName() + " - " + newPerson.getName());
+        Log.d("PersonManagerDebug", "Created Person " + category.getName() + " - " + newPerson.getSurname());
     }
 
     /**
