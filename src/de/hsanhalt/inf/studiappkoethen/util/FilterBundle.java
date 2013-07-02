@@ -12,7 +12,7 @@ import android.os.Bundle;
  * 
  * 		newFilter.addNewCategory(nextCategoryId); -> Schliesst die letzte Kategorie ab und erstellt eine Neue mit der Id [nextCategoryId].
  * 
- * 		newFilter.getBundle(); -> Gibt das fertige Filter-Bundle zur�ck.
+ * 		newFilter.getBundle(); -> Gibt das fertige Filter-Bundle zurueck.
  * 
  * 
 Aufbau des Bundles:
@@ -57,6 +57,9 @@ Aufbau des Bundles:
 
 */
 
+/**
+ * Klasse zur Erstellung eines Bundles mit Filteroptionen, welches an die GoogleMapsActivity weitergegeben werden kann.
+ */
 public class FilterBundle
 {
 	private Bundle categoryBundle = new Bundle();
@@ -66,23 +69,37 @@ public class FilterBundle
 	private String sNextCategory = "nextcategory";
 	private String sNextBuilding = "nextbuilding";
 	
+	/**
+	 * Initialisierung/Ruecksetzung des Bundles fuer die Kategorie
+	 */
 	private void initalizeCategory() {
 		categoryBundle.putBundle(sNextCategory, null);
 		categoryBundle.putByte(sCategory, (byte) -1);
 		categoryBundle.putBundle(sNextBuilding, null);
 	}
-	
+
+	/**
+	 * Initialisierung/Ruecksetzung des Bundles fuer die Gebaeude
+	 */
 	private void initalizeBuilding() {
 		buildingBundle.putBundle(sNextBuilding, null);
 		buildingBundle.putByte(sBuilding, (byte) -1);
 	}
 	
+	/**
+	 * Constructor fuer das FilterBundle
+	 * @param newCategory
+	 */
 	public FilterBundle(byte newCategory) {
 		initalizeCategory();
 		initalizeBuilding();
 		categoryBundle.putByte(sCategory, newCategory);
 	}
 	
+	/**
+	 * Hinzufuegen eines neuen Gebaeudes zu der zuletzt gespeicherten Kategorie
+	 * @param newBuilding
+	 */
 	public void addNewBuilding(byte newBuilding) {
 		if(buildingBundle.getByte(sBuilding) != (byte) -1) {
 			Bundle tmpBundle = new Bundle();
@@ -93,6 +110,10 @@ public class FilterBundle
 		buildingBundle.putByte(sBuilding, newBuilding);
 	}
 	
+	/**
+	 * Hinzufuegen einer neuen Kategorie und abschliessen der letzten
+	 * @param newCategory
+	 */
 	public void addNewCategory(byte newCategory) {
 		putCategoryTogether();
 		
@@ -104,10 +125,11 @@ public class FilterBundle
 		categoryBundle.putBundle(sNextBuilding, null);
 		
 		initalizeBuilding();
-
-		//Log.i("FILTERBUNDLE", "New Category Bundle: " + categoryBundle.toString());
 	}
 	
+	/**
+	 * Zusammenstellung des finalen Bundles
+	 */
 	private void putCategoryTogether() {
 		if(buildingBundle.getByte(sBuilding) != (byte) -1) {
 			Bundle nextBuildingBundle = new Bundle();
@@ -116,9 +138,12 @@ public class FilterBundle
 		}
 	}
 	
+	/**
+	 * Uebergabe des finalen Bundles
+	 * @return
+	 */
 	public Bundle getBundle() {
 		putCategoryTogether();
-		//Log.i("FILTERBUNDLE", "Complete Bundle: " + categoryBundle.toString());
 		return categoryBundle;
 	}
 	

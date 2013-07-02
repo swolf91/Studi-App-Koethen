@@ -2,7 +2,7 @@ package de.hsanhalt.inf.studiappkoethen.util;
 
 import com.google.android.gms.maps.model.Marker;
 
-/*
+/**
  * Da ein Marker keine Zusatzdaten speichern kann, werden durch diese Klasse noch die ID's 
  * der Kategorie und des Gebaeudes zu dem Marker gespeichert.
  * Eine Aenderung der Daten nach der Initialisierung ist nicht vorgesehen, daher gibt es 
@@ -21,15 +21,27 @@ public class ExtendetMarker
 		buildingId = bldn;
 	}
 	
-	public Marker getMarker() {		// Rueckgabe des Markers
+	/**
+	 * Rueckgabe des Markers
+	 * @return
+	 */
+	public Marker getMarker() {
 		return eMarker;
 	}
 	
-	public byte getCategId() {		// Rueckgabe der Kategorie-ID
+	/**
+	 * Rueckgabe der Kategorie-ID
+	 * @return
+	 */
+	public byte getCategId() {
 		return categoryId;
 	}
 	
-	public byte getBuildId() {		// Rueckgabe der Gebaeude-ID
+	/**
+	 * Rueckgabe der Gebaeude-ID
+	 * @return
+	 */
+	public byte getBuildId() {
 		return buildingId;
 	}
 	

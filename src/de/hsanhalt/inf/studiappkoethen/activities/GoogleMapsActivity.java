@@ -48,6 +48,9 @@ public class GoogleMapsActivity extends Activity
 	private List<FilterItem> specialFilter = new ArrayList<FilterItem>();	// angepasster Filter der anhand der uebergebenen Daten gefuellt wird
 	private List<ExtendetMarker> displayedMarkers = new ArrayList<ExtendetMarker>();
 	
+	/**
+	 * Initialisierung bei Erstellung der Activity
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -70,15 +73,21 @@ public class GoogleMapsActivity extends Activity
     	setFocus();				// Bestimmung der Kameraposition und Fokus auf diese Position
 	}
 
+	/**
+	 * Erstellung des Filters in der Action-Bar
+	 */
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {		// Erstellung des Filters in der Action-Bar
+	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.googlemaps, menu);
 		return true;
 	}
 	
+	/**
+	 * Aufruf des Kontextmenues mit den Filteroptionen
+	 */
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item)	// Aufruf des Kontextmenues mit den Filteroptionen
+	public boolean onOptionsItemSelected(MenuItem item)
 	{
 		switch(item.getItemId()) {
 			case R.id.action_filter:					// Wenn der Filter ausgewaehlt wurde ...
@@ -102,8 +111,11 @@ public class GoogleMapsActivity extends Activity
 		}
 	}
 
+	/**
+	 * Erstellung des Filter-Kontextmenues
+	 */
 	@Override
-	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo)	// Erstellung des Filter-Kontextmenues
+	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo)
 	{
 		super.onCreateContextMenu(menu, v, menuInfo);
 		BuildingCategoryManager bcm = BuildingCategoryManager.getInstance();
@@ -125,8 +137,11 @@ public class GoogleMapsActivity extends Activity
 		}
 	}
 	
+	/**
+	 * Reaktion auf Filteraenderung
+	 */
 	@Override
-	public boolean onContextItemSelected(MenuItem item)			// Reaktion auf Filteraenderung
+	public boolean onContextItemSelected(MenuItem item)
 	{
 		boolean filterOn = false;
 		for(int i = 0; i < specialFilter.size(); i++) {			// Wenn der Filter vorhanden ist, loesche ihn, ...
@@ -144,7 +159,10 @@ public class GoogleMapsActivity extends Activity
 		return super.onContextItemSelected(item);
 	}
 
-	private void getCategories() {							// Erstellt eine Liste aller verwendeten Kategorien
+	/**
+	 * Erstellt eine Liste aller verwendeten Kategorien.
+	 */
+	private void getCategories() {
 		BuildingCategoryManager bcm = BuildingCategoryManager.getInstance();
 		for(BuildingCategory category : bcm.getBuildingCategories())
 		{
@@ -154,6 +172,9 @@ public class GoogleMapsActivity extends Activity
 		}
 	}
 	
+	/**
+	 * Holt den Icon-Pfad aus der xml und gibt ihn als BitMapDescriptor zurueck.
+	 */
 	public BitmapDescriptor getCategoryIcon(byte category) {
 		BuildingCategoryManager buildingCategoryManager = BuildingCategoryManager.getInstance();
         BitmapDescriptor bitmapDescriptor = null;
@@ -175,7 +196,10 @@ public class GoogleMapsActivity extends Activity
         return bitmapDescriptor;
 	}
 	
-	private boolean setFilter() {									// Auslesen und Verarbeiten der uebergebenen Daten zur Filtereinstellung
+	/**
+	 * Auslesen und Verarbeiten der uebergebenen Daten zur Filtereinstellung.
+	 */
+	private boolean setFilter() {
 		Bundle filterBundle = this.getIntent().getExtras();			// Abrufen der uebergebenen Daten
 		String sCategory = "category";
 		String sBuilding = "building";
@@ -217,7 +241,13 @@ public class GoogleMapsActivity extends Activity
 		}
 	}
 	
-	private boolean filterContainsBuilding(byte category, byte building) {			// Abfrage, ob ein Gebaeude durch den Filter akzeptiert werden kann
+	
+	/**
+	 * Abfrage, ob ein Gebaeude durch den Filter akzeptiert werden kann.
+	 * @param category
+	 * @param building
+	 */
+	private boolean filterContainsBuilding(byte category, byte building) {
 		boolean buildingFound = false;
 		int i = 0;
 		while(i < specialFilter.size() && !buildingFound) {
@@ -229,7 +259,10 @@ public class GoogleMapsActivity extends Activity
 		return buildingFound;
 	}
 	
-	private void setFocus() {														// Bestimmen der Kameraposition und Setzen des Fokus auf diese Position
+	/**
+	 * Bestimmen der Kameraposition und setzen des Fokus auf diese Position.
+	 */
+	private void setFocus() {
 		if(numberFilterItems > 0) {													// Wurde wenigstens ein Gebaeude auf der Karte angezeigt ...
 			double finalLatitude = averageLatitude / numberFilterItems;				// ... wird der Durchschnitt der Breiten- und Laengengrade ermittelt, ...
 			double finalLongitude = averageLongitude / numberFilterItems;
@@ -244,7 +277,12 @@ public class GoogleMapsActivity extends Activity
 	    map.animateCamera(CameraUpdateFactory.zoomTo(startZoomLevel), 2000, null);	// Zum schluss wird der Zoomlevel auf den Standardwert gesetzt.
 	}
 	
-	public void createNewMarker(Building building) {				// Erstellung eines Gebaeude-Markers
+	
+	/**
+	 * Erstellung eines Gebaeude-Markers.
+	 * @param building
+	 */
+	public void createNewMarker(Building building) {
 		LatLng newBuilding = new LatLng(building.getExactLatitude(), building.getExactLongitude());		// Bestimmung der exakten Breiten- und Laengengrade
 		String title = building.getName();								// Bestimmung des Gebaeudenamens
 		byte index = building.getBuildingCategory().getID();			// Bestimmung der Gebaeude-ID
@@ -274,7 +312,11 @@ public class GoogleMapsActivity extends Activity
         displayedMarkers.add(new ExtendetMarker(newBuildingMarker, building.getBuildingCategory().getID(), building.getID()));		// Speichern aller angezeigten Markers, so das sie von anderen Funktionen leichter abgefragt werden koennen.
 	}
 	
-	public void setMarkersDependingOnFilter(){		//Setzen aller Marker
+	
+	/**
+	 * Setzen aller Marker
+	 */
+	public void setMarkersDependingOnFilter(){
 		BuildingManager buildingManager = BuildingManager.getInstance();		// Holen der Gebaeude-Daten aus der XML
 		List<Building> buildings = buildingManager.getBuildingList();
 		
@@ -292,7 +334,11 @@ public class GoogleMapsActivity extends Activity
 		}
 	}
 	
-	private void startDetailedView(String markerId) {			// Starten der Detail-Ansicht
+	/**
+	 * Starten der Detail-Ansicht
+	 * @param markerId
+	 */
+	private void startDetailedView(String markerId) {
 		byte currentCategId = 0;
 		byte currentBuildId = 0;
 		int i = 0;
@@ -313,8 +359,10 @@ public class GoogleMapsActivity extends Activity
 		}
 	}
 	
-	
-	public void clearAllMarkers() {				// Loeschen aller dargestellten Marker
+	/**
+	 * Loeschen aller dargestellten Marker
+	 */
+	public void clearAllMarkers() {
 		while(!displayedMarkers.isEmpty()) {
 			Marker first = displayedMarkers.get(0).getMarker();	// Bestimmung des ersten Markers mit Hilfe der Liste
 			displayedMarkers.remove(0);							// Loeschen des Listeneintrages
