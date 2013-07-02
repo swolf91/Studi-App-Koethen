@@ -5,14 +5,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import android.util.Log;
-import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
  * Diese Klasse verwaltet die Instanzen der BuildingCategory-Klasse.
  */
-public final class BuildingCategoryManager implements IXmlParsing
+public final class BuildingCategoryManager implements XmlParser
 {
     /**
      * beinhaltet die Instanz dieser Klasse

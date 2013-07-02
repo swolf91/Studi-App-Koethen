@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.util.Log;
-import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class QuizManager implements IXmlParsing
+public class QuizManager implements XmlParser
 {
     private static QuizManager INSTANCE;
     private List<Quiz> quizList;

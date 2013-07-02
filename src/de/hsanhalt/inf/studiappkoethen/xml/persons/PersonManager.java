@@ -5,14 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import android.util.Log;
-import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 /**
  * Bekommt Daten aus der XML und fuegt diese zu einem Personen-Objekt zusammen.
  *
  */
-public class PersonManager implements IXmlParsing
+public class PersonManager implements XmlParser
 {
 
     private static PersonManager INSTANCE;

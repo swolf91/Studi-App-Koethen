@@ -5,11 +5,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import android.util.Log;
-import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class PersonCategoryManager implements IXmlParsing
+public class PersonCategoryManager implements XmlParser
 {
     private static PersonCategoryManager INSTANCE;
     private Map<Byte, PersonCategory> categoryMap;
