@@ -81,12 +81,12 @@ public class GoogleMapsActivity extends Activity
 	public boolean onOptionsItemSelected(MenuItem item)	// Aufruf des Kontextmenues mit den Filteroptionen
 	{
 		switch(item.getItemId()) {
-			case R.id.action_filter:					// Wenn der Filter ausgewählt wurde ... 
+			case R.id.action_filter:					// Wenn der Filter ausgewaehlt wurde ...
 				View view = this.findViewById(id.action_filter);	// ... erstelle View fuer das Contextmenue ...
 				this.registerForContextMenu(view);
 				this.openContextMenu(view);				// ... und zeige das Menue an
 				return true;
-			case R.id.action_focus:						// Wenn der Focus gewählt wurde ...
+			case R.id.action_focus:						// Wenn der Focus gewaehlt wurde ...
 				setFocus();								// ... setzen den Focus zurueck.
 				return true;
 	        case R.id.action_close:
@@ -317,8 +317,8 @@ public class GoogleMapsActivity extends Activity
 	public void clearAllMarkers() {				// Loeschen aller dargestellten Marker
 		while(!displayedMarkers.isEmpty()) {
 			Marker first = displayedMarkers.get(0).getMarker();	// Bestimmung des ersten Markers mit Hilfe der Liste
-			displayedMarkers.remove(0);							// Löschen des Listeneintrages
-			first.remove();										// Löschen des Markers
+			displayedMarkers.remove(0);							// Loeschen des Listeneintrages
+			first.remove();										// Loeschen des Markers
 		}
 	}
 }
