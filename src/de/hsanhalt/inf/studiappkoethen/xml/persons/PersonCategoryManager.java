@@ -5,11 +5,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import android.util.Log;
-import de.hsanhalt.inf.studiappkoethen.xml.parsing.IXmlParsing;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParseException;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class PersonCategoryManager implements IXmlParsing
+public class PersonCategoryManager implements XmlParser
 {
     private static PersonCategoryManager INSTANCE;
     private Map<Byte, PersonCategory> categoryMap;
@@ -25,12 +26,7 @@ public class PersonCategoryManager implements IXmlParsing
 
     private PersonCategoryManager()
     {
-        this.categoryMap = new HashMap<Byte, PersonCategory>();
-    }
-
-    public boolean hasContent()
-    {
-        return this.categoryMap != null && !this.categoryMap.isEmpty();
+        this.categoryMap = new HashMap<>();
     }
 
     public PersonCategory getCategory(byte id)
@@ -38,26 +34,12 @@ public class PersonCategoryManager implements IXmlParsing
         return this.categoryMap.get(id);
     }
 
-    public PersonCategory getCategory(String name)
-    {
-
-        for (Entry<Byte, PersonCategory> entry : this.categoryMap.entrySet())
-        {
-            PersonCategory category = entry.getValue();
-            if (category.getName().equals(name))
-            {
-                return category;
-            }
-        }
-        return null;
-    }
-
     @Override
-    public void addNode(Node node)
+    public void addNode(Node node) throws XmlParseException
     {
         if (!this.getStartTag().equals(node.getNodeName()))
         {
-            return;
+            throw new XmlParseException("Could not parse person categories. Wrong node is given!");
         }
         if (node.hasChildNodes())
         {
@@ -67,7 +49,14 @@ public class PersonCategoryManager implements IXmlParsing
                 Node subNode = nodes.item(i);
                 if (subNode.getNodeName().equals("category"))
                 {
-                    this.addElement(subNode);
+                    try
+                    {
+                        this.addElement(subNode);
+                    }
+                    catch (XmlParseException e)
+                    {
+                        Log.e("PersonCategoryManager", "XmlParseException", e);
+                    }
                 }
             }
         }
@@ -79,11 +68,11 @@ public class PersonCategoryManager implements IXmlParsing
         return "personCategories";
     }
 
-    private boolean addElement(Node node)
+    private boolean addElement(Node node) throws XmlParseException
     {
         if (!node.hasChildNodes())
         {
-            return false;
+            throw new XmlParseException("Couldn't parse person categorie. Child nodes are missing!");
         }
 
         byte id = -1;
@@ -104,9 +93,13 @@ public class PersonCategoryManager implements IXmlParsing
             }
         }
 
-        if (id == -1 || name == null)
+        if(name == null)
         {
-            return false;
+            throw new XmlParseException("Could not parse person category. Name is unspecified!");
+        }
+        if(id == -1)
+        {
+            throw new XmlParseException("Could not parse person category " + name + ". ID is unspecified!");
         }
 
         PersonCategory category = new PersonCategory(id, name);

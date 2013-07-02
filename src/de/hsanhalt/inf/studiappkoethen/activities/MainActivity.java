@@ -13,7 +13,12 @@ import de.hsanhalt.inf.studiappkoethen.R;
 import de.hsanhalt.inf.studiappkoethen.R.drawable;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.R.string;
-import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.buildings.BuildingManager;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.DefaultXmlParser;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonCategoryManager;
+import de.hsanhalt.inf.studiappkoethen.xml.persons.PersonManager;
+import de.hsanhalt.inf.studiappkoethen.xml.quiz.QuizManager;
 
 
 public class MainActivity extends Activity
@@ -27,11 +32,16 @@ public class MainActivity extends Activity
         this.setContentView(R.layout.activity_main);
         this.mPreferences = getSharedPreferences("firstStart", MODE_PRIVATE);
 
-        if (!XmlParser.isCreated())
+        if (!DefaultXmlParser.isCreated())
         {
-            XmlParser xmlParser = XmlParser.getInstance();
-            xmlParser.setAssets(this.getAssets());
-            xmlParser.install();
+            DefaultXmlParser defaultXmlParser = DefaultXmlParser.getInstance();
+            defaultXmlParser.setAssets(this.getAssets());
+            defaultXmlParser.registerXmlParser(PersonManager.getInstance());
+            defaultXmlParser.registerXmlParser(BuildingManager.getInstance());
+            defaultXmlParser.registerXmlParser(BuildingCategoryManager.getInstance());
+            defaultXmlParser.registerXmlParser(PersonCategoryManager.getInstance());
+            defaultXmlParser.registerXmlParser(QuizManager.getInstance());
+            defaultXmlParser.install();
         }
     }
 
