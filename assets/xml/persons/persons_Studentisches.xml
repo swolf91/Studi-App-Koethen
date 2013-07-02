@@ -8,25 +8,16 @@
         <name>Doris</name>
         <surname>Quabis</surname>
         <state>Frau</state>
-        <specialField></specialField>
         <street>Bernburger Strasse</street>
         <houseNumber>55</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-
         <buildings>03</buildings>
         <room>14</room>
-        <description></description>
-
-        <profession></profession>
-        <module></module>
         <responsibility>Allgemeine Studienberatung</responsibility>
-
-        <talkTime></talkTime>
         <phone>+49 3496 67 5203</phone>
         <email>beratung@hs-anhalt.de</email>
         <url>http://www.hs-anhalt.de/nc/studium/service-fuer-studierende/allgemeine-studienberatung.html</url>
-
     </person>
 
     <person>
@@ -34,21 +25,13 @@
         <name>Ingrid</name>
         <surname>Heuer</surname>
         <state>Frau</state>
-        <specialField></specialField>
         <street>Bernburger Strasse</street>
         <houseNumber>55</houseNumber>
         <postalCode>06366</postalCode>
         <city>Koethen</city>
-
         <buildings>03</buildings>
         <room>007</room>
-        <description></description>
-
-        <profession></profession>
-        <module></module>
         <responsibility>Studentische Angelegenheiten</responsibility>
-
-        <talkTime></talkTime>
         <phone>+49 (0) 3496 67 5229</phone>
         <email>i.heuer@asa.hs-anhalt.de</email>
         <url>http://www.hs-anhalt.de/nc/studium/service-fuer-studierende/abteilung-studentische-angelegenheiten.html
