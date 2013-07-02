@@ -14,7 +14,6 @@
         <city>Koethen</city>
         <buildings>23</buildings>
         <room>132</room>
-        <description></description>
         <profession>Softwaretechnik</profession>
         <modules>
             <module>Softwearetechnik</module>
@@ -24,7 +23,6 @@
 	<responsibilities>
         	<responsibility>Leitung der Fakultaet</responsibility>
 	</responsibilities>
-        <talkTime></talkTime>
         <phone>+49-3496-67-3121</phone>
         <email>u.fissgus@inf.hs-anhlt.de</email>
         <url>http://www.inf.hs-anhalt.de/fachbereich/personal/profs/fissgus/</url>
@@ -42,13 +40,10 @@
         <city>Koethen</city>
         <buildings>01</buildings>
         <room>219</room>
-        <description></description>
         <profession>Leistungselektronik und Antriebe</profession>
-        <modules><module></module></modules>
         <responsibilities>
 	<responsibility>Leitung der Fakultaet</responsibility>
 	</responsibilities>
-        <talkTime></talkTime>
         <phone>+49 (0) 3496 67 2334</phone>
         <email>dekan@emw.hs-anhalt.de</email>
         <url>http://www.emw.hs-anhalt.de/www/menschen/professoren/prof-dr-j-schwarz.html</url>
@@ -67,13 +62,10 @@
         <city>Koethen</city>
         <buildings>02</buildings>
         <room>213</room>
-        <description></description>
         <profession>Mathematik</profession>
-        <modules><module></module></modules>
 	<responsibilities>
         <responsibility>Leitung der Fakultaet</responsibility>
 	</responsibilities>
-        <talkTime></talkTime>
         <phone>+49 (0) 3496 67 2517</phone>
         <email>dekan@bwp.hs-anhalt.de</email>
         <url>http://www.bwp.hs-anhalt.de/fachbereich/dekanat.html</url>
