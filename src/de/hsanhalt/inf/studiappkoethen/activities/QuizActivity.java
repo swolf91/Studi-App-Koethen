@@ -209,6 +209,8 @@ public class QuizActivity extends Activity
                     button.setHeight(50);
                     button.setId(state.hashCode() * Button.class.hashCode() + (i++));
                     button.setOnClickListener(this.OnButtonClickListener);
+                    button.setTextColor(Color.WHITE);
+                    button.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.button));
                     buttonlist.add(button);
                 }
                 Random random = new Random();
