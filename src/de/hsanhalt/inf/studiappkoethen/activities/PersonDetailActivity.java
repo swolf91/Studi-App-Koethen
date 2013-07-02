@@ -5,12 +5,14 @@ import java.net.URL;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import de.hsanhalt.inf.studiappkoethen.R;
@@ -38,10 +40,8 @@ public class PersonDetailActivity extends Activity
         super.onCreate(savedInstanceState);
         this.setContentView(layout.activity_person_detail);
 
-        byte categorieID = this.getIntent()
-                               .getByteExtra("category", (byte)-1);   // ruft die ID der Kategorie aus den uebergebenen Parametern ab
-        byte personID = this.getIntent()
-                            .getByteExtra("person", (byte)-1);   // ruft die ID der Person aus den uebergebenen Parametern ab
+        byte categorieID = this.getIntent().getByteExtra("category", (byte)-1);   // ruft die ID der Kategorie aus den uebergebenen Parametern ab
+        byte personID = this.getIntent().getByteExtra("person", (byte)-1);   // ruft die ID der Person aus den uebergebenen Parametern ab
 
         LinearLayout linearLayout = (LinearLayout)this.findViewById(id.detail_linearlayout);
 
@@ -151,17 +151,68 @@ public class PersonDetailActivity extends Activity
         if (this.person.getPhone() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_phone), true));
-            linearLayout.addView(this.createTextView(this.person.getPhone(), false));
+            TextView textView = this.createTextView(this.person.getPhone(), false);
+            textView.setTextColor(Color.BLUE);
+            textView.setClickable(true);
+            textView.setOnClickListener(new OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    String phoneNumber = person.getPhone();
+                    if(phoneNumber != null)
+                    {
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse("tel:" + phoneNumber));
+                        startActivity(intent);
+                    }
+                }
+            });
+            linearLayout.addView(textView);
         }        
         if (this.person.getEmail() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_email), true));
-            linearLayout.addView(this.createTextView(this.person.getEmail(), false));
+            TextView textView = this.createTextView(this.person.getEmail(), false);
+            textView.setTextColor(Color.BLUE);
+            textView.setClickable(true);
+            textView.setOnClickListener(new OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    String email = person.getEmail();
+                    if(email != null)
+                    {
+                        Intent intent = new Intent(Intent.ACTION_SENDTO);
+                        intent.setData(Uri.fromParts("mailto", email, null));
+                        startActivity(intent);
+                    }
+                }
+            });
+            linearLayout.addView(textView);
         }        
         if (this.person.getUrl() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_url), true));
-            linearLayout.addView(this.createTextView(this.person.getUrl().toString(), false));
+            TextView textView = this.createTextView(this.person.getUrl().toString(), false);
+            textView.setTextColor(Color.BLUE);
+            textView.setClickable(true);
+            textView.setOnClickListener(new OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    URL url = person.getUrl();
+                    if(url != null)
+                    {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(person.getUrl().toString()));
+                        startActivity(intent);
+                    }
+                }
+            });
+            linearLayout.addView(textView);
         }        
         
     }
@@ -222,23 +273,5 @@ public class PersonDetailActivity extends Activity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.detail, menu);
         return true;
-    }
-    /**
-     * Oeffnet die Homepage einer Person
-     * @param view
-     */
-    public void openUrl(View view)
-    {
-        if(this.person != null && view.getId() == id.detail_textView_homepage)
-        {
-            URL url = this.person.getUrl();
-            if(url != null)
-            {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url.toString()));
-                this.startActivity(intent);
-            }
-
-        }
     }
 }
