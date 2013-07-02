@@ -64,14 +64,14 @@ public class ExpandableListActivity extends Activity
 
             if (this.showBuildings)
             {
-                ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Buildings);
+                ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Persons);
                 imageView.setBackgroundColor(Color.rgb(255, 255, 255));
                 this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus));
                 this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
             }
             else
             {
-                ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Persons);
+                ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Buildings);
                 imageView.setBackgroundColor(Color.rgb(255, 255, 255));
                 this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList());
                 this.expandableListView.setAdapter(this.expandableListAdapterPerson);
