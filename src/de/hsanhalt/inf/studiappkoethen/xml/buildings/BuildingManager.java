@@ -5,9 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import android.util.Log;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParseException;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xmlpull.v1.XmlPullParserException;
 
 /**
  * Diese Klasse verwaltet die Instanzen der Building-Klasse.
@@ -101,11 +103,11 @@ public class BuildingManager implements XmlParser
      * @param node - node welches als Inhalt das Starttag hat.
      */
     @Override
-    public void addNode(Node node)
+    public void addNode(Node node) throws XmlParseException
     {
         if (!this.getStartTag().equals(node.getNodeName()))
         {
-            return;
+            throw new XmlParseException("Can parse buildings. Wrong node is given.");
         }
         if (node.hasChildNodes())
         {
@@ -121,7 +123,14 @@ public class BuildingManager implements XmlParser
                 }
                 else if (subNode.getNodeName().equals("building"))
                 {
-                    this.addElement(category, subNode);
+                    try
+                    {
+                        this.addElement(category, subNode);
+                    }
+                    catch (XmlParseException e)
+                    {
+                        Log.e("BuildingManager", "XmlParseException", e);
+                    }
                 }
             }
         }
@@ -132,12 +141,11 @@ public class BuildingManager implements XmlParser
      * @param category
      * @param node
      */
-    private void addElement(BuildingCategory category, Node node)
+    private void addElement(BuildingCategory category, Node node) throws XmlParseException
     {
         if (category == null)
         {
-            Log.e("MatchBuildingError", "Tried to match building without category.");
-            return;
+            throw new XmlParseException("Tried to match building without a category.");
         }
 
         byte id = -1;
@@ -156,7 +164,7 @@ public class BuildingManager implements XmlParser
         Integer numberOfFaculty = null;
         Integer numberOfBuilding = null;
 
-        List<String> images = new ArrayList<String>();
+        List<String> images = new ArrayList<>();
 
         NodeList list = node.getChildNodes();
         for (int i = 0; i < list.getLength(); i++)
@@ -239,26 +247,27 @@ public class BuildingManager implements XmlParser
             }
         }
 
-
-        if(id != -1 && name != null)
+        if(name == null)
         {
-            Building building;
-            if (collegeBuilding)
-            {
-                building = new CollegeBuilding(name, id, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, numberOfBuilding, numberOfFaculty, url, images.toArray(new String[images.size()]));
-            }
-            else
-            {
-                building = new Building(name, id, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url, images.toArray(new String[images.size()]));
-            }
-            this.buildings.add(building);
+            throw new XmlParseException("Couldn't parse building from category " + category.getName() + ". Name is unspecified");
+        }
+        else if(id == -1)
+        {
+            throw new XmlParseException("Couldn't parse building " + name + " from category " + category.getName() + ". ID is unspecified");
+        }
 
-            Log.d("BuildingManagerDebug ", "Created " + building.getClass().getSimpleName() + ": " + category.getName() + " - " + name);
+        Building building;
+        if (collegeBuilding)
+        {
+            building = new CollegeBuilding(name, id, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, numberOfBuilding, numberOfFaculty, url, images.toArray(new String[images.size()]));
         }
         else
         {
-            Log.d("BuildingManagerDebug", "Could not add a building from category " + category.getName() + " because name or id is missing!" );
+            building = new Building(name, id, category, street, houseNumber, postalCode, city, phoneNumber, latitude, longitude, description, url, images.toArray(new String[images.size()]));
         }
+        this.buildings.add(building);
+
+        Log.d("BuildingManagerDebug ", "Created " + building.getClass().getSimpleName() + ": " + category.getName() + " - " + name);
     }
 
     /**

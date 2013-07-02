@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import android.util.Log;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParseException;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -56,11 +57,11 @@ public final class BuildingCategoryManager implements XmlParser
     }
 
     @Override
-    public void addNode(Node node)
+    public void addNode(Node node) throws XmlParseException
     {
         if (!this.getStartTag().equals(node.getNodeName()))
         {
-            return;
+            throw new XmlParseException("Couldn't parse building categories. Wrong node is given!");
         }
         if (node.hasChildNodes())
         {
@@ -70,7 +71,14 @@ public final class BuildingCategoryManager implements XmlParser
                 Node subNode = nodes.item(i);
                 if (subNode.getNodeName().equals("category"))
                 {
-                    this.addElement(subNode);
+                    try
+                    {
+                        this.addElement(subNode);
+                    }
+                    catch (XmlParseException e)
+                    {
+                         Log.e("BuildingCategoryManager", "XmlParseException", e);
+                    }
                 }
             }
         }
@@ -87,11 +95,11 @@ public final class BuildingCategoryManager implements XmlParser
      * @param node
      * @return ob Element hinzugefuegt werden konnte oder nicht.
      */
-    private boolean addElement(Node node)
+    private boolean addElement(Node node) throws XmlParseException
     {
         if (!node.hasChildNodes())
         {
-            return false;
+            throw new XmlParseException("Couldn't parse building categorie. Child nodes are missing!");
         }
 
         byte id = -1;
@@ -117,9 +125,13 @@ public final class BuildingCategoryManager implements XmlParser
             }
         }
 
-        if (id == -1 || name == null)
+        if(name == null)
         {
-            return false;
+            throw new XmlParseException("Could not parse building category. Name is unspecified!");
+        }
+        if(id == -1)
+        {
+            throw new XmlParseException("Could not parse building category " + name + ". ID is unspecified!");
         }
 
         BuildingCategory category = new BuildingCategory(id, name, iconPath);

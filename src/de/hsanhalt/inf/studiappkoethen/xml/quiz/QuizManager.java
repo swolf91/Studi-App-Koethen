@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.util.Log;
+import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParseException;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -66,18 +67,18 @@ public class QuizManager implements XmlParser
      * @param node - node welches als Inhalt das Starttag hat.
      */
     @Override
-    public void addNode(Node node)
+    public void addNode(Node node) throws XmlParseException
     {
         if(!node.getNodeName().equals(this.getStartTag()))
         {
-            return;
+            throw new XmlParseException("Couldn't parse quiz. Wrong node is given!");
         }
         if(node.hasChildNodes())
         {
             NodeList nodeList = node.getChildNodes();
 
             byte id = -1;
-            List<Question> questions = new ArrayList<Question>();
+            List<Question> questions = new ArrayList<>();
             String startmsg = null;
             String name = null;
 
@@ -102,10 +103,17 @@ public class QuizManager implements XmlParser
                 }
             }
 
-            if(id == -1 || questions.isEmpty() || name == null)
+            if(name == null)
             {
-                Log.e("QuizManagerError", "Could not create quiz!");
-                return;
+                throw new XmlParseException("Could not parse quiz. Name is unspecified!");
+            }
+            if(id == -1)
+            {
+                throw new XmlParseException("Could not parse quiz. Id is unspecified!");
+            }
+            if(questions.isEmpty())
+            {
+                throw new XmlParseException("Could not create quiz. Questions are unspecified!");
             }
 
             Quiz quiz = new Quiz(id, name, questions.toArray(new Question[questions.size()]), startmsg);
