@@ -97,7 +97,7 @@
     <string name="quiz_button_exitquiz">Quiz beenden</string>
     <string name="quiz_context_choosequiz">Quiz-Auswahl</string>
 
-   	<string name="detail_person_state">Titel:</string>
+   	<string name="detail_person_state">Anrede:</string>
   	<string name="detail_person_name">Vorname:</string>
    	<string name="detail_person_surname">Nachname:</string>
  	<string name="detail_person_specialfield">Fachbereich:</string>
@@ -106,7 +106,8 @@
 	<string name="detail_person_postalcode">PLZ:</string>
 	<string name="detail_person_city">Ort:</string>
 	<string name="detail_person_buildings">Gebaeudenummer:</string>
-	<string name="detail_person_room">Raumnummer:</string>
+    <string name="detail_person_builddescribtion">Gebaeude:</string>
+	<string name="detail_person_room">Buero:</string>
 	<string name="detail_person_description">Beschreibung:</string>
 
 	<string name="detail_person_profession">Fachgebiet:</string>
