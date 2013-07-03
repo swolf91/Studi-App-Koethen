@@ -65,89 +65,68 @@ public class PersonDetailActivity extends Activity
     {
         Resources resources = this.getResources();
 
-        if (this.person.getState() != null)
+        if(this.person.getState()!= null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_state), true));
             linearLayout.addView(this.createTextView(this.person.getState(), false));
         }
 
-        linearLayout.addView(this.createTextView(resources.getString(string.detail_person_name), true));
-        linearLayout.addView(this.createTextView(this.person.getName(), false));
+        if(this.person.getName()!= null && this.person.getSurname()!= null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_name_headline), true));
+            linearLayout.addView(this.createTextView(this.person.getName()+ " " + this.person.getSurname(), false));
+        }
 
-        linearLayout.addView(this.createTextView(resources.getString(string.detail_person_surname), true));
-        linearLayout.addView(this.createTextView(this.person.getSurname(), false));
-        
+        if (this.person.getStreet() != null && this.person.gethouseNumber() != null && this.person.getPostalCode() != null && this.person.getCity() != null)
+        {
+            linearLayout.addView(this.createTextView(resources.getString(string.detail_adresse_headline ), true));
+            linearLayout.addView(this.createTextView("Raum " +this.person.getRoom() + " im Gebaeude " + this.person.getBuilding(), false));
+            linearLayout.addView(this.createTextView(this.person.getStreet() + " " + this.person.gethouseNumber(), false));
+            linearLayout.addView(this.createTextView(this.person.getPostalCode() + " " + this.person.getCity(), false));
+        }
+
         if (this.person.getSpecialField() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_specialfield), true));
             linearLayout.addView(this.createTextView(this.person.getSpecialField(), false));
         }
-        
-        if (this.person.getStreet() != null)
-        {
-            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_street), true));
-            linearLayout.addView(this.createTextView(this.person.getStreet(), false));
-        }        
-        if (this.person.gethouseNumber() != null)
-        {
-            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_buildingnumber), true));
-            linearLayout.addView(this.createTextView(this.person.gethouseNumber(), false));
-        }        
-        if (this.person.getPostalCode() != null)
-        {
-            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_postalcode), true));
-            linearLayout.addView(this.createTextView(this.person.getPostalCode(), false));
-        }        
-        if (this.person.getCity() != null)
-        {
-            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_city), true));
-            linearLayout.addView(this.createTextView(this.person.getCity(), false));
-        }        
-        if (this.person.getBuilding() != null)
-        {
-            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_buildings), true));
-            linearLayout.addView(this.createTextView(this.person.getBuilding(), false));
-        }        
-        if (this.person.getRoom() != null)
-        {
-            linearLayout.addView(this.createTextView(resources.getString(string.detail_person_room), true));
-            linearLayout.addView(this.createTextView(this.person.getRoom(), false));
-        }        
+
+
         if (this.person.getDescription() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_description), true));
             linearLayout.addView(this.createTextView(this.person.getDescription(), false));
-        }        
+        }
         if (this.person.getProfession() != null)
         {
         	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_profession), true));
             linearLayout.addView(this.createTextView(this.person.getProfession(), false));
-        }        
+        }
         if (this.person.getModuls() != null && this.person.getModuls().length>0)
-        {	
-       
+        {
+
         	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_modules), true));
         	String [] tmpModules = this.person.getModuls();
-        
+
         	for(int i=0;i<tmpModules.length;i++){
 	             linearLayout.addView(this.createTextView(tmpModules[i], false));
         	}
-        }        
+        }
         if (this.person.getResponsibilities() != null && this.person.getResponsibilities().length>0)
         {
         	linearLayout.addView(this.createTextView(resources.getString(string.detail_person_responsibility), true));
             String [] tmpResponsibilities = this.person.getResponsibilities();
-            
+
             	for(int i=0;i<tmpResponsibilities.length;i++){
-    	            
+
     	            linearLayout.addView(this.createTextView(tmpResponsibilities[i], false));
             	}
-        }        
+        }
         if (this.person.getTalkTime() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_talktime), true));
             linearLayout.addView(this.createTextView(this.person.getTalkTime(), false));
-        }        
+        }
         if (this.person.getPhone() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_phone), true));
@@ -169,7 +148,7 @@ public class PersonDetailActivity extends Activity
                 }
             });
             linearLayout.addView(textView);
-        }        
+        }
         if (this.person.getEmail() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_email), true));
@@ -191,7 +170,7 @@ public class PersonDetailActivity extends Activity
                 }
             });
             linearLayout.addView(textView);
-        }        
+        }
         if (this.person.getUrl() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_person_url), true));
@@ -213,8 +192,8 @@ public class PersonDetailActivity extends Activity
                 }
             });
             linearLayout.addView(textView);
-        }        
-        
+        }
+
     }
     /**
      * Verschoenert unsere Textviews.
