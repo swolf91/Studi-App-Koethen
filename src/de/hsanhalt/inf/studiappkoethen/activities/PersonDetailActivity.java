@@ -80,7 +80,7 @@ public class PersonDetailActivity extends Activity
         if (this.person.getStreet() != null && this.person.gethouseNumber() != null && this.person.getPostalCode() != null && this.person.getCity() != null)
         {
             linearLayout.addView(this.createTextView(resources.getString(string.detail_adresse_headline ), true));
-            linearLayout.addView(this.createTextView("Gebaeude " + this.person.getBuilding() + " im Raum " +this.person.getRoom(), false));
+            linearLayout.addView(this.createTextView("Raum " +this.person.getRoom() + " im Gebaeude " + this.person.getBuilding(), false));
             linearLayout.addView(this.createTextView(this.person.getStreet() + " " + this.person.gethouseNumber(), false));
             linearLayout.addView(this.createTextView(this.person.getPostalCode() + " " + this.person.getCity(), false));
         }
