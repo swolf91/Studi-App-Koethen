@@ -9,7 +9,7 @@
         <surname>Anderson</surname>
         <description>Nils ist der Teamchef, welcher für die Koordination, den Zusammenhalt und die Planung zuständig war.
             Dabei nahm er kein Blatt vor den Mund und sagte, was ihm nicht passte. 
-            Auch für die wöchentliche Absparache zum Dienstag nahm er die Planung in die Hand und spielte Moderator.
+            Auch für die wöchentliche Absprache zum Dienstag nahm er die Planung in die Hand und spielte Moderator.
             Ansonsten schrieb er Dokumentation und pflegte den Kontakt zur Professorin, sodass sich darum kein anderer kümmern musste.
         </description>
     </person>
@@ -30,7 +30,7 @@
         <id>2</id>
         <name>Steven</name>
         <surname>Piotter</surname>
-        <description>Steven ist der Designer und zustaendig fuer das Optische der App. 
+        <description>Steven ist der Designer und zuständig für das Optische der App. 
         Da kein Photoshop im Androidlabor installiert ist, 
         lief er mehrmals die Etagen hoch und runter, um am Ende zu erfahren, dass doch noch nicht alles passt. 
         Ansonsten ist Steven für den Spaß in der Runde da und ermuntert alle mit Youtube-Videos, sowie lustigen Sprüchen.
@@ -41,7 +41,7 @@
         <id>3</id>
         <name>Stefan</name>
         <surname>Weichel</surname>
-        <description>Stefan ist der Zustaendige fuer die GoogleMaps Integration der App.
+        <description>Stefan ist der Zuständige für die GoogleMaps Integration der App.
                     Er arbeitet gerne still und heimlich. Macht viel, aber kommuniziert dies nicht gerne.
                     Trotzdem ist er ein wichtiger Bestandteil des Teams, denn die GoogleMaps Integration ist essenziell.
         </description>
@@ -62,7 +62,7 @@
         <id>5</id>
         <name>Sebastian</name>
         <surname>Maurer</surname>
-        <description>Sebastian ist fuer Inhalte der App und die Erstellung, sowie Pflege von XML-Dateien
+        <description>Sebastian ist für Inhalte der App und die Erstellung, sowie Pflege von XML-Dateien
             verantwortlich.
         </description>
     </person>
