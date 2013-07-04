@@ -95,7 +95,12 @@ public class QuizManager implements XmlParser
                 }
                 else if(subNode.getNodeName().equals("startMessage"))
                 {
-                    startmsg = subNode.getTextContent();
+                    String[] tmp = subNode.getTextContent().split("\n");
+                    startmsg = "";
+                    for(String str : tmp)
+                    {
+                        startmsg += str.trim() + "\n";
+                    }
                 }
                 else if(subNode.getNodeName().equals("name"))
                 {
@@ -131,8 +136,8 @@ public class QuizManager implements XmlParser
     {
         byte id = -1;
         String question = null;
-        List<String> answer = new ArrayList<String>(4);
-        List<Integer> correctAnswers = new ArrayList<Integer>(1);
+        List<String> answer = new ArrayList<>(4);
+        List<Integer> correctAnswers = new ArrayList<>(1);
         String hint = null;
         String result = null;
         byte buildingCategory = -1;
@@ -151,7 +156,12 @@ public class QuizManager implements XmlParser
                 }
                 else if(subNode.getNodeName().equals("question"))
                 {
-                    question = content;
+                    String[] tmp = content.split("\n");
+                    question = "";
+                    for(String str : tmp)
+                    {
+                        question += str.trim() + "\n";
+                    }
                 }
                 else if(subNode.getNodeName().equals("answer"))
                 {
