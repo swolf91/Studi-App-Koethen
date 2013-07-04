@@ -7,8 +7,10 @@
         <id>0</id>
         <name>Nils</name>
         <surname>Anderson</surname>
-        <description>Dies ist der Teamchef, welcher für die Koordination, den Zusammenhalt und die Planung zuständig war.
-            Dabei nahm er kein Blatt vor den Mund und sagte, was ihm nicht zusagt.
+        <description>Nils ist der Teamchef, welcher für die Koordination, den Zusammenhalt und die Planung zuständig war.
+            Dabei nahm er kein Blatt vor den Mund und sagte, was ihm nicht passte. 
+            Auch für die wöchentliche Absparache zum Dienstag nahm er die Planung in die Hand und spielte Moderator.
+            Ansonsten schrieb er Dokumentation und pflegte den Kontakt zur Professorin, sodass sich darum kein anderer kümmern musste.
         </description>
     </person>
 
@@ -17,28 +19,43 @@
         <name>Stefan</name>
         <surname>Wolf</surname>
         <description>Er war und ist weiterhin unser Programmiergenie. Egal welche Fragen auch aufkamen
-            es hatte immer eine passende Antwort und denkt immer schon viele Schritte voraus.</description>
+            er hatte immer eine passende Antwort und denkt immer schon viele Schritte voraus.
+            Er verteilte fleissig Aufgaben und kontrollierte penibel die Ergebnisse. Alleine machen wollte er es nicht, 
+            aber nachkontrollieren war für ihn ein Muss. Durch seine vorherigen Kenntnisse in Programmierprojekten 
+            profitierten wir alle und lernten Techniken kennen, sodass man optimal im Team arbeiten kann.
+            </description>
     </person>
 
     <person>
         <id>2</id>
         <name>Steven</name>
         <surname>Piotter</surname>
-        <description>Steven ist der Designer und zustaendig fuer das Optische der App.</description>
+        <description>Steven ist der Designer und zustaendig fuer das Optische der App. 
+        Da kein Photoshop im Androidlabor installiert ist, 
+        lief er mehrmals die Etagen hoch und runter, um am Ende zu erfahren, dass doch noch nicht alles passt. 
+        Ansonsten ist Steven für den Spaß in der Runde da und ermuntert alle mit Youtube-Videos, sowie lustigen Sprüchen.
+        </description>
     </person>
 
     <person>
         <id>3</id>
         <name>Stefan</name>
         <surname>Weichel</surname>
-        <description>Stefan ist der Zustaendige fuer die GoogleMaps Integration der App.</description>
+        <description>Stefan ist der Zustaendige fuer die GoogleMaps Integration der App.
+                    Er arbeitet gerne still und heimlich. Macht viel, aber kommuniziert dies nicht gerne.
+                    Trotzdem ist er ein wichtiger Bestandteil des Teams, denn die GoogleMaps Integration ist essenziell.
+        </description>
     </person>
 
     <person>
         <id>4</id>
         <name>Gordian</name>
         <surname>Kauf</surname>
-        <description>Gordian ist die rechte Hand von Stefan Wolf und hilft bzw. programmiert.</description>
+        <description>Gordian ist die rechte Hand von Stefan Wolf und hilft bzw. programmiert.
+            Er ist auch eher der Ruhige, aber sagt wenn ihm was nicht passt. 
+            Seine Aufgaben erledigt er ausdauernd bis zum letzten Fehler, auch wenn Stefan Wolf es am Ende anders will.
+            Die Aufgabenteilung zwischen Stefan Wolf und Gordian Kauf stellten die Weichen für die Programmierbestandteile unserer APP.
+        </description>
     </person>
 
     <person>
