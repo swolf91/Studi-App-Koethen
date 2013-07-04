@@ -245,11 +245,14 @@ public class PersonDetailActivity extends Activity
             return super.onOptionsItemSelected(item);
         }
     }
-
+    /**
+     * Zum Aufbau des Options-Menues.+
+     * @return true, wenn es erfolgreich gebaut wurde.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        
         getMenuInflater().inflate(R.menu.detail, menu);
         return true;
     }

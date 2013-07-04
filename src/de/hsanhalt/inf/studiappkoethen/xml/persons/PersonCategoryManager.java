@@ -87,7 +87,7 @@ public class PersonCategoryManager implements XmlParser
     /**
      * Laedt die Unterelemente der Kategorie-XML Datei zur Laufzeit. Wird von "addNode(Node node)" genutzt.
      * @param node Knoten
-     * @return Wahr, wenn kein Fehler gewurfen wurde.
+     * @return Ist true, wenn kein Fehler gewurfen wurde.
      * @throws XmlParseException Fehler wenn die Kategorie-XML unvollstaendig ist.
      */
     private boolean addElement(Node node) throws XmlParseException

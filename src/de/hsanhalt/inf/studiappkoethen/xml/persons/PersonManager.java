@@ -21,7 +21,7 @@ public class PersonManager implements XmlParser
 
 
     /**
-     * Standartkonstruktor. Laedt alle in als XML-Daten vorhandenen Personen in den RAM.
+     * Laedt alle als XML-Daten vorhandenen Personen.
      */
     private PersonManager()
     {
@@ -32,9 +32,9 @@ public class PersonManager implements XmlParser
 
     /**
      * Gibt eine Instanz dieser Klasse zurueck und sorgt dafuer, dass auch nur
-     * eine Instanz erstellt wird! Ganz ala Singleton.
+     * eine Instanz erstellt wird! 
      *
-     * @return eine Instanz!
+     * @return eine Instanz
      */
     public static PersonManager getInstance()
     {
@@ -91,7 +91,7 @@ public class PersonManager implements XmlParser
     }
     
     /**
-     * Wertet ein XML Knote aus und teilt jedem neuen Personenobjekt eine Kategorie zu.
+     * Wertet ein XML-Knoten aus und teilt jedem neuen Personenobjekt eine Kategorie zu.
      */
     @Override
     public void addNode(Node node) throws XmlParseException
@@ -128,7 +128,7 @@ public class PersonManager implements XmlParser
     }
 
     /**
-     * Elemente werden aus der XML ausgelesen und als Personenobjekte angelegt.
+     * Unterelemente werden aus der XML ausgelesen und als Personenobjekte angelegt.
      *
      * @param category wird benoetigt um schneller auf die Person zu schliessen.
      * @param node     aktueller XML Knoten
@@ -160,7 +160,7 @@ public class PersonManager implements XmlParser
 
         NodeList list = node.getChildNodes();
         
-        ArrayList<String> modules = new ArrayList<>();       //zum Fuellen der Arrays nutzen wir Arraylisten um leere Elemente zu vermeiden.
+        ArrayList<String> modules = new ArrayList<>();       
         ArrayList<String> responsibilities = new ArrayList<>();
         
         for (int i = 0; i < list.getLength(); i++)
@@ -289,7 +289,7 @@ public class PersonManager implements XmlParser
     }
 
     /**
-     * Zur erkennung des Anfangs der Personen-XML. 
+     * Wird gebraucht um den Anfang der Personen-XML zu identifizieren. 
      *
      */
     @Override

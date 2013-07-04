@@ -179,10 +179,14 @@ public class ExpandableListActivity extends Activity
         return entryList;
     }
 
+    /**
+     * Baut das Options-Menue auf.
+     * @return true, wenn es erfolgreich gebaut wurde.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        
         getMenuInflater().inflate(R.menu.expandable_list, menu);
         return true;
     }

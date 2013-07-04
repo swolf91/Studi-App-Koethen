@@ -120,7 +120,7 @@ public class ExpandableListAdapter<G, C> extends BaseExpandableListAdapter
         return convertView;
     }
     /**
-     * Ist "true" wenn die Unterelemente der Kategorie selektierbar sein duerfen.
+     * Ist true, wenn die Unterelemente der Kategorie selektierbar sein duerfen.
      */
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition)

@@ -175,7 +175,7 @@ public class Person
     }
 
     /**
-     * Gibt die Fachrichtung der Person  zurueck.
+     * Gibt die Fachrichtung der Person zurueck.
      */
     public String getSpecialField()
     {
@@ -297,21 +297,21 @@ public class Person
     /**
      * Legt eine 1:1 Kopie des uebergebenen Arrays an.
      *
-     * @param dat : dat kopiert er 1:1.
+     * @param copyMe : dies kopiert er 1:1.
      */
-    private String[] copy(String[] dat)
+    private String[] copy(String[] copyMe)
     {
-        String[] tmp = new String[dat.length];
+        String[] tmp = new String[copyMe.length];
 
-        for (int i = 0; i < dat.length; i++)
+        for (int i = 0; i < copyMe.length; i++)
         {
-            tmp[i] = dat[i];
+            tmp[i] = copyMe[i];
         }
         return tmp;
     }
     
     /**
-     * Konvertiert eine Person zu einem String.
+     * Gibt fuer eine Person die "Kennung" zurueck.
      */
     public String toString()
     {
