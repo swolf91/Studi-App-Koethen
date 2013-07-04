@@ -3,6 +3,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/quiz_linearlayout_mainlayout"
-    android:background="@drawable/fragezeichen">
+    android:id="@+id/quiz_linearlayout_mainlayout">
 </LinearLayout>

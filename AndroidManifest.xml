@@ -46,9 +46,9 @@
         <activity android:name=".activities.GoogleMapsActivity"></activity>
         <activity android:name=".activities.QuizActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".activities.DetailActivity"></activity>
-        <activity android:name=".activities.ExpandableListActivity"></activity>
+        <activity android:name=".activities.ExpandableListActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".activities.ImageActivity"></activity>
-        <activity android:name=".activities.SupportActivity"></activity>
+        <activity android:name=".activities.SupportActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".activities.PersonDetailActivity"></activity>
     </application>
 
