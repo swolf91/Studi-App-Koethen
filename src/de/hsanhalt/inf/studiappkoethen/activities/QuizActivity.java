@@ -166,7 +166,7 @@ public class QuizActivity extends Activity
                     MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
                     params.setMargins(10, 5, 85, 5);
 
-                    buildingButton.setBackgroundDrawable(this.getResources().getDrawable(drawable.button));
+                    buildingButton.setBackgroundDrawable(this.getResources().getDrawable(drawable.button_small));
                     buildingButton.setTextColor(Color.WHITE);
                     buildingButton.setLayoutParams(new LinearLayout.LayoutParams(params));
                     linearLayoutInner.addView(buildingButton);

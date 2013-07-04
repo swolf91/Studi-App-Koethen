@@ -16,6 +16,7 @@ import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ImageView;
 import de.hsanhalt.inf.studiappkoethen.R;
+import de.hsanhalt.inf.studiappkoethen.R.drawable;
 import de.hsanhalt.inf.studiappkoethen.R.id;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListAdapter;
 import de.hsanhalt.inf.studiappkoethen.util.expandablelist.ExpandableListEntry;
@@ -65,14 +66,14 @@ public class ExpandableListActivity extends Activity
             if (this.showBuildings)
             {
                 ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Persons);
-                imageView.setBackgroundColor(Color.rgb(255, 255, 255));
+                imageView.setBackgroundDrawable(this.getResources().getDrawable(drawable.border2));
                 this.expandableListAdapterBuilding = new ExpandableListAdapter<BuildingCategory, Building>(this, this.getBuildingList(isCampus));
                 this.expandableListView.setAdapter(this.expandableListAdapterBuilding);
             }
             else
             {
                 ImageView imageView = (ImageView)this.findViewById(R.id.imageView_Buildings);
-                imageView.setBackgroundColor(Color.rgb(255, 255, 255));
+                imageView.setBackgroundDrawable(this.getResources().getDrawable(drawable.border2));
                 this.expandableListAdapterPerson = new ExpandableListAdapter<PersonCategory, Person>(this, this.getPersonList());
                 this.expandableListView.setAdapter(this.expandableListAdapterPerson);
             }
