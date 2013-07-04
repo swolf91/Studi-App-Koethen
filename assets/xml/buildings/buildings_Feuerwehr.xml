@@ -8,10 +8,10 @@
         <street>Bärteichpromenade</street>
         <houseNumber>12</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517493400</latitude>
         <longitude>119741800</longitude>
-        <description>Feuerwehr Koethen</description>
+        <description>Feuerwehr Köthen</description>
         <registerImage>buildings/Feuerwehr.JPG</registerImage>
         <registerImage>buildings/Feuerwehr_1.JPG</registerImage>
     </building>

@@ -4,31 +4,31 @@
 
     <building>
         <id>0</id>
-        <name>Kino Koethen</name>
+        <name>Kino Köthen</name>
         <street>Weintraubenstrasse</street>
         <houseNumber>15</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517516980</latitude>
         <longitude>119816820</longitude>
         <description>
-	Cine Circus Koethen ist der richtige Ort wenn ihr nicht weit weg wollt, 
-	um einen Flm zu sehen egal ob 2D oder 3D alles wird geboten.
+	Cine Circus Köthen ist der richtige Ort wenn ihr nicht weit weg wollt,
+	um einen Flm zu sehen. Egal ob 2D oder 3D alles wird geboten.
 	</description>
 	<registerImage>buildings/Kino.JPG</registerImage>
         <url>http://www.cine-circus.de/index.php</url>
     </building>
     <building>
         <id>1</id>
-        <name>Dilan Doener</name>
+        <name>Dilan Döner</name>
         <street>Weintraubenstrasse</street>
         <houseNumber>23</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517517751</latitude>
         <longitude>119822303</longitude>
         <description>
-	Der Dilan Doener in Koethen ist auch eine beliebte Anlaufstelle zum Mittag.
+	Der Dilan Döner in Köthen ist auch eine beliebte Anlaufstelle zum Mittag.
 	</description>
         <url>http://dilan-doener.jimdo.com/</url>
         <registerImage>buildings/DilanDoener.JPG</registerImage>
@@ -39,7 +39,7 @@
         <street>Leopoldstrasse</street>
         <houseNumber>67a</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517564600</latitude>
         <longitude>119853700</longitude>
         <description>
@@ -54,7 +54,7 @@
         <street>Lohmannstrasse</street>
         <houseNumber>75</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517456300</latitude>
         <longitude>119722860</longitude>
         <description>
@@ -70,12 +70,12 @@
         <street>Fasanerieallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517539986</latitude>
         <longitude>119664018</longitude>
         <description>
-	Es ist die Studentendisco in Koethen.
-	Mittwochs ist immer irgendeine Motto-Party und sonst haengen ueberall Flyer und Plakate, welche euch informieren aus.
+	Es ist die Studentendisco in Köthen.
+	Mittwochs ist immer irgendeine Motto-Party und sonst hängen überall Flyer und Plakate, welche euch informieren aus.
 	</description>
         <url>http://www.mensakeller.com/</url>
         <registerImage>buildings/Mensakeller.JPG</registerImage>
@@ -86,12 +86,12 @@
         <street>Hubertus</street>
         <houseNumber>56</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517552250</latitude>
         <longitude>119597090</longitude>
         <description>
 	Im VT Club ist dienstags Motto-Abend und ihr findet ihn im Keller des Wohnheims 6.
-	Aber ihr koennt auch beim Grillen draussen sitzen.
+	Aber ihr könnt auch beim Grillen draussen sitzen.
 	</description>
         <url>http://www.vt-club.de/index.php</url>
         <registerImage>buildings/VTClub.JPG</registerImage>

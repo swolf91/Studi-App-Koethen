@@ -7,45 +7,47 @@
         <id>0</id>
         <name>Nils</name>
         <surname>Anderson</surname>
-        <specialField>Nils ist Teamchef und fuer saemtliche Koordination, Zusammenhalt und Planung zustaendig.
-        </specialField>
+        <description>Dies ist der Teamchef, welcher für die Koordination, den Zusammenhalt und die Planung zuständig war.
+            Dabei nahm er kein Blatt vor den Mund und sagte, was ihm nicht zusagt.
+        </description>
     </person>
 
     <person>
         <id>1</id>
         <name>Stefan</name>
         <surname>Wolf</surname>
-        <specialField>Stefan ist der Quellcode-Guru und erklaert bzw. hilft wo er kann.</specialField>
+        <description>Er war und ist weiterhin unser Programmiergenie. Egal welche Fragen auch aufkamen
+            es hatte immer eine passende Antwort und denkt immer schon viele Schritte voraus.</description>
     </person>
 
     <person>
         <id>2</id>
         <name>Steven</name>
         <surname>Piotter</surname>
-        <specialField>Steven ist der Designer und zustaendig fuer das Optische der App.</specialField>
+        <description>Steven ist der Designer und zustaendig fuer das Optische der App.</description>
     </person>
 
     <person>
         <id>3</id>
         <name>Stefan</name>
         <surname>Weichel</surname>
-        <specialField>Stefan ist der Zustaendige fuer die GoogleMaps Integration der App.</specialField>
+        <description>Stefan ist der Zustaendige fuer die GoogleMaps Integration der App.</description>
     </person>
 
     <person>
         <id>4</id>
         <name>Gordian</name>
         <surname>Kauf</surname>
-        <specialField>Gordian ist die rechte Hand von Stefan Wolf und hilft bzw. programmiert.</specialField>
+        <description>Gordian ist die rechte Hand von Stefan Wolf und hilft bzw. programmiert.</description>
     </person>
 
     <person>
         <id>5</id>
         <name>Sebastian</name>
         <surname>Maurer</surname>
-        <specialField>Sebastian ist fuer Inhalte der App und die Erstellung, sowie Pflege von XML-Dateien
+        <description>Sebastian ist fuer Inhalte der App und die Erstellung, sowie Pflege von XML-Dateien
             verantwortlich.
-        </specialField>
+        </description>
     </person>
 
 </persons>

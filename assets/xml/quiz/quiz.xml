@@ -2,17 +2,24 @@
 <quiz>
     <id>0</id>
     <name>Standard Campusquiz</name>
-    <startMessage>Das Quiz beginnt vor dem roten Gebaeude (01). Die Auswertung erfolgt nach dem kompletten Rundgang.</startMessage>
+    <startMessage>Das Quiz soll dazu dienen dir deinen Campus ein wenig näher zu bringen und dich über diesen zu führen.
+        Es beginnt vor dem Gebäude 01 (dem roten Gebauede). Also begib dich jetzt bitte dahin und fange mit dem Quiz an.
+        Wenn du den kompletten Rundgang abgeschlossen hast, wird deine Begehungsrunde ausgewertet.
+        Viel Spaß dabei.
+    </startMessage>
     <question>
         <id>0</id>
         <buildingCategory>1</buildingCategory>
         <building>0</building>
-        <question>Wie viele Fenster hat das rote Gebäude in der 2. Etage an der Frontseite?</question>
-        <hint>Stell dich direkt vor den Haupteingang des Gebäudes und zähle durch.</hint>
+        <question>Wie viele Fenster zählt das rote Gebäude in der 2. Etage an der Frontseite?
+
+            Irgendwie müssen wir dich ja schliesslich aufwärmen!
+        </question>
+        <hint>Stell dich direkt vor den Haupteingang des Gebäudes und zähle durch. 1 2 3...</hint>
         <answer answer="true">22</answer>
         <answer>33</answer>
         <answer>44</answer>
-        <result>Nun geht es um die Hochschulbibliothek.
+        <result>Nun geht es zur Hochschulbibliothek.
         
         
         
@@ -25,24 +32,24 @@
         <buildingCategory>1</buildingCategory>
         <building>0</building>
         <question>In welcher Etage befindet sich die Hochschulbibliothek?</question>
-        <hint>Schau dir das Hauptgebäude von Innen an.</hint>
+        <hint>Nun geh schon rein und schaue dir das Hauptgebäude von Innen an.</hint>
         <answer answer="true">2. Etage</answer>
         <answer>5. Etage</answer>
         <answer>Keller</answer>
-        <result>Gehe nun zum grünen Gebäude (02)
+        <result>Gehe nun zum grünen Gebäude (02). Das befindet sich gleich nebenan.
         
         
         
-	Wusstest du schon? 
-	An den 3 Standortbibliotheken in Köthen, Bernburg und Dessau wird der Zugriff auf mehr als 385.000 Bände an Fachliteratur zur Verfügung gestellt. Zudem bietet das Campusnetz den Onlinezugriff auf mehr als 7.000 Ebooks und 38.000 Zeitschriftentitel.
+	        Wusstest du schon?
+	        An den 3 Standortbibliotheken in Köthen, Bernburg und Dessau wird der Zugriff auf mehr als 385.000 Bände an Fachliteratur zur Verfügung gestellt. Zudem bietet das Campusnetz den Onlinezugriff auf mehr als 7.000 Ebooks und 38.000 Zeitschriftentitel.
 		</result>
     </question>
     <question>
         <id>2</id>
         <buildingCategory>1</buildingCategory>
         <building>1</building>
-        <question>Wann wurde das Gebäude als Laborgebäude eingweiht?</question>
-        <hint>Tafel neben dem Gebäude (02)</hint>
+        <question>Wann wurde das grüne Gebäude als Laborgebäude eingweiht?</question>
+        <hint>Gucke mal rechts, gucke mal links..... und jetzt auf die Tafel, die direkt vor dem Haupteingang steht!</hint>
         <answer answer="true">1926</answer>
         <answer>1924</answer>
         <answer>1953</answer>
@@ -50,57 +57,57 @@
         
         
         
-	Wusstest du schon? 
-	Das grüne Gebäude gehört zu den ältesten Hochschulgebäuden in Köthen und dient seit 1926 als Erweiterungsbau für die Lehranstalt. Am 15.Mai 2013 wurde es im Rahmen einer langen Renovierungsphase feierlich eingeweiht.
+	        Wusstest du schon?
+	        Das grüne Gebäude gehört zu den ältesten Hochschulgebäuden in Köthen und dient seit 1926 als Erweiterungsbau für die Lehranstalt. Am 15.Mai 2013 wurde es im Rahmen einer langen Renovierungsphase feierlich eingeweiht.
 		</result>
     </question>
     <question>
         <id>3</id>
         <buildingCategory>2</buildingCategory>
         <building>4</building>
-        <question>Was ist nicht im weißen Gebäude vertreten.</question>
-        <hint>Tafel neben dem Gebäude (03)</hint>
+        <question>Welche Abteilung befindet sich nicht im weißen Gebäude?</question>
+        <hint>Na das weißt du wohl auch nicht? Wie hast du es denn bei der Frage davor beantwortet?</hint>
         <answer answer="true">Sprachenzentrum</answer>
         <answer>Hochschulverwaltung</answer>
         <answer>Akademisches Auslandsamt</answer>
-        <result>Gehe nun zur Turnhalle
+        <result>Gehe nun zur Turnhalle. (Auch wenn Sport eventuell nicht so dein Ding ist.)
         
         
         
-	Wusstest du schon? 
-	Die Hochschule Anhalt wurde 1991 gegründet. Zurzeit sind etwa 7400 Studenten an allen drei Standorten immatrikuliert. 
+	        Wusstest du schon?
+	        Die Hochschule Anhalt wurde 1991 gegründet. Zurzeit sind etwa 7400 Studenten an allen drei Standorten immatrikuliert.
 		</result>
     </question>
     <question>
         <id>4</id>
         <buildingCategory>2</buildingCategory>
         <building>1</building>
-        <question>Wie weit reicht das Sportangebot der Hochschule?</question>
+        <question>Wie weit reicht eigentlich das Sportangebot der Hochschule?</question>
         <answer answer="true">Aerobic - Volleyball</answer>
         <answer>Golf - Tennis</answer>
         <answer>Eishockey - Curling</answer>
-        <result>Gehe nun zum Wohnheim 5
+        <result>Gehe nun zum Wohnheim 5. Keine Sorge, wenn du nicht weißt wo sich das Wohnheim befindet, könntest du einfach auf unserer Karte gucken. Aber es ist gar nicht so weit weg!
         
         
         
-	Wusstest du schon? 
-	Allen Studenten und Hochschulangehörigen wird ein umfangreiches Sportangebot bereitet und jährlích findet ein Sommerfest des Hochschulsports statt. 
+	        Wusstest du schon?
+	        Allen Studenten und Hochschulangehörigen wird ein umfangreiches Sportangebot bereitet und jährlích findet ein Sommerfest des Hochschulsports statt.
 		</result>
     </question>
     <question>
         <id>5</id>
         <buildingCategory>8</buildingCategory>
         <building>4</building>
-        <question>Wie viele Etagen hat dieses Haus?</question>
+        <question>Wie viele Etagen hat das Wohnheim 5?</question>
         <answer answer="true">10</answer>
         <answer>5</answer>
         <answer>15</answer>
-        <result>Gehe nun zum Wohnheim 6
+        <result>Gehe nun zum Wohnheim 6. Selbstverständlich gilt hier das selbe was ich letztes mal schon angemerkt hatte.
         
         
         
-	Wusstest du schon? 
-	Dass das Studentewerk Halle auch für die Wohnraumvermittlung in Köthen zuständig ist.
+	        Wusstest du schon?
+	        Dass das Studentenwerk Halle auch für die Wohnraumvermittlung in Köthen zuständig ist.
 		</result>
     </question>
     <question>
@@ -108,7 +115,7 @@
         <buildingCategory>8</buildingCategory>
         <building>5</building>
         <question>Wie heißt der Studentenclub im Wohnheim 6?</question>
-        <hint>Er befindet sich nicht an der Hauptstraße, aber ist trotzdem sehr gut sichtbar.</hint>
+        <hint>Er befindet sich nicht an der Hauptstraße, ist aber trotzdem sehr gut sichtbar und nicht zu verfehlen.</hint>
         <answer answer="true">VT-Club</answer>
         <answer>HS-Club</answer>
         <answer>Mensakeller</answer>
@@ -122,25 +129,25 @@
     </question>
     <question>
         <id>7</id>        
-        <question>Welches Tier ist vor dem Gebäude und neben dem Haupteingang zu sehen?</question>
-        <hint>Das Tier ist ein Modell und nicht echt.</hint>
+        <question>Welches Tier ist vor dem Gebäude, neben dem Haupteingang zu sehen?</question>
+        <hint>Das Tier ist ein Modell und steht überall in Köthen rum.</hint>
         <answer answer="true">Kuh</answer>
         <answer>Ziege</answer>
         <answer>Bär</answer>
-        <result>Gehe nun zum Technologiezentrum
+        <result>Gehe nun zum Technologiezentrum. Es lebe der Fortschritt!
         
         
         
-	Wusstest du schon? 
-	Hugo Junkers lebte von 1859 bis 1935 und gründete 1895 in Dessau die Firma Junkers und Co. Weiterhin schuf er wichtige Kenntnisse in den bereichen Flugzeugbau und Metallbau.
+	        Wusstest du schon?
+	        Hugo Junkers lebte von 1859 bis 1935 und gründete 1895 in Dessau die Firma Junkers und Co. Weiterhin schuf er wichtige Kenntnisse in den Bereichen Flugzeug- und Metallbau.
 	</result>
     </question>
     <question>
         <id>8</id>
         <buildingCategory>3</buildingCategory>
         <building>0</building>
-        <question>Was befindet neben dem Technologiezentrum?</question>
-        <hint>Stell dich vor den Haupteingang und schau nach links.</hint>
+        <question>Was befindet sich eigentlich neben dem Technologiezentrum? Das Gebäude an sich ist doch uninteressant.</question>
+        <hint>Stell dich vor den Haupteingang und schau nach links. Noch ein Tipp: Es dreht sich nicht um die Straße.</hint>
         <answer answer="true">Sportplatz</answer>
         <answer>Fachbereich 5</answer>
         <answer>Schwimmhalle</answer>
@@ -148,16 +155,16 @@
         
         
         
-	Wusstest du schon? 
-	Das Technologiezentrum ist die perfekte Anlaufstelle für technologieorientierte Unternehmen und bietet den geeigneten Rahmen für erste Entwicklungschritte.
+	        Wusstest du schon?
+	        Das Technologiezentrum ist die perfekte Anlaufstelle für technologieorientierte Unternehmen und bietet den geeigneten Rahmen für erste Entwicklungschritte.
 		</result>
     </question>
     <question>
         <id>09</id>
         <buildingCategory>2</buildingCategory>
         <building>2</building>
-        <question>Wie heißt das preiswerte und beliebte Gericht in der Hochschulmensa?</question>
-        <hint>Das Gericht kostet in der Regel 1.50 Euro für Studenten</hint>
+        <question>Wie heißt das preiswerte und "beliebte" Gericht in der Hochschulmensa?</question>
+        <hint>Der Preis liegt für Studenten in der Regel bei 1.50 Euro.</hint>
         <answer answer="true">Sprintmenü</answer>
         <answer>Chillmenü</answer>
         <answer>MenüToGo</answer>
@@ -165,8 +172,8 @@
         
         
         
-	Wusstest du schon? 
-	Um die Wartezeiten an den Kassen zu verkürzen, wurde ein bargeldloser Zahlungsverkehr mittels Chipkarte eingeführt. Dieser Chip befindet sich auf dem Studentenausweis.
+	        Wusstest du schon?
+	        Um die Wartezeiten an den Kassen zu verkürzen, wurde ein bargeldloser Zahlungsverkehr mittels Chipkarte eingeführt. Dieser Chip befindet sich auf dem Studentenausweis.
 		</result>
     </question>
     <question>
@@ -174,16 +181,16 @@
         <buildingCategory>7</buildingCategory>
         <building>4</building>
         <question>Welche Biermarke wird offensichtlich beworben?</question>
-        <hint>Das Logo ist direkt über dem Eingang zum Mensakeller erkennbar.</hint>
+        <hint>Das Logo ist direkt über dem Eingang zum Mensakeller erkennbar. *Hust* und eventuell auch auf unseren Bildern zu sehen *Hust*</hint>
         <answer answer="true">Becks</answer>
         <answer>Sternburger</answer>
         <answer>Radeberger</answer>
-        <result>Gehe nun in Richtung Lohmannstraße 23 und nutze den Weg über den Marktplatz, da allgemeine Fragen folgen.
+        <result>Gehe nun in Richtung Lohmannstraße 23 und nutze den Weg über den Marktplatz, da allgemeine Fragen folgen und diese sich auch über diesen Weg drehen könnten.
 				
 				
 				
-	Wusstest du schon? 
-	Der Mensakeller bietet zusätzlich zu den Musikveranstaltungen regelmäßig Kinovorstellungen mt aktuellen Filmen an.
+	        Wusstest du schon?
+	        Der Mensakeller bietet zusätzlich zu den Musikveranstaltungen regelmäßig Kinovorstellungen mt aktuellen Filmen an.
 		</result>
     </question>
     <question>
@@ -192,12 +199,12 @@
         <answer answer="true">5,6 und 7</answer>
         <answer>1,2 und 3</answer>
         <answer>5,7 und 4</answer>
-		<result>Ich hoffe ihr seit noch unterwegs.
+		<result>Wir hoffen, dass du noch unterwegs bist. Du solltet dich nämlich gerade zum besten Fachbereich der Hochschule bewegen.
 			
 			
 			
-	Wusstest du schon? 
-	69 Bachelor- und Masterstudiengänge bereiten 8.020, davon 2038 internationale, Studenten an sieben Fachbereichen auf das Berufsleben vor.
+	        Wusstest du schon?
+	        69 Bachelor- und Masterstudiengänge bereiten 8.020, davon 2038 internationale, Studenten an sieben Fachbereichen auf das Berufsleben vor.
 	</result>
     </question>
     <question>
@@ -210,8 +217,8 @@
 		
 		
 		
-	Wusstest du schon? 
-	Köthen ist die  Welthauptstadt der Homöopathie. Aktuell ist Köthen die Kreisstadt des Bereiches Anhalt-Bitterfeld und hat etwa 27.400 Einwohner.</result>
+	        Wusstest du schon?
+	        Köthen ist die  Welthauptstadt der Homöopathie. Aktuell ist Köthen die Kreisstadt des Bereiches Anhalt-Bitterfeld und hat etwa 27.400 Einwohner.</result>
     </question>
     <question>
         <id>13</id>
@@ -222,9 +229,9 @@
 		<result>
 		
 		
-	Wusstest du schon? 
-	Das Schloss Köthen befindet sich im Herzen der Stadt und diente von 1244 bis 1845 als anhaltische Fürstenresidenz. Es war außerdem seit 1629 Sitz der fruchtbringenden Gesellschaft, des ersten deutschen Sprachvereins, der 1617 in Weimar gegründet wurde.
-	</result>
+	        Wusstest du schon?
+	        Das Schloss Köthen befindet sich im Herzen der Stadt und diente von 1244 bis 1845 als anhaltische Fürstenresidenz. Es war außerdem seit 1629 Sitz der fruchtbringenden Gesellschaft, des ersten deutschen Sprachvereins, der 1617 in Weimar gegründet wurde.
+	    </result>
     </question>
     <question>
         <id>14</id>
@@ -235,8 +242,9 @@
 		<result>
 		
 		
-		Wusstest du schon? 
-		Johann Sebastian Bach wirkte in Köthen zwischen 1717 und 1732 als Hofkapellmeister Leopolds von Anhalt Köthen und schuff hier Teile seiner Brandenburgischen Konzerte und seines Zyklus das wohltemperierte Klavier.</result>
+		    Wusstest du schon?
+		    Johann Sebastian Bach wirkte in Köthen zwischen 1717 und 1732 als Hofkapellmeister Leopolds von Anhalt Köthen und schuff hier Teile seiner Brandenburgischen Konzerte und seines Zyklus das wohltemperierte Klavier.
+        </result>
     </question>
     <question>
         <id>15</id>
@@ -244,43 +252,44 @@
         <answer answer="true">rot und blau</answer>
         <answer>grün und gelb</answer>
         <answer>orange und lila</answer>
-        <result>Du solltest nun das Gebäude 23 in der Lohmannstraße erreicht haben, um weitere Fragen beantworten zu können.
+        <result>Bist du jetzt endlich beim Gebäude 23 in der Lohmannstraße angekommen? Wenn nicht solltest du mal bitte einen Zahn zulegen. Dein Akku wird nicht ewig halten!
 				
 				
 				
-	Wusstest du schon? 
-	Leopold von Anhalt Köthen war regierender Fürst von Anhalt Köthen. Er ist als Förderer und lebenslanger Freund Johann Sebastian Bachs in die Geschichte eingegangen.
+	        Wusstest du schon?
+	        Leopold von Anhalt Köthen war regierender Fürst von Anhalt Köthen. Er ist als Förderer und lebenslanger Freund Johann Sebastian Bachs in die Geschichte eingegangen.
 		</result>
     </question>
     <question>
         <id>16</id>
         <buildingCategory>1</buildingCategory>
         <building>2</building>
-        <question>Welcher Fachbereich befindet sich in der Lohmannstraße?</question>
+        <question>Welcher Fachbereich befindet sich denn in der Lohmannstraße?</question>
         <answer answer="true">Fachbereich 5</answer>
         <answer>Fachbereich 2</answer>
         <answer>Fachbereich 6</answer>
 		<result>		
 		
 		
-		Wusstest du schon?
-		Rund 430 ausländische Studenten bereitet sich am Landesstudinekolleg auf ein erfoglreiches Studium in Deutschland vor.</result>
+            Wusstest du schon?
+		    Rund 430 ausländische Studenten bereiten sich am Landesstudinekolleg auf ein erfoglreiches Studium in Deutschland vor.
+        </result>
     </question>
     <question>
         <id>17</id>
         <buildingCategory>1</buildingCategory>
         <building>2</building>
         <question>Wie heißt dieses Gebäude genau?</question>
-        <hint>Tafel neben dem Haupteingang an der Vorderseite</hint>
+        <hint>Muss ich dir das Spiel schon wieder erklären? Da steht eine Tafel! Am Haupteingang!</hint>
         <answer answer="true">Ratke Gebäude</answer>
         <answer>rotes Gebäude</answer>
         <answer>Hugo-Junkers Gebäude</answer>
-        <result>Gehe nun hinter das Gebäude 23
+        <result>Gehe nun hinter das Gebäude 23. Keine Angst. Du hast es bald geschafft.
 				
 				
 				
-	Wusstest du schon? 
-	Der Namensgeber des Gebäudes, Wolfgang Ratke, lebte in der Zeit von 1618 bis 1620 in Köthen und gründete dort den ersten Schulbuchverlag, sowie eine Schule für Jungen und Mädchen.
+	        Wusstest du schon?
+	        Der Namensgeber des Gebäudes, Wolfgang Ratke, lebte in der Zeit von 1618 bis 1620 in Köthen und gründete dort den ersten Schulbuchverlag, sowie eine Schule für Jungen und Mädchen.
 	</result>
     </question>
     <question>
@@ -295,8 +304,8 @@
 				
 				
 				
-	Wusstest du schon? 
-	Das Gebäude wird erst seit dem Jahr 2000 durch den Fachbereich Informatik und Sprachen benutzt. Vorher wurde es bereits drei Jahre für die Organisationen des Studienkollegs und des europäischen Fernstudienzentrums im Hochschulverband Sachsen Anhalt genutzt.
+	        Wusstest du schon?
+	        Das Gebäude wird erst seit dem Jahr 2000 durch den Fachbereich Informatik und Sprachen benutzt. Vorher wurde es bereits drei Jahre für die Organisationen des Studienkollegs und des europäischen Fernstudienzentrums im Hochschulverband Sachsen Anhalt genutzt.
 		</result>
     </question>
     <question>
@@ -307,6 +316,11 @@
         <answer answer="true">50</answer>
         <answer answer="true">100</answer>
         <answer answer="true">150</answer>
-        <result>Wusstest du schon? Wir haben selbst nie gezählt und das Ausdenken der Texte hat echt ewig gedauert.</result>
+        <result>
+
+
+
+            Wusstest du schon?
+            Wir haben selbst nie gezählt, deshalb wäre jede Antwort richtig gewesen. Das Ausdenken der Texte hat schon genug Zeit in Anspruch genommen.</result>
     </question>
 </quiz>

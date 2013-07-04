@@ -8,10 +8,10 @@
         <street>Friedrich-Ebert-Strasse</street>
         <houseNumber>39</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <latitude>517541224</latitude>
         <longitude>119930895</longitude>
-        <description>Polizeirevier Anhalt-Bitterfeld, Sitz Koethen</description>
+        <description>Polizeirevier Anhalt-Bitterfeld, Sitz Köthen</description>
         <registerImage>buildings/Polizei.JPG</registerImage>
         <registerImage>buildings/Polizei_1.JPG</registerImage>
     </building>
