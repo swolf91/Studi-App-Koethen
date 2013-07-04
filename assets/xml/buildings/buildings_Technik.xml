@@ -8,13 +8,13 @@
         <street>Hubertus</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <collegeBuilding></collegeBuilding>
         <latitude>517557047</latitude>
         <longitude>119602829</longitude>
         <description>
-Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstuetzen und erste Rahmenbedingungen fuer die professionelle Projektausarbeitung zu ermoeglichen.
-Weiterhin koennen hier verschiedene Technologiezweige durch Rechnernetze, Medienbereitstellung
+Dieses Zentrum soll dazu dienen junge technologieorientierte Unternehmen zu unterstützen und erste Rahmenbedingungen für die professionelle Projektausarbeitung zu ermöglichen.
+Weiterhin können hier verschiedene Technologiezweige durch Rechnernetze, Medienbereitstellung
 oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden.
 </description>
         <url>http://www.koethen-anhalt.de/de/technologiezentrum.html</url>
@@ -28,7 +28,7 @@ oder auch durch Anbindung an speizielle Messarchitekuren erleichtert werden.
         <street>Fasaneriallee</street>
         <houseNumber>1a</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <collegeBuilding>
             <numberOfBuilding>13</numberOfBuilding>
         </collegeBuilding>
@@ -47,21 +47,21 @@ Das Elektrotechniklabor dient den technikinteressierten Studenten zur Ausbildung
     
         <building>
     <id>2</id>
-        <name>Werkstattgebaeude</name>
+        <name>Werkstattgebäude</name>
         <street>Hubertus</street>
         <houseNumber>56</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <collegeBuilding>
             <numberOfBuilding>07</numberOfBuilding>
         </collegeBuilding>
         <latitude>517548510</latitude>
         <longitude>119582960</longitude>
         <description>
-Das Werkstattgebaeude dient dem Fachbereich 6 zur technischen Ausbildung, sowie der Durchführung von Projekten.
+Das Werkstattgebäude dient dem Fachbereich 6 zur technischen Ausbildung, sowie der Durchführung von Projekten.
 </description>
         <url>http://www.hs-anhalt.de/</url>
-        <registerImage>buildings/Prakt.-_und_Forschungshalle.JPG</registerImage>
+        <registerImage>buildings/Praktikums-_und_Forschungshalle.JPG</registerImage>
     </building>
     
 <building>
@@ -70,7 +70,7 @@ Das Werkstattgebaeude dient dem Fachbereich 6 zur technischen Ausbildung, sowie 
         <street>Bernburger Strasse</street>
         <houseNumber>55</houseNumber>
         <postalCode>06366</postalCode>
-        <city>Koethen</city>
+        <city>Köthen</city>
         <collegeBuilding>
             <numberOfBuilding>03</numberOfBuilding>
         </collegeBuilding>
