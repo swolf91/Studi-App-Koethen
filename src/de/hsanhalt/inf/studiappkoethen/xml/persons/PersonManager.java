@@ -215,7 +215,13 @@ public class PersonManager implements XmlParser
             }
             else if (nodeName.equals("description"))
             {
-                description = content;
+                String[] tmp = content.split("\n");
+                description = "";
+
+                for(String str : tmp)
+                {
+                    description += str.trim() + "\n";
+                }
             }
             else if (nodeName.equals("profession"))
             {
