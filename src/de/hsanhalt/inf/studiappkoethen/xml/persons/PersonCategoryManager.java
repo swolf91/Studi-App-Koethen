@@ -9,12 +9,19 @@ import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParseException;
 import de.hsanhalt.inf.studiappkoethen.xml.parsing.XmlParser;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+/**
+ * Dieses Objekt hat nur eine Instanz und wird benutzt um die Kategorie-XML mit Funktionen des XML Parsers auszulesen.
+ *  
+ *
+ */
 public class PersonCategoryManager implements XmlParser
 {
     private static PersonCategoryManager INSTANCE;
     private Map<Byte, PersonCategory> categoryMap;
-
+    /**
+     * Gibt eine Instanz des Objektes zurueck.
+     * @return Objekt vom Typ Personen-Kategorie-Manager.
+     */
     public static PersonCategoryManager getInstance()
     {
         if (INSTANCE == null)
@@ -23,17 +30,25 @@ public class PersonCategoryManager implements XmlParser
         }
         return INSTANCE;
     }
-
+    /**
+     * Erzeugt einen neuen Personen-Kategorie-Manager.
+     */
     private PersonCategoryManager()
     {
         this.categoryMap = new HashMap<>();
     }
-
+    /**
+     * Gibt eine Kategorie zurueck abhaengig vom byte-Parameter.
+     * @param id byte
+     * @return Person-Kategorie Objekt.
+     */
     public PersonCategory getCategory(byte id)
     {
         return this.categoryMap.get(id);
     }
-
+    /**
+     * Parst die XML-Kategorie Dateien mit Hilfe der XML-Funktionen des Parsers.
+     */
     @Override
     public void addNode(Node node) throws XmlParseException
     {
@@ -61,13 +76,20 @@ public class PersonCategoryManager implements XmlParser
             }
         }
     }
-
+    /**
+     * Diese Methode beschreibt den Starttag, damit der Parser weis wo er beginnen muss.
+     */
     @Override
     public String getStartTag()
     {
         return "personCategories";
     }
-
+    /**
+     * Laedt die Unterelemente der Kategorie-XML Datei zur Laufzeit. Wird von "addNode(Node node)" genutzt.
+     * @param node Knoten
+     * @return Wahr, wenn kein Fehler gewurfen wurde.
+     * @throws XmlParseException Fehler wenn die Kategorie-XML unvollstaendig ist.
+     */
     private boolean addElement(Node node) throws XmlParseException
     {
         if (!node.hasChildNodes())
@@ -108,7 +130,9 @@ public class PersonCategoryManager implements XmlParser
 
         return true;
     }
-
+    /**
+     * Gibt ein Array von allen Personen-Kategorien zurueck.
+    */
     public PersonCategory[] getPersonCategories()
     {
         PersonCategory[] personCategories = new PersonCategory[this.categoryMap.size()];
@@ -120,7 +144,9 @@ public class PersonCategoryManager implements XmlParser
         }
         return personCategories;
     }
-    
+    /**
+     * Gibt die Anzahl der Kategorien zurueck.
+     */
     public int getSize()
     {
     	return this.categoryMap.size();
