@@ -165,8 +165,9 @@ public class QuizActivity extends Activity
                     Button buildingButton = new Button(this);
                     MarginLayoutParams params = new MarginLayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 75);
                     params.setMargins(10, 5, 85, 5);
-                    buildingButton.setBackgroundDrawable(this.getResources().getDrawable(drawable.button));
-                    buildingButton.setTextColor(Color.WHITE);
+
+                    buildingButton.setBackgroundDrawable(this.getResources().getDrawable(drawable.quiz_answer_button));
+                    buildingButton.setTextColor(Color.BLACK);
                     buildingButton.setLayoutParams(new LinearLayout.LayoutParams(params));
                     linearLayoutInner.addView(buildingButton);
 
@@ -208,6 +209,7 @@ public class QuizActivity extends Activity
                     button.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
                     button.setHeight(50);
                     button.setId(state.hashCode() * Button.class.hashCode() + (i++));
+                    button.setTypeface(Typeface.DEFAULT_BOLD);
                     button.setOnClickListener(this.OnButtonClickListener);
                     button.setTextColor(Color.BLACK);
                     button.setBackgroundDrawable(this.getResources().getDrawable(drawable.quiz_answer_button));
