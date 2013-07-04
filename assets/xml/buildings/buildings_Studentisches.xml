@@ -60,8 +60,9 @@ Die komplett sanierte Mensa am Hauptkampus macht optisch einen sehr guten Eindru
 Das Essensangebot ist sehr reichhaltig und abwechslungsreich.
 Es gibt zum Essensangebot der Mensa Köthen eine direkte Applikation zum Herunterladen.
 </description>
-        <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-fasanerieallee/</url>
+        <url>market://search?q=pname:it.peinhardt.android.meine.mensa</url>
         <registerImage>buildings/Studentenwerk.JPG</registerImage>
+      
     </building>
     
         <building>
@@ -80,7 +81,7 @@ Es gibt zum Essensangebot der Mensa Köthen eine direkte Applikation zum Herunte
 Da das Gebaeude in der Lohmannstrasse etwas abseits vom Hauptkampus ist, gibt es hier eine eigene Mensa.
 Diese ist kleiner und bietet nur beschränkt das Angebot vom Hauptkampus.
 </description>
-        <url>http://www.studentenwerk-halle.de/hochschulgastronomie/koethen/mensa-lohmannstrasse/</url>
+        <url>market://search?q=pname:it.peinhardt.android.meine.mensa</url>
         <registerImage>buildings/Lohmannstrasse23.JPG</registerImage>
         <registerImage>buildings/Lohmannstrasse23_2.JPG</registerImage>
     </building>
