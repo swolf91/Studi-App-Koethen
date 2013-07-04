@@ -1,5 +1,6 @@
 package de.hsanhalt.inf.studiappkoethen.xml.buildings;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Building
@@ -46,6 +47,10 @@ public class Building
      */
     private final URL url;
     /**
+     * Applink des Gebaudes
+     */
+    private final String appURL;
+    /**
      * Der Breitengrad in dem sich das Gebaeude befindet
      * Festkommadarstellung (immer 7 Stellen nach dem Komma) in int umwandeln um Rundungsfehler zu vermeiden!
      * Wert von -90 bis 90 mit 7 Kommastellen, also 90 = 900000000
@@ -88,16 +93,24 @@ public class Building
         this.phoneNumber = phoneNumber;
         this.images = images;
 
+        String appURL = null;
         if (url != null)
         {
-            URL matchedURL;
+            URL matchedURL = null;
             try
             {
                 matchedURL = new URL(url);
             }
+            catch (MalformedURLException e)
+            {
+                url = url.trim();
+                if(url.startsWith("market://"))
+                {
+                    appURL = url;
+                }
+            }
             catch (Exception e)
             {
-                matchedURL = null;
             }
             this.url = matchedURL;
         }
@@ -105,6 +118,7 @@ public class Building
         {
             this.url = null;
         }
+        this.appURL = appURL;
     }
 
     /**
