@@ -52,8 +52,8 @@
     <string name="quiz_text">Das Quiz soll dich animieren eine Runde durch Köthen und über deinen neuen Campus zu gehen.\nDabei werden dir Gebäude-spezifische Fragen gestellt
                              und du kannst dein Wissen über Köthen unter Beweis stellen. Viel Spaß damit und solltest du einmal keine Lust mehr haben, wird es automatisch an der aktuellen Position gespeichert.
 							 \nSo kannst du jederzeit weiter spielen, wenn du Lust hast.</string>
-    <string name="koethen_text">Unter dem Menüpunkt "Köthen" findest du eine Liste mit wichtigen und interessanten Orten hier in Köthen. Darunter befinden sich Ämter, Freizeiteinrichtungen und mehr. Wähle einen Eintrag aus, um mehr zu erfahren.</string>
-    <string name="campus_text">Hier findest du alles Wichtige zum Kammpus in Köthen, wie zum Beispiel die Fachbereiche, Wohnheime und Verwaltung</string>
+    <string name="koethen_text">Unter dem Menüpunkt Köthen findest du eine Liste mit wichtigen und interessanten Orten hier in Köthen. Darunter befinden sich Ämter, Freizeiteinrichtungen und mehr. Wähle einen Eintrag aus, um mehr zu erfahren.</string>
+    <string name="campus_text">Unter Campus findest du alles Wichtige zur Hochschule, wie zum Beispiel Infos zu den Fachbereichen, Wohnheimen und zur Verwaltung.</string>
     <string name="quiz_startmsg">
         Willkommen bei unserem Campusführer!
         \n
