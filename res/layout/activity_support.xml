@@ -32,6 +32,40 @@
         		android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"/>
+            
+             <TextView
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/help_headline_koethen"
+            	android:textStyle="bold" />
+
+             <TextView
+      			android:layout_width="wrap_content"
+       			android:layout_height="wrap_content"
+        		android:text="@string/koethen_text"
+        		android:layout_gravity="left"
+        		android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+            
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/help_headline_campus"
+            	android:textStyle="bold" />
+
+             <TextView
+      			android:layout_width="wrap_content"
+       			android:layout_height="wrap_content"
+        		android:text="@string/campus_text"
+        		android:layout_gravity="left"
+        		android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
