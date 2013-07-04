@@ -121,6 +121,11 @@ public class Building
         this.appURL = appURL;
     }
 
+    public String getAppURL()
+    {
+        return this.appURL;
+    }
+
     /**
      * Gibt die Telefonnummer des Gebaeudes zurueck.
      * @return

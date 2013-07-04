@@ -164,14 +164,21 @@ public class DetailActivity extends Activity
                 }
             }
 
-            if(this.building.getURL() != null)
+            if(this.building.getURL() != null || this.building.getAppURL() != null)
             {
                 textView = (TextView) this.findViewById(R.id.detail_textView_homepage_headline);
                 textView.setVisibility(View.VISIBLE);
 
                 textView = (TextView) this.findViewById(R.id.detail_textView_homepage);
                 textView.setVisibility(View.VISIBLE);
-                textView.setText(this.building.getURL().toString());
+                if(this.building.getURL() != null)
+                {
+                    textView.setText(this.building.getURL().toString());
+                }
+                else
+                {
+                    textView.setText(this.building.getAppURL());
+                }
             }
 
             if(this.building.getDescription() != null)
@@ -199,6 +206,12 @@ public class DetailActivity extends Activity
             {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url.toString()));
+                this.startActivity(intent);
+            }
+            else if(this.building.getAppURL() != null)
+            {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(this.building.getAppURL()));
                 this.startActivity(intent);
             }
 
