@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+?<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_close">Beenden</string>
     <string name="action_filter">Filter</string>
@@ -36,51 +36,52 @@
     <string name="help_headline_filter">-Benutzung des Filters</string>
     <string name="help_headline_navigation">-Tipps zur Navigation</string>
     <string name="help_headline_quiz">Campus Quiz:</string>
-    <string name="filter_text">Mithilfe des Filters, welcher im oberen Optionsmenü zu finden ist,\nkönnen die verschiedenen Gebäudegruppen ein oder ausgeblendet werden.
+    <string name="filter_text">Mithilfe des Filters, welcher im oberen Optionsmenü zu finden ist,\nkönnen die verschiedenen Gebäudegruppen ein- oder ausgeblendet werden.
                                Diese Funktion soll dir die Übersicht auf der Köthen Map erleichtern und dabei helfen schneller ein bestimmtes Objekt zu finden.</string>
     <string name="marker_text">Die Marker stellen verschiedene Gebäudegruppen dar. Jeder Marker auf der Karte steht für ein Gebäude oder einen wichtigen Ort.Um nähere Informationen über
-                               einen Punkt heraus zu finden,muss man einfach auf den entsprechenden Marker drücken und es öffnet sich ein kleines Informationsfenster\n\nWeiterhin ist es bis jetzt so,
-                               dass wenn mehrere Gebäude an einem Fleck sind diese durch mehrmaliges Drücken auf den Marker durchgewählt werden können.</string>
+                               einen Punkt heraus zu finden,muss man einfach auf den entsprechenden Marker drücken und es öffnet sich ein kleines Informationsfenster\n\nWeiterhin ist es so,
+                               dass wenn mehrere Gebäude an einem Fleck sind, diese durch mehrmaliges Drücken auf den Marker durchschalten werden können.</string>
     <string name="navigation_text">Zur besseren Navigation kann die eigene Position auf der Karte angezeigt werden. Hierfür ist es jedoch erforderlich, die Standortbestimmung in den Smartphone-Einstellungen zu aktivieren.
-        						Über den Button in der oberen rechten Ecke der Karte, kannst du dann die Karte auf deine Position zentrieren.
-								Im Optionsmenü gibt es neben dem Filtereinstellungen auch die Möglichkeit, die Position der Karte und deren Zoonstufe zurück auf den Anfangswert zu setzen.</string>
-    <string name="support_text">Willkommen in dem Hilfe-Bereich der Studi App Köthen. Wir haben uns Mühe gegeben alles einfach und intuitiv zu gestalten ,aber da du hier bis um
-                                weitere Sachen zu erfahren haben wir verschiedene Sachen gelistet.</string>
+        						Über den Button in der oberen rechten Ecke der Karte kannst du dann die Karte auf deine Position zentrieren.
+								Im Optionsmenü gibt es neben dem Filtereinstellungen auch die Möglichkeit, die Position der Karte und deren Zoomstufe zurück auf den Anfangswert zu setzen.</string>
+    <string name="support_text">Willkommen in dem Hilfe-Bereich der Studi App Köthen. Wir haben uns Mühe gegeben alles einfach und intuitiv zu gestalten ,aber da du hier bist um
+                                weitere Sachen zu erfahren, haben wir verschiedene Sachen gelistet.</string>
     <string name="map_text">Zu wissen ist ,dass manche Symbole auf der Karte bis jetzt mehrere Bedeutungen haben und diese durch mehrfaches Klicken wechseln.
                             \nBerührt Ihr den Infokasten oberhalb des Markers wird eine Seite mit wichtigsten Informationen geöffnet.</string>
     <string name="quiz_text">Das Quiz soll dich animieren eine Runde durch Köthen und über deinen neuen Campus zu gehen.\nDabei werden dir Gebäude-spezifische Fragen gestellt
-                             und du kannst dein Wissen über Köthen unter Beweis stellen. Viel Spaß damit und solltest du einmal keine Lust mehr haben wird es automatisch an der aktuellen Position gespeichert.</string>
+                             und du kannst dein Wissen über Köthen unter Beweis stellen. Viel Spaß damit und solltest du einmal keine Lust mehr haben wird es automatisch an der aktuellen Position gespeichert.
+							 \nSo kannst du jederzeit weiter spielen, wenn du Lust hast.</string>
     <string name="quiz_startmsg">
-        Willkommen bei unserem Campusfuehrer!
+        Willkommen bei unserem Campusführer!
         \n
-        \nwie der Name schon sagt, ist die Intention dieses Apppunktes, euch euren Campus etwas naeher zu bringen und euch darueber zu fuehren.
+        \nwie der Name schon sagt, ist die Intention dieses Apppunktes, euch euren Campus etwas näher zu bringen und euch darüber zu führen.
         \n
-        \nIn der Actionbar existiert ein Symbol, das mit einem Fragezeichen versehen ist. Bei einem Klick auf dieses, koennt ihr das zu bearbeitende Quiz auswaehlen.
+        \nIn der Actionbar existiert ein Symbol, das mit einem Fragezeichen versehen ist. Bei einem Klick auf dieses, könnt ihr das zu bearbeitende Quiz auswählen.
         \nAllerdings existiert zurzeit nur ein einziges Quiz, auf Grund dessen habt ihr nicht wirklich viel Spielraum! ;)
-        \nWenn mehrere Quizze existieren wuerden, sollte man über dieses Symbol jederzeit zwischen diesen wechseln koennen.
+        \nWenn mehrere Quizze existieren würden, sollte man über dieses Symbol jederzeit zwischen diesen wechseln können.
         \n
-        \nDas Quiz kann jederzeit verlassen werden und faehrt beim naechsten Start von der letzten Position fort.
+        \nDas Quiz kann jederzeit verlassen werden und fährt beim nächsten Start von der letzten Position fort.
         \n
-        \nDes Weiteren existiert ein Gluehbirnensymbol, welche euch nuetzliche Hinweise zum loesen der Aufgaben geben.
+        \nDes Weiteren existiert ein Glühbirnensymbol, welches euch nützliche Hinweise zum lösen der Aufgaben gibt.
         \n
         \nDen Rest werdet ihr wohl alleine rausfinden, damit ich jetzt nicht noch mehr quaseln muss.
         \n
         \nViel Spaß beim Kennenlernen eures Campuses!
     </string>
     <string name="quiz_analysis_verybad">
-        Du sollste doch deinen Campus begehen und dir alles anschauen und nicht nur wild rumklicken.
-        \nHoffentlich wird es naechstes mal besser. Du hast nur =p Prozent richtig beantwortet. Was =c/=q richtig beantwortete Fragen entspricht.
+        Du solltest doch deinen Campus begehen und dir alles anschauen und nicht nur wild rumklicken.
+        \nHoffentlich wird es nächstes mal besser. Du hast nur =p Prozent richtig beantwortet. Was =c/=q richtig beantwortete Fragen entspricht.
     </string>
     <string name="quiz_analysis_bad">
-        Naja, das kannst du auch besser. String dich naechstes mal besser an.
+        Naja, das kannst du auch besser. Streng dich nächstes mal besser an.
         \nDu hast =p Prozent des Quizes richtig beantwortet. Das entspricht =c/=q Fragen.
     </string>
     <string name="quiz_analysis_medium">
-        Kopf hoch, begehe den Campus einfach noch einmal und beim naechsten Mal klappt es bestimmt besser.
+        Kopf hoch, begehe den Campus einfach noch einmal und beim nächsten Mal klappt es bestimmt besser.
         \nImmerhin hast du schon =p Prozent bzw =c/=q Fragen richtig beantwortet.
     </string>
     <string name="quiz_analysis_good">
-        Gar nicht mal so schlecht. Du kennst immerhin schon mehr als die Haelfte von deinem Campus und hast
+        Gar nicht mal so schlecht. Du kennst immerhin schon mehr als die Hälfte von deinem Campus und hast
         =p Prozent bzw =c/=q Fragen richtig beantwortet.
     </string>
     <string name="quiz_analysis_verygood">
@@ -88,11 +89,11 @@
         \nUm genau zu sein =p Prozent bzw =c/=q Fragen. Weiter so!
     </string>
     <string name="quiz_analysis_perfekt">
-        Alter Schwede! Du bist wohl wirklich mit dem Quiz durch Koethen gelaufen?
+        Alter Schwede! Du bist wohl wirklich mit dem Quiz durch Köthen gelaufen?
         \nDu hast anscheinend alle Fragen (=p Prozent) richtig beantwortet. Dann kann im Studium doch gar nichts mehr schief laufen.
     </string>
     <string name="quiz_button_startbutton">Quiz starten!</string>
-    <string name="quiz_button_nextquestion">Zur naechsten Frage!</string>
+    <string name="quiz_button_nextquestion">Zur nächsten Frage!</string>
     <string name="quiz_button_exitquiz">Quiz beenden</string>
     <string name="quiz_context_choosequiz">Quiz-Auswahl</string>
 
@@ -104,14 +105,14 @@
 	<string name="detail_person_buildingnumber">Hausnummer:</string>    
 	<string name="detail_person_postalcode">PLZ:</string>
 	<string name="detail_person_city">Ort:</string>
-	<string name="detail_person_buildings">Gebaeudenummer:</string>
-    <string name="detail_person_builddescribtion">Gebaeude:</string>
-	<string name="detail_person_room">Buero:</string>
+	<string name="detail_person_buildings">Gebäudenummer:</string>
+    <string name="detail_person_builddescribtion">Gebäude:</string>
+	<string name="detail_person_room">Büro:</string>
 	<string name="detail_person_description">Beschreibung:</string>
 
 	<string name="detail_person_profession">Fachgebiet:</string>
 	<string name="detail_person_modules">Bietet folgende Module an:</string>
-	<string name="detail_person_responsibility">Ist zustaendig fuer:</string>
+	<string name="detail_person_responsibility">Ist zuständig für:</string>
 
 	<string name="detail_person_talktime">Sprechzeiten:</string>	
 	<string name="detail_person_phone">Telefonnummer:</string>
